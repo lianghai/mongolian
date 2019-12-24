@@ -1,4 +1,4 @@
-↑ [About Liang Hai](https://lianghai.github.io)\
+↑ [About Liang Hai](https://lianghai.github.io)<br/>
 ↑ [Mongolian resources](https://lianghai.github.io/mongolian/)
 
 # A summary of China’s national standards related to the Mongolian script
