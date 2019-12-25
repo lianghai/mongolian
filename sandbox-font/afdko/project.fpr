@@ -1,0 +1,11 @@
+InputFontPath	Prototayip-Regular.ufo
+OutputFontPath	/Library/Application Support/Adobe/Fonts/Prototayip-Regular.otf
+ReleaseMode	true
+FeaturePath	features.fea
+FontMenuDBPath	FontMenuNameDB
+GlyphAliasDBPath	GlyphOrderAndAliasDB
+kSetfsSelectionBitsOn	[6]
+OmitMacNames	true
+OverrideMenuNames	true
+AllowStubGSUB	true
+SuppressHintWarnings	true

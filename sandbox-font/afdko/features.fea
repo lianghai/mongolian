@@ -1,0 +1,105 @@
+# Ia. General
+# -----------
+
+    table head {
+        FontRevision 000.001;
+    } head;
+
+    # Basic character-to-glyph mapping:
+    # GlyphOrderAndAliasDB
+
+# IIa. Cursive script
+# -------------------
+
+    include(otl/classes.fea);
+
+    table GDEF {
+        GlyphClassDef
+            , # Bases
+            , # Ligatures
+            @mark.GDEF, # Marks
+            ; # Components
+    } GDEF;
+
+    languagesystem DFLT dflt;
+    languagesystem mong dflt;
+
+    include(otl/IIa.fea);
+    include(otl/III.fea);
+    include(otl/IIb.fea);
+
+    # Initiation of cursive positions:
+
+        feature isol {
+            lookup IIa.isol;
+        } isol;
+
+        feature init {
+            lookup IIa.init;
+        } init;
+
+        feature medi {
+            lookup IIa.medi;
+        } medi;
+
+        feature fina {
+            lookup IIa.fina;
+        } fina;
+
+# III. Hudum-specific
+# -------------------
+# Reduction of phonetic letters to written units
+
+feature rclt {
+
+    # 1. Syllabic:
+
+        lookup III.1.syllabic;
+
+    # 2. Gender-specific:
+
+        lookup III.2.gender_specific;
+
+    # 3. MVS-involving:
+
+        lookup III.3.MVS_involving;
+
+    # 4. NNBSP-involving:
+
+        lookup III.4.NNBSP_involving;
+
+    # 5. Devsger i:
+
+        lookup III.5.devsger_i;
+
+    # 6. Post-bowed:
+
+        lookup III.6.post_bowed;
+
+    # 7. FVS-selected:
+
+        lookup III.7.FVS_selected;
+
+# IIb. Cursive script (continued)
+# -------------------------------
+# Sub–written unit variations
+
+    # Variation involving bowed written units:
+
+        lookup IIb.variation_involving_bowed_written_units;
+
+    # Cleanup of format controls:
+
+        lookup IIb.cmap_markers;
+        lookup IIb.overt_format_controls;
+        lookup IIb.hidden_format_controls;
+
+} rclt;
+
+# Ib. General (continued)
+# -----------------------
+# Typography
+
+    # Vertical forms of punctuation marks:
+
+        # lookup;

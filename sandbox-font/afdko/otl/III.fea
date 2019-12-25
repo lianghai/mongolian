@@ -1,0 +1,105 @@
+include(conditions.fea);
+
+lookup III.1.syllabic {
+
+    lookupflag IgnoreMarks;
+
+    sub [@n @d]' lookup condition.onset @vowel;
+    sub @vowel [@n @d]' lookup condition.devsger;
+
+    lookupflag 0;
+
+} III.1.syllabic;
+
+# include(gender.fea);
+
+lookup III.2.gender_specific {
+
+    lookupflag IgnoreMarks;
+
+    sub [@h @g]' lookup condition.masculine_onset @masculine_vowel;
+    sub [@h @g]' lookup condition.feminine [@feminine_vowel @neuter_vowel];
+
+    sub @masculine_vowel @g' lookup condition.masculine_devsger;
+    sub @feminine_vowel @g' lookup condition.feminine;
+    # sub @g' lookup condition.masculine_devsger;
+    sub @g' lookup condition.feminine;
+
+    lookupflag 0;
+
+} III.2.gender_specific;
+
+lookup III.3.MVS_involving {
+
+    lookupflag IgnoreMarks;
+
+    sub MVS [@a.isol @e.isol]' lookup condition.chachlag;
+
+    sub [@n @j @y @w]' lookup condition.pre_chachlag MVS [@a.isol @e.isol];
+
+    sub [@h @g]' lookup condition.pre_chachlag MVS [@a.isol];
+
+    lookupflag 0;
+
+} III.3.MVS_involving;
+
+lookup III.4.NNBSP_involving {
+
+    lookupflag IgnoreMarks;
+
+    sub NNBSP [@a @i @u @ue]' lookup condition.unmarked;
+
+    ignore sub NNBSP @consonant.init [@o @u @oe @ue]';
+    sub @consonant.init [@o @u @oe @ue]' lookup condition.marked;
+
+    sub NNBSP @d' lookup condition.particle;
+
+    sub NNBSP @y.init' lookup condition.particle @i.medi @n.fina;
+    sub NNBSP @y.init' lookup condition.particle @i.fina;
+    sub NNBSP @i.init @y.medi' lookup condition.particle [@a.medi @e.medi] [@r.fina @n.fina];
+
+    lookupflag 0;
+
+} III.4.NNBSP_involving;
+
+lookup III.5.devsger_i {
+
+    lookupflag IgnoreMarks;
+
+    sub @vowel.not_ending_with_I.init_or_medi @i' lookup condition.devsger;
+
+    lookupflag 0;
+
+} III.5.devsger_i;
+
+lookup III.6.post_bowed {
+
+    lookupflag MarkAttachmentType @joining_control;
+
+    sub @consonant.bowed.init_or_medi @vowel.U.fina' lookup condition.post_bowed;
+
+    lookupflag 0;
+
+} III.6.post_bowed;
+
+lookup III.7.FVS_selected {
+
+    sub [a.A.medi] FVS1 by a.AA.medi;
+    sub [i.I.medi i.II.medi] FVS1 by i.AI.medi;
+    sub [o.U.medi] FVS1 by o.AU.medi;
+    sub [u.U.medi] FVS1 by u.AU.medi;
+    sub [oe.U.medi oe.UI.medi] FVS1 by oe.AUI.medi;
+    sub [ue.U.medi ue.UI.medi] FVS1 by ue.AUI.medi;
+    sub [t.D.medi] FVS1 by t.T.medi;
+    sub [d.T.init] FVS1 by d.D.init;
+
+    sub [n.A.medi] FVS1 by n.N.medi;
+    sub [n.N.medi] FVS2 by n.A.medi;
+    sub [n.A.fina] FVS1 by n.N.fina;
+    sub [n.N.fina] FVS2 by n.A.fina;
+    sub [d.Dh.medi] FVS1 by d.D.medi;
+    sub [d.D.medi] FVS2 by d.Dh.medi;
+    sub [d.Dh.fina] FVS1 by d.D.fina;
+    sub [d.D.fina] FVS2 by d.Dh.fina;
+
+} III.7.FVS_selected;

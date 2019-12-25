@@ -1,0 +1,415 @@
+.notdef .notdef
+space space uni0020
+NBSP NBSP uni00A0
+ZWJ ZWJ uni200D
+ZWNJ ZWNJ uni200C
+NNBSP NNBSP uni202F
+FVS1 FVS1 uni180B
+FVS2 FVS2 uni180C
+FVS3 FVS3 uni180D
+MVS MVS uni180E
+nirugu nirugu uni180A
+a.cmap a.cmap uni1820
+a.A.isol a.A.isol
+a.A.init a.A.init
+a.A.medi a.A.medi
+a.A.fina a.A.fina
+a.AA.isol a.AA.isol
+a.AA.init a.AA.init
+a.AA.medi a.AA.medi
+a.Ah.isol a.Ah.isol
+e.cmap e.cmap uni1821
+e.A.isol e.A.isol
+e.A.init e.A.init
+e.A.medi e.A.medi
+e.A.fina e.A.fina
+e.Ah.isol e.Ah.isol
+i.cmap i.cmap uni1822
+i.AI.isol i.AI.isol
+i.AI.init i.AI.init
+i.AI.medi i.AI.medi
+i.I.isol i.I.isol
+i.I.init i.I.init
+i.I.medi i.I.medi
+i.I.fina i.I.fina
+i.II.medi i.II.medi
+o.cmap o.cmap uni1823
+o.AU.init o.AU.init
+o.AU.medi o.AU.medi
+o.AO.isol o.AO.isol
+o.U.medi o.U.medi
+o.U.fina o.U.fina
+o.O.fina o.O.fina
+u.cmap u.cmap uni1824
+u.AU.init u.AU.init
+u.AU.medi u.AU.medi
+u.AO.isol u.AO.isol
+u.U.isol u.U.isol
+u.U.init u.U.init
+u.U.medi u.U.medi
+u.U.fina u.U.fina
+u.O.fina u.O.fina
+oe.cmap oe.cmap uni1825
+oe.AUI.init oe.AUI.init
+oe.AUI.medi oe.AUI.medi
+oe.AUe.isol oe.AUe.isol
+oe.U.medi oe.U.medi
+oe.U.fina oe.U.fina
+oe.UI.medi oe.UI.medi
+oe.O.fina oe.O.fina
+oe.Ue.fina oe.Ue.fina
+ue.cmap ue.cmap uni1826
+ue.AU.isol ue.AU.isol
+ue.AUI.init ue.AUI.init
+ue.AUI.medi ue.AUI.medi
+ue.AUe.isol ue.AUe.isol
+ue.U.isol ue.U.isol
+ue.U.init ue.U.init
+ue.U.medi ue.U.medi
+ue.U.fina ue.U.fina
+ue.UI.medi ue.UI.medi
+ue.O.fina ue.O.fina
+ue.Ue.fina ue.Ue.fina
+ee.cmap ee.cmap uni1827
+ee.AW.isol ee.AW.isol
+ee.AW.init ee.AW.init
+ee.W.medi ee.W.medi
+ee.W.fina ee.W.fina
+n.cmap n.cmap uni1828
+n.A.medi n.A.medi
+n.A.fina n.A.fina
+n.N.init n.N.init
+n.N.medi n.N.medi
+n.N.fina n.N.fina
+ng.cmap ng.cmap uni1829
+ng.AG.medi ng.AG.medi
+ng.AG.fina ng.AG.fina
+b.cmap b.cmap uni182A
+b.B.init b.B.init
+b.B.medi b.B.medi
+b.B.fina b.B.fina
+p.cmap p.cmap uni182B
+p.P.init p.P.init
+p.P.medi p.P.medi
+p.P.fina p.P.fina
+h.cmap h.cmap uni182C
+h.H.init h.H.init
+h.H.medi h.H.medi
+h.H.fina h.H.fina
+h.G.init h.G.init
+h.G.medi h.G.medi
+g.cmap g.cmap uni182D
+g.H.medi g.H.medi
+g.H.fina g.H.fina
+g.Gh.init g.Gh.init
+g.Gh.medi g.Gh.medi
+g.Gh.fina g.Gh.fina
+g.G.init g.G.init
+g.G.medi g.G.medi
+g.G.fina g.G.fina
+m.cmap m.cmap uni182E
+m.M.init m.M.init
+m.M.medi m.M.medi
+m.M.fina m.M.fina
+l.cmap l.cmap uni182F
+l.L.init l.L.init
+l.L.medi l.L.medi
+l.L.fina l.L.fina
+s.cmap s.cmap uni1830
+s.S.init s.S.init
+s.S.medi s.S.medi
+s.S.fina s.S.fina
+sh.cmap sh.cmap uni1831
+sh.Sh.init sh.Sh.init
+sh.Sh.medi sh.Sh.medi
+sh.Sh.fina sh.Sh.fina
+t.cmap t.cmap uni1832
+t.D.medi t.D.medi
+t.T.init t.T.init
+t.T.medi t.T.medi
+t.T.fina t.T.fina
+d.cmap d.cmap uni1833
+d.D.init d.D.init
+d.D.medi d.D.medi
+d.D.fina d.D.fina
+d.T.init d.T.init
+d.Dh.medi d.Dh.medi
+d.Dh.fina d.Dh.fina
+ch.cmap ch.cmap uni1834
+ch.Ch.init ch.Ch.init
+ch.Ch.medi ch.Ch.medi
+ch.Ch.fina ch.Ch.fina
+j.cmap j.cmap uni1835
+j.I.isol j.I.isol
+j.I.init j.I.init
+j.J.medi j.J.medi
+j.J.fina j.J.fina
+y.cmap y.cmap uni1836
+y.I.init y.I.init
+y.I.medi y.I.medi
+y.I.fina y.I.fina
+y.Y.init y.Y.init
+y.Y.medi y.Y.medi
+r.cmap r.cmap uni1837
+r.R.init r.R.init
+r.R.medi r.R.medi
+r.R.fina r.R.fina
+w.cmap w.cmap uni1838
+w.W.init w.W.init
+w.W.medi w.W.medi
+w.W.fina w.W.fina
+w.U.fina w.U.fina
+f.cmap f.cmap uni1839
+f.F.init f.F.init
+f.F.medi f.F.medi
+f.F.fina f.F.fina
+k.cmap k.cmap uni183B
+k.K.init k.K.init
+k.K.medi k.K.medi
+k.K.fina k.K.fina
+c.cmap c.cmap uni183C
+c.C.init c.C.init
+c.C.medi c.C.medi
+c.C.fina c.C.fina
+z.cmap z.cmap uni183D
+z.Z.init z.Z.init
+z.Z.medi z.Z.medi
+z.Z.fina z.Z.fina
+hh.cmap hh.cmap uni183E
+hh.Hh.init hh.Hh.init
+hh.Hh.medi hh.Hh.medi
+hh.Hh.fina hh.Hh.fina
+rh.cmap rh.cmap uni183F
+rh.Rh.init rh.Rh.init
+rh.Rh.medi rh.Rh.medi
+rh.Rh.fina rh.Rh.fina
+lh.cmap lh.cmap uni1840
+lh.LHh.init lh.LHh.init
+lh.LHh.medi lh.LHh.medi
+zhr.cmap zhr.cmap uni1841
+zhr.Zhr.init zhr.Zhr.init
+chr.cmap chr.cmap uni1842
+chr.Chr.init chr.Chr.init
+aleph.cmap aleph.cmap uni1807
+aleph.A.medi aleph.A.medi
+b_a.BA.isol b_a.BA.isol
+b_a.BA.init b_a.BA.init
+b_a.BA.medi b_a.BA.medi
+b_a.BA.fina b_a.BA.fina
+b_e.BA.isol b_e.BA.isol
+b_e.BA.init b_e.BA.init
+b_e.BA.medi b_e.BA.medi
+b_e.BA.fina b_e.BA.fina
+b_i.BI.isol b_i.BI.isol
+b_i.BI.init b_i.BI.init
+b_i.BI.medi b_i.BI.medi
+b_i.BI.fina b_i.BI.fina
+b_o.BO.isol b_o.BO.isol
+b_o.BU.init b_o.BU.init
+b_o.BU.medi b_o.BU.medi
+b_o.BO.fina b_o.BO.fina
+b_u.BO.isol b_u.BO.isol
+b_u.BU.init b_u.BU.init
+b_u.BU.medi b_u.BU.medi
+b_u.BO.fina b_u.BO.fina
+b_oe.BO.isol b_oe.BO.isol
+b_oe.BU.init b_oe.BU.init
+b_oe.BU.medi b_oe.BU.medi
+b_oe.BO.fina b_oe.BO.fina
+b_oe.BUe.isol b_oe.BUe.isol
+b_oe.BUI.init b_oe.BUI.init
+b_oe.BUI.medi b_oe.BUI.medi
+b_oe.BUe.fina b_oe.BUe.fina
+b_ue.BO.isol b_ue.BO.isol
+b_ue.BU.init b_ue.BU.init
+b_ue.BU.medi b_ue.BU.medi
+b_ue.BO.fina b_ue.BO.fina
+b_ue.BUe.isol b_ue.BUe.isol
+b_ue.BUI.init b_ue.BUI.init
+b_ue.BUI.medi b_ue.BUI.medi
+b_ue.BUe.fina b_ue.BUe.fina
+b_ee.BW.isol b_ee.BW.isol
+b_ee.BW.init b_ee.BW.init
+b_ee.BW.medi b_ee.BW.medi
+b_ee.BW.fina b_ee.BW.fina
+p_a.PA.isol p_a.PA.isol
+p_a.PA.init p_a.PA.init
+p_a.PA.medi p_a.PA.medi
+p_a.PA.fina p_a.PA.fina
+p_e.PA.isol p_e.PA.isol
+p_e.PA.init p_e.PA.init
+p_e.PA.medi p_e.PA.medi
+p_e.PA.fina p_e.PA.fina
+p_i.PI.isol p_i.PI.isol
+p_i.PI.init p_i.PI.init
+p_i.PI.medi p_i.PI.medi
+p_i.PI.fina p_i.PI.fina
+p_o.PO.isol p_o.PO.isol
+p_o.PU.init p_o.PU.init
+p_o.PU.medi p_o.PU.medi
+p_o.PO.fina p_o.PO.fina
+p_u.PO.isol p_u.PO.isol
+p_u.PU.init p_u.PU.init
+p_u.PU.medi p_u.PU.medi
+p_u.PO.fina p_u.PO.fina
+p_oe.PO.isol p_oe.PO.isol
+p_oe.PU.init p_oe.PU.init
+p_oe.PU.medi p_oe.PU.medi
+p_oe.PO.fina p_oe.PO.fina
+p_oe.PUe.isol p_oe.PUe.isol
+p_oe.PUI.init p_oe.PUI.init
+p_oe.PUI.medi p_oe.PUI.medi
+p_oe.PUe.fina p_oe.PUe.fina
+p_ue.PO.isol p_ue.PO.isol
+p_ue.PU.init p_ue.PU.init
+p_ue.PU.medi p_ue.PU.medi
+p_ue.PO.fina p_ue.PO.fina
+p_ue.PUe.isol p_ue.PUe.isol
+p_ue.PUI.init p_ue.PUI.init
+p_ue.PUI.medi p_ue.PUI.medi
+p_ue.PUe.fina p_ue.PUe.fina
+p_ee.PW.isol p_ee.PW.isol
+p_ee.PW.init p_ee.PW.init
+p_ee.PW.medi p_ee.PW.medi
+p_ee.PW.fina p_ee.PW.fina
+h_e.GA.isol h_e.GA.isol
+h_e.GA.init h_e.GA.init
+h_e.GA.medi h_e.GA.medi
+h_e.GA.fina h_e.GA.fina
+h_i.GI.isol h_i.GI.isol
+h_i.GI.init h_i.GI.init
+h_i.GI.medi h_i.GI.medi
+h_i.GI.fina h_i.GI.fina
+h_oe.GO.isol h_oe.GO.isol
+h_oe.GU.init h_oe.GU.init
+h_oe.GU.medi h_oe.GU.medi
+h_oe.GO.fina h_oe.GO.fina
+h_oe.GUe.isol h_oe.GUe.isol
+h_oe.GUI.init h_oe.GUI.init
+h_oe.GUI.medi h_oe.GUI.medi
+h_oe.GUe.fina h_oe.GUe.fina
+h_ue.GO.isol h_ue.GO.isol
+h_ue.GU.init h_ue.GU.init
+h_ue.GU.medi h_ue.GU.medi
+h_ue.GO.fina h_ue.GO.fina
+h_ue.GUe.isol h_ue.GUe.isol
+h_ue.GUI.init h_ue.GUI.init
+h_ue.GUI.medi h_ue.GUI.medi
+h_ue.GUe.fina h_ue.GUe.fina
+h_ee.GW.isol h_ee.GW.isol
+h_ee.GW.init h_ee.GW.init
+h_ee.GW.medi h_ee.GW.medi
+h_ee.GW.fina h_ee.GW.fina
+g_e.GA.isol g_e.GA.isol
+g_e.GA.init g_e.GA.init
+g_e.GA.medi g_e.GA.medi
+g_e.GA.fina g_e.GA.fina
+g_i.GI.isol g_i.GI.isol
+g_i.GI.init g_i.GI.init
+g_i.GI.medi g_i.GI.medi
+g_i.GI.fina g_i.GI.fina
+g_oe.GO.isol g_oe.GO.isol
+g_oe.GU.init g_oe.GU.init
+g_oe.GU.medi g_oe.GU.medi
+g_oe.GO.fina g_oe.GO.fina
+g_oe.GUe.isol g_oe.GUe.isol
+g_oe.GUI.init g_oe.GUI.init
+g_oe.GUI.medi g_oe.GUI.medi
+g_oe.GUe.fina g_oe.GUe.fina
+g_ue.GO.isol g_ue.GO.isol
+g_ue.GU.init g_ue.GU.init
+g_ue.GU.medi g_ue.GU.medi
+g_ue.GO.fina g_ue.GO.fina
+g_ue.GUe.isol g_ue.GUe.isol
+g_ue.GUI.init g_ue.GUI.init
+g_ue.GUI.medi g_ue.GUI.medi
+g_ue.GUe.fina g_ue.GUe.fina
+g_ee.GW.isol g_ee.GW.isol
+g_ee.GW.init g_ee.GW.init
+g_ee.GW.medi g_ee.GW.medi
+g_ee.GW.fina g_ee.GW.fina
+f_a.FA.isol f_a.FA.isol
+f_a.FA.init f_a.FA.init
+f_a.FA.medi f_a.FA.medi
+f_a.FA.fina f_a.FA.fina
+f_e.FA.isol f_e.FA.isol
+f_e.FA.init f_e.FA.init
+f_e.FA.medi f_e.FA.medi
+f_e.FA.fina f_e.FA.fina
+f_i.FI.isol f_i.FI.isol
+f_i.FI.init f_i.FI.init
+f_i.FI.medi f_i.FI.medi
+f_i.FI.fina f_i.FI.fina
+f_o.FO.isol f_o.FO.isol
+f_o.FU.init f_o.FU.init
+f_o.FU.medi f_o.FU.medi
+f_o.FO.fina f_o.FO.fina
+f_u.FO.isol f_u.FO.isol
+f_u.FU.init f_u.FU.init
+f_u.FU.medi f_u.FU.medi
+f_u.FO.fina f_u.FO.fina
+f_oe.FO.isol f_oe.FO.isol
+f_oe.FU.init f_oe.FU.init
+f_oe.FU.medi f_oe.FU.medi
+f_oe.FO.fina f_oe.FO.fina
+f_oe.FUe.isol f_oe.FUe.isol
+f_oe.FUI.init f_oe.FUI.init
+f_oe.FUI.medi f_oe.FUI.medi
+f_oe.FUe.fina f_oe.FUe.fina
+f_ue.FO.isol f_ue.FO.isol
+f_ue.FU.init f_ue.FU.init
+f_ue.FU.medi f_ue.FU.medi
+f_ue.FO.fina f_ue.FO.fina
+f_ue.FUe.isol f_ue.FUe.isol
+f_ue.FUI.init f_ue.FUI.init
+f_ue.FUI.medi f_ue.FUI.medi
+f_ue.FUe.fina f_ue.FUe.fina
+f_ee.FW.isol f_ee.FW.isol
+f_ee.FW.init f_ee.FW.init
+f_ee.FW.medi f_ee.FW.medi
+f_ee.FW.fina f_ee.FW.fina
+k_a.KA.isol k_a.KA.isol
+k_a.KA.init k_a.KA.init
+k_a.KA.medi k_a.KA.medi
+k_a.KA.fina k_a.KA.fina
+k_e.KA.isol k_e.KA.isol
+k_e.KA.init k_e.KA.init
+k_e.KA.medi k_e.KA.medi
+k_e.KA.fina k_e.KA.fina
+k_i.KI.isol k_i.KI.isol
+k_i.KI.init k_i.KI.init
+k_i.KI.medi k_i.KI.medi
+k_i.KI.fina k_i.KI.fina
+k_o.KO.isol k_o.KO.isol
+k_o.KU.init k_o.KU.init
+k_o.KU.medi k_o.KU.medi
+k_o.KO.fina k_o.KO.fina
+k_u.KO.isol k_u.KO.isol
+k_u.KU.init k_u.KU.init
+k_u.KU.medi k_u.KU.medi
+k_u.KO.fina k_u.KO.fina
+k_oe.KO.isol k_oe.KO.isol
+k_oe.KU.init k_oe.KU.init
+k_oe.KU.medi k_oe.KU.medi
+k_oe.KO.fina k_oe.KO.fina
+k_oe.KUe.isol k_oe.KUe.isol
+k_oe.KUI.init k_oe.KUI.init
+k_oe.KUI.medi k_oe.KUI.medi
+k_oe.KUe.fina k_oe.KUe.fina
+k_ue.KO.isol k_ue.KO.isol
+k_ue.KU.init k_ue.KU.init
+k_ue.KU.medi k_ue.KU.medi
+k_ue.KO.fina k_ue.KO.fina
+k_ue.KUe.isol k_ue.KUe.isol
+k_ue.KUI.init k_ue.KUI.init
+k_ue.KUI.medi k_ue.KUI.medi
+k_ue.KUe.fina k_ue.KUe.fina
+k_ee.KW.isol k_ee.KW.isol
+k_ee.KW.init k_ee.KW.init
+k_ee.KW.medi k_ee.KW.medi
+k_ee.KW.fina k_ee.KW.fina
+FVS1.overt FVS1.overt
+FVS2.overt FVS2.overt
+FVS3.overt FVS3.overt
+cmapmarkerleft cmapmarkerleft
+cmapmarkerright cmapmarkerright
