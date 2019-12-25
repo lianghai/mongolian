@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.</string>
+	<string>io.github.lianghai.mongolian.keyboards</string>
 	<key>CFBundleName</key>
-	<string></string>
+	<string>io.github.lianghai.mongolian</string>
 	<key>CFBundleVersion</key>
-	<string></string>
-	<key>KLInfo_ABC copy</key>
+	<string>1.0</string>
+	<key>KLInfo_ᠮᠣᠩᠭᠣᠯ</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout..abccopy</string>
+		<string>io.github.lianghai.mongolian.keyboards.ᠮᠣᠩᠭᠣᠯ</string>
 		<key>TISIntendedLanguage</key>
-		<string>en</string>
+		<string>mn-Mong</string>
 	</dict>
 </dict>
 </plist>
