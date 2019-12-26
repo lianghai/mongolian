@@ -1,4 +1,7 @@
-# OFL FONTLOG: sandbox font for the Mongolian script
+↖ [About Liang Hai](https://lianghai.github.io)<br/>
+↖ [Mongolian resources](../)
+
+# OFL FONTLOG: Sandbox font for the Mongolian script
 
 ## Glyphs
 
