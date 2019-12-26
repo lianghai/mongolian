@@ -1,5 +1,4 @@
-↖ [About Liang Hai](https://lianghai.github.io)<br/>
-↖ [Mongolian resources](../)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/national-standards)
 
 # A summary of China’s national standards related to the Mongolian script
 
@@ -19,7 +18,7 @@ Item count: 6
     - Information technology—Mongolian presentation forms character set and use rules of controlling characters
 
 - Hudum subset: encoding
-    - [**GB/T 25914-2010**](http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=62808E0BCB8246A287CFD9CF795ECF94) ([archived file](./gb-t-25914-2010.pdf))
+    - [**GB/T 25914-2010**](http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=62808E0BCB8246A287CFD9CF795ECF94) ([archived file ↓](./gb-t-25914-2010.pdf))
     - 信息技术 传统蒙古文名义字符、变形显现字符和控制字符使用规则
     - Information technology—Traditional Mongolian nominal characters, presentation characters and use rules of controlling characters
 
@@ -82,7 +81,7 @@ Item count: 6
 Item count: 4
 
 - Hudum: 7/8-bit legacy encoding
-    - [**GB/T 8045-1987**](http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=17866656CDFAEBC6533652D475BA323C) ([archived file](./gb-t-8045-1987.pdf))
+    - [**GB/T 8045-1987**](http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=17866656CDFAEBC6533652D475BA323C) ([archived file ↓](./gb-t-8045-1987.pdf))
     - 信息处理交换用蒙古文七位和八位编码图形字符集
     - Mongolian 7-bit and 8-bit coded graphic character sets for information processing interchange
 

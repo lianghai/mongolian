@@ -1,11 +1,10 @@
-↖ [About Liang Hai](https://lianghai.github.io)<br/>
-↖ [Mongolian resources](../)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/draft-utn)
 
 # Draft UTN
 
 This is the editor’s draft:
 
-- [**draft-utn.pages**](./draft-utn.pages) ↓
+- [**draft-utn.pages ↓**](./draft-utn.pages)
 
 Latest published draft:
 
