@@ -2,6 +2,8 @@
 
 # Keyboard layouts
 
+## A simple layout
+
 - Plain and `Shift`-ed keys:
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 |
@@ -17,3 +19,7 @@
 - NNBSP and FVS1/2/3: `Option` `Space` / `1` / `2` / `3`
 - Tooth (᠇) and nirugu (᠊): `'` and `"`
 - Comma (᠂), full stop (᠃), ellipsis (᠁), and colon (᠄): `,` and `.` and `;` and `:`
+
+Download:
+
+- [**macOS native (26 Dec 2019) ↓**](./releases/lianghai-mongolian-keyboard-layouts-macos-native-20191226.zip)
