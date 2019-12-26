@@ -3,6 +3,10 @@
 
 # Draft UTN
 
-This is the [editor](https://lianghai.github.io)’s draft.
+This is the editor’s draft:
 
-The latest published version: [L2/19-368](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf), _Draft technical note: Text representation and shaping specification of the Mongolian script_
+- [**draft-utn.pages**](./draft-utn.pages) ↓
+
+Latest published draft:
+
+- [**L2/19-368**](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf), Draft technical note: _Text representation and shaping specification of the Mongolian script_
