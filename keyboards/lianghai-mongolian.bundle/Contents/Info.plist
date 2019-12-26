@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.</string>
+	<string>org.sil.ukelele.keyboardlayout.lianghai-mongolian</string>
 	<key>CFBundleName</key>
-	<string></string>
+	<string>lianghai-mongolian</string>
 	<key>CFBundleVersion</key>
 	<string></string>
-	<key>KLInfo_Devanagari - QWERTY copy</key>
+	<key>KLInfo_Mongol Bichig</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>
-		<false/>
+		<true/>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout..devanagari-qwertycopy</string>
+		<string>org.sil.ukelele.keyboardlayout.lianghai-mongolian.mongolbichig</string>
 		<key>TISIntendedLanguage</key>
-		<string>hi</string>
+		<string>mn-Mong</string>
 	</dict>
 </dict>
 </plist>
