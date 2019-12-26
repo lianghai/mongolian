@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.mongolbichig</string>
+	<string>org.sil.ukelele.keyboardlayout.lianghai-mongolian-keyboards</string>
 	<key>CFBundleName</key>
-	<string>MongolBichig</string>
+	<string>lianghai-mongolian-keyboards</string>
 	<key>CFBundleVersion</key>
-	<string></string>
+	<string>1</string>
 	<key>KLInfo_Mongol Bichig</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>
-		<false/>
+		<true/>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout.mongolbichig.mongolbichig</string>
+		<string>org.sil.ukelele.keyboardlayout.lianghai-mongolian-keyboards.mongolbichig</string>
 		<key>TISIntendedLanguage</key>
 		<string>mn-Mong</string>
 	</dict>
