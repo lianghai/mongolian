@@ -2,7 +2,7 @@
 
 # Mongolian resources
 
-This is [Liang Hai](https://lianghai.github.io)’s growing list of public resources about the Mongolian script / ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ. They may help with the community efforts of improving the script’s (Unicode) text representation and (OpenType, etc.) shaping situation.
+This is [Liang Hai](https://lianghai.github.io)’s growing list of public resources for the Mongolian script / ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ. They may help with the community efforts of improving the script’s (Unicode) text representation and (OpenType, etc.) shaping situation.
 
 ## Documents
 
