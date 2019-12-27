@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ascender</key>
+	<integer>836</integer>
+	<key>capHeight</key>
+	<integer>714</integer>
+	<key>descender</key>
+	<integer>-264</integer>
+	<key>familyName</key>
+	<string>Written Units</string>
+	<key>openTypeHeadCreated</key>
+	<string>2019/12/27 16:44:46</string>
+	<key>postscriptBlueValues</key>
+	<array/>
+	<key>postscriptFontName</key>
+	<string>Written Units-Regular</string>
+	<key>postscriptOtherBlues</key>
+	<array/>
+	<key>styleName</key>
+	<string>Regular</string>
+	<key>unitsPerEm</key>
+	<integer>1000</integer>
+	<key>versionMajor</key>
+	<integer>1</integer>
+	<key>versionMinor</key>
+	<integer>0</integer>
+	<key>xHeight</key>
+	<integer>444</integer>
+</dict>
+</plist>
