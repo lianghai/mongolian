@@ -1,0 +1,182 @@
+# ---
+?a.isol.A = A.isol
+?a.isol.AA = A.init &\ A.fina
+?a.isol.Ah = Ah.isol
+?a.init.A = A.init
+?a.init.AA = A.init &\ A.medi
+?a.medi.A = A.medi
+?a.medi.AA = A.medi &\ A.medi
+?a.fina.A = A.fina
+# ---
+?e.isol.A = A.isol
+?e.isol.Ah = Ah.isol
+?e.init.A = A.init
+?e.medi.A = A.medi
+?e.fina.A = A.fina
+# ---
+?i.isol.I = I.isol
+?i.isol.AI = A.init &\ I.fina
+?i.init.I = I.init
+?i.init.AI = A.init &\ I.medi
+?i.medi.I = I.medi
+?i.medi.AI = A.medi &\ I.medi
+?i.medi.II = I.medi &\ I.medi
+?i.fina.I = I.fina
+# ---
+?o.isol.AO = A.init &\ O.fina
+?o.init.AU = A.init &\ U.medi
+?o.medi.U = U.medi
+?o.medi.AU = A.medi &\ U.medi
+?o.fina.U = U.fina
+?o.fina.O = O.fina
+# ---
+?u.isol.U = U.isol
+?u.isol.AO = A.init &\ O.fina
+?u.init.U = U.init
+?u.init.AU = A.init &\ U.medi
+?u.medi.U = U.medi
+?u.medi.AU = A.medi &\ U.medi
+?u.fina.U = U.fina
+?u.fina.O = O.fina
+# ---
+?oe.isol.AUe = A.init &\ Ue.fina
+?oe.init.AUI = A.init &\ U.medi &\ I.medi
+?oe.medi.U = U.medi
+?oe.medi.UI = U.medi &\ I.medi
+?oe.medi.AUI = A.medi &\ U.medi &\ I.medi
+?oe.fina.U = U.fina
+?oe.fina.O = O.fina
+?oe.fina.Ue = Ue.fina
+# ---
+?ue.isol.U = U.isol
+?ue.isol.AUe = A.init &\ Ue.fina
+?ue.isol.AU = A.init &\ U.fina
+?ue.init.U = U.init
+?ue.init.AUI = A.init &\ U.medi &\ I.medi
+?ue.medi.U = U.medi
+?ue.medi.UI = U.medi &\ I.medi
+?ue.medi.AUI = A.medi &\ U.medi &\ I.medi
+?ue.fina.U = U.fina
+?ue.fina.O = O.fina
+?ue.fina.Ue = Ue.fina
+# ---
+?e2.isol.AW = A.init &\ W.fina
+?e2.init.AW = A.init &\ W.medi
+?e2.medi.W = W.medi
+?e2.fina.W = W.fina
+# ---
+?n.init.N = N.init
+?n.medi.N = N.medi
+?n.medi.A = A.medi
+?n.fina.N = N.fina
+?n.fina.A = A.fina
+# ---
+?ng.medi.AG = A.medi &\ G.medi
+?ng.fina.AG = A.medi &\ G.fina
+# ---
+?b.init.B = B.init
+?b.medi.B = B.medi
+?b.fina.B = B.fina
+# ---
+?p.init.P = P.init
+?p.medi.P = P.medi
+?p.fina.P = P.fina
+# ---
+?h.init.G = G.init
+?h.init.H = H.init
+?h.medi.G = G.medi
+?h.medi.H = H.medi
+?h.fina.H = H.fina
+# ---
+?g.init.G = G.init
+?g.init.Gh = Gh.init
+?g.medi.G = G.medi
+?g.medi.H = H.medi
+?g.medi.Gh = Gh.medi
+?g.fina.G = G.fina
+?g.fina.H = H.fina
+?g.fina.Gh = Gh.fina
+# ---
+?m.init.M = M.init
+?m.medi.M = M.medi
+?m.fina.M = M.fina
+# ---
+?l.init.L = L.init
+?l.medi.L = L.medi
+?l.fina.L = L.fina
+# ---
+?s.init.S = S.init
+?s.medi.S = S.medi
+?s.fina.S = S.fina
+# ---
+?sh.init.Sh = Sh.init
+?sh.medi.Sh = Sh.medi
+?sh.fina.Sh = Sh.fina
+# ---
+?t.init.T = T.init
+?t.medi.T = T.medi
+?t.medi.D = D.medi
+?t.fina.T = T.fina
+# ---
+?d.init.D = D.init
+?d.init.T = T.init
+?d.medi.D = D.medi
+?d.medi.Dh = Dh.medi
+?d.fina.D = D.fina
+?d.fina.Dh = Dh.fina
+# ---
+?ch.init.Ch = Ch.init
+?ch.medi.Ch = Ch.medi
+?ch.fina.Ch = Ch.fina
+# ---
+?j.isol.I = I.isol
+?j.init.I = I.init
+?j.medi.J = J.medi
+?j.fina.J = J.fina
+# ---
+?y.init.Y = Y.init
+?y.init.I = I.init
+?y.medi.Y = Y.medi
+?y.medi.I = I.medi
+?y.fina.I = I.fina
+# ---
+?r.init.R = R.init
+?r.medi.R = R.medi
+?r.fina.R = R.fina
+# ---
+?w.init.W = W.init
+?w.medi.W = W.medi
+?w.fina.W = W.fina
+?w.fina.U = U.fina
+# ---
+?f.init.F = F.init
+?f.medi.F = F.medi
+?f.fina.F = F.fina
+# ---
+?k.init.K = K.init
+?k.medi.K = K.medi
+?k.fina.K = K.fina
+# ---
+?c.init.C = C.init
+?c.medi.C = C.medi
+?c.fina.C = C.fina
+# ---
+?z.init.Z = Z.init
+?z.medi.Z = Z.medi
+?z.fina.Z = Z.fina
+# ---
+?h2.init.H2 = H2.init
+?h2.medi.H2 = H2.medi
+?h2.fina.H2 = H2.fina
+# ---
+?rh.init.Rh = Rh.init
+?rh.medi.Rh = Rh.medi
+?rh.fina.Rh = Rh.fina
+# ---
+?lh.init.LH2 = L.init &\ H2.medi
+?lh.medi.LH2 = L.medi &\ H2.medi
+# ---
+?zr.init.Zr = Zr.init
+# ---
+?cr.init.Cr = Cr.init
+# ---

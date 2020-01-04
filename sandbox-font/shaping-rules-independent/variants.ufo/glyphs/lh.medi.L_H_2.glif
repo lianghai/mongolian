@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lh.medi.LH2" format="2">
+  <advance width="805"/>
+  <outline>
+    <component base="L.medi"/>
+    <component base="H2.medi" xOffset="284"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.8,1,0.4,1</string>
+    </dict>
+  </lib>
+</glyph>
