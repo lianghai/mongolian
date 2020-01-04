@@ -142,8 +142,6 @@
     </array>
     <key>com.schriftgestaltung.useNiceNames</key>
     <false/>
-    <key>com.typemytype.robofont.segmentType</key>
-    <string>curve</string>
     <key>public.glyphOrder</key>
     <array>
       <string>.notdef</string>

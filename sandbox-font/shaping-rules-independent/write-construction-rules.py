@@ -11,18 +11,18 @@ JOINEDNESS_TO_POSITION = OrderedDict(
     (v, k) for k, v in POSITION_TO_JOINEDNESS.items()
 )
 
-with open("../draft-utn/data/phonetic-letters.txt") as f:
+with open("../../draft-utn/data/phonetic-letters.txt") as f:
     CODE_POINT_TO_LETTER_GLYPH_NAME = OrderedDict(
         line.split(", ")[1:] for line in f.read().splitlines()
     )
 
-with open("../draft-utn/data/written-units.txt") as f:
+with open("../../draft-utn/data/written-units.txt") as f:
     WRITTEN_UNIT_NAME_TO_WRITTEN_UNIT_GLYPH_NAME = OrderedDict(
         line.split(", ") for line in f.read().splitlines()
     )
 
 VARIANT_DATA = OrderedDict()
-with open("../draft-utn/data/Mongolian_Written_Forms.txt") as f:
+with open("../../draft-utn/data/Mongolian_Written_Forms.txt") as f:
     for line in f.read().splitlines():
         content, _, comment = line.partition("#")
         fields = [field.strip() for field in content.split(" ; ")]
@@ -42,7 +42,7 @@ with open("../draft-utn/data/Mongolian_Written_Forms.txt") as f:
                     for written_unit_name in variant_field.split()
                 ])
 
-with open("shaping-rules-independent/variants.glyphConstruction", "w") as f:
+with open("./variants.glyphConstruction", "w") as f:
     f.write("# ---\n")
     for letter, positions in VARIANT_DATA.items():
         # f.write(f"?{letter} = .notdef\n")
