@@ -1,0 +1,18 @@
+# Mongolian_Syllabic_Category = Vowel_Masculine
+
+1820       ; Vowel_Masculine #      MONGOLIAN LETTER A
+1823..1824 ; Vowel_Masculine #  [2] MONGOLIAN LETTER O..MONGOLIAN LETTER U
+
+# Mongolian_Syllabic_Category = Vowel_Feminine
+
+1821       ; Vowel_Feminine  #      MONGOLIAN LETTER E
+1825..1827 ; Vowel_Feminine  #  [3] MONGOLIAN LETTER OE..MONGOLIAN LETTER EE
+
+# Mongolian_Syllabic_Category = Vowel_Neuter
+
+1822       ; Vowel_Neuter    #      MONGOLIAN LETTER I
+
+# Mongolian_Syllabic_Category = Consonant
+
+1828..1839 ; Consonant       # [18] MONGOLIAN LETTER NA..MONGOLIAN LETTER FA
+183B..1842 ; Consonant       #  [9] MONGOLIAN LETTER KHA..MONGOLIAN LETTER CHI

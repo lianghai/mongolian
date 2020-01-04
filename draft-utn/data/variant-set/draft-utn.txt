@@ -1,0 +1,92 @@
+a: .A   .A   .A   .A
+a: .AA  .AA  .AA  .
+a: .Á   .    .    .
+
+e: .A   .A   .A   .A
+e: .Á   .    .    .
+
+i: .I   .I   .I   .I
+i: .AI  .AI  .AI  .
+i: .    .    .II  .
+
+o: .    .    .U   .U
+o: .    .    .    .O
+o: .AO  .AU  .AU  .
+
+u: .U   .U   .U   .U
+u: .    .    .    .O
+u: .AO  .AU  .AU  .
+
+ö: .    .    .U   .U
+ö: .    .    .    .O
+ö: .    .    .UI  .Ü
+ö: .AÜ  .AUI .AUI .
+
+ü: .U   .U   .U   .U
+ü: .    .    .    .O
+ü: .    .    .UI  .Ü
+ü: .AÜ  .AUI .AUI .
+ü: .AU  .    .    .
+
+é: .    .    .W   .W
+é: .AW  .AW  .    .
+
+n: .    .N   .N   .N
+n: .    .    .A   .A
+
+ŋ: .    .    .AG  .AG
+
+b: .    .B   .B   .B
+
+p: .    .P   .P   .P
+
+h: .    .G   .G   .
+h: .    .H   .H   .H
+
+g: .    .G   .G   .G
+g: .    .    .H   .H
+g: .    .Ğ   .Ğ   .Ğ
+
+m: .    .M   .M   .M
+
+l: .    .L   .L   .L
+
+s: .    .S   .S   .S
+
+ś: .    .Ś   .Ś   .Ś
+
+t: .    .T   .T   .T
+t: .    .    .D   .
+
+d: .    .D   .D   .D
+d: .    .T   .Đ   .Đ
+
+ć: .    .Ć   .Ć   .Ć
+
+j: .I   .I   .J   .J
+
+y: .    .Y   .Y   .
+y: .    .I   .I   .I
+
+r: .    .R   .R   .R
+
+w: .    .W   .W   .W
+w: .    .    .    .U
+
+f: .    .F   .F   .F
+
+k: .    .K   .K   .K
+
+c: .    .C   .C   .C
+
+z: .    .Z   .Z   .Z
+
+ħ: .    .Ħ   .Ħ   .Ħ
+
+ř: .    .Ř   .Ř   .Ř
+
+ł: .    .LĦ  .LĦ  .
+
+ž: .    .Ž   .    .
+
+č: .    .Č   .    .

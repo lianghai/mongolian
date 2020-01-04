@@ -15,7 +15,7 @@
 | ᡁ<br/>ᠽ | <br/>ᠱ | ᡂ<br/>ᠼ | <br/>ᠸ | <br/>ᠪ᠊ | ᠊ᠩ<br/>ᠨ | <br/>ᠮ |
 | **Z** | **X** | **C** | **V** | **B** | **N** | **M** |
 
-- Chachlag (᠎ᠠ) forms of ᠠ and ᠡ: `Option` `ᠠ` and `Option` `ᠡ` (i.e., `Option` `A`, and `Option` `E` or `Option` `Shift` `A`)
+- Chachlag (᠎ᠠ) forms of ᠠ and ᠡ: `Option` `ᠠ` and `Option` `ᠡ`
 - NNBSP and FVS1/2/3: `Option` `Space` / `1` / `2` / `3`
 - Tooth (᠇) and nirugu (᠊): `'` and `"`
 - Comma (᠂), full stop (᠃), ellipsis (᠁), and colon (᠄): `,` and `.` and `;` and `:`
