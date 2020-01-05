@@ -22,7 +22,7 @@ with open("../../draft-utn/data/written-units.txt") as f:
     )
 
 VARIANT_DATA = OrderedDict()
-with open("../../draft-utn/data/Mongolian_Written_Forms.txt") as f:
+with open("../../draft-utn/properties/Mongolian_Written_Forms.txt") as f:
     for line in f.read().splitlines():
         content, _, comment = line.partition("#")
         fields = [field.strip() for field in content.split(" ; ")]
