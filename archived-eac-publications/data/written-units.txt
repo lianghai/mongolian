@@ -1,0 +1,36 @@
+A, A
+Á, Ah
+N, N
+W, W
+H, H
+Ğ, Gh
+U, U
+U̇, Uh  # additional
+O, O
+Ü, Ue
+I, I
+İ, Ih  # additional
+Y, Y
+G, G
+G̈, Gg  # additional
+K, K
+Ḱ, K2  # additional
+D, D
+M, M
+S, S
+Ś, Sh
+B, B
+P, P
+F, F
+Ć, Ch
+J, J
+C, C
+Z, Z
+R, R
+T, T
+Đ, Dh
+L, L
+Ř, Rh
+Ħ, H2
+Ž, Zr
+Č, Cr

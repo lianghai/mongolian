@@ -1,169 +1,174 @@
-a.isol: .AA<3dc .A<1 .Á<M2c
-a.init: .AA<2dc .A<1c
-a.medi: .A<dc .AA<1
-a.fina: .A<2dc .Á<1c
+a.isol: AA <(3)>, A <1>, Á <context|post-mvs|2>
+a.init: AA <(2)>, A <context|1>
+a.medi: A, AA <1>
+a.fina: A <(2)>, Á <context|1>
 
-e.isol: .A<2dc .Á<M1c
-e.init: .A<dc .AA<1
-e.medi: .A<dc
-e.fina: .A<2dc .Á<1c
+e.isol: A <(2)>, Á <context|post-mvs|1>
+e.init: A, AA <1>
+e.medi: A
+e.fina: A <(2)>, Á <context|1>
 
-i.isol: .AI<3dc .I<1c .Í<2
-i.init: .AI<2dc .I<1c
-i.medi: .I<3dc .AI<1 .II<2c
-i.fina: .I<dc
+i.isol: AI <(3)>, I <context|1>, İ <2>
+i.init: AI <(2)>, I <context|1>
+i.medi: I <(3)>, AI <1>, II <context|2>
+i.fina: I
 
-o.isol: .AO<dc
-o.init: .AU<dc
-o.medi: .U<dc .AU<1
-o.fina: .U<2dc .O<1c
+o.isol: AO
+o.init: AU
+o.medi: U, AU <1>
+o.fina: U <(2)>, O <context|1>
 
-u.isol: .AO<3dc .U<1c .Ú<2
-u.init: .AU<2dc .U<1c
-u.medi: .U<dc .AU<1
-u.fina: .U<2dc .O<1c
+u.isol: AO <(3)>, U <context|1>, U̇ <2>
+u.init: AU <(2)>, U <context|1>
+u.medi: U, AU <1>
+u.fina: U <(2)>, O <context|1>
 
-ö.isol: .AÜ<dc .AU<1
-ö.init: .AUI<dc
-ö.medi: .U<3dc .UI<1c .AUI<2
-ö.fina: .U<3dc .Ü<1c .O<2c
+ö.isol: AÜ, AU <1>
+ö.init: AUI
+ö.medi: U <(3)>, UI <context|1>, AUI <2>
+ö.fina: U <(3)>, Ü <context|1>, O <context|2>
 
-ü.isol: .AÜ<dc .AU<1 .U<2c .Ú<3
-ü.init: .AUI<2dc .U<1c
-ü.medi: .U<3dc .UI<1c .AUI<2
-ü.fina: .U<3dc .Ü<1c .O<2c
+ü.isol: AÜ, AU <1>, U <context|2>, U̇ <3>
+ü.init: AUI <(2)>, U <context|1>
+ü.medi: U <(3)>, UI <context|1>, AUI <2>
+ü.fina: U <(3)>, Ü <context|1>, O <context|2>
 
-é.isol: .AW<dc
-é.init: .AW<dc
-é.medi: .W<dc
-é.fina: .W<dc
+é.isol: AW
+é.init: AW
+é.medi: W
+é.fina: W
 
-n.isol: .N.init<dc .A.init<1
-n.init: .N<dc .A<1
-n.medi: .A<2dc .N<1c
-n.fina: .A<m2dc .N<m1
+n.isol: N.init, A.init <1>
+n.init: N, A <1>
+n.medi: A <(2)>, N <context|1>
+n.fina: A <(mvs|2)>, N <mvs|1>  # ?
 
-ŋ.isol: .AG.medi<dc
-ŋ.init: .AG.medi<dc
-ŋ.medi: .AG<dc
-ŋ.fina: .AG<dc
+ŋ.isol: AG.medi
+ŋ.init: AG.medi
+ŋ.medi: AG
+ŋ.fina: AG
 
-b.isol: .B.init<dc
-b.init: .B<dc
-b.medi: .B<dc
-b.fina: .B<dc
+b.isol: B.init
+b.init: B
+b.medi: B
+b.fina: B
 
-p.isol: .P.init<dc
-p.init: .P<dc
-p.medi: .P<dc
-p.fina: .P<dc
+p.isol: P.init
+p.init: P
+p.medi: P
+p.fina: P
 
-h.isol: .H.init<dc .Ğ.init<1 .G.init<2 .Ǵ.init<4
-h.init: .H<3dc .Ğ<1 .G<2c .Ǵ<4
-h.medi: .H<3dc .Ğ<1 .G<2c .Ǵ<4
-h.fina: .H<mdc .Ğ<m1
+h.isol: H.init, Ğ.init <1>, G.init <2>, G̈.init <4>
+h.init: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
+h.medi: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
+h.fina: H <(mvs)>, Ğ <mvs|1>  # ?
 
-g.isol: .Ğ.init<gc .H.init<1 .G.init<2 .Ǵ.init<4
-g.init: .Ğ<3dc .H<1 .G<2c .Ǵ<4
-g.medi: .H<3dc .Ğ<1c .G<2c .Ǵ<4
-g.fina: .H<m1dc .G<2c .Ğ<m3
+g.isol: Ğ.init, H.init <1>, G.init <2>, G̈.init <4>
+g.init: Ğ <(3)>, H <1>, G <context|2>, G̈ <4>
+g.medi: H <(3)>, Ğ <context|1>, G <context|2>, G̈ <4>
+g.fina: H <(mvs|1)>, G <context|2>, Ğ <mvs|3>  # ?
 
-m.isol: .M.init<dc
-m.init: .M<dc
-m.medi: .M<dc
-m.fina: .M<mdc
+m.isol: M.init
+m.init: M
+m.medi: M
+m.fina: M <(mvs)>
 
-l.isol: .L.init<dc
-l.init: .L<dc
-l.medi: .L<dc
-l.fina: .L<mdc
+l.isol: L.init
+l.init: L
+l.medi: L
+l.fina: L <mvs>
 
-s.isol: .S.init<dc
-s.init: .S<dc
-s.medi: .S<dc
-s.fina: .S<mdc
+s.isol: S.init
+s.init: S
+s.medi: S
+s.fina: S <(mvs)>
 
-ś.isol: .Ś.init<dc .S.init<1
-ś.init: .Ś<2dc .S<1c
-ś.medi: .Ś<2dc .S<1c
-ś.fina: .Ś<mdc
+ś.isol: Ś.init, S.init <1>
+ś.init: Ś <(2)>, S <context|1>
+ś.medi: Ś <(2)>, S <context|1>
+ś.fina: Ś <(mvs)>
 
-t.isol: .T.init<dc
-t.init: .T<dc
-t.medi: .D<dc .T<1
-t.fina: .T<dc
+t.isol: T.init
+t.init: T
+t.medi: D, T <1>
+t.fina: T
 
-d.isol: .D.init<dc .T.init<1
-d.init: .T<dc .D<1c
-d.medi: .Đ<2dc .D<1c
-d.fina: .Đ<dc .D<1
+d.isol: D.init, T.init <1>
+d.init: T, D <context|1>
+d.medi: Đ <(2)>, D <context|1>
+d.fina: Đ, D <1>
 
-ć.isol: .Ć.init<dc
-ć.init: .Ć<dc
-ć.medi: .Ć<dc
-ć.fina: .Ć<dc
+ć.isol: Ć.init
+ć.init: Ć
+ć.medi: Ć
+ć.fina: Ć
 
-j.isol: .I.init<dc .I<mc
-j.init: .I<dc
-j.medi: .J<dc
-j.fina: .J<dc .I<mc
+j.isol: I.init, I <context|mvs>
+j.init: I
+j.medi: J
+j.fina: J, I <context|mvs>
 
-y.isol: .Y.init<dc .I.init<1
-y.init: .Y<2dc .I<1c
-y.medi: .Y<3dc .I<1c .II<2
-y.fina: .I<mdc
+y.isol: Y.init, I.init <1>
+y.init: Y <(2)>, I <context|1>
+y.medi: Y <(3)>, I <context|1>, II <2>
+y.fina: I <(mvs)>
 
-r.isol: .R.init<dc
-r.init: .R<dc
-r.medi: .R<dc
-r.fina: .R<mdc
+r.isol: R.init
+r.init: R
+r.medi: R
+r.fina: R <(mvs)>
 
-w.isol: .W.init<dc
-w.init: .W<dc
-w.medi: .W<dc .U<1
-w.fina: .W<dc .U<m1
+w.isol: W.init
+w.init: W
+w.medi: W, U <1>
+w.fina: W, U <mvs|1>
 
-f.isol: .F.init<dc
-f.init: .F<dc
-f.medi: .F<dc
-f.fina: .F<dc
+f.isol: F.init
+f.init: F
+f.medi: F
+f.fina: F
 
-k.isol: .K.init<dc
-k.init: .K<dc
-k.medi: .K<dc
-k.fina: .K<dc
+ḱ.isol: Ḱ.init
+ḱ.init: Ḱ
+ḱ.medi: Ḱ
+ḱ.fina: Ḱ
 
-c.isol: .C.init<dc
-c.init: .C<dc
-c.medi: .C<dc
-c.fina: .C<dc
+k.isol: K.init
+k.init: K
+k.medi: K
+k.fina: K
 
-z.isol: .Z.init<dc
-z.init: .Z<dc
-z.medi: .Z<dc
-z.fina: .Z<dc
+c.isol: C.init
+c.init: C
+c.medi: C
+c.fina: C
 
-ħ.isol: .Ħ.init<dc
-ħ.init: .Ħ<dc
-ħ.medi: .Ħ<dc
-ħ.fina: .Ħ<dc
+z.isol: Z.init
+z.init: Z
+z.medi: Z
+z.fina: Z
 
-ř.isol: .Ř.init<dc
-ř.init: .Ř<dc
-ř.medi: .Ř<dc
-ř.fina: .Ř<dc
+ħ.isol: Ħ.init
+ħ.init: Ħ
+ħ.medi: Ħ
+ħ.fina: Ħ
 
-ł.isol: .LĦ.init<dc
-ł.init: .LĦ<dc
-ł.medi: .LĦ<dc
-ł.fina: .LĦ.medi<dc
+ř.isol: Ř.init
+ř.init: Ř
+ř.medi: Ř
+ř.fina: Ř
 
-ž.isol: .Ž.init<dc
-ž.init: .Ž<dc
-ž.medi: .Ž.init<dc
-ž.fina: .Ž.init<dc
+ł.isol: LĦ.init
+ł.init: LĦ
+ł.medi: LĦ
+ł.fina: LĦ.medi
 
-č.isol: .Č.init<dc
-č.init: .Č<dc
-č.medi: .Č.init<dc
-č.fina: .Č.init<dc
+ž.isol: Ž.init
+ž.init: Ž
+ž.medi: Ž.init
+ž.fina: Ž.init
+
+č.isol: Č.init
+č.init: Č
+č.medi: Č.init
+č.fina: Č.init
