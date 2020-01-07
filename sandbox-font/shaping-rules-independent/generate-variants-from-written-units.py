@@ -67,7 +67,7 @@ with open("./variants.glyphConstruction", "w") as f:
         f.write("# ---\n")
 
 RULES_PATH = "variants.glyphConstruction"
-MARK_COLOR = 0.8, 1, 0.4, 1
+MARK_COLOR = 0.67, 0.95, 0.38, 1
 FONT_INPUT_PATH = "../encoding-independent/written-units.ufo"
 FONT_OUTPUT_PATH = "variants.ufo"
 
@@ -92,5 +92,10 @@ for rule in glyphConstruction.ParseGlyphConstructionListFromString(
     else:
         glyph.markColor = MARK_COLOR
     print(glyph.name)
+
+glyphs_app_glyphOrder = font.lib["com.schriftgestaltung.glyphOrder"]
+for glyph_name in font.glyphOrder:
+    if glyph_name not in glyphs_app_glyphOrder:
+        glyphs_app_glyphOrder.append(glyph_name)
 
 font.save(FONT_OUTPUT_PATH)

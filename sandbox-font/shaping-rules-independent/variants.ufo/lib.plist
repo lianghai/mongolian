@@ -39,6 +39,10 @@
       <string>U.medi</string>
       <string>U.fina</string>
       <string>U.isol</string>
+      <string>Uh.init</string>
+      <string>Uh.medi</string>
+      <string>Uh.fina</string>
+      <string>Uh.isol</string>
       <string>O.init</string>
       <string>O.medi</string>
       <string>O.fina</string>
@@ -51,6 +55,10 @@
       <string>I.medi</string>
       <string>I.fina</string>
       <string>I.isol</string>
+      <string>Ih.init</string>
+      <string>Ih.medi</string>
+      <string>Ih.fina</string>
+      <string>Ih.isol</string>
       <string>Y.init</string>
       <string>Y.medi</string>
       <string>Y.fina</string>
@@ -59,10 +67,18 @@
       <string>G.medi</string>
       <string>G.fina</string>
       <string>G.isol</string>
+      <string>Gg.init</string>
+      <string>Gg.medi</string>
+      <string>Gg.fina</string>
+      <string>Gg.isol</string>
       <string>K.init</string>
       <string>K.medi</string>
       <string>K.fina</string>
       <string>K.isol</string>
+      <string>K2.init</string>
+      <string>K2.medi</string>
+      <string>K2.fina</string>
+      <string>K2.isol</string>
       <string>D.init</string>
       <string>D.medi</string>
       <string>D.fina</string>
@@ -139,6 +155,153 @@
       <string>Cr.medi</string>
       <string>Cr.fina</string>
       <string>Cr.isol</string>
+      <string>a.isol.A</string>
+      <string>a.isol.AA</string>
+      <string>a.isol.Ah</string>
+      <string>a.init.A</string>
+      <string>a.init.AA</string>
+      <string>a.medi.A</string>
+      <string>a.medi.AA</string>
+      <string>a.fina.A</string>
+      <string>e.isol.A</string>
+      <string>e.isol.Ah</string>
+      <string>e.init.A</string>
+      <string>e.medi.A</string>
+      <string>e.fina.A</string>
+      <string>i.isol.I</string>
+      <string>i.isol.AI</string>
+      <string>i.init.I</string>
+      <string>i.init.AI</string>
+      <string>i.medi.I</string>
+      <string>i.medi.AI</string>
+      <string>i.medi.II</string>
+      <string>i.fina.I</string>
+      <string>o.isol.AO</string>
+      <string>o.init.AU</string>
+      <string>o.medi.U</string>
+      <string>o.medi.AU</string>
+      <string>o.fina.U</string>
+      <string>o.fina.O</string>
+      <string>u.isol.U</string>
+      <string>u.isol.AO</string>
+      <string>u.init.U</string>
+      <string>u.init.AU</string>
+      <string>u.medi.U</string>
+      <string>u.medi.AU</string>
+      <string>u.fina.U</string>
+      <string>u.fina.O</string>
+      <string>oe.isol.AUe</string>
+      <string>oe.init.AUI</string>
+      <string>oe.medi.U</string>
+      <string>oe.medi.UI</string>
+      <string>oe.medi.AUI</string>
+      <string>oe.fina.U</string>
+      <string>oe.fina.O</string>
+      <string>oe.fina.Ue</string>
+      <string>ue.isol.U</string>
+      <string>ue.isol.AUe</string>
+      <string>ue.isol.AU</string>
+      <string>ue.init.U</string>
+      <string>ue.init.AUI</string>
+      <string>ue.medi.U</string>
+      <string>ue.medi.UI</string>
+      <string>ue.medi.AUI</string>
+      <string>ue.fina.U</string>
+      <string>ue.fina.O</string>
+      <string>ue.fina.Ue</string>
+      <string>e2.isol.AW</string>
+      <string>e2.init.AW</string>
+      <string>e2.medi.W</string>
+      <string>e2.fina.W</string>
+      <string>n.init.N</string>
+      <string>n.medi.N</string>
+      <string>n.medi.A</string>
+      <string>n.fina.N</string>
+      <string>n.fina.A</string>
+      <string>ng.medi.AG</string>
+      <string>ng.fina.AG</string>
+      <string>b.init.B</string>
+      <string>b.medi.B</string>
+      <string>b.fina.B</string>
+      <string>p.init.P</string>
+      <string>p.medi.P</string>
+      <string>p.fina.P</string>
+      <string>h.init.G</string>
+      <string>h.init.H</string>
+      <string>h.medi.G</string>
+      <string>h.medi.H</string>
+      <string>h.fina.H</string>
+      <string>g.init.G</string>
+      <string>g.init.Gh</string>
+      <string>g.medi.G</string>
+      <string>g.medi.H</string>
+      <string>g.medi.Gh</string>
+      <string>g.fina.G</string>
+      <string>g.fina.H</string>
+      <string>g.fina.Gh</string>
+      <string>m.init.M</string>
+      <string>m.medi.M</string>
+      <string>m.fina.M</string>
+      <string>l.init.L</string>
+      <string>l.medi.L</string>
+      <string>l.fina.L</string>
+      <string>s.init.S</string>
+      <string>s.medi.S</string>
+      <string>s.fina.S</string>
+      <string>sh.init.Sh</string>
+      <string>sh.medi.Sh</string>
+      <string>sh.fina.Sh</string>
+      <string>t.init.T</string>
+      <string>t.medi.T</string>
+      <string>t.medi.D</string>
+      <string>t.fina.T</string>
+      <string>d.init.D</string>
+      <string>d.init.T</string>
+      <string>d.medi.D</string>
+      <string>d.medi.Dh</string>
+      <string>d.fina.D</string>
+      <string>d.fina.Dh</string>
+      <string>ch.init.Ch</string>
+      <string>ch.medi.Ch</string>
+      <string>ch.fina.Ch</string>
+      <string>j.isol.I</string>
+      <string>j.init.I</string>
+      <string>j.medi.J</string>
+      <string>j.fina.J</string>
+      <string>y.init.Y</string>
+      <string>y.init.I</string>
+      <string>y.medi.Y</string>
+      <string>y.medi.I</string>
+      <string>y.fina.I</string>
+      <string>r.init.R</string>
+      <string>r.medi.R</string>
+      <string>r.fina.R</string>
+      <string>w.init.W</string>
+      <string>w.medi.W</string>
+      <string>w.fina.W</string>
+      <string>w.fina.U</string>
+      <string>f.init.F</string>
+      <string>f.medi.F</string>
+      <string>f.fina.F</string>
+      <string>k.init.K</string>
+      <string>k.medi.K</string>
+      <string>k.fina.K</string>
+      <string>c.init.C</string>
+      <string>c.medi.C</string>
+      <string>c.fina.C</string>
+      <string>z.init.Z</string>
+      <string>z.medi.Z</string>
+      <string>z.fina.Z</string>
+      <string>h2.init.H2</string>
+      <string>h2.medi.H2</string>
+      <string>h2.fina.H2</string>
+      <string>rh.init.Rh</string>
+      <string>rh.medi.Rh</string>
+      <string>rh.fina.Rh</string>
+      <string>lh.init.LH2</string>
+      <string>lh.medi.LH2</string>
+      <string>zr.init.Zr</string>
+      <string>cr.init.Cr</string>
     </array>
     <key>com.schriftgestaltung.useNiceNames</key>
     <false/>
@@ -151,6 +314,7 @@
       <string>A.medi</string>
       <string>A.fina</string>
       <string>A.isol</string>
+      <string>Ah.fina</string>
       <string>Ah.isol</string>
       <string>N.init</string>
       <string>N.medi</string>
@@ -168,20 +332,27 @@
       <string>U.medi</string>
       <string>U.fina</string>
       <string>U.isol</string>
+      <string>Uh.isol</string>
       <string>O.fina</string>
       <string>Ue.fina</string>
       <string>I.init</string>
       <string>I.medi</string>
       <string>I.fina</string>
       <string>I.isol</string>
+      <string>Ih.isol</string>
       <string>Y.init</string>
       <string>Y.medi</string>
       <string>G.init</string>
       <string>G.medi</string>
       <string>G.fina</string>
+      <string>Gg.init</string>
+      <string>Gg.medi</string>
       <string>K.init</string>
       <string>K.medi</string>
       <string>K.fina</string>
+      <string>K2.init</string>
+      <string>K2.medi</string>
+      <string>K2.fina</string>
       <string>D.init</string>
       <string>D.medi</string>
       <string>D.fina</string>
@@ -381,52 +552,5 @@
       <string>zr.init.Zr</string>
       <string>cr.init.Cr</string>
     </array>
-    <key>public.postscriptNames</key>
-    <dict>
-      <key>Ah.isol</key>
-      <string>a.fina.v1</string>
-      <key>Ch.fina</key>
-      <string>uni1834.fina</string>
-      <key>Ch.init</key>
-      <string>uni1834.init</string>
-      <key>Ch.medi</key>
-      <string>uni1834.medi</string>
-      <key>Cr.init</key>
-      <string>uni1842.init</string>
-      <key>Dh.fina</key>
-      <string>d.fina</string>
-      <key>Dh.medi</key>
-      <string>d.medi</string>
-      <key>Gh.fina</key>
-      <string>h.fina.v1</string>
-      <key>Gh.init</key>
-      <string>g.init</string>
-      <key>Gh.medi</key>
-      <string>g.medi</string>
-      <key>H2.fina</key>
-      <string>uni183E.fina</string>
-      <key>H2.init</key>
-      <string>uni183E.init</string>
-      <key>H2.medi</key>
-      <string>uni183E.medi</string>
-      <key>Rh.fina</key>
-      <string>uni183F.fina</string>
-      <key>Rh.init</key>
-      <string>uni183F.init</string>
-      <key>Rh.medi</key>
-      <string>uni183F.medi</string>
-      <key>Sh.fina</key>
-      <string>uni1831.fina</string>
-      <key>Sh.init</key>
-      <string>uni1831.init</string>
-      <key>Sh.medi</key>
-      <string>uni1831.medi</string>
-      <key>Ue.fina</key>
-      <string>oe.fina.v1</string>
-      <key>Zr.init</key>
-      <string>uni1841.init</string>
-      <key>nirugu</key>
-      <string>uni180A</string>
-    </dict>
   </dict>
 </plist>

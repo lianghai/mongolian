@@ -1,5 +1,5 @@
 {
-.appVersion = "1282";
+.appVersion = "1283";
 customParameters = (
 {
 name = glyphOrder;
@@ -150,8 +150,7 @@ Zr.isol,
 Cr.init,
 Cr.medi,
 Cr.fina,
-Cr.isol,
-_dot
+Cr.isol
 );
 }
 );
@@ -170,8 +169,9 @@ xHeight = 444;
 );
 glyphs = (
 {
+color = 10;
 glyphname = .notdef;
-lastChange = "2019-12-27 15:06:15 +0000";
+lastChange = "2020-01-07 14:47:35 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -517,9 +517,9 @@ width = 824;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = Ah.fina;
-lastChange = "2020-01-06 03:41:09 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -1441,9 +1441,9 @@ width = 680;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = Uh.isol;
-lastChange = "2020-01-06 03:58:24 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -1763,9 +1763,9 @@ width = 548;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = Ih.isol;
-lastChange = "2020-01-06 03:56:22 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2017,9 +2017,9 @@ width = 668;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = Gg.init;
-lastChange = "2020-01-06 03:55:23 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2082,9 +2082,9 @@ width = 428;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = Gg.medi;
-lastChange = "2020-01-06 03:55:55 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2294,9 +2294,9 @@ width = 620;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = K2.init;
-lastChange = "2020-01-06 03:33:24 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2336,9 +2336,9 @@ width = 429;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = K2.medi;
-lastChange = "2020-01-06 03:44:41 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2378,9 +2378,9 @@ width = 384;
 );
 },
 {
-color = 4;
+color = 3;
 glyphname = K2.fina;
-lastChange = "2020-01-06 03:33:24 +0000";
+lastChange = "2020-01-07 14:47:21 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";

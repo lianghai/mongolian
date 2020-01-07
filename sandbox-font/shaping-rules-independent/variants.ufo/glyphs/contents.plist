@@ -12,6 +12,8 @@
     <string>A_.isol.glif</string>
     <key>A.medi</key>
     <string>A_.medi.glif</string>
+    <key>Ah.fina</key>
+    <string>A_h.fina.glif</string>
     <key>Ah.isol</key>
     <string>A_h.isol.glif</string>
     <key>B.fina</key>
@@ -56,6 +58,10 @@
     <string>G_.init.glif</string>
     <key>G.medi</key>
     <string>G_.medi.glif</string>
+    <key>Gg.init</key>
+    <string>G_g.init.glif</string>
+    <key>Gg.medi</key>
+    <string>G_g.medi.glif</string>
     <key>Gh.fina</key>
     <string>G_h.fina.glif</string>
     <key>Gh.init</key>
@@ -82,6 +88,8 @@
     <string>I_.isol.glif</string>
     <key>I.medi</key>
     <string>I_.medi.glif</string>
+    <key>Ih.isol</key>
+    <string>I_h.isol.glif</string>
     <key>J.fina</key>
     <string>J_.fina.glif</string>
     <key>J.medi</key>
@@ -92,6 +100,12 @@
     <string>K_.init.glif</string>
     <key>K.medi</key>
     <string>K_.medi.glif</string>
+    <key>K2.fina</key>
+    <string>K_2.fina.glif</string>
+    <key>K2.init</key>
+    <string>K_2.init.glif</string>
+    <key>K2.medi</key>
+    <string>K_2.medi.glif</string>
     <key>L.fina</key>
     <string>L_.fina.glif</string>
     <key>L.init</key>
@@ -158,6 +172,8 @@
     <string>U_.medi.glif</string>
     <key>Ue.fina</key>
     <string>U_e.fina.glif</string>
+    <key>Uh.isol</key>
+    <string>U_h.isol.glif</string>
     <key>W.fina</key>
     <string>W_.fina.glif</string>
     <key>W.init</key>
