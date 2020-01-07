@@ -41,7 +41,7 @@ u.fina: U <(2)>, O <context|1>
 n.isol: N.init, A.init <1>
 n.init: N, A <1>
 n.medi: A <(2)>, N <context|1>
-n.fina: A <(mvs|2)>, N <mvs|1>  # ?
+n.fina: A <(pre-mvs|2)>, N <pre-mvs|1>  # ?
 
 ŋ.isol: AG.medi
 ŋ.init: AG.medi
@@ -61,32 +61,32 @@ p.fina: P
 h.isol: H.init, Ğ.init <1>, G.init <2>, G̈.init <4>
 h.init: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
 h.medi: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
-h.fina: H <(mvs)>, Ğ <mvs|1>  # ?
+h.fina: H <(pre-mvs)>, Ğ <pre-mvs|1>  # ?
 
 g.isol: Ğ.init, H.init <1>, G.init <2>, G̈.init <4>
 g.init: Ğ <(3)>, H <1>, G <context|2>, G̈ <4>
 g.medi: H <(3)>, Ğ <context|1>, G <context|2>, G̈ <4>
-g.fina: H <(mvs|1)>, G <context|2>, Ğ <mvs|3>  # ?
+g.fina: H <(pre-mvs|1)>, G <context|2>, Ğ <pre-mvs|3>  # ?
 
 m.isol: M.init
 m.init: M
 m.medi: M
-m.fina: M <(mvs)>
+m.fina: M <(pre-mvs)>
 
 l.isol: L.init
 l.init: L
 l.medi: L
-l.fina: L <mvs>
+l.fina: L <pre-mvs>
 
 s.isol: S.init
 s.init: S
 s.medi: S
-s.fina: S <(mvs)>
+s.fina: S <(pre-mvs)>
 
 ś.isol: Ś.init, S.init <1>
 ś.init: Ś <(2)>, S <context|1>
 ś.medi: Ś <(2)>, S <context|1>
-ś.fina: Ś <(mvs)>
+ś.fina: Ś <(pre-mvs)>
 
 t.isol: T.init
 t.init: T
@@ -103,25 +103,25 @@ d.fina: Đ, D <1>
 ć.medi: Ć
 ć.fina: Ć
 
-j.isol: I.init, I <context|mvs>
+j.isol: I.init, I <context|pre-mvs>
 j.init: I
 j.medi: J
-j.fina: J, I <context|mvs>
+j.fina: J, I <context|pre-mvs>
 
 y.isol: Y.init, I.init <1>
 y.init: Y <(2)>, I <context|1>
 y.medi: Y <(3)>, I <context|1>, II <2>
-y.fina: I <(mvs)>
+y.fina: I <(pre-mvs)>
 
 r.isol: R.init
 r.init: R
 r.medi: R
-r.fina: R <(mvs)>
+r.fina: R <(pre-mvs)>
 
 w.isol: W.init
 w.init: W
 w.medi: W, U <1>
-w.fina: W, U <mvs|1>
+w.fina: W, U <pre-mvs|1>
 
 f.isol: F.init
 f.init: F

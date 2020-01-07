@@ -1,0 +1,214 @@
+1820 ; isol ; A A   ;      ; default ;      ; 3  # MONGOLIAN LETTER A
+1820 ; isol ; A     ;      ;         ;      ; 1  # MONGOLIAN LETTER A
+1820 ; isol ; Á     ;      ; alt     ; post ; 2  # MONGOLIAN LETTER A
+1820 ; init ; A A   ;      ; default ;      ; 2  # MONGOLIAN LETTER A
+1820 ; init ; A     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER A
+1820 ; medi ; A     ;      ; default ;      ;    # MONGOLIAN LETTER A
+1820 ; medi ; A A   ;      ;         ;      ; 1  # MONGOLIAN LETTER A
+1820 ; fina ; A     ;      ; default ;      ; 2  # MONGOLIAN LETTER A
+1820 ; fina ; Á     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER A
+1821 ; isol ; A     ;      ; default ;      ; 2  # MONGOLIAN LETTER E
+1821 ; isol ; Á     ;      ; alt     ; post ; 1  # MONGOLIAN LETTER E
+1821 ; init ; A     ;      ; default ;      ;    # MONGOLIAN LETTER E
+1821 ; init ; A A   ;      ;         ;      ; 1  # MONGOLIAN LETTER E
+1821 ; medi ; A     ;      ; default ;      ;    # MONGOLIAN LETTER E
+1821 ; fina ; A     ;      ; default ;      ; 2  # MONGOLIAN LETTER E
+1821 ; fina ; Á     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER E
+1822 ; isol ; A I   ;      ; default ;      ; 3  # MONGOLIAN LETTER I
+1822 ; isol ; I     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER I
+1822 ; isol ; İ     ;      ;         ;      ; 2  # MONGOLIAN LETTER I
+1822 ; init ; A I   ;      ; default ;      ; 2  # MONGOLIAN LETTER I
+1822 ; init ; I     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER I
+1822 ; medi ; I     ;      ; default ;      ; 3  # MONGOLIAN LETTER I
+1822 ; medi ; A I   ;      ;         ;      ; 1  # MONGOLIAN LETTER I
+1822 ; medi ; I I   ;      ; alt     ;      ; 2  # MONGOLIAN LETTER I
+1822 ; fina ; I     ;      ; default ;      ;    # MONGOLIAN LETTER I
+1823 ; isol ; A O   ;      ; default ;      ;    # MONGOLIAN LETTER O
+1823 ; init ; A U   ;      ; default ;      ;    # MONGOLIAN LETTER O
+1823 ; medi ; U     ;      ; default ;      ;    # MONGOLIAN LETTER O
+1823 ; medi ; A U   ;      ;         ;      ; 1  # MONGOLIAN LETTER O
+1823 ; fina ; U     ;      ; default ;      ; 2  # MONGOLIAN LETTER O
+1823 ; fina ; O     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER O
+1824 ; isol ; A O   ;      ; default ;      ; 3  # MONGOLIAN LETTER U
+1824 ; isol ; U     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER U
+1824 ; isol ; U̇     ;      ;         ;      ; 2  # MONGOLIAN LETTER U
+1824 ; init ; A U   ;      ; default ;      ; 2  # MONGOLIAN LETTER U
+1824 ; init ; U     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER U
+1824 ; medi ; U     ;      ; default ;      ;    # MONGOLIAN LETTER U
+1824 ; medi ; A U   ;      ;         ;      ; 1  # MONGOLIAN LETTER U
+1824 ; fina ; U     ;      ; default ;      ; 2  # MONGOLIAN LETTER U
+1824 ; fina ; O     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER U
+1825 ; isol ; A Ü   ;      ; default ;      ;    # MONGOLIAN LETTER OE
+1825 ; isol ; A U   ;      ;         ;      ; 1  # MONGOLIAN LETTER OE
+1825 ; init ; A U I ;      ; default ;      ;    # MONGOLIAN LETTER OE
+1825 ; medi ; U     ;      ; default ;      ; 3  # MONGOLIAN LETTER OE
+1825 ; medi ; U I   ;      ; alt     ;      ; 1  # MONGOLIAN LETTER OE
+1825 ; medi ; A U I ;      ;         ;      ; 2  # MONGOLIAN LETTER OE
+1825 ; fina ; U     ;      ; default ;      ; 3  # MONGOLIAN LETTER OE
+1825 ; fina ; Ü     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER OE
+1825 ; fina ; O     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER OE
+1826 ; isol ; A Ü   ;      ; default ;      ;    # MONGOLIAN LETTER UE
+1826 ; isol ; A U   ;      ;         ;      ; 1  # MONGOLIAN LETTER UE
+1826 ; isol ; U     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER UE
+1826 ; isol ; U̇     ;      ;         ;      ; 3  # MONGOLIAN LETTER UE
+1826 ; init ; A U I ;      ; default ;      ; 2  # MONGOLIAN LETTER UE
+1826 ; init ; U     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER UE
+1826 ; medi ; U     ;      ; default ;      ; 3  # MONGOLIAN LETTER UE
+1826 ; medi ; U I   ;      ; alt     ;      ; 1  # MONGOLIAN LETTER UE
+1826 ; medi ; A U I ;      ;         ;      ; 2  # MONGOLIAN LETTER UE
+1826 ; fina ; U     ;      ; default ;      ; 3  # MONGOLIAN LETTER UE
+1826 ; fina ; Ü     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER UE
+1826 ; fina ; O     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER UE
+1827 ; isol ; A W   ;      ; default ;      ;    # MONGOLIAN LETTER EE
+1827 ; init ; A W   ;      ; default ;      ;    # MONGOLIAN LETTER EE
+1827 ; medi ; W     ;      ; default ;      ;    # MONGOLIAN LETTER EE
+1827 ; fina ; W     ;      ; default ;      ;    # MONGOLIAN LETTER EE
+1828 ; isol ; N     ; init ; default ;      ;    # MONGOLIAN LETTER NA
+1828 ; isol ; A     ; init ;         ;      ; 1  # MONGOLIAN LETTER NA
+1828 ; init ; N     ;      ; default ;      ;    # MONGOLIAN LETTER NA
+1828 ; init ; A     ;      ;         ;      ; 1  # MONGOLIAN LETTER NA
+1828 ; medi ; A     ;      ; default ;      ; 2  # MONGOLIAN LETTER NA
+1828 ; medi ; N     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER NA
+1828 ; fina ; A     ;      ; default ; pre  ; 2  # MONGOLIAN LETTER NA
+1828 ; fina ; N     ;      ;         ; pre  ;    # MONGOLIAN LETTER NA
+1829 ; isol ; A G   ; medi ; default ;      ;    # MONGOLIAN LETTER ANG
+1829 ; init ; A G   ; medi ; default ;      ;    # MONGOLIAN LETTER ANG
+1829 ; medi ; A G   ;      ; default ;      ;    # MONGOLIAN LETTER ANG
+1829 ; fina ; A G   ;      ; default ;      ;    # MONGOLIAN LETTER ANG
+182A ; isol ; B     ; init ; default ;      ;    # MONGOLIAN LETTER BA
+182A ; init ; B     ;      ; default ;      ;    # MONGOLIAN LETTER BA
+182A ; medi ; B     ;      ; default ;      ;    # MONGOLIAN LETTER BA
+182A ; fina ; B     ;      ; default ;      ;    # MONGOLIAN LETTER BA
+182B ; isol ; P     ; init ; default ;      ;    # MONGOLIAN LETTER PA
+182B ; init ; P     ;      ; default ;      ;    # MONGOLIAN LETTER PA
+182B ; medi ; P     ;      ; default ;      ;    # MONGOLIAN LETTER PA
+182B ; fina ; P     ;      ; default ;      ;    # MONGOLIAN LETTER PA
+182C ; isol ; H     ; init ; default ;      ;    # MONGOLIAN LETTER QA
+182C ; isol ; Ğ     ; init ;         ;      ; 1  # MONGOLIAN LETTER QA
+182C ; isol ; G     ; init ;         ;      ; 2  # MONGOLIAN LETTER QA
+182C ; isol ; G̈     ; init ;         ;      ;    # MONGOLIAN LETTER QA
+182C ; init ; H     ;      ; default ;      ; 3  # MONGOLIAN LETTER QA
+182C ; init ; Ğ     ;      ;         ;      ; 1  # MONGOLIAN LETTER QA
+182C ; init ; G     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER QA
+182C ; init ; G̈     ;      ;         ;      ;    # MONGOLIAN LETTER QA
+182C ; medi ; H     ;      ; default ;      ; 3  # MONGOLIAN LETTER QA
+182C ; medi ; Ğ     ;      ;         ;      ; 1  # MONGOLIAN LETTER QA
+182C ; medi ; G     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER QA
+182C ; medi ; G̈     ;      ;         ;      ;    # MONGOLIAN LETTER QA
+182C ; fina ; H     ;      ; default ; pre  ;    # MONGOLIAN LETTER QA
+182C ; fina ; Ğ     ;      ;         ; pre  ;    # MONGOLIAN LETTER QA
+182D ; isol ; Ğ     ; init ; default ;      ;    # MONGOLIAN LETTER GA
+182D ; isol ; H     ; init ;         ;      ; 1  # MONGOLIAN LETTER GA
+182D ; isol ; G     ; init ;         ;      ; 2  # MONGOLIAN LETTER GA
+182D ; isol ; G̈     ; init ;         ;      ;    # MONGOLIAN LETTER GA
+182D ; init ; Ğ     ;      ; default ;      ; 3  # MONGOLIAN LETTER GA
+182D ; init ; H     ;      ;         ;      ; 1  # MONGOLIAN LETTER GA
+182D ; init ; G     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER GA
+182D ; init ; G̈     ;      ;         ;      ;    # MONGOLIAN LETTER GA
+182D ; medi ; H     ;      ; default ;      ; 3  # MONGOLIAN LETTER GA
+182D ; medi ; Ğ     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER GA
+182D ; medi ; G     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER GA
+182D ; medi ; G̈     ;      ;         ;      ;    # MONGOLIAN LETTER GA
+182D ; fina ; H     ;      ; default ; pre  ; 1  # MONGOLIAN LETTER GA
+182D ; fina ; G     ;      ; alt     ;      ; 2  # MONGOLIAN LETTER GA
+182D ; fina ; Ğ     ;      ;         ; pre  ;    # MONGOLIAN LETTER GA
+182E ; isol ; M     ; init ; default ;      ;    # MONGOLIAN LETTER MA
+182E ; init ; M     ;      ; default ;      ;    # MONGOLIAN LETTER MA
+182E ; medi ; M     ;      ; default ;      ;    # MONGOLIAN LETTER MA
+182E ; fina ; M     ;      ; default ; pre  ;    # MONGOLIAN LETTER MA
+182F ; isol ; L     ; init ; default ;      ;    # MONGOLIAN LETTER LA
+182F ; init ; L     ;      ; default ;      ;    # MONGOLIAN LETTER LA
+182F ; medi ; L     ;      ; default ;      ;    # MONGOLIAN LETTER LA
+182F ; fina ; L     ;      ;         ; pre  ;    # MONGOLIAN LETTER LA
+1830 ; isol ; S     ; init ; default ;      ;    # MONGOLIAN LETTER SA
+1830 ; init ; S     ;      ; default ;      ;    # MONGOLIAN LETTER SA
+1830 ; medi ; S     ;      ; default ;      ;    # MONGOLIAN LETTER SA
+1830 ; fina ; S     ;      ; default ; pre  ;    # MONGOLIAN LETTER SA
+1831 ; isol ; Ś     ; init ; default ;      ;    # MONGOLIAN LETTER SHA
+1831 ; isol ; S     ; init ;         ;      ; 1  # MONGOLIAN LETTER SHA
+1831 ; init ; Ś     ;      ; default ;      ; 2  # MONGOLIAN LETTER SHA
+1831 ; init ; S     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER SHA
+1831 ; medi ; Ś     ;      ; default ;      ; 2  # MONGOLIAN LETTER SHA
+1831 ; medi ; S     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER SHA
+1831 ; fina ; Ś     ;      ; default ; pre  ;    # MONGOLIAN LETTER SHA
+1832 ; isol ; T     ; init ; default ;      ;    # MONGOLIAN LETTER TA
+1832 ; init ; T     ;      ; default ;      ;    # MONGOLIAN LETTER TA
+1832 ; medi ; D     ;      ; default ;      ;    # MONGOLIAN LETTER TA
+1832 ; medi ; T     ;      ;         ;      ; 1  # MONGOLIAN LETTER TA
+1832 ; fina ; T     ;      ; default ;      ;    # MONGOLIAN LETTER TA
+1833 ; isol ; D     ; init ; default ;      ;    # MONGOLIAN LETTER DA
+1833 ; isol ; T     ; init ;         ;      ; 1  # MONGOLIAN LETTER DA
+1833 ; init ; T     ;      ; default ;      ;    # MONGOLIAN LETTER DA
+1833 ; init ; D     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER DA
+1833 ; medi ; Đ     ;      ; default ;      ; 2  # MONGOLIAN LETTER DA
+1833 ; medi ; D     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER DA
+1833 ; fina ; Đ     ;      ; default ;      ;    # MONGOLIAN LETTER DA
+1833 ; fina ; D     ;      ;         ;      ; 1  # MONGOLIAN LETTER DA
+1834 ; isol ; Ć     ; init ; default ;      ;    # MONGOLIAN LETTER CHA
+1834 ; init ; Ć     ;      ; default ;      ;    # MONGOLIAN LETTER CHA
+1834 ; medi ; Ć     ;      ; default ;      ;    # MONGOLIAN LETTER CHA
+1834 ; fina ; Ć     ;      ; default ;      ;    # MONGOLIAN LETTER CHA
+1835 ; isol ; I     ; init ; default ;      ;    # MONGOLIAN LETTER JA
+1835 ; isol ; I     ;      ; alt     ; pre  ;    # MONGOLIAN LETTER JA
+1835 ; init ; I     ;      ; default ;      ;    # MONGOLIAN LETTER JA
+1835 ; medi ; J     ;      ; default ;      ;    # MONGOLIAN LETTER JA
+1835 ; fina ; J     ;      ; default ;      ;    # MONGOLIAN LETTER JA
+1835 ; fina ; I     ;      ; alt     ; pre  ;    # MONGOLIAN LETTER JA
+1836 ; isol ; Y     ; init ; default ;      ;    # MONGOLIAN LETTER YA
+1836 ; isol ; I     ; init ;         ;      ; 1  # MONGOLIAN LETTER YA
+1836 ; init ; Y     ;      ; default ;      ; 2  # MONGOLIAN LETTER YA
+1836 ; init ; I     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER YA
+1836 ; medi ; Y     ;      ; default ;      ; 3  # MONGOLIAN LETTER YA
+1836 ; medi ; I     ;      ; alt     ;      ; 1  # MONGOLIAN LETTER YA
+1836 ; medi ; I I   ;      ;         ;      ; 2  # MONGOLIAN LETTER YA
+1836 ; fina ; I     ;      ; default ; pre  ;    # MONGOLIAN LETTER YA
+1837 ; isol ; R     ; init ; default ;      ;    # MONGOLIAN LETTER RA
+1837 ; init ; R     ;      ; default ;      ;    # MONGOLIAN LETTER RA
+1837 ; medi ; R     ;      ; default ;      ;    # MONGOLIAN LETTER RA
+1837 ; fina ; R     ;      ; default ; pre  ;    # MONGOLIAN LETTER RA
+1838 ; isol ; W     ; init ; default ;      ;    # MONGOLIAN LETTER WA
+1838 ; init ; W     ;      ; default ;      ;    # MONGOLIAN LETTER WA
+1838 ; medi ; W     ;      ; default ;      ;    # MONGOLIAN LETTER WA
+1838 ; medi ; U     ;      ;         ;      ; 1  # MONGOLIAN LETTER WA
+1838 ; fina ; W     ;      ; default ;      ;    # MONGOLIAN LETTER WA
+1838 ; fina ; U     ;      ;         ; pre  ; 1  # MONGOLIAN LETTER WA
+1839 ; isol ; F     ; init ; default ;      ;    # MONGOLIAN LETTER FA
+1839 ; init ; F     ;      ; default ;      ;    # MONGOLIAN LETTER FA
+1839 ; medi ; F     ;      ; default ;      ;    # MONGOLIAN LETTER FA
+1839 ; fina ; F     ;      ; default ;      ;    # MONGOLIAN LETTER FA
+183A ; isol ; Ḱ     ; init ; default ;      ;    # MONGOLIAN LETTER KA
+183A ; init ; Ḱ     ;      ; default ;      ;    # MONGOLIAN LETTER KA
+183A ; medi ; Ḱ     ;      ; default ;      ;    # MONGOLIAN LETTER KA
+183A ; fina ; Ḱ     ;      ; default ;      ;    # MONGOLIAN LETTER KA
+183B ; isol ; K     ; init ; default ;      ;    # MONGOLIAN LETTER KHA
+183B ; init ; K     ;      ; default ;      ;    # MONGOLIAN LETTER KHA
+183B ; medi ; K     ;      ; default ;      ;    # MONGOLIAN LETTER KHA
+183B ; fina ; K     ;      ; default ;      ;    # MONGOLIAN LETTER KHA
+183C ; isol ; C     ; init ; default ;      ;    # MONGOLIAN LETTER TSA
+183C ; init ; C     ;      ; default ;      ;    # MONGOLIAN LETTER TSA
+183C ; medi ; C     ;      ; default ;      ;    # MONGOLIAN LETTER TSA
+183C ; fina ; C     ;      ; default ;      ;    # MONGOLIAN LETTER TSA
+183D ; isol ; Z     ; init ; default ;      ;    # MONGOLIAN LETTER ZA
+183D ; init ; Z     ;      ; default ;      ;    # MONGOLIAN LETTER ZA
+183D ; medi ; Z     ;      ; default ;      ;    # MONGOLIAN LETTER ZA
+183D ; fina ; Z     ;      ; default ;      ;    # MONGOLIAN LETTER ZA
+183E ; isol ; Ħ     ; init ; default ;      ;    # MONGOLIAN LETTER HAA
+183E ; init ; Ħ     ;      ; default ;      ;    # MONGOLIAN LETTER HAA
+183E ; medi ; Ħ     ;      ; default ;      ;    # MONGOLIAN LETTER HAA
+183E ; fina ; Ħ     ;      ; default ;      ;    # MONGOLIAN LETTER HAA
+183F ; isol ; Ř     ; init ; default ;      ;    # MONGOLIAN LETTER ZRA
+183F ; init ; Ř     ;      ; default ;      ;    # MONGOLIAN LETTER ZRA
+183F ; medi ; Ř     ;      ; default ;      ;    # MONGOLIAN LETTER ZRA
+183F ; fina ; Ř     ;      ; default ;      ;    # MONGOLIAN LETTER ZRA
+1840 ; isol ; L Ħ   ; init ; default ;      ;    # MONGOLIAN LETTER LHA
+1840 ; init ; L Ħ   ;      ; default ;      ;    # MONGOLIAN LETTER LHA
+1840 ; medi ; L Ħ   ;      ; default ;      ;    # MONGOLIAN LETTER LHA
+1840 ; fina ; L Ħ   ; medi ; default ;      ;    # MONGOLIAN LETTER LHA
+1841 ; isol ; Ž     ; init ; default ;      ;    # MONGOLIAN LETTER ZHI
+1841 ; init ; Ž     ;      ; default ;      ;    # MONGOLIAN LETTER ZHI
+1841 ; medi ; Ž     ; init ; default ;      ;    # MONGOLIAN LETTER ZHI
+1841 ; fina ; Ž     ; init ; default ;      ;    # MONGOLIAN LETTER ZHI
+1842 ; isol ; Č     ; init ; default ;      ;    # MONGOLIAN LETTER CHI
+1842 ; init ; Č     ;      ; default ;      ;    # MONGOLIAN LETTER CHI
+1842 ; medi ; Č     ; init ; default ;      ;    # MONGOLIAN LETTER CHI
+1842 ; fina ; Č     ; init ; default ;      ;    # MONGOLIAN LETTER CHI
