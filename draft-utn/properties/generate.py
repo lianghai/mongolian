@@ -1,5 +1,5 @@
-from collections import OrderedDict, defaultdict
 import unicodedata
+from collections import OrderedDict, defaultdict
 
 LETTER_NAME_TO_CODE_POINT = OrderedDict()
 with open("../data/phonetic-letters.txt") as f:

@@ -38,7 +38,7 @@ Attachments:
 
 13. [**信息技术蒙古文W3C相关标准.pdf ↓**](./13.%20信息技术蒙古文W3C相关标准.pdf)
 
-## Data files
+## Derived data files
 
 - [**variant-set.txt ↓**](./data/variant-set.txt)
 
