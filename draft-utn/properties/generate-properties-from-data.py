@@ -3,8 +3,8 @@ from collections import OrderedDict, defaultdict
 
 LETTER_NAME_TO_CODE_POINT = OrderedDict()
 with open("../data/phonetic-letters.txt") as f:
-    for line in f.readlines():
-        letter_name, code_point = line.strip().split(", ")[:2]
+    for line in f.read().splitlines():
+        letter_name, code_point = line.partition("  # ")[0].split(", ")[:2]
         LETTER_NAME_TO_CODE_POINT[letter_name] = code_point
 
 LETTER_NAME_TO_VARIANT_GROUPS = defaultdict(list)

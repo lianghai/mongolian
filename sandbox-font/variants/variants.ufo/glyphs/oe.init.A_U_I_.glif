@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="oe.init.AUI" format="2">
+  <advance width="1426"/>
+  <outline>
+    <component base="A.init"/>
+    <component base="U.medi" xOffset="492"/>
+    <component base="I.medi" xOffset="1065"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

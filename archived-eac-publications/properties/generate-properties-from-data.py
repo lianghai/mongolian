@@ -44,7 +44,7 @@ class Variant:
 
 with open("../data/phonetic-letters.txt") as f:
     LETTER_NAME_TO_CODE_POINT = OrderedDict(
-        line.split(", ")[:2] for line in f.read().splitlines()
+        line.partition("  # ")[0].split(", ")[:2] for line in f.read().splitlines()
     )
 
 LETTER_NAME_TO_VARIANTS = defaultdict(list)
