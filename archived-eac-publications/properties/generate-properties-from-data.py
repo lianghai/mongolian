@@ -48,7 +48,7 @@ with open("../data/phonetic-letters.txt") as f:
     )
 
 LETTER_NAME_TO_VARIANTS = defaultdict(list)
-with open("../data/variant-set.txt") as f:
+with open("../data/variants.txt") as f:
     for line in f.read().splitlines():
         content, _, comment = line.partition("  # ")
         if not content:
