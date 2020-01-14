@@ -1,0 +1,95 @@
+# : isol       ; init        ; medi       ; fina      ;
+
+a : AA <(1)>   ; AA  <(1)>   ;            ;           ;
+a : A  <ctx|2> ; A   <ctx|2> ; A          ; A         ;
+a : Á  <ctx|3> ;             ;            ;           ;
+
+e : A  <(1)>   ; A           ; A          ; A         ;
+e : Á  <ctx|2> ;             ;            ;           ;
+
+é : AW         ; AW          ;            ;           ;
+é :            ;             ; W          ; W         ;
+
+i : AI <(1)>   ; AI  <(1)>   ;            ;           ;
+i : I  <ctx|2> ; I   <ctx|2> ; I  <(1)>   ; I         ;
+i :            ;             ; II <ctx|2> ;           ;
+
+o : AO         ; AU          ;            ;           ;
+o :            ;             ; U          ; U <(1)>   ;
+o :            ;             ;            ; O <ctx|2> ;
+
+u : AO <(1)>   ; AU  <(1)>   ;            ;           ;
+u : U  <ctx|2> ; U   <ctx|2> ; U          ; U <(1)>   ;
+o :            ;             ;            ; O <ctx|2> ;
+
+ö : AÜ         ; AUI         ; U  <(1)>   ; U <(1)>   ;
+ö :            ;             ; UI <ctx|2> ; Ü <ctx|2> ;
+ö :            ;             ;            ; O <ctx|3> ;
+
+ü : AÜ <(1)>   ; AUI <(1)>   ;            ;           ;
+ü : U  <ctx|2> ; U   <ctx|2> ; U  <(1)>   ; U <(1)>   ;
+ü :            ;             ; UI <ctx|2> ; Ü <ctx|2> ;
+ü :            ;             ;            ; O <ctx|3> ;
+ü : AU <3>     ;             ;            ;           ;
+
+# : isol      ; init      ; medi      ; fina      ;
+
+n :           ; N         ; N <(1)>   ; N <ctx|1> ;
+n :           ;           ; A <ctx|2> ; A <(2)>   ;
+
+ŋ :           ;           ; AG        ; AG        ;
+
+b :           ; B         ; B         ; B         ;
+
+p :           ; P         ; P         ; P         ;
+
+h :           ; H <(1)>   ; H <(1)>   ; H <ctx|1> ;  # Abnomality on fina.
+h :           ; G <ctx|2> ; G <ctx|2> ;           ;
+
+g :           ; Ğ <(1)>   ; Ğ <(1)>   ; Ğ <ctx|1> ;
+g :           ; G <ctx|2> ; G <ctx|2> ; G <ctx|2> ;
+g :           ;           ; H <ctx|3> ; H <(3)>   ;
+
+m :           ; M         ; M         ; M         ;
+
+l :           ; L         ; L         ; L         ;
+
+s :           ; S         ; S         ; S         ;
+
+ś :           ; Ś         ; Ś         ; Ś         ;
+
+t :           ; T         ; T <ctx|1> ; T         ;
+t :           ;           ; D <(2)>   ;           ;
+
+d :           ; T <ctx|2> ;           ;           ;
+d :           ; D <(1)>   ; D <(1)>   ; D <(1)>   ;
+d :           ;           ; Đ <ctx|2> ; Đ <ctx|2> ;
+
+ć :           ; Ć         ; Ć         ; Ć         ;
+
+j :           ;           ; J         ; J         ;  # Abnomality on isol.
+j : I <ctx|1> ; I         ;           ;           ;
+
+y :           ; Y <(1)>   ; Y <(1)>   ;           ;  # Abnomality on fina.
+y :           ; I <ctx|2> ; I <ctx|2> ; I <ctx|2> ;
+
+r :           ; R         ; R         ; R         ;
+
+w :           ; W         ; W         ; W <(1)>   ;
+w :           ;           ;           ; U <ctx|2> ;
+
+# : isol ; init ; medi ; fina ;
+
+f :      ; F    ; F    ; F    ;
+k :      ; K    ; K    ; K    ;
+c :      ; C    ; C    ; C    ;
+z :      ; Z    ; Z    ; Z    ;
+ħ :      ; Ħ    ; Ħ    ; Ħ    ;
+ř :      ; Ř    ; Ř    ; Ř    ;
+ł :      ; LĦ   ; LĦ   ;      ;
+ž :      ; Ž    ;      ;      ;
+č :      ; Č    ;      ;      ;
+
+# : isol ; init ; medi ; fina ;
+
+’ :      ;      ; A    ;      ;
