@@ -24,7 +24,7 @@ class Variant:
         written_form = fields[0]
         if len(fields) == 1:
             is_contextual = False
-            fvs_assignment = None
+            fvs_assignment = False
         elif len(fields) == 2:
             prefix, fvs_assignment = fields[1]
             is_contextual = False if prefix == "!" else True
@@ -79,13 +79,16 @@ with open("./MongolianVariants.txt", "w") as f:
             ),
         ):
             fields = [code_point]
-            if variant.fvs_assignment != last_fvs_assignment:
+            if (
+                last_fvs_assignment is not None
+                and variant.fvs_assignment != last_fvs_assignment
+            ):
                 f.write("\n")
-                last_fvs_assignment = variant.fvs_assignment
+            last_fvs_assignment = variant.fvs_assignment
             fields.append(
                 "FVS" + variant.fvs_assignment
                 if variant.fvs_assignment
-                else "    "
+                else " " * 4
             )
             fields.append(variant.position_key)
             field = " ".join(variant.written_units)
@@ -97,7 +100,7 @@ with open("./MongolianVariants.txt", "w") as f:
             fields.append(
                 "Contextual"
                 if variant.is_contextual
-                else "          "
+                else " " * 10
             )
             f.write(" ; ".join(fields).strip() + "\n")
         f.write("\n")

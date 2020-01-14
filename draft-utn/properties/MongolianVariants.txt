@@ -53,7 +53,6 @@
 1823 ; FVS1 ; fina ; U     ; Contextual
 
 1823 ; FVS2 ; fina ; O     ; Contextual
-1823 ; FVS2 ; fina ; O     ; Contextual
 
 # MONGOLIAN LETTER U
 
@@ -65,6 +64,7 @@
 
 1824 ; FVS2 ; isol ; U     ; Contextual
 1824 ; FVS2 ; init ; U     ; Contextual
+1824 ; FVS2 ; fina ; O     ; Contextual
 
 # MONGOLIAN LETTER OE
 
@@ -80,7 +80,6 @@
 1825 ; FVS3 ; fina ; O     ; Contextual
 
 # MONGOLIAN LETTER UE
-
 
 1826 ; FVS1 ; isol ; A Ü   ; Contextual
 1826 ; FVS1 ; init ; A U I ; Contextual
@@ -131,7 +130,6 @@
 
 # MONGOLIAN LETTER QA
 
-
 182C ; FVS1 ; init ; H     ; Contextual
 182C ; FVS1 ; medi ; H     ; Contextual
 182C ; FVS1 ; fina ; H     ; Contextual
@@ -140,7 +138,6 @@
 182C ; FVS2 ; medi ; G     ; Contextual
 
 # MONGOLIAN LETTER GA
-
 
 182D ; FVS1 ; init ; Ğ     ; Contextual
 182D ; FVS1 ; medi ; Ğ     ; Contextual
@@ -188,7 +185,6 @@
 
 # MONGOLIAN LETTER DA
 
-
 1833 ; FVS1 ; init ; D     ; Contextual
 1833 ; FVS1 ; medi ; D     ; Contextual
 1833 ; FVS1 ; fina ; D     ; Contextual
@@ -212,7 +208,6 @@
 1835 ; FVS1 ; isol ; I     ; Contextual
 
 # MONGOLIAN LETTER YA
-
 
 1836 ; FVS1 ; init ; Y     ; Contextual
 1836 ; FVS1 ; medi ; Y     ; Contextual
