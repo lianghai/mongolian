@@ -55,8 +55,7 @@ with open("../data/variants.txt") as f:
             continue
         key, _, value = line.partition(": ")
         letter_name, _, position_key = key.partition(".")
-        raw_variant_descriptions = value.split(", ")
-        for raw_variant_description in raw_variant_descriptions:
+        for raw_variant_description in value.split(", "):
             written_form, _, conditions = raw_variant_description.partition(" ")
             written_form, _, position_key_borrowed = written_form.partition(".")
             variant = Variant(
@@ -68,7 +67,7 @@ with open("../data/variants.txt") as f:
             )
             LETTER_NAME_TO_VARIANTS[letter_name].append(variant)
 
-with open("./Mongolian_Written_Forms.txt", "w") as f:
+with open("./MongolianVariants.txt", "w") as f:
     for letter_name, code_point in LETTER_NAME_TO_CODE_POINT.items():
         character_name = unicodedata.name(chr(int(code_point, 16)))
         for variant in LETTER_NAME_TO_VARIANTS[letter_name]:
@@ -87,8 +86,8 @@ with open("./Mongolian_Written_Forms.txt", "w") as f:
             fields.append(field)
             for field_key, width in [
                 ("context", 7),
-                ("mvs",        4),
-                ("fvs",        1),
+                ("mvs",     4),
+                ("fvs",     1),
             ]:
                 value = variant.conditions[field_key]
                 if value:

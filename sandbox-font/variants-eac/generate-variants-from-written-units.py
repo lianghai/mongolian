@@ -32,7 +32,7 @@ with open(os.path.join(SPEC_DIRECTORY, "data/written-units.txt")) as f:
 
 VARIANT_DATA = OrderedDict()
 
-with open(os.path.join(SPEC_DIRECTORY, "properties/Mongolian_Written_Forms.txt")) as f:
+with open(os.path.join(SPEC_DIRECTORY, "properties/MongolianVariants.txt")) as f:
     for line in f.read().splitlines():
         content, _, comment = line.partition("#")
         fields = [field.strip() for field in content.split(" ; ")]
