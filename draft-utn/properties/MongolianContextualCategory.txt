@@ -2,19 +2,27 @@
 #   Field 0: Unicode code point value or range of code point values
 #   Field 1: Mongolian_Contextual_Category property value
 
-1820       ; Vowel_Masculine #      MONGOLIAN LETTER A
-1823..1824 ; Vowel_Masculine #  [2] MONGOLIAN LETTER O..MONGOLIAN LETTER U
+1820       ; Vowel_Masculine     #      MONGOLIAN LETTER A
+1823..1824 ; Vowel_Masculine     #  [2] MONGOLIAN LETTER O..MONGOLIAN LETTER U
 
-1821       ; Vowel_Feminine  #      MONGOLIAN LETTER E
-1825..1827 ; Vowel_Feminine  #  [3] MONGOLIAN LETTER OE..MONGOLIAN LETTER EE
+1821       ; Vowel_Feminine      #      MONGOLIAN LETTER E
+1825..1827 ; Vowel_Feminine      #  [3] MONGOLIAN LETTER OE..MONGOLIAN LETTER EE
 
-1822       ; Vowel_Neuter    #      MONGOLIAN LETTER I
+1822       ; Vowel_Neuter        #      MONGOLIAN LETTER I
 
-1807       ; Consonant       #      MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
-1828..1839 ; Consonant       # [18] MONGOLIAN LETTER NA..MONGOLIAN LETTER FA
-183B..1842 ; Consonant       #  [9] MONGOLIAN LETTER KHA..MONGOLIAN LETTER CHI
+1807       ; Consonant           #      MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
+1828..1839 ; Consonant           # [18] MONGOLIAN LETTER NA..MONGOLIAN LETTER FA
+183B..1842 ; Consonant           #  [8] MONGOLIAN LETTER KHA..MONGOLIAN LETTER CHI
 
-180A       ; Transparent     #      MONGOLIAN NIRUGU
-200C..200D ; Transparent     #  [2] ZERO WIDTH NON-JOINER..ZERO WIDTH JOINER
+202F       ; Particle_Leader     #      NARROW NO-BREAK SPACE
+
+180E       ; Chachlag_Leader     #      MONGOLIAN VOWEL SEPARATOR
+
+180B..180D ; Variation_Selector  #  [3] MONGOLIAN FREE VARIATION SELECTOR ONE..MONGOLIAN FREE VARIATION SELECTOR THREE
+
+# The following characters are explicitly defined to have only cursive joining effect.
+
+180A       ; Transparent         #      MONGOLIAN NIRUGU
+200C..200D ; Transparent         #  [2] ZERO WIDTH NON-JOINER..ZERO WIDTH JOINER
 
 # EOF
