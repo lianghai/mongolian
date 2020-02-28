@@ -12,7 +12,7 @@ store(&NAME) 'Mongol Bichig'
 store(&VISUALKEYBOARD) 'mongol_bichig.kvks'
 store(&BITMAP) 'mongol_bichig.ico'
 store(&LAYOUTFILE) 'mongol_bichig.keyman-touch-layout'
-store(&COPYRIGHT) '2020 © Liang Hai'
+store(&COPYRIGHT) '© 2020 Liang Hai'
 store(&KEYBOARDVERSION) '0.1'
 store(&TARGETS) 'any'
 
@@ -20,56 +20,99 @@ begin Unicode > use(main)
 
 group(main) using keys
 
-+ [K_SPACE] > U+0020
+c # Basic layout
+c # ------------
 
-+ [K_0] > U+003f
-+ [SHIFT K_0] > U+0030
+c ## Row 1
 
-+ [K_1] > U+2116
-+ [SHIFT K_1] > U+0031
++ [K_BKQUOTE] > '='
++ [SHIFT K_BKQUOTE] > '+'
 
-+ [K_2] > U+002d
-+ [SHIFT K_2] > U+0032
++ [K_1] > '№'
++ [SHIFT K_1] > '1'
 
-+ [K_3] > U+0022
-+ [SHIFT K_3] > U+0033
++ [K_2] > '-'
++ [SHIFT K_2] > '2'
 
-+ [K_4] > U+20ae
-+ [SHIFT K_4] > U+0034
++ [K_3] > '"'
++ [SHIFT K_3] > '3'
 
-+ [K_5] > U+003a
-+ [SHIFT K_5] > U+0035
++ [K_4] > '₮'
++ [SHIFT K_4] > '4'
 
-+ [K_6] > U+002e
-+ [SHIFT K_6] > U+0036
++ [K_5] > ':'
++ [SHIFT K_5] > '5'
 
-+ [K_7] > U+005f
-+ [SHIFT K_7] > U+0037
++ [K_6] > '.'
++ [SHIFT K_6] > '6'
 
-+ [K_8] > U+002c
-+ [SHIFT K_8] > U+0038
++ [K_7] > '_'
++ [SHIFT K_7] > '7'
 
-+ [K_9] > U+0025
-+ [SHIFT K_9] > U+0039
++ [K_8] > ','
++ [SHIFT K_8] > '8'
+
++ [K_9] > '%'
++ [SHIFT K_9] > '9'
+
++ [K_0] > '?'
++ [SHIFT K_0] > '0'
+
++ [K_HYPHEN] > nul
++ [SHIFT K_HYPHEN] > nul
+
++ [K_EQUAL] > nul
++ [SHIFT K_EQUAL] > nul
+
+c [K_BKSLASH] is located here in the MNS 4332: 1996 layout,
+c   but is located at the end of row 2 in the US English layout.
+
+c ## Row 2
+
++ [K_Q] > 'ᠹ'
+
++ [K_W] > 'ᠼ'
+
++ [K_E] > 'ᠤ'
+
++ [K_R] > 'ᠵ'
++ [SHIFT K_R] > 'ᠿ'
+
++ [K_T] > 'ᠡ'
++ [SHIFT K_T] > 'ᠧ'
+
++ [K_Y] > 'ᠨ'
+
++ [K_U] > 'ᠭ'
+
++ [K_I] > 'ᠱ'
+
++ [K_O] > 'ᠦ'
+
++ [K_P] > 'ᠽ'
+
++ [K_LBRKT] > 'ᠻ'
+
++ [K_RBRKT] > '᠊'
++ [SHIFT K_RBRKT] > '᠇'
+
++ [K_BKSLASH] > '\'  c Located at the end of row 1 in the MNS 4332: 1996 layout.
++ [SHIFT K_BKSLASH] > '|'
+
+c ## Row 3
 
 + [K_A] > 'ᠶ'
 
-+ [K_B] > 'ᠮ'
-
-+ [K_C] > U+0451
-+ [SHIFT K_C] > U+0401
+c + [K_S] >
 
 + [K_D] > 'ᠪ'
-
-+ [K_E] > 'ᠤ'
 
 + [K_F] > 'ᠥ'
 
 + [K_G] > 'ᠠ'
 
 + [K_H] > 'ᠬ'
-
-+ [K_I] > 'ᠱ'
++ [SHIFT K_H] > 'ᠾ'
 
 + [K_J] > 'ᠷ'
 
@@ -77,163 +120,145 @@ group(main) using keys
 
 + [K_L] > 'ᠯ'
 
-+ [K_M] > 'ᠲ'
-
-+ [K_N] > 'ᠢ'
-
-+ [K_O] > 'ᠦ'
-
-+ [K_P] > 'ᠽ'
-
-+ [K_Q] > 'ᠹ'
-
-+ [K_R] > 'ᠵ'
-
-+ [K_S] > U+044b
-+ [SHIFT K_S] > U+042b
-
-+ [K_T] > 'ᠡ'
-
-+ [K_U] > 'ᠭ'
-
-+ [K_V] > 'ᠰ'
-
-+ [K_W] > 'ᠼ'
-
-+ [K_X] > 'ᠴ'
-
-+ [K_Y] > 'ᠨ'
-
-+ [K_Z] > U+044f
-+ [SHIFT K_Z] > U+042f
-
-+ [K_COLON] > 'ᠳ'
-
-+ [K_EQUAL] > U+0449
-+ [SHIFT K_EQUAL] > U+0429
-
-+ [K_COMMA] > U+044c
-+ [SHIFT K_COMMA] > U+042c
-
-+ [K_HYPHEN] > U+0435
-+ [SHIFT K_HYPHEN] > U+0415
-
-+ [K_PERIOD] > 'ᠸ'
-
-+ [K_BKQUOTE] > U+003d
-+ [SHIFT K_BKQUOTE] > U+002b
-
-+ [K_LBRKT] > 'ᠻ'
-
-+ [K_BKSLASH] > U+005c
-+ [SHIFT K_BKSLASH] > U+007c
-
-+ [K_RBRKT] > '᠊'
++ [K_COLON] > 'ᠳ'  c K_COLON is actually for ';'.
 
 + [K_QUOTE] > 'ᠫ'
 
-c ---
+c ## Row 4
 
-c # Modifiers
+c + [K_Z] >
 
-+ [SHIFT K_T] > 'ᠧ'
-+ [SHIFT K_H] > 'ᠾ'
-+ [SHIFT K_R] > 'ᠿ'
-+ [SHIFT K_RBRKT] > '᠇'
++ [K_X] > 'ᠴ'
 
-c ---
+c + [K_C] >
+
++ [K_V] > 'ᠰ'
+
++ [K_B] > 'ᠮ'
+
++ [K_N] > 'ᠢ'
+
++ [K_M] > 'ᠲ'
+
+c + [K_COMMA] >
+
++ [K_PERIOD] > 'ᠸ'
+
++ [K_SLASH] > nul
++ [SHIFT K_SLASH] > nul
+
+c ## Row 5
+
++ [K_SPACE] > U+0020  c SPACE
++ [SHIFT K_SPACE] > U+202f  c NARROW NO-BREAK SPACE
 
 c # Sequences
+c # ---------
 
 'ᠯ' + [SHIFT K_H] > 'ᡀ'
 
-c ---
+c # Rotas
+c # -----
 
-c # Rotas (/)
+store(next) [K_SLASH]
+
+store(vowel.masculine) 'ᠠ' 'ᠣ' 'ᠤ'
+store(vowel.feminine)  'ᠡ' 'ᠧ' 'ᠥ' 'ᠦ'
+store(vowel.neuter)    'ᠢ'
+
+store(vowel) \
+  outs(vowel.masculine) outs(vowel.feminine) outs(vowel.neuter)
+
+store(consonant) \
+  'ᠨ' 'ᠩ' 'ᠪ' 'ᠫ' 'ᠬ' 'ᠭ' 'ᠮ' 'ᠯ' 'ᠰ' 'ᠱ' 'ᠲ' 'ᠳ' 'ᠴ' 'ᠵ' 'ᠶ' 'ᠷ' 'ᠸ' \
+  'ᠹ' 'ᠻ' 'ᠼ' 'ᠽ' 'ᠾ' 'ᠿ' 'ᡀ' 'ᡁ' 'ᡂ'
+
+store(MVS) U+180E
+
+store(FVS1) U+180B
+store(FVS2) U+180C
+store(FVS3) U+180D
 
 c ## Syllable codas
 
-'ᠨ' + '/' > 'ᠩ'
-'ᠩ' + '/' > 'ᠨ'
+'ᠨ' + outs(next) > 'ᠩ'
+'ᠩ' + outs(next) > 'ᠨ'
 
-'ᠢ' 'ᠭ'        + '/' > 'ᠢ' 'ᠭ' U+180B  c (g has an alternative form only after i)
-'ᠢ' 'ᠭ' U+180B + '/' > 'ᠢ' 'ᠭ'
+'ᠢ' 'ᠭ'       + outs(next) > 'ᠢ' 'ᠭ' $FVS1  c (g has an alternative form only after i)
+'ᠢ' 'ᠭ' $FVS1 + outs(next) > 'ᠢ' 'ᠭ'
 
-'ᠳ'        + '/' > 'ᠳ' U+180B
-'ᠳ' U+180B + '/' > 'ᠳ'
+'ᠳ'       + outs(next) > 'ᠳ' $FVS1
+'ᠳ' $FVS1 + outs(next) > 'ᠳ'
 
 c ## (C)V syllables
 
 c ### General
 
-store(vowel) 'ᠠ' 'ᠡ' 'ᠧ' 'ᠢ' 'ᠣ' 'ᠤ' 'ᠥ' 'ᠦ'
-store(consonant) 'ᠨ' 'ᠩ' 'ᠪ' 'ᠫ' 'ᠬ' 'ᠭ' 'ᠮ' 'ᠯ' 'ᠰ' 'ᠱ' 'ᠲ' 'ᠳ' 'ᠴ' 'ᠵ' 'ᠶ' 'ᠷ' 'ᠸ' 'ᠹ' 'ᠻ' 'ᠼ' 'ᠽ' 'ᠾ' 'ᠿ' 'ᡀ' 'ᡁ' 'ᡂ'
+'ᠠ'       + outs(next) > 'ᠠ' $FVS1
+'ᠠ' $FVS1 + outs(next) > 'ᠠ'
 
-'ᠠ'        + '/' > 'ᠠ' U+180B
-'ᠠ' U+180B + '/' > 'ᠠ'
+'ᠦ'       + outs(next) > 'ᠦ' $FVS1
+'ᠦ' $FVS1 + outs(next) > 'ᠦ'
 
-'ᠦ'        + '/' > 'ᠦ' U+180B
-'ᠦ' U+180B + '/' > 'ᠦ'
-
-'ᠳ'        any(vowel) + '/' > 'ᠳ' U+180B index(vowel, 2)
-'ᠳ' U+180B any(vowel) + '/' > 'ᠳ'        index(vowel, 3)
+'ᠳ'       any(vowel) + outs(next) > 'ᠳ' $FVS1 index(vowel, 2)
+'ᠳ' $FVS1 any(vowel) + outs(next) > 'ᠳ'       index(vowel, 3)
 
 store(vowel.rounded) 'ᠣ' 'ᠤ' 'ᠥ' 'ᠦ'
 
-any(consonant) any(vowel.rounded)        + '/' > index(consonant, 1) index(vowel.rounded, 2) U+180B
-any(consonant) any(vowel.rounded) U+180B + '/' > index(consonant, 1) index(vowel.rounded, 2)
+any(consonant) any(vowel.rounded)       + outs(next) > index(consonant, 1) index(vowel.rounded, 2) $FVS1
+any(consonant) any(vowel.rounded) $FVS1 + outs(next) > index(consonant, 1) index(vowel.rounded, 2)
 
 c The section above overlaps with the preceding one and needs handling.
 c The possible FVS between consonant and vowel.rounded needs to be ignored.
 
 c ### Chachlag
 
-'ᠨ'        'ᠠ' + '/' > 'ᠨ' U+180E 'ᠠ'
-'ᠨ' U+180E 'ᠠ' + '/' > 'ᠨ'        'ᠠ'
-'ᠨ'        'ᠡ' + '/' > 'ᠨ' U+180E 'ᠡ'
-'ᠨ' U+180E 'ᠡ' + '/' > 'ᠨ'        'ᠡ'
+'ᠨ'      'ᠠ' + outs(next) > 'ᠨ' $MVS 'ᠠ'
+'ᠨ' $MVS 'ᠠ' + outs(next) > 'ᠨ'      'ᠠ'
+'ᠨ'      'ᠡ' + outs(next) > 'ᠨ' $MVS 'ᠡ'
+'ᠨ' $MVS 'ᠡ' + outs(next) > 'ᠨ'      'ᠡ'
 
-'ᠬ'        'ᠠ' + '/' > 'ᠬ' U+180E 'ᠠ'
-'ᠬ' U+180E 'ᠠ' + '/' > 'ᠬ'        'ᠠ'
+'ᠬ'      'ᠠ' + outs(next) > 'ᠬ' $MVS 'ᠠ'
+'ᠬ' $MVS 'ᠠ' + outs(next) > 'ᠬ'      'ᠠ'
 
-'ᠭ'        'ᠠ' + '/' > 'ᠭ' U+180E 'ᠠ'
-'ᠭ' U+180E 'ᠠ' + '/' > 'ᠭ'        'ᠠ'
+'ᠭ'      'ᠠ' + outs(next) > 'ᠭ' $MVS 'ᠠ'
+'ᠭ' $MVS 'ᠠ' + outs(next) > 'ᠭ'      'ᠠ'
 
-'ᠮ'        'ᠠ' + '/' > 'ᠮ' U+180E 'ᠠ'
-'ᠮ' U+180E 'ᠠ' + '/' > 'ᠮ'        'ᠠ'
-'ᠮ'        'ᠡ' + '/' > 'ᠮ' U+180E 'ᠡ'
-'ᠮ' U+180E 'ᠡ' + '/' > 'ᠮ'        'ᠡ'
+'ᠮ'      'ᠠ' + outs(next) > 'ᠮ' $MVS 'ᠠ'
+'ᠮ' $MVS 'ᠠ' + outs(next) > 'ᠮ'      'ᠠ'
+'ᠮ'      'ᠡ' + outs(next) > 'ᠮ' $MVS 'ᠡ'
+'ᠮ' $MVS 'ᠡ' + outs(next) > 'ᠮ'      'ᠡ'
 
-'ᠯ'        'ᠠ' + '/' > 'ᠯ' U+180E 'ᠠ'
-'ᠯ' U+180E 'ᠠ' + '/' > 'ᠯ'        'ᠠ'
-'ᠯ'        'ᠡ' + '/' > 'ᠯ' U+180E 'ᠡ'
-'ᠯ' U+180E 'ᠡ' + '/' > 'ᠯ'        'ᠡ'
+'ᠯ'      'ᠠ' + outs(next) > 'ᠯ' $MVS 'ᠠ'
+'ᠯ' $MVS 'ᠠ' + outs(next) > 'ᠯ'      'ᠠ'
+'ᠯ'      'ᠡ' + outs(next) > 'ᠯ' $MVS 'ᠡ'
+'ᠯ' $MVS 'ᠡ' + outs(next) > 'ᠯ'      'ᠡ'
 
-'ᠶ'        'ᠠ' + '/' > 'ᠶ' U+180E 'ᠠ'
-'ᠶ' U+180E 'ᠠ' + '/' > 'ᠶ'        'ᠠ'
-'ᠶ'        'ᠡ' + '/' > 'ᠶ' U+180E 'ᠡ'
-'ᠶ' U+180E 'ᠡ' + '/' > 'ᠶ'        'ᠡ'
+'ᠶ'      'ᠠ' + outs(next) > 'ᠶ' $MVS 'ᠠ'
+'ᠶ' $MVS 'ᠠ' + outs(next) > 'ᠶ'      'ᠠ'
+'ᠶ'      'ᠡ' + outs(next) > 'ᠶ' $MVS 'ᠡ'
+'ᠶ' $MVS 'ᠡ' + outs(next) > 'ᠶ'      'ᠡ'
 
-'ᠷ'        'ᠠ' + '/' > 'ᠷ' U+180E 'ᠠ'
-'ᠷ' U+180E 'ᠠ' + '/' > 'ᠷ'        'ᠠ'
-'ᠷ'        'ᠡ' + '/' > 'ᠷ' U+180E 'ᠡ'
-'ᠷ' U+180E 'ᠡ' + '/' > 'ᠷ'        'ᠡ'
+'ᠷ'      'ᠠ' + outs(next) > 'ᠷ' $MVS 'ᠠ'
+'ᠷ' $MVS 'ᠠ' + outs(next) > 'ᠷ'      'ᠠ'
+'ᠷ'      'ᠡ' + outs(next) > 'ᠷ' $MVS 'ᠡ'
+'ᠷ' $MVS 'ᠡ' + outs(next) > 'ᠷ'      'ᠡ'
 
-'ᠸ'        'ᠠ' + '/' > 'ᠸ' U+180E 'ᠠ'
-'ᠸ' U+180E 'ᠠ' + '/' > 'ᠸ'        'ᠠ'
-'ᠸ'        'ᠡ' + '/' > 'ᠸ' U+180E 'ᠡ'
-'ᠸ' U+180E 'ᠡ' + '/' > 'ᠸ'        'ᠡ'
+'ᠸ'      'ᠠ' + outs(next) > 'ᠸ' $MVS 'ᠠ'
+'ᠸ' $MVS 'ᠠ' + outs(next) > 'ᠸ'      'ᠠ'
+'ᠸ'      'ᠡ' + outs(next) > 'ᠸ' $MVS 'ᠡ'
+'ᠸ' $MVS 'ᠡ' + outs(next) > 'ᠸ'      'ᠡ'
 
 c ### Mandarin transcriptions
 
-'ᠵ' 'ᠢ' + '/' > 'ᡁ' 'ᠢ'
-'ᡁ' 'ᠢ' + '/' > 'ᠵ' 'ᠢ'
+'ᠵ' 'ᠢ' + outs(next) > 'ᡁ' 'ᠢ'
+'ᡁ' 'ᠢ' + outs(next) > 'ᠵ' 'ᠢ'
 
-'ᠴ' 'ᠢ' + '/' > 'ᡂ' 'ᠢ'
-'ᡂ' 'ᠢ' + '/' > 'ᠴ' 'ᠢ'
+'ᠴ' 'ᠢ' + outs(next) > 'ᡂ' 'ᠢ'
+'ᡂ' 'ᠢ' + outs(next) > 'ᠴ' 'ᠢ'
 
-'ᠰ' 'ᠢ' + '/' > 'ᠱ' 'ᠢ'
-'ᠱ' 'ᠢ' + '/' > 'ᠰ' 'ᠢ'
+'ᠰ' 'ᠢ' + outs(next) > 'ᠱ' 'ᠢ'
+'ᠱ' 'ᠢ' + outs(next) > 'ᠰ' 'ᠢ'
 
-'ᠷ' 'ᠢ' + '/' > 'ᠿ' 'ᠢ'
-'ᠿ' 'ᠢ' + '/' > 'ᠷ' 'ᠢ'
+'ᠷ' 'ᠢ' + outs(next) > 'ᠿ' 'ᠢ'
+'ᠿ' 'ᠢ' + outs(next) > 'ᠷ' 'ᠢ'
