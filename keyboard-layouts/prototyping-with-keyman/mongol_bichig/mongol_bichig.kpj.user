@@ -13,14 +13,18 @@
         <LayoutDisplay102Key>0</LayoutDisplay102Key>
         <DebugDefaultFont>1</DebugDefaultFont>
         <DebugFont>MS Sans Serif|8|   |1</DebugFont>
-        <CodeFont>Consolas|-9|   |0</CodeFont>
-        <CharFont>Consolas|10|   |0</CharFont>
+        <CodeFont>Consolas|11|   |0</CodeFont>
+        <CharFont>Consolas|11|   |0</CharFont>
       </IDEState>
-      <Debug>False</Debug>
+      <Debug>True</Debug>
     </FileState>
     <FileState>
       <ID>id_f4029869a7b84f3993071b5b41e945d0</ID>
       <FullPath>C:\Users\lianghai\Google Drive\Hai-KeymanDev\mongol_bichig\source\mongol_bichig.kps</FullPath>
+      <IDEState>
+        <CodeFont>Consolas|-9|   |0</CodeFont>
+        <CharFont>Consolas|-9|   |0</CharFont>
+      </IDEState>
     </FileState>
     <FileState>
       <ID>id_ede98e4633e239f933cbfd1f4e1b766c</ID>
@@ -69,6 +73,12 @@
       <Filename>mongol_bichig.kmn</Filename>
       <FileType>.kmn</FileType>
       <FullPath>C:\Users\lianghai\Google Drive\Hai-KeymanDev\mongol_bichig\source\mongol_bichig.kmn</FullPath>
+    </File>
+    <File>
+      <ID>id_MRU1</ID>
+      <Filename>mongol_bichig.kps</Filename>
+      <FileType>.kps</FileType>
+      <FullPath>C:\Users\lianghai\Google Drive\Hai-KeymanDev\mongol_bichig\source\mongol_bichig.kps</FullPath>
     </File>
   </MRU>
 </KeymanDeveloperProjectUser>

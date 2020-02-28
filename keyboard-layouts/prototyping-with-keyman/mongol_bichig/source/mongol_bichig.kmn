@@ -20,8 +20,6 @@ begin Unicode > use(main)
 
 group(main) using keys
 
-+ [K_N] > 'ᠢ'
-
 + [K_SPACE] > U+0020
 
 + [K_0] > U+003f
@@ -55,84 +53,61 @@ group(main) using keys
 + [SHIFT K_9] > U+0039
 
 + [K_A] > 'ᠶ'
-+ [SHIFT K_A] > U+0419
 
 + [K_B] > 'ᠮ'
-+ [SHIFT K_B] > U+041c
 
 + [K_C] > U+0451
 + [SHIFT K_C] > U+0401
 
 + [K_D] > 'ᠪ'
-+ [SHIFT K_D] > U+0411
 
 + [K_E] > 'ᠤ'
-+ [SHIFT K_E] > U+0423
 
 + [K_F] > 'ᠥ'
-+ [SHIFT K_F] > U+04e8
 
 + [K_G] > 'ᠠ'
-+ [SHIFT K_G] > U+0410
 
 + [K_H] > 'ᠬ'
-+ [SHIFT K_H] > U+0425
 
 + [K_I] > 'ᠱ'
-+ [SHIFT K_I] > U+0428
 
 + [K_J] > 'ᠷ'
-+ [SHIFT K_J] > U+0420
 
 + [K_K] > 'ᠣ'
-+ [SHIFT K_K] > U+041e
 
 + [K_L] > 'ᠯ'
-+ [SHIFT K_L] > U+041b
 
 + [K_M] > 'ᠲ'
-+ [SHIFT K_M] > U+0422
 
-+ [SHIFT K_N] > U+0418
++ [K_N] > 'ᠢ'
 
 + [K_O] > 'ᠦ'
-+ [SHIFT K_O] > U+04ae
 
 + [K_P] > 'ᠽ'
-+ [SHIFT K_P] > U+0417
 
 + [K_Q] > 'ᠹ'
-+ [SHIFT K_Q] > U+0424
 
 + [K_R] > 'ᠵ'
-+ [SHIFT K_R] > U+0416
 
 + [K_S] > U+044b
 + [SHIFT K_S] > U+042b
 
 + [K_T] > 'ᠡ'
-+ [SHIFT K_T] > U+042d
 
 + [K_U] > 'ᠭ'
-+ [SHIFT K_U] > U+0413
 
 + [K_V] > 'ᠰ'
-+ [SHIFT K_V] > U+0421
 
 + [K_W] > 'ᠼ'
-+ [SHIFT K_W] > U+0426
 
 + [K_X] > 'ᠴ'
-+ [SHIFT K_X] > U+0427
 
 + [K_Y] > 'ᠨ'
-+ [SHIFT K_Y] > U+041d
 
 + [K_Z] > U+044f
 + [SHIFT K_Z] > U+042f
 
 + [K_COLON] > 'ᠳ'
-+ [SHIFT K_COLON] > U+0414
 
 + [K_EQUAL] > U+0449
 + [SHIFT K_EQUAL] > U+0429
@@ -144,59 +119,121 @@ group(main) using keys
 + [SHIFT K_HYPHEN] > U+0415
 
 + [K_PERIOD] > 'ᠸ'
-+ [SHIFT K_PERIOD] > U+0412
 
 + [K_BKQUOTE] > U+003d
 + [SHIFT K_BKQUOTE] > U+002b
 
 + [K_LBRKT] > 'ᠻ'
-+ [SHIFT K_LBRKT] > U+041a
 
 + [K_BKSLASH] > U+005c
 + [SHIFT K_BKSLASH] > U+007c
 
 + [K_RBRKT] > '᠊'
-+ [SHIFT K_RBRKT] > U+042a
 
 + [K_QUOTE] > 'ᠫ'
-+ [SHIFT K_QUOTE] > U+041f
 
-+ [K_oE2] > U+005c
-+ [SHIFT K_oE2] > U+007c
+c ---
 
-c # Rota (/) lists:
+c # Modifiers
 
-c ## CV syllables, Chachlag:
++ [SHIFT K_T] > 'ᠧ'
++ [SHIFT K_H] > 'ᠾ'
++ [SHIFT K_R] > 'ᠿ'
++ [SHIFT K_RBRKT] > '᠇'
 
-'ᠨ' 'ᠠ' + [K_SLASH] > 'ᠨ' U+180E 'ᠠ'
-'ᠨ' U+180E 'ᠠ' + [K_SLASH] > 'ᠨ' 'ᠠ'
+c ---
 
-'ᠨ' 'ᠡ' + [K_SLASH] > 'ᠨ' U+180E 'ᠡ'
-'ᠨ' U+180E 'ᠡ' + [K_SLASH] > 'ᠨ' 'ᠡ'
+c # Sequences
 
-c ...
+'ᠯ' + [SHIFT K_H] > 'ᡀ'
 
-c ## CV syllables, Mandarin transcriptions:
+c ---
 
-'ᠵ' 'ᠢ' + [K_SLASH] > 'ᡁ' 'ᠢ'
-'ᡁ' 'ᠢ' + [K_SLASH] > 'ᠵ' 'ᠢ'
+c # Rotas (/)
 
-c ...
+c ## Syllable codas
 
-c ## Syllable codas:
+'ᠨ' + '/' > 'ᠩ'
+'ᠩ' + '/' > 'ᠨ'
 
-'ᠨ' + [K_SLASH] > 'ᠩ'
-'ᠩ' + [K_SLASH] > 'ᠨ'
+'ᠢ' 'ᠭ'        + '/' > 'ᠢ' 'ᠭ' U+180B  c (g has an alternative form only after i)
+'ᠢ' 'ᠭ' U+180B + '/' > 'ᠢ' 'ᠭ'
 
-'ᠢ' 'ᠭ' + [K_SLASH] > 'ᠢ' 'ᠭ' U+180B  c (g has an alternative form only after i)
-'ᠢ' 'ᠭ' U+180B + [K_SLASH] > 'ᠢ' 'ᠭ'
+'ᠳ'        + '/' > 'ᠳ' U+180B
+'ᠳ' U+180B + '/' > 'ᠳ'
 
-'ᠳ' + [K_SLASH] > 'ᠳ' U+180B
-'ᠳ' U+180B + [K_SLASH] > 'ᠳ'
+c ## (C)V syllables
 
-c Loanword and additional letters:
+c ### General
 
-'᠊' + [K_SLASH] > '᠇'
-'᠇' + [K_SLASH] > '᠊'
+store(vowel) 'ᠠ' 'ᠡ' 'ᠧ' 'ᠢ' 'ᠣ' 'ᠤ' 'ᠥ' 'ᠦ'
+store(consonant) 'ᠨ' 'ᠩ' 'ᠪ' 'ᠫ' 'ᠬ' 'ᠭ' 'ᠮ' 'ᠯ' 'ᠰ' 'ᠱ' 'ᠲ' 'ᠳ' 'ᠴ' 'ᠵ' 'ᠶ' 'ᠷ' 'ᠸ' 'ᠹ' 'ᠻ' 'ᠼ' 'ᠽ' 'ᠾ' 'ᠿ' 'ᡀ' 'ᡁ' 'ᡂ'
 
-c ...
+'ᠠ'        + '/' > 'ᠠ' U+180B
+'ᠠ' U+180B + '/' > 'ᠠ'
+
+'ᠦ'        + '/' > 'ᠦ' U+180B
+'ᠦ' U+180B + '/' > 'ᠦ'
+
+'ᠳ'        any(vowel) + '/' > 'ᠳ' U+180B index(vowel, 2)
+'ᠳ' U+180B any(vowel) + '/' > 'ᠳ'        index(vowel, 3)
+
+store(vowel.rounded) 'ᠣ' 'ᠤ' 'ᠥ' 'ᠦ'
+
+any(consonant) any(vowel.rounded)        + '/' > index(consonant, 1) index(vowel.rounded, 2) U+180B
+any(consonant) any(vowel.rounded) U+180B + '/' > index(consonant, 1) index(vowel.rounded, 2)
+
+c The section above overlaps with the preceding one and needs handling.
+c The possible FVS between consonant and vowel.rounded needs to be ignored.
+
+c ### Chachlag
+
+'ᠨ'        'ᠠ' + '/' > 'ᠨ' U+180E 'ᠠ'
+'ᠨ' U+180E 'ᠠ' + '/' > 'ᠨ'        'ᠠ'
+'ᠨ'        'ᠡ' + '/' > 'ᠨ' U+180E 'ᠡ'
+'ᠨ' U+180E 'ᠡ' + '/' > 'ᠨ'        'ᠡ'
+
+'ᠬ'        'ᠠ' + '/' > 'ᠬ' U+180E 'ᠠ'
+'ᠬ' U+180E 'ᠠ' + '/' > 'ᠬ'        'ᠠ'
+
+'ᠭ'        'ᠠ' + '/' > 'ᠭ' U+180E 'ᠠ'
+'ᠭ' U+180E 'ᠠ' + '/' > 'ᠭ'        'ᠠ'
+
+'ᠮ'        'ᠠ' + '/' > 'ᠮ' U+180E 'ᠠ'
+'ᠮ' U+180E 'ᠠ' + '/' > 'ᠮ'        'ᠠ'
+'ᠮ'        'ᠡ' + '/' > 'ᠮ' U+180E 'ᠡ'
+'ᠮ' U+180E 'ᠡ' + '/' > 'ᠮ'        'ᠡ'
+
+'ᠯ'        'ᠠ' + '/' > 'ᠯ' U+180E 'ᠠ'
+'ᠯ' U+180E 'ᠠ' + '/' > 'ᠯ'        'ᠠ'
+'ᠯ'        'ᠡ' + '/' > 'ᠯ' U+180E 'ᠡ'
+'ᠯ' U+180E 'ᠡ' + '/' > 'ᠯ'        'ᠡ'
+
+'ᠶ'        'ᠠ' + '/' > 'ᠶ' U+180E 'ᠠ'
+'ᠶ' U+180E 'ᠠ' + '/' > 'ᠶ'        'ᠠ'
+'ᠶ'        'ᠡ' + '/' > 'ᠶ' U+180E 'ᠡ'
+'ᠶ' U+180E 'ᠡ' + '/' > 'ᠶ'        'ᠡ'
+
+'ᠷ'        'ᠠ' + '/' > 'ᠷ' U+180E 'ᠠ'
+'ᠷ' U+180E 'ᠠ' + '/' > 'ᠷ'        'ᠠ'
+'ᠷ'        'ᠡ' + '/' > 'ᠷ' U+180E 'ᠡ'
+'ᠷ' U+180E 'ᠡ' + '/' > 'ᠷ'        'ᠡ'
+
+'ᠸ'        'ᠠ' + '/' > 'ᠸ' U+180E 'ᠠ'
+'ᠸ' U+180E 'ᠠ' + '/' > 'ᠸ'        'ᠠ'
+'ᠸ'        'ᠡ' + '/' > 'ᠸ' U+180E 'ᠡ'
+'ᠸ' U+180E 'ᠡ' + '/' > 'ᠸ'        'ᠡ'
+
+c ### Mandarin transcriptions
+
+'ᠵ' 'ᠢ' + '/' > 'ᡁ' 'ᠢ'
+'ᡁ' 'ᠢ' + '/' > 'ᠵ' 'ᠢ'
+
+'ᠴ' 'ᠢ' + '/' > 'ᡂ' 'ᠢ'
+'ᡂ' 'ᠢ' + '/' > 'ᠴ' 'ᠢ'
+
+'ᠰ' 'ᠢ' + '/' > 'ᠱ' 'ᠢ'
+'ᠱ' 'ᠢ' + '/' > 'ᠰ' 'ᠢ'
+
+'ᠷ' 'ᠢ' + '/' > 'ᠿ' 'ᠢ'
+'ᠿ' 'ᠢ' + '/' > 'ᠷ' 'ᠢ'
