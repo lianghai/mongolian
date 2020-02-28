@@ -1,5 +1,5 @@
 {
-.appVersion = "1283";
+.appVersion = "1284";
 customParameters = (
 {
 name = glyphOrder;
@@ -2294,9 +2294,9 @@ width = 620;
 );
 },
 {
-color = 3;
+color = 11;
 glyphname = K2.init;
-lastChange = "2020-01-07 14:47:21 +0000";
+lastChange = "2020-01-16 21:52:59 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2336,9 +2336,9 @@ width = 429;
 );
 },
 {
-color = 3;
+color = 11;
 glyphname = K2.medi;
-lastChange = "2020-01-07 14:47:21 +0000";
+lastChange = "2020-01-16 21:52:59 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
@@ -2378,9 +2378,9 @@ width = 384;
 );
 },
 {
-color = 3;
+color = 11;
 glyphname = K2.fina;
-lastChange = "2020-01-07 14:47:21 +0000";
+lastChange = "2020-01-16 21:52:59 +0000";
 layers = (
 {
 layerId = "E91C2A68-9D13-40A3-B48F-6510F845363B";
