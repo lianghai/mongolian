@@ -48,6 +48,7 @@
       <key vkey="K_W">ᠼ</key>
       <key vkey="K_X">ᠴ</key>
       <key vkey="K_Y">ᠨ</key>
+      <key vkey="K_SLASH">↹</key>
     </layer>
     <layer shift="S">
       <key vkey="K_SPACE"> </key>

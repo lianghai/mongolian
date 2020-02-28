@@ -7,6 +7,7 @@ c
 c 
 c Run by: Liang Hai
 
+
 store(&VERSION) '10.0'
 store(&NAME) 'Mongol Bichig'
 store(&VISUALKEYBOARD) 'mongol_bichig.kvks'
@@ -16,12 +17,70 @@ store(&COPYRIGHT) '© 2020 Liang Hai'
 store(&KEYBOARDVERSION) '0.1'
 store(&TARGETS) 'any'
 
+
 begin Unicode > use(main)
+
 
 group(main) using keys
 
-c # Basic layout
+
+c # Basic stores
 c # ------------
+
+store(o) 'ᠣ'
+store(u) 'ᠤ'
+store(oe) 'ᠥ'
+store(ue) 'ᠦ'
+
+store(aleph)  '᠇'
+store(nirugu) '᠊'
+
+store(MVS)   U+180e
+store(NNBSP) U+202f
+store(FVS1)  U+180b
+store(FVS2)  U+180c
+store(FVS3)  U+180d
+
+store(vowel.masculine) 'ᠠ' 'ᠣ' 'ᠤ'
+store(vowel.feminine)  'ᠡ' 'ᠧ' 'ᠥ' 'ᠦ'
+store(vowel.neuter)    'ᠢ'
+
+store(vowel) \
+  outs(vowel.masculine) outs(vowel.feminine) outs(vowel.neuter)
+
+store(consonant) \
+  'ᠨ' 'ᠩ' 'ᠪ' 'ᠫ' 'ᠬ' 'ᠭ' 'ᠮ' 'ᠯ' 'ᠰ' 'ᠱ' 'ᠲ' 'ᠳ' 'ᠴ' 'ᠵ' 'ᠶ' 'ᠷ' 'ᠸ' \
+  'ᠹ' 'ᠻ' 'ᠼ' 'ᠽ' 'ᠾ' 'ᠿ' 'ᡀ' 'ᡁ' 'ᡂ' \
+  $aleph
+
+store(letter) \
+  outs(vowel) outs(consonant)
+
+
+c # Basic layout, including modifiers and sequences
+c # -----------------------------------------------
+
+store(letter_key) \
+  [K_Q] [K_W] [K_E] [K_R] [SHIFT K_R] [K_T] [SHIFT K_T] [K_Y] [K_U] [K_I] [K_O] [K_P] [K_LBRKT] [SHIFT K_RBRKT] \
+  [K_A] [K_D] [K_F] [K_G] [K_H] [SHIFT K_H] [K_J] [K_K] [K_L] [K_COLON] [K_QUOTE] \
+  [K_X] [K_V] [K_B] [K_N] [K_M] [K_PERIOD]
+
+store(letter_key.output) \
+  'ᠹ' 'ᠼ' $u 'ᠵ' 'ᠿ' 'ᠡ' 'ᠧ' 'ᠨ' 'ᠭ' 'ᠱ' $ue 'ᠽ' 'ᠻ' $aleph \
+  'ᠶ' 'ᠪ' $oe 'ᠠ' 'ᠬ' 'ᠾ' 'ᠷ' $o 'ᠯ' 'ᠳ' 'ᠫ' \
+  'ᠴ' 'ᠰ' 'ᠮ' 'ᠢ' 'ᠲ' 'ᠸ'
+
+store(nirugu_key) [K_RBRKT]
+
+c Prioritized sequences:
+
+'ᠯ' $nirugu + [SHIFT K_H] > 'ᡀ' context(2)
+
+c General letter keys:
+
+any(letter) $nirugu + any(letter_key) > context(1) index(letter_key.output, 3) context(2)
+                    + any(letter_key) >            index(letter_key.output, 1) $nirugu
+
 
 c ## Row 1
 
@@ -67,198 +126,195 @@ c ## Row 1
 c [K_BKSLASH] is located here in the MNS 4332: 1996 layout,
 c   but is located at the end of row 2 in the US English layout.
 
+
 c ## Row 2
 
-+ [K_Q] > 'ᠹ'
+c + [K_Q] > 'ᠹ'
 
-+ [K_W] > 'ᠼ'
+c + [K_W] > 'ᠼ'
 
-+ [K_E] > 'ᠤ'
+c + [K_E] > $u
 
-+ [K_R] > 'ᠵ'
-+ [SHIFT K_R] > 'ᠿ'
+c + [K_R] > 'ᠵ'
+c + [SHIFT K_R] > 'ᠿ'
 
-+ [K_T] > 'ᠡ'
-+ [SHIFT K_T] > 'ᠧ'
+c + [K_T] > 'ᠡ'
+c + [SHIFT K_T] > 'ᠧ'
 
-+ [K_Y] > 'ᠨ'
+c + [K_Y] > 'ᠨ'
 
-+ [K_U] > 'ᠭ'
+c + [K_U] > 'ᠭ'
 
-+ [K_I] > 'ᠱ'
+c + [K_I] > 'ᠱ'
 
-+ [K_O] > 'ᠦ'
+c + [K_O] > $ue
 
-+ [K_P] > 'ᠽ'
+c + [K_P] > 'ᠽ'
 
-+ [K_LBRKT] > 'ᠻ'
+c + [K_LBRKT] > 'ᠻ'
 
-+ [K_RBRKT] > '᠊'
-+ [SHIFT K_RBRKT] > '᠇'
++ [K_RBRKT] > $nirugu
+c + [SHIFT K_RBRKT] > $aleph
 
 + [K_BKSLASH] > '\'  c Located at the end of row 1 in the MNS 4332: 1996 layout.
 + [SHIFT K_BKSLASH] > '|'
 
+
 c ## Row 3
 
-+ [K_A] > 'ᠶ'
+c + [K_A] > 'ᠶ'
 
-c + [K_S] >
++ [K_S] > nul
++ [SHIFT K_S] > nul
 
-+ [K_D] > 'ᠪ'
+c + [K_D] > 'ᠪ'
 
-+ [K_F] > 'ᠥ'
+c + [K_F] > $oe
 
-+ [K_G] > 'ᠠ'
+c + [K_G] > 'ᠠ'
 
-+ [K_H] > 'ᠬ'
-+ [SHIFT K_H] > 'ᠾ'
+c + [K_H] > 'ᠬ'
+c + [SHIFT K_H] > 'ᠾ'
 
-+ [K_J] > 'ᠷ'
+c + [K_J] > 'ᠷ'
 
-+ [K_K] > 'ᠣ'
+c + [K_K] > $o
 
-+ [K_L] > 'ᠯ'
+c + [K_L] > 'ᠯ'
 
-+ [K_COLON] > 'ᠳ'  c K_COLON is actually for ';'.
+c + [K_COLON] > 'ᠳ'
+c c K_COLON is actually for ';'.
 
-+ [K_QUOTE] > 'ᠫ'
+c + [K_QUOTE] > 'ᠫ'
+
 
 c ## Row 4
 
-c + [K_Z] >
++ [K_Z] > nul
++ [SHIFT K_Z] > nul
 
-+ [K_X] > 'ᠴ'
+c + [K_X] > 'ᠴ'
 
-c + [K_C] >
++ [K_C] > nul
++ [SHIFT K_C] > nul
 
-+ [K_V] > 'ᠰ'
+c + [K_V] > 'ᠰ'
 
-+ [K_B] > 'ᠮ'
+c + [K_B] > 'ᠮ'
 
-+ [K_N] > 'ᠢ'
+c + [K_N] > 'ᠢ'
 
-+ [K_M] > 'ᠲ'
+c + [K_M] > 'ᠲ'
 
-c + [K_COMMA] >
++ [K_COMMA] > nul
++ [SHIFT K_COMMA] > nul
 
-+ [K_PERIOD] > 'ᠸ'
+c + [K_PERIOD] > 'ᠸ'
 
 + [K_SLASH] > nul
 + [SHIFT K_SLASH] > nul
 
+
 c ## Row 5
 
-+ [K_SPACE] > U+0020  c SPACE
-+ [SHIFT K_SPACE] > U+202f  c NARROW NO-BREAK SPACE
++ [K_SPACE] > ' '
++ [SHIFT K_SPACE] > $NNBSP
 
-c # Sequences
-c # ---------
 
-'ᠯ' + [SHIFT K_H] > 'ᡀ'
-
-c # Rotas
-c # -----
+c # Rotas! Yay!
+c # -----------
 
 store(next) [K_SLASH]
 
-store(vowel.masculine) 'ᠠ' 'ᠣ' 'ᠤ'
-store(vowel.feminine)  'ᠡ' 'ᠧ' 'ᠥ' 'ᠦ'
-store(vowel.neuter)    'ᠢ'
 
-store(vowel) \
-  outs(vowel.masculine) outs(vowel.feminine) outs(vowel.neuter)
+c ## Devsgers (syllable codas)
 
-store(consonant) \
-  'ᠨ' 'ᠩ' 'ᠪ' 'ᠫ' 'ᠬ' 'ᠭ' 'ᠮ' 'ᠯ' 'ᠰ' 'ᠱ' 'ᠲ' 'ᠳ' 'ᠴ' 'ᠵ' 'ᠶ' 'ᠷ' 'ᠸ' \
-  'ᠹ' 'ᠻ' 'ᠼ' 'ᠽ' 'ᠾ' 'ᠿ' 'ᡀ' 'ᡁ' 'ᡂ'
+c .medi/fina
 
-store(MVS) U+180E
+'ᠨ'         + outs(next) > 'ᠩ'
+'ᠨ' $nirugu + outs(next) > 'ᠩ' context(2)
+'ᠩ'         + outs(next) > 'ᠨ'
+'ᠩ' $nirugu + outs(next) > 'ᠨ' context(2)
 
-store(FVS1) U+180B
-store(FVS2) U+180C
-store(FVS3) U+180D
+'ᠳ'               + outs(next) > context(1) $FVS1
+'ᠳ'       $nirugu + outs(next) > context(1) $FVS1 context(2)
+'ᠳ' $FVS1         + outs(next) > context(1)
+'ᠳ' $FVS1 $nirugu + outs(next) > context(1)       context(3)
 
-c ## Syllable codas
+c Letter g has an alternative devsger form only after i:
 
-'ᠨ' + outs(next) > 'ᠩ'
-'ᠩ' + outs(next) > 'ᠨ'
+'ᠢ' 'ᠭ'               + outs(next) > context(1) context(2) $FVS1
+'ᠢ' 'ᠭ'       $nirugu + outs(next) > context(1) context(2) $FVS1 context(3)
+'ᠢ' 'ᠭ' $FVS1         + outs(next) > context(1) context(2)
+'ᠢ' 'ᠭ' $FVS1 $nirugu + outs(next) > context(1) context(2)       context(4)
 
-'ᠢ' 'ᠭ'       + outs(next) > 'ᠢ' 'ᠭ' $FVS1  c (g has an alternative form only after i)
-'ᠢ' 'ᠭ' $FVS1 + outs(next) > 'ᠢ' 'ᠭ'
-
-'ᠳ'       + outs(next) > 'ᠳ' $FVS1
-'ᠳ' $FVS1 + outs(next) > 'ᠳ'
 
 c ## (C)V syllables
 
-c ### General
+c .isol
 
-'ᠠ'       + outs(next) > 'ᠠ' $FVS1
-'ᠠ' $FVS1 + outs(next) > 'ᠠ'
+'ᠠ'       + outs(next) > context(1) $FVS1
+'ᠠ' $FVS1 + outs(next) > context(1)
 
-'ᠦ'       + outs(next) > 'ᠦ' $FVS1
-'ᠦ' $FVS1 + outs(next) > 'ᠦ'
+'ᠦ'       + outs(next) > context(1) $FVS1
+'ᠦ' $FVS1 + outs(next) > context(1)
 
-'ᠳ'       any(vowel) + outs(next) > 'ᠳ' $FVS1 index(vowel, 2)
-'ᠳ' $FVS1 any(vowel) + outs(next) > 'ᠳ'       index(vowel, 3)
+c .medi/fina
 
-store(vowel.rounded) 'ᠣ' 'ᠤ' 'ᠥ' 'ᠦ'
+'ᠲ'       any(vowel)         + outs(next) > context(1) $FVS1 context(2)
+'ᠲ'       any(vowel) $nirugu + outs(next) > context(1) $FVS1 context(2) context(3)
+'ᠲ' $FVS1 any(vowel)         + outs(next) > context(1)       context(3)
+'ᠲ' $FVS1 any(vowel) $nirugu + outs(next) > context(1)       context(3) context(4)
 
-any(consonant) any(vowel.rounded)       + outs(next) > index(consonant, 1) index(vowel.rounded, 2) $FVS1
-any(consonant) any(vowel.rounded) $FVS1 + outs(next) > index(consonant, 1) index(vowel.rounded, 2)
+c .isol/init
+
+'ᠳ'       any(vowel)         + outs(next) > context(1) $FVS1 context(2)
+'ᠳ'       any(vowel) $nirugu + outs(next) > context(1) $FVS1 context(2) context(3)
+'ᠳ' $FVS1 any(vowel)         + outs(next) > context(1)       context(3)
+'ᠳ' $FVS1 any(vowel) $nirugu + outs(next) > context(1)       context(3) context(4)
+
+c .fina
+
+store(vowel.4567) $o $u $oe $ue
+
+any(consonant) any(vowel.4567)       + outs(next) > context(1) context(2) $FVS1
+any(consonant) any(vowel.4567) $FVS1 + outs(next) > context(1) context(2)
 
 c The section above overlaps with the preceding one and needs handling.
 c The possible FVS between consonant and vowel.rounded needs to be ignored.
 
+
 c ### Chachlag
 
-'ᠨ'      'ᠠ' + outs(next) > 'ᠨ' $MVS 'ᠠ'
-'ᠨ' $MVS 'ᠠ' + outs(next) > 'ᠨ'      'ᠠ'
-'ᠨ'      'ᠡ' + outs(next) > 'ᠨ' $MVS 'ᠡ'
-'ᠨ' $MVS 'ᠡ' + outs(next) > 'ᠨ'      'ᠡ'
+c .fina
 
-'ᠬ'      'ᠠ' + outs(next) > 'ᠬ' $MVS 'ᠠ'
-'ᠬ' $MVS 'ᠠ' + outs(next) > 'ᠬ'      'ᠠ'
+store(vowel.12) 'ᠠ' 'ᠡ'
+store(consonant.h_g) 'ᠬ' 'ᠭ'
+store(consonant.n_m_l_y_r_w) 'ᠨ' 'ᠮ' 'ᠯ' 'ᠶ' 'ᠷ' 'ᠸ'
 
-'ᠭ'      'ᠠ' + outs(next) > 'ᠭ' $MVS 'ᠠ'
-'ᠭ' $MVS 'ᠠ' + outs(next) > 'ᠭ'      'ᠠ'
+any(consonant.h_g)         'ᠠ'           $nirugu + [K_BKSP] > context(1) $MVS context(2)
+any(consonant.n_m_l_y_r_w) any(vowel.12) $nirugu + [K_BKSP] > context(1) $MVS context(2)
 
-'ᠮ'      'ᠠ' + outs(next) > 'ᠮ' $MVS 'ᠠ'
-'ᠮ' $MVS 'ᠠ' + outs(next) > 'ᠮ'      'ᠠ'
-'ᠮ'      'ᠡ' + outs(next) > 'ᠮ' $MVS 'ᠡ'
-'ᠮ' $MVS 'ᠡ' + outs(next) > 'ᠮ'      'ᠡ'
+any(consonant.h_g)              'ᠠ'           + outs(next) > context(1) $MVS context(2)
+any(consonant.h_g)         $MVS 'ᠠ'           + outs(next) > context(1)      context(3)
+any(consonant.n_m_l_y_r_w)      any(vowel.12) + outs(next) > context(1) $MVS context(2)
+any(consonant.n_m_l_y_r_w) $MVS any(vowel.12) + outs(next) > context(1)      context(3)
 
-'ᠯ'      'ᠠ' + outs(next) > 'ᠯ' $MVS 'ᠠ'
-'ᠯ' $MVS 'ᠠ' + outs(next) > 'ᠯ'      'ᠠ'
-'ᠯ'      'ᠡ' + outs(next) > 'ᠯ' $MVS 'ᠡ'
-'ᠯ' $MVS 'ᠡ' + outs(next) > 'ᠯ'      'ᠡ'
-
-'ᠶ'      'ᠠ' + outs(next) > 'ᠶ' $MVS 'ᠠ'
-'ᠶ' $MVS 'ᠠ' + outs(next) > 'ᠶ'      'ᠠ'
-'ᠶ'      'ᠡ' + outs(next) > 'ᠶ' $MVS 'ᠡ'
-'ᠶ' $MVS 'ᠡ' + outs(next) > 'ᠶ'      'ᠡ'
-
-'ᠷ'      'ᠠ' + outs(next) > 'ᠷ' $MVS 'ᠠ'
-'ᠷ' $MVS 'ᠠ' + outs(next) > 'ᠷ'      'ᠠ'
-'ᠷ'      'ᠡ' + outs(next) > 'ᠷ' $MVS 'ᠡ'
-'ᠷ' $MVS 'ᠡ' + outs(next) > 'ᠷ'      'ᠡ'
-
-'ᠸ'      'ᠠ' + outs(next) > 'ᠸ' $MVS 'ᠠ'
-'ᠸ' $MVS 'ᠠ' + outs(next) > 'ᠸ'      'ᠠ'
-'ᠸ'      'ᠡ' + outs(next) > 'ᠸ' $MVS 'ᠡ'
-'ᠸ' $MVS 'ᠡ' + outs(next) > 'ᠸ'      'ᠡ'
+any(consonant.h_g)         $MVS 'ᠠ'           + outs(nirugu_key) > context(1) context(3) $nirugu
+any(consonant.n_m_l_y_r_w) $MVS any(vowel.12) + outs(nirugu_key) > context(1) context(3) $nirugu
 
 c ### Mandarin transcriptions
 
-'ᠵ' 'ᠢ' + outs(next) > 'ᡁ' 'ᠢ'
-'ᡁ' 'ᠢ' + outs(next) > 'ᠵ' 'ᠢ'
+c .isol
 
-'ᠴ' 'ᠢ' + outs(next) > 'ᡂ' 'ᠢ'
-'ᡂ' 'ᠢ' + outs(next) > 'ᠴ' 'ᠢ'
+'ᠵ' 'ᠢ' + outs(next) > 'ᡁ' context(2)
+'ᡁ' 'ᠢ' + outs(next) > 'ᠵ' context(2)
 
-'ᠰ' 'ᠢ' + outs(next) > 'ᠱ' 'ᠢ'
-'ᠱ' 'ᠢ' + outs(next) > 'ᠰ' 'ᠢ'
+'ᠴ' 'ᠢ' + outs(next) > 'ᡂ' context(2)
+'ᡂ' 'ᠢ' + outs(next) > 'ᠴ' context(2)
 
-'ᠷ' 'ᠢ' + outs(next) > 'ᠿ' 'ᠢ'
-'ᠿ' 'ᠢ' + outs(next) > 'ᠷ' 'ᠢ'
+'ᠰ' 'ᠢ' + outs(next) > 'ᠱ' context(2)
+'ᠱ' 'ᠢ' + outs(next) > 'ᠰ' context(2)
+
+'ᠷ' 'ᠢ' + outs(next) > 'ᠿ' context(2)
+'ᠿ' 'ᠢ' + outs(next) > 'ᠷ' context(2)

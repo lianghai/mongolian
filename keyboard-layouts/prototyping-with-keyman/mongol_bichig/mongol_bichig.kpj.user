@@ -13,8 +13,8 @@
         <LayoutDisplay102Key>0</LayoutDisplay102Key>
         <DebugDefaultFont>1</DebugDefaultFont>
         <DebugFont>MS Sans Serif|8|   |1</DebugFont>
-        <CodeFont>Consolas|11|   |0</CodeFont>
-        <CharFont>Consolas|11|   |0</CharFont>
+        <CodeFont>Consolas|10|   |0</CodeFont>
+        <CharFont>Consolas|10|   |0</CharFont>
       </IDEState>
       <Debug>True</Debug>
     </FileState>
