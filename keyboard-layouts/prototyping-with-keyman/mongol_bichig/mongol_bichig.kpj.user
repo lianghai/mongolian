@@ -14,7 +14,7 @@
         <DebugDefaultFont>1</DebugDefaultFont>
         <DebugFont>MS Sans Serif|8|   |1</DebugFont>
         <CodeFont>Consolas|-9|   |0</CodeFont>
-        <CharFont>Consolas|-9|   |0</CharFont>
+        <CharFont>Consolas|10|   |0</CharFont>
       </IDEState>
       <Debug>False</Debug>
     </FileState>
