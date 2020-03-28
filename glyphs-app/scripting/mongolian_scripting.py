@@ -28,30 +28,25 @@ def transform_font(font, transform):
                 key = "io.lianghai.backup.{}".format(attribute)
                 master.customParameters[key] = getattr(master, attribute)
             master.descender -= master.ascender
-            master.ascender, master.capHeight, master.xHeight = 0.0, 0.0, 0.0
+            master.ascender = 0.0
+            master.capHeight, master.xHeight = 0.0, 0.0
         else:
             for attribute in ["ascender", "capHeight", "xHeight", "descender"]:
                 key = "io.lianghai.backup.{}".format(attribute)
                 setattr(master, attribute, master.customParameters[key])
                 del master.customParameters[key]
-        # h_kerning = font.kerning[master.id].copy()
-        # font.kerning[master.id].clear()
-        # v_kerning = font.verticalKerning[master.id]
-        # font.verticalKerning[master.id].clear()
-        # for l_key, r_keys_to_values in h_kerning.items():
-        #     for r_key, value in r_keys_to_values.items():
-        #         font.setKerningForPair(
-        #             master.id,
-        #             l_key.replace("@MMK_L_", "@MMK_T_"),
-        #             r_key.replace("@MMK_R_", "@MMK_B_"),
-        #             value,
-        #             direction=LTRTTB,
-        #         )
 
     if transform is H_TO_V:
         font.customParameters["io.lianghai.state"] =  "mongolian.ttb"
+        for tab in font.tabs:
+            tab.direction = LTRTTB
     else:
         del font.customParameters["io.lianghai.state"]
+        try:
+            for tab in font.tabs:
+                tab.direction = LTR
+        except AttributeError:
+            pass
 
 
 def transform_glyph(glyph, transform):
@@ -98,7 +93,7 @@ def transform_glyph(glyph, transform):
         for guide in l.guides:
             transform_guide(guide, transform)
         if transform is H_TO_V:
-            l.vertOrigin = 0
+            l.vertOrigin = 0.0
             l.vertWidth = l.width
             l.width = g.parent.masters[l.associatedMasterId].ascender
         else:
