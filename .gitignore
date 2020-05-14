@@ -2,3 +2,4 @@
 * (Autosaved).glyphs
 *.pyc
 /temp/
+.mypy_cache
