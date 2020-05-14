@@ -1,0 +1,44 @@
+# Character classes
+# =================
+
+@mongolian = [nirugu @vowel @consonant];
+
+@vowel = [@vowel.masculine @vowel.feminine @vowel.neuter];
+@vowel.masculine = [@a @o @u];
+@vowel.feminine = [@e @oe @ue @e2];
+@vowel.neuter = [@i];
+
+@consonant = [@consonant.static_bowed @consonant.gender_dependent @consonant.except_potentially_bowed];
+
+@fvs = [fvs1 fvs2 fvs3 fvs4];
+
+# Note: FVS4 (U+180F MONGOLIAN FREE VARIATION SELECTOR FOUR) has been accepted
+# as a *draft candidate* character for Unicode 14.0 (see the Pipeline
+# http://unicode.org/alloc/Pipeline.html).
+
+## Other classes
+
+@vowel.except_neuter = [@vowel.masculine @vowel.feminine];
+@vowel.preceding_i_II = [@a @e @o @u @e2];
+@vowel.oe_ue = [@oe @ue];
+
+@consonant.static_bowed = [@b @p @f @k2 @k];
+@consonant.potentially_bowed = [@consonant.gender_dependent @static_bowed];
+@consonant.except_static_bowed = [@consonant.gender_dependent @except_potentially_bowed];
+@consonant.except_potentially_bowed = [@n @ng @m @l @s @sh @t @d @ch @j @y @r @w @c @z @h2 @rh @lh @zr @cr];
+
+@consonant.s_d = [@s @d];
+
+@consonant.preceding_a_chachlag = [@consonant.gender_dependent @consonant.preceding_e_chachlag];
+@consonant.preceding_e_chachlag = [@n @m @l @s @sh @j @y @r @w];
+
+## Classes not defined in the EAC standard
+
+@consonant.gender_dependent = [@h @g];
+
+# OTL rules
+# =========
+
+# feature init {
+
+# } init;
