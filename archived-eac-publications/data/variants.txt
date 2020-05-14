@@ -1,9 +1,20 @@
-a.isol: AA <(3)>, A <1>, Á <context|post-mvs|2>
+# Syntax
+# ======
+
+# - By default, psdef are not marked with anything (see é).
+# - Variants are marked with a cursive position suffix when there is positional mismatch (see N.init of n.isol).
+# - FVSes are marked with its number, e.g., <1> for FVS1 (see A of a.isol).
+# - When an FVS is specified for psdef to override the automatic contextual shaping, the FVS is recorded in parentheses, e.g., <(1)> for a psdef that is assigned FVS1 (see AA of a.isol).
+# - As all cxdef are also psdef, only non-psdef cxdef are marked <context> (see of ÁA.isol).
+# - MVS-triggered variants are merged into either <context> if their gray “mvs” rows are cxdef (see Á of A.isol and N of n.fina, which are marked as <context>, as well as Ğ of h.fina, which is marked only as <1>).
+# - When a variant can be triggered by both the automatic contextual shaping and the manual FVS overriding, both are recorded and separated, e.g., <context|1> (see Á of a.isol).
+
+a.isol: AA <(3)>, A <1>, Á <context|2>
 a.init: AA <(2)>, A <context|1>
 a.medi: A, AA <1>
 a.fina: A <(2)>, Á <context|1>
 
-e.isol: A <(2)>, Á <context|post-mvs|1>
+e.isol: A <(2)>, Á <context|1>
 e.init: A, AA <1>
 e.medi: A
 e.fina: A <(2)>, Á <context|1>
@@ -41,7 +52,7 @@ u.fina: U <(2)>, O <context|1>
 n.isol: N.init, A.init <1>
 n.init: N, A <1>
 n.medi: A <(2)>, N <context|1>
-n.fina: A <(pre-mvs|2)>, N <pre-mvs|1>  # ?
+n.fina: A <(2)>, N <context|1>
 
 ŋ.isol: AG.medi
 ŋ.init: AG.medi
@@ -61,32 +72,32 @@ p.fina: P
 h.isol: H.init, Ğ.init <1>, G.init <2>, G̈.init <4>
 h.init: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
 h.medi: H <(3)>, Ğ <1>, G <context|2>, G̈ <4>
-h.fina: H <(pre-mvs)>, Ğ <pre-mvs|1>  # ?
+h.fina: H, Ğ <1>
 
 g.isol: Ğ.init, H.init <1>, G.init <2>, G̈.init <4>
 g.init: Ğ <(3)>, H <1>, G <context|2>, G̈ <4>
 g.medi: H <(3)>, Ğ <context|1>, G <context|2>, G̈ <4>
-g.fina: H <(pre-mvs|1)>, G <context|2>, Ğ <pre-mvs|3>  # ?
+g.fina: H <(1)>, G <context|2>, Ğ <context|3>
 
 m.isol: M.init
 m.init: M
 m.medi: M
-m.fina: M <(pre-mvs)>
+m.fina: M
 
 l.isol: L.init
 l.init: L
 l.medi: L
-l.fina: L <pre-mvs>
+l.fina: L
 
 s.isol: S.init
 s.init: S
 s.medi: S
-s.fina: S <(pre-mvs)>
+s.fina: S
 
 ś.isol: Ś.init, S.init <1>
 ś.init: Ś <(2)>, S <context|1>
 ś.medi: Ś <(2)>, S <context|1>
-ś.fina: Ś <(pre-mvs)>
+ś.fina: Ś
 
 t.isol: T.init
 t.init: T
@@ -103,25 +114,25 @@ d.fina: Đ, D <1>
 ć.medi: Ć
 ć.fina: Ć
 
-j.isol: I.init, I <context|pre-mvs>
+j.isol: I.init, I <context>
 j.init: I
 j.medi: J
-j.fina: J, I <context|pre-mvs>
+j.fina: J, I <context>
 
 y.isol: Y.init, I.init <1>
 y.init: Y <(2)>, I <context|1>
 y.medi: Y <(3)>, I <context|1>, II <2>
-y.fina: I <(pre-mvs)>
+y.fina: I
 
 r.isol: R.init
 r.init: R
 r.medi: R
-r.fina: R <(pre-mvs)>
+r.fina: R
 
 w.isol: W.init
 w.init: W
 w.medi: W, U <1>
-w.fina: W, U <pre-mvs|1>
+w.fina: W, U <context|1>
 
 f.isol: F.init
 f.init: F
