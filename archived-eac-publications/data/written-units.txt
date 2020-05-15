@@ -5,11 +5,11 @@ W, W
 H, H
 Ğ, Gh
 U, U
-U̇, Uh  # additional
+Ụ, Uh  # additional
 O, O
 Ü, Ue
 I, I
-İ, Ih  # additional
+Ị, Ih  # additional
 Y, Y
 G, G
 G̈, Gg  # additional

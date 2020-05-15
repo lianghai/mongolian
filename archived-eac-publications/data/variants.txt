@@ -19,7 +19,7 @@ e.init: A, AA <1>
 e.medi: A
 e.fina: A <(2)>, Á <context|1>
 
-i.isol: AI <(3)>, I <context|1>, İ <2>
+i.isol: AI <(3)>, I <context|1>, Ị <2>
 i.init: AI <(2)>, I <context|1>
 i.medi: I <(3)>, AI <1>, II <context|2>
 i.fina: I
@@ -29,7 +29,7 @@ o.init: AU
 o.medi: U, AU <1>
 o.fina: U <(2)>, O <context|1>
 
-u.isol: AO <(3)>, U <context|1>, U̇ <2>
+u.isol: AO <(3)>, U <context|1>, Ụ <2>
 u.init: AU <(2)>, U <context|1>
 u.medi: U, AU <1>
 u.fina: U <(2)>, O <context|1>
@@ -39,7 +39,7 @@ u.fina: U <(2)>, O <context|1>
 ö.medi: U <(3)>, UI <context|1>, AUI <2>
 ö.fina: U <(3)>, Ü <context|1>, O <context|2>
 
-ü.isol: AÜ, AU <1>, U <context|2>, U̇ <3>
+ü.isol: AÜ, AU <1>, U <context|2>, Ụ <3>
 ü.init: AUI <(2)>, U <context|1>
 ü.medi: U <(3)>, UI <context|1>, AUI <2>
 ü.fina: U <(3)>, Ü <context|1>, O <context|2>
