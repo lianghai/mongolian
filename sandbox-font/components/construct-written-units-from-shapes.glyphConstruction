@@ -1,0 +1,31 @@
+A.init = A.core.init &\ nirugu ^ {disjoined_LSB}, {joined_RSB}
+A.medi = A.core.medi &\ nirugu ^ {joined_LSB},    {joined_RSB}
+A.fina = A.core.fina           ^ {joined_LSB},    {disjoined_RSB}
+
+A.init =                A.core.init &\ nirugu.half ^ {disjoined_LSB}, {joined_RSB}
+A.medi = nirugu.half &\ A.core.medi &\ nirugu.half ^ {joined_LSB},    {joined_RSB}
+A.fina = nirugu.half &\ A.core.fina                ^ {joined_LSB},    {disjoined_RSB}
+
+# Inline composition
+
+?H.medi  = A.medi &\ A.medi
+?Dh.medi = U.medi &\ A.medi
+?Dh.fina = U.medi &\ A.fina
+?H2.init = A.init &\ H2.medi
+?Cr.init = U.init &\ U.medi
+
+# Dots
+
+?N.init  = A.init + _dot       @ center, bottom
+?N.medi  = A.medi + _dot       @ center, bottom
+?N.fina  = A.fina + _dot       @ center, bottom
+?Gh.init = H.init + _doubledot @ center, bottom
+?Gh.medi = H.medi + _doubledot @ center, bottom
+?Gh.fina = H.fina + _doubledot @ center, bottom
+?Uh.isol = U.isol + _dot       @ center, bottom
+?Ih.isol = I.isol + _dot       @ center, bottom
+?Gg.init = G.init + _doubledot @ center, bottom
+?Gg.medi = G.medi + _doubledot @ center, bottom
+?Sh.init = S.init + _doubledot @ center, top
+?Sh.medi = S.medi + _doubledot @ center, top
+?Sh.fina = S.fina + _doubledot @ center, top
