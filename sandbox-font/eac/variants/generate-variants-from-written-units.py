@@ -1,5 +1,9 @@
-import os, defcon, glyphConstruction
+import os.path
 from collections import OrderedDict
+
+import defcon
+
+import glyphConstruction
 
 POSITION_TO_JOINEDNESS = OrderedDict([
     ("isol", (0, 0)),

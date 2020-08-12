@@ -1,7 +1,9 @@
-import unicodedata, grapheme
 from collections import OrderedDict, defaultdict
+from typing import Optional
 
-graphemes = grapheme.graphemes
+from fontTools import unicodedata
+from grapheme import graphemes
+
 
 class Variant:
     def __init__(
@@ -16,10 +18,10 @@ class Variant:
         self.position_key = position_key
         self.written_units = written_units
         self.position_key_borrowed = position_key_borrowed
-        self.conditions = {
-            "context": None, # default | alt
-            "mvs": None, # pre | post
-            "fvs": None, # 1 | 2 | 3
+        self.conditions: dict[str, Optional[str]] = {
+            "context": None,  # default | alt
+            "mvs": None,  # pre | post
+            "fvs": None,  # 1 | 2 | 3
         }
         if not conditions:
             self.conditions["context"] = "default"
@@ -42,9 +44,11 @@ class Variant:
             if "3" in fields:
                 self.conditions["fvs"] = "3"
 
+
 with open("../data/phonetic-letters.txt") as f:
     LETTER_NAME_TO_CODE_POINT = OrderedDict(
-        line.partition("  # ")[0].split(", ")[:2] for line in f.read().splitlines()
+        line.partition("  # ")[0].split(", ")[:2]
+        for line in f.read().splitlines()
     )
 
 LETTER_NAME_TO_VARIANTS = defaultdict(list)
@@ -56,8 +60,10 @@ with open("../data/variants.txt") as f:
         key, _, value = line.partition(": ")
         letter_name, _, position_key = key.partition(".")
         for raw_variant_description in value.split(", "):
-            written_form, _, conditions = raw_variant_description.partition(" ")
-            written_form, _, position_key_borrowed = written_form.partition(".")
+            written_form, _, conditions = raw_variant_description\
+                .partition(" ")
+            written_form, _, position_key_borrowed = written_form\
+                .partition(".")
             variant = Variant(
                 letter_name=letter_name,
                 position_key=position_key,
@@ -86,8 +92,8 @@ with open("./MongolianVariants.txt", "w") as f:
             fields.append(field)
             for field_key, width in [
                 ("context", 7),
-                ("mvs",     4),
-                ("fvs",     1),
+                ("mvs", 4),
+                ("fvs", 1),
             ]:
                 value = variant.conditions[field_key]
                 if value:
