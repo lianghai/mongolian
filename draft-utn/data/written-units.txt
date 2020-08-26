@@ -1,5 +1,5 @@
 A, A
-Á, Ah
+Á, A2
 N, N
 W, W
 H, H
@@ -24,7 +24,7 @@ C, C
 Z, Z
 R, R
 T, T
-Đ, Dh
+Đ, D2
 L, L
 Ř, Rh
 Ħ, H2

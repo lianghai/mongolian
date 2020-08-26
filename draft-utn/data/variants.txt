@@ -1,3 +1,7 @@
+# : isol ; init ; medi ; fina ;
+
+’ :      ;      ; A    ;      ;
+
 # : isol  ; init   ; medi  ; fina ;
 
 a : AA ~1 ; AA  ~1 ;       ;      ;
@@ -90,7 +94,3 @@ z :      ; Z    ; Z    ; Z    ;
 ł :      ; LĦ   ; LĦ   ;      ;
 ž :      ; Ž    ;      ;      ;
 č :      ; Č    ;      ;      ;
-
-# : isol ; init ; medi ; fina ;
-
-’ :      ;      ; A    ;      ;
