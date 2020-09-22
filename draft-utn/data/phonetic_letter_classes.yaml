@@ -1,0 +1,15 @@
+--- # Mapping: phonetic_letter_class_tag to phonetic_letters
+
+"masculine_vowel": { "a", "o", "u" }
+"feminine_vowel": { "e", "ee", "oe", "ue" }
+"neuter_vowel": { "i" }
+
+# "vowel": { "masculine_vowel" + "feminine_vowel" + "neuter_vowel" }
+
+"consonant": {
+  "aleph",
+  "n", "ng", "b", "p", "h", "g", "m", "l", "s", "sh", "t", "d", "ch", "j", "y", "r", "w",
+  "f", "k", "c", "z", "hh", "rh", "lh", "zr", "cr"
+}
+
+...
