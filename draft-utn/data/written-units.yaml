@@ -35,7 +35,7 @@
       orthogonally_joining_types: { "trailing_major" }
 
 "Ii":
-  single_letter_transcription: "Ụ"
+  single_letter_transcription: "Ị"
   cursive_position_to_variant:
     isol: # Ii.isol
       represented_phonetic_letters: { "i" }
@@ -144,7 +144,33 @@
     fina: # G.fina
       represented_phonetic_letters: { "g" }
 
-# …
+"Gg":
+  single_letter_transcription: "G̈"
+
+"M":
+
+"L":
+
+"S":
+
+"Sh":
+  single_letter_transcription: "Ś"
+
+"T":
+
+"D":
+
+"Dd":
+  single_letter_transcription: "Đ"
+
+"Ch":
+  single_letter_transcription: "Ć"
+
+"J":
+
+"Y":
+
+"R":
 
 "W":
   cursive_position_to_variant:
@@ -157,6 +183,24 @@
       represented_phonetic_letters: { "w", "ee" }
       orthogonally_joining_types: { "trailing_minor" }
 
-# …
+"F":
+
+"K":
+
+"C":
+
+"Z":
+
+"Hh":
+  single_letter_transcription: "Ħ"
+
+"Rh":
+  single_letter_transcription: "Ř"
+
+"Zr":
+  single_letter_transcription: "Ž"
+
+"Cr":
+  single_letter_transcription: "Č"
 
 ...

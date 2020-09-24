@@ -1,4 +1,4 @@
---- # Mapping: phonetic_letter_class_tag to phonetic_letters
+--- # Mapping: syllabic_category_value to characters
 
 "masculine_vowel": { "a", "o", "u" }
 "feminine_vowel": { "e", "ee", "oe", "ue" }
