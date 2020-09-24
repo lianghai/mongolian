@@ -21,26 +21,94 @@
     fina: # Aa.fina
       represented_phonetic_letters: { "a" }
 
+"I":
+  cursive_position_to_variant:
+    isol: # I.isol
+      represented_phonetic_letters: { "i", "j" }
+    init: # I.init
+      represented_phonetic_letters: { "i", "j", "y" }
+    medi: # I.medi
+      represented_phonetic_letters: { "i", "y" }
+      orthogonally_joining_types: { "trailing_minor" }
+    fina: # I.fina
+      represented_phonetic_letters: { "i", "y" }
+      orthogonally_joining_types: { "trailing_major" }
+
+"Ii":
+  single_letter_transcription: "Ụ"
+  cursive_position_to_variant:
+    isol: # Ii.isol
+      represented_phonetic_letters: { "i" }
+      note: "Early modern orthographies"
+      typographical_decomposition: "I.isol + _dotbelow"
+
+"O":
+  cursive_position_to_variant:
+    init: # O.init
+      represented_phonetic_letters: { "u", "ue" } # Particles
+    medi: # O.medi
+      represented_phonetic_letters: { "o", "u", "oe", "ue" }
+      orthogonally_joining_types: { "trailing_major" }
+    fina: # O.fina
+      represented_phonetic_letters: { "o", "u", "oe", "ue"} # Marked, orthogonally joined
+      orthogonally_joining_types: { "trailing_major" }
+
+"Ue":
+  single_letter_transcription: "Ü"
+  cursive_position_to_variant:
+    fina: # Ue.fina
+      represented_phonetic_letters: { "oe", "ue" }
+      orthogonally_joining_types: { "trailing_major" }
+
+"U":
+  cursive_position_to_variant:
+    isol: # U.isol
+      represented_phonetic_letters: { "u", "ue" }
+    fina: # U.fina
+      represented_phonetic_letters: { "o", "u", "oe", "ue", "w" }
+
+"Uu":
+  single_letter_transcription: "Ụ"
+  cursive_position_to_variant:
+    isol: # Uu.isol
+      represented_phonetic_letters: { "u", "ue" }
+      note: "Early modern orthographies"
+      typographical_decomposition: "U.isol + _dotbelow"
+
 "N":
   cursive_position_to_variant:
     init: # N.init
       represented_phonetic_letters: { "n" }
+      typographical_decomposition: "A.init + _dotbelow"
     medi: # N.medi
       represented_phonetic_letters: { "n" }
       orthogonally_joining_types: { "trailing_minor" }
+      typographical_decomposition: "A.medi + _dotbelow"
     fina: # N.fina
       represented_phonetic_letters: { "n" }
+      typographical_decomposition: "A.fina + _dotbelow"
 
-"W":
+"B":
   cursive_position_to_variant:
-    init: # W.init
-      represented_phonetic_letters: { "w" }
-    medi: # W.medi
-      represented_phonetic_letters: { "w", "ee" }
-      orthogonally_joining_types: { "trailing_minor" }
-    fina: # W.fina
-      represented_phonetic_letters: { "w", "ee" }
-      orthogonally_joining_types: { "trailing_minor" }
+    init: # B.init
+      represented_phonetic_letters: { "b" }
+      orthogonally_joining_types: { "leading" }
+    medi: # B.medi
+      represented_phonetic_letters: { "b" }
+      orthogonally_joining_types: { "leading" }
+    fina: # B.fina
+      represented_phonetic_letters: { "b" }
+
+"P":
+  cursive_position_to_variant:
+    init: # P.init
+      represented_phonetic_letters: { "p" }
+      orthogonally_joining_types: { "leading" }
+    medi: # P.medi
+      represented_phonetic_letters: { "p" }
+      orthogonally_joining_types: { "leading" }
+    fina: # P.fina
+      represented_phonetic_letters: { "p" }
 
 "H":
   cursive_position_to_variant:
@@ -65,26 +133,6 @@
       represented_phonetic_letters: { "g" }
       orthogonally_joining_types: { "trailing_minor" }
 
-"U":
-  cursive_position_to_variant:
-    isol: # U.isol
-      represented_phonetic_letters: { "u", "ue" }
-    init: # U.init
-      represented_phonetic_letters: { "u", "ue" }
-    medi: # U.medi
-      represented_phonetic_letters: { "o", "u", "oe", "ue", "w" }
-      orthogonally_joining_types: { "trailing_major" }
-    fina: # U.fina
-      represented_phonetic_letters: { "o", "u", "oe", "ue", "w" }
-
-"Uu":
-  single_letter_transcription: "Ụ"
-  cursive_position_to_variant:
-    isol: # Uu.isol
-      represented_phonetic_letters: { "u", "ue" }
-
-# …
-
 "G":
   cursive_position_to_variant:
     init: # G.init
@@ -95,6 +143,19 @@
       orthogonally_joining_types: { "leading", "trailing_minor" }
     fina: # G.fina
       represented_phonetic_letters: { "g" }
+
+# …
+
+"W":
+  cursive_position_to_variant:
+    init: # W.init
+      represented_phonetic_letters: { "w" }
+    medi: # W.medi
+      represented_phonetic_letters: { "w", "ee" }
+      orthogonally_joining_types: { "trailing_minor" }
+    fina: # W.fina
+      represented_phonetic_letters: { "w", "ee" }
+      orthogonally_joining_types: { "trailing_minor" }
 
 # …
 
