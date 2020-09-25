@@ -1,0 +1,401 @@
+{
+    "A": {
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "a",
+                    "e"
+                ]
+            },
+            "init": {
+                "represented_phonetic_letters": [
+                    "aleph",
+                    "a",
+                    "e",
+                    "n"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "aleph",
+                    "a",
+                    "e",
+                    "n"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "a",
+                    "e",
+                    "n"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_major"
+                ]
+            }
+        }
+    },
+    "Aa": {
+        "single_letter_transcription": "Á",
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "a",
+                    "e"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "a"
+                ]
+            }
+        }
+    },
+    "I": {
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "i",
+                    "j"
+                ]
+            },
+            "init": {
+                "represented_phonetic_letters": [
+                    "i",
+                    "j",
+                    "y"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "i",
+                    "y"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "i",
+                    "y"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_major"
+                ]
+            }
+        }
+    },
+    "Ii": {
+        "single_letter_transcription": "Ị",
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "i"
+                ],
+                "note": "Early modern orthographies",
+                "typographical_decomposition": "I.isol + _dotbelow"
+            }
+        }
+    },
+    "O": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "u",
+                    "ue"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "o",
+                    "u",
+                    "oe",
+                    "ue"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_major"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "o",
+                    "u",
+                    "oe",
+                    "ue"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_major"
+                ]
+            }
+        }
+    },
+    "Ue": {
+        "single_letter_transcription": "Ü",
+        "joining_form_to_variant": {
+            "fina": {
+                "represented_phonetic_letters": [
+                    "oe",
+                    "ue"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_major"
+                ]
+            }
+        }
+    },
+    "U": {
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "u",
+                    "ue"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "o",
+                    "u",
+                    "oe",
+                    "ue",
+                    "w"
+                ]
+            }
+        }
+    },
+    "Uu": {
+        "single_letter_transcription": "Ụ",
+        "joining_form_to_variant": {
+            "isol": {
+                "represented_phonetic_letters": [
+                    "u",
+                    "ue"
+                ],
+                "note": "Early modern orthographies",
+                "typographical_decomposition": "U.isol + _dotbelow"
+            }
+        }
+    },
+    "N": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "n"
+                ],
+                "typographical_decomposition": "A.init + _dotbelow"
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "n"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ],
+                "typographical_decomposition": "A.medi + _dotbelow"
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "n"
+                ],
+                "typographical_decomposition": "A.fina + _dotbelow"
+            }
+        }
+    },
+    "B": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "b"
+                ],
+                "orthogonally_joining_types": [
+                    "leading"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "b"
+                ],
+                "orthogonally_joining_types": [
+                    "leading"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "b"
+                ]
+            }
+        }
+    },
+    "P": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "p"
+                ],
+                "orthogonally_joining_types": [
+                    "leading"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "p"
+                ],
+                "orthogonally_joining_types": [
+                    "leading"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "p"
+                ]
+            }
+        }
+    },
+    "H": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "h"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "h",
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "h",
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            }
+        }
+    },
+    "Gh": {
+        "single_letter_transcription": "Ğ",
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "g"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            }
+        }
+    },
+    "G": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "h",
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "leading"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "h",
+                    "g"
+                ],
+                "orthogonally_joining_types": [
+                    "leading",
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "g"
+                ]
+            }
+        }
+    },
+    "Gg": {
+        "single_letter_transcription": "G̈"
+    },
+    "M": {},
+    "L": {},
+    "S": {},
+    "Sh": {
+        "single_letter_transcription": "Ś"
+    },
+    "T": {},
+    "D": {},
+    "Dd": {
+        "single_letter_transcription": "Đ"
+    },
+    "Ch": {
+        "single_letter_transcription": "Ć"
+    },
+    "J": {},
+    "Y": {},
+    "R": {},
+    "W": {
+        "joining_form_to_variant": {
+            "init": {
+                "represented_phonetic_letters": [
+                    "w"
+                ]
+            },
+            "medi": {
+                "represented_phonetic_letters": [
+                    "w",
+                    "ee"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            },
+            "fina": {
+                "represented_phonetic_letters": [
+                    "w",
+                    "ee"
+                ],
+                "orthogonally_joining_types": [
+                    "trailing_minor"
+                ]
+            }
+        }
+    },
+    "F": {},
+    "K": {},
+    "C": {},
+    "Z": {},
+    "Hh": {
+        "single_letter_transcription": "Ħ"
+    },
+    "Rh": {
+        "single_letter_transcription": "Ř"
+    },
+    "Zr": {
+        "single_letter_transcription": "Ž"
+    },
+    "Cr": {
+        "single_letter_transcription": "Č"
+    }
+}

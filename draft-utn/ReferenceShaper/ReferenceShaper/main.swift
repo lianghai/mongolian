@@ -17,29 +17,26 @@ enum OrthogonallyJoiningType: String {
 }
 
 enum WrittenUnit: String {
-
     case A, Aa, I, Ii, O, Ue, U, Uu,
          N, B, P, H, Gh, G, Gg, M, L, S, Sh, T, D, Dd, Ch, J, Y, R, W,
          F, K, C, Z, Hh, Rh, Zr, Cr
     case unknown
-
-    var data: Data? {
-        return WrittenUnit.data[self] ?? nil
+    var data: Data.WrittenUnit? {
+        return WrittenUnit.data?[self] ?? nil
     }
 }
+
+dump(WrittenUnit.B.data?[.medi])
 
 typealias Variant = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
 
 enum Character: String {
-
     case MVS,
          aleph,
          a, e, ee, i, o, u, oe, ue,
          n, ng, b, p, h, g, m, l, s, sh, t, d, ch, j, y, r, w,
          f, k, c, z, hh, rh, lh, zr, cr
-
     case unknown
-    
 //    var data: Data? {
 //        return Character.data[self] ?? nil
 //    }

@@ -3,57 +3,56 @@ import Yams
 let yamlDecoder = YAMLDecoder()
 
 extension WrittenUnit {
-    static let data: [WrittenUnit: Data?] = {
-        if let d = try? yamlDecoder.decode([String: Data?].self, from: writtenUnitsYaml) {
-            return Dictionary(uniqueKeysWithValues: d.map { k, v in (WrittenUnit(rawValue: k) ?? .unknown, v) })
-        } else {
-            return [:]
-        }
-    }()
+    static let data: Data? = try? yamlDecoder.decode(Data.self, from: writtenUnitsYaml)
     struct Data: Decodable {
-//        let asciiTranscription: String
-        let singleLetterTranscription: String?
-        private let joiningFormToVariant: [JoiningForm: Variant]?
-        subscript(joiningForm: JoiningForm) -> Variant? {
-            return joiningFormToVariant?[joiningForm]
+        subscript(writtenUnit: ReferenceShaper.WrittenUnit) -> WrittenUnit? {
+            return ascii_transcription_to_written_unit[writtenUnit.rawValue] ?? nil
         }
-        private enum CodingKeys: String, CodingKey {
-            case singleLetterTranscription = "single_letter_transcription"
-            case joiningFormToVariant = "joining_form_to_variant"
-        }
+        private let ascii_transcription_to_written_unit: [String: WrittenUnit?]
         internal init(from decoder: Decoder) throws {
-            let data = try decoder.container(keyedBy: CodingKeys.self)
-            singleLetterTranscription = try? data.decode(String.self, forKey: .singleLetterTranscription)
-            if let j = try? data.decode([String: Variant].self, forKey: .joiningFormToVariant) {
-                joiningFormToVariant = Dictionary(
-                    uniqueKeysWithValues: j.map { k, v in (JoiningForm(rawValue: k) ?? .unknown, v) }
-                )
-            } else {
-                joiningFormToVariant = nil
-            }
+            let container = try decoder.singleValueContainer()
+            ascii_transcription_to_written_unit = (try? container.decode([String: WrittenUnit?].self)) ?? [:]
+//            let written_unit_container = try container.
         }
-        struct Variant: Decodable {
-            let representedLetters: Set<Character>?
-            let orthogonallyJoiningTypes: Set<OrthogonallyJoiningType>?
-            let note: String?
+        struct WrittenUnit: Decodable {
+    //        let asciiTranscription: String
+            let singleLetterTranscription: String?
+            subscript(joiningForm: JoiningForm) -> Variant? {
+                return joining_form_to_variant[joiningForm.rawValue]
+            }
+            private let joining_form_to_variant: [String: Variant]
             private enum CodingKeys: String, CodingKey {
-                case representedLetters = "represented_phonetic_letters"
-                case orthogonallyJoiningTypes = "orthogonally_joining_types"
-                case note
+                case singleLetterTranscription = "single_letter_transcription"
+                case joining_form_to_variant
             }
             internal init(from decoder: Decoder) throws {
-                let data = try decoder.container(keyedBy: CodingKeys.self)
-                if let r = try? data.decode([String: String].self, forKey: .representedLetters).keys {
-                    representedLetters = Set(r.map { Character(rawValue: $0) ?? .unknown })
-                } else {
-                    representedLetters = nil
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                singleLetterTranscription = try? container.decode(String.self, forKey: .singleLetterTranscription)
+                joining_form_to_variant = (try? container.decode([String: Variant].self, forKey: .joining_form_to_variant)) ?? [:]
+            }
+            struct Variant: Decodable {
+                let representedLetters: Set<Character>
+                let orthogonallyJoiningTypes: Set<OrthogonallyJoiningType>
+                let note: String?
+                private enum CodingKeys: String, CodingKey {
+                    case representedLetters = "represented_phonetic_letters"
+                    case orthogonallyJoiningTypes = "orthogonally_joining_types"
+                    case note
                 }
-                if let o = try? data.decode([String: String].self, forKey: .orthogonallyJoiningTypes).keys {
-                    orthogonallyJoiningTypes = Set(o.map { OrthogonallyJoiningType(rawValue: $0) ?? .unknown })
-                } else {
-                    orthogonallyJoiningTypes = nil
+                internal init(from decoder: Decoder) throws {
+                    let container = try decoder.container(keyedBy: CodingKeys.self)
+                    if let r = try? container.decode([String: String].self, forKey: .representedLetters).keys {
+                        representedLetters = Set(r.map { Character(rawValue: $0) ?? .unknown })
+                    } else {
+                        representedLetters = Set()
+                    }
+                    if let o = try? container.decode([String: String].self, forKey: .orthogonallyJoiningTypes).keys {
+                        orthogonallyJoiningTypes = Set(o.map { OrthogonallyJoiningType(rawValue: $0) ?? .unknown })
+                    } else {
+                        orthogonallyJoiningTypes = Set()
+                    }
+                    note = try? container.decode(String.self, forKey: .note)
                 }
-                note = try? data.decode(String.self, forKey: .note)
             }
         }
     }
