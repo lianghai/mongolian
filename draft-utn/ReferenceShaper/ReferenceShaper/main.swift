@@ -16,17 +16,20 @@ enum OrthogonallyJoiningType: String {
     case unknown
 }
 
+let jsonDecoder = JSONDecoder()
+jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+
 enum WrittenUnit: String {
     case A, Aa, I, Ii, O, Ue, U, Uu,
          N, B, P, H, Gh, G, Gg, M, L, S, Sh, T, D, Dd, Ch, J, Y, R, W,
          F, K, C, Z, Hh, Rh, Zr, Cr
     case unknown
-    var data: Data.WrittenUnit? {
-        return WrittenUnit.data?[self] ?? nil
+    var data: Data? {
+        return WrittenUnit.dataDictionary[self]
     }
 }
 
-dump(WrittenUnit.B.data?[.medi])
+//dump(WrittenUnit.B.data?[.medi])
 
 typealias Variant = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
 
@@ -37,12 +40,14 @@ enum Character: String {
          n, ng, b, p, h, g, m, l, s, sh, t, d, ch, j, y, r, w,
          f, k, c, z, hh, rh, lh, zr, cr
     case unknown
-//    var data: Data? {
-//        return Character.data[self] ?? nil
-//    }
+    var data: Data? {
+        return Character.dataDictionary[self]
+    }
 }
 
-enum Condition: String {
+dump(Character.a.data)
+
+enum Condition: String, Decodable { // Contextual shaping condition
     case fallback,
          chachlag
 }

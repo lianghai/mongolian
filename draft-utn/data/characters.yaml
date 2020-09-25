@@ -1,211 +1,200 @@
---- # Mapping: code_point to character
+---
 
-0x180E: # MONGOLIAN VOWEL SEPARATOR
+- code_point: 0x180E # MONGOLIAN VOWEL SEPARATOR
   ascii_transcription: "MVS"
 
-0x1807: # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
+- code_point: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
   ascii_transcription: "aleph"
   single_letter_transcription: "’"
   joining_form_to_variants:
     medi:
-      "A": # aleph.medi.A
-        {}
+      - written_units: ["A"] # aleph.medi.A
 
-0x1820: # ᠠ MONGOLIAN LETTER A
+- code_point: 0x1820 # ᠠ MONGOLIAN LETTER A
   ascii_transcription: "a"
   joining_form_to_variants:
     isol:
-      "A A": # a.isol.AA
+      - written_units: ["A", "A"] # a.isol.AA
         contextual_conditions: ["else"]
         fvs: 1
-      "A": # a.isol.A
+      - written_units: ["A"] # a.isol.A
         contextual_conditions: ["particle"]
         fvs: 2
-      "Aa": # a.isol.Aa
+      - written_units: ["Aa"] # a.isol.Aa
         contextual_conditions: ["chachlag"]
         fvs: 3
     init:
-      "A A": # a.init.AA
+      - written_units: ["A", "A"] # a.init.AA
         contextual_conditions: ["else"]
         fvs: 1
-      "A": # a.init.A
+      - written_units: ["A"] # a.init.A
         contextual_conditions: ["particle"]
         fvs: 2
     medi:
-      "A": # a.medi.A
-        {}
+      - written_units: ["A"] # a.medi.A
     fina:
-      "A": # a.fina.A
-        {}
-      "Aa": # a.fina.Aa
+      - written_units: ["A"] # a.fina.A
+      - written_units: ["Aa"] # a.fina.Aa
         fvs: 1
         note: "Ali Gali a"
 
-0x1821: # ᠡ MONGOLIAN LETTER E
+- code_point: 0x1821 # ᠡ MONGOLIAN LETTER E
   ascii_transcription: "e"
   joining_form_to_variants:
     isol:
-      "A": # e.isol.A
+      - written_units: ["A"] # e.isol.A
         contextual_conditions: ["else"]
         fvs: 1
-      "Aa": # e.isol.Aa
+      - written_units: ["Aa"] # e.isol.Aa
         contextual_conditions: ["chachlag"]
         fvs: 2
     init:
-      "A": # e.init.A
-        {}
+      - written_units: ["A"] # e.init.A
     medi:
-      "A": # e.medi.A
-        {}
+      - written_units: ["A"] # e.medi.A
     fina:
-      "A": # e.fina.A
-        {}
+      - written_units: ["A"] # e.fina.A
 
-0x1827: # ᠧ MONGOLIAN LETTER EE
+- code_point: 0x1827 # ᠧ MONGOLIAN LETTER EE
   ascii_transcription: "ee"
   single_letter_transcription: "é"
   joining_form_to_variants:
     isol:
-      "A W": # ee.isol.AW
-        {}
+      - written_units: ["A", "W"] # ee.isol.AW
     init:
-      "A W": # ee.init.AW
-        {}
+      - written_units: ["A", "W"] # ee.init.AW
     medi:
-      "A": # ee.medi.W
-        {}
+      - written_units: ["A"] # ee.medi.W
     fina:
-      "A": # ee.fina.W
-        {}
+      - written_units: ["A"] # ee.fina.W
 
-0x1822: # ᠢ MONGOLIAN LETTER I
+- code_point: 0x1822 # ᠢ MONGOLIAN LETTER I
   ascii_transcription: "i"
   joining_form_to_variants:
     isol:
-      "A I": # i.isol.AI
+      - written_units: ["A", "I"] # i.isol.AI
         contextual_conditions: ["else"]
         fvs: 1
-      "I": # i.isol.I
+      - written_units: ["I"] # i.isol.I
         contextual_conditions: ["particle"]
         fvs: 2
-      "Ii": # i.isol.Ii
+      - written_units: ["Ii"] # i.isol.Ii
         fvs: 3
         note: "Early modern orthographies"
     init:
-      "A I": # i.init.AI
+      - written_units: ["A", "I"] # i.init.AI
         contextual_conditions: ["else"]
         fvs: 1
-      "I": # i.init.I
+      - written_units: ["I"] # i.init.I
         contextual_conditions: ["particle"]
         fvs: 2
     medi:
-      "I": # i.medi.I
+      - written_units: ["I"] # i.medi.I
         contextual_conditions: ["else"]
         fvs: 1
-      "I I": # i.medi.II
+      - written_units: ["I", "I"] # i.medi.II
         contextual_conditions: ["devsger"]
         fvs: 2
     fina:
-      "I": # i.fina.I
-        {}
+      - written_units: ["I"] # i.fina.I
 
-0x1823: # ᠣ MONGOLIAN LETTER O
+- code_point: 0x1823 # ᠣ MONGOLIAN LETTER O
   ascii_transcription: "o"
 
-0x1824: # ᠤ MONGOLIAN LETTER U
+- code_point: 0x1824 # ᠤ MONGOLIAN LETTER U
   ascii_transcription: "u"
 
-0x1825: # ᠥ MONGOLIAN LETTER OE
+- code_point: 0x1825 # ᠥ MONGOLIAN LETTER OE
   ascii_transcription: "oe"
   single_letter_transcription: "ö"
 
-0x1826: # ᠦ MONGOLIAN LETTER UE
+- code_point: 0x1826 # ᠦ MONGOLIAN LETTER UE
   ascii_transcription: "ue"
   single_letter_transcription: "ü"
 
-0x1828: # ᠨ MONGOLIAN LETTER NA
+- code_point: 0x1828 # ᠨ MONGOLIAN LETTER NA
   ascii_transcription: "n"
 
-0x1829: # ᠩ MONGOLIAN LETTER ANG
+- code_point: 0x1829 # ᠩ MONGOLIAN LETTER ANG
   ascii_transcription: "ng"
   single_letter_transcription: "ŋ"
 
-0x182A: # ᠪ MONGOLIAN LETTER BA
+- code_point: 0x182A # ᠪ MONGOLIAN LETTER BA
   ascii_transcription: "b"
 
-0x182B: # ᠫ MONGOLIAN LETTER PA
+- code_point: 0x182B # ᠫ MONGOLIAN LETTER PA
   ascii_transcription: "p"
 
-0x182C: # ᠬ MONGOLIAN LETTER QA
+- code_point: 0x182C # ᠬ MONGOLIAN LETTER QA
   ascii_transcription: "h"
 
-0x182D: # ᠭ MONGOLIAN LETTER GA
+- code_point: 0x182D # ᠭ MONGOLIAN LETTER GA
   ascii_transcription: "g"
 
-0x182E: # ᠮ MONGOLIAN LETTER MA
+- code_point: 0x182E # ᠮ MONGOLIAN LETTER MA
   ascii_transcription: "m"
 
-0x182F: # ᠯ MONGOLIAN LETTER LA
+- code_point: 0x182F # ᠯ MONGOLIAN LETTER LA
   ascii_transcription: "l"
 
-0x1830: # ᠰ MONGOLIAN LETTER SA
+- code_point: 0x1830 # ᠰ MONGOLIAN LETTER SA
   ascii_transcription: "s"
 
-0x1831: # ᠱ MONGOLIAN LETTER SHA
+- code_point: 0x1831 # ᠱ MONGOLIAN LETTER SHA
   ascii_transcription: "sh"
   single_letter_transcription: "ś"
 
-0x1832: # ᠲ MONGOLIAN LETTER TA
+- code_point: 0x1832 # ᠲ MONGOLIAN LETTER TA
   ascii_transcription: "t"
 
-0x1833: # ᠳ MONGOLIAN LETTER DA
+- code_point: 0x1833 # ᠳ MONGOLIAN LETTER DA
   ascii_transcription: "d"
 
-0x1834: # ᠴ MONGOLIAN LETTER CHA
+- code_point: 0x1834 # ᠴ MONGOLIAN LETTER CHA
   ascii_transcription: "ch"
   single_letter_transcription: "ć"
 
-0x1835: # ᠵ MONGOLIAN LETTER JA
+- code_point: 0x1835 # ᠵ MONGOLIAN LETTER JA
   ascii_transcription: "j"
 
-0x1836: # ᠶ MONGOLIAN LETTER YA
+- code_point: 0x1836 # ᠶ MONGOLIAN LETTER YA
   ascii_transcription: "y"
 
-0x1837: # ᠷ MONGOLIAN LETTER RA
+- code_point: 0x1837 # ᠷ MONGOLIAN LETTER RA
   ascii_transcription: "r"
 
-0x1838: # ᠸ MONGOLIAN LETTER WA
+- code_point: 0x1838 # ᠸ MONGOLIAN LETTER WA
   ascii_transcription: "w"
 
-0x1839: # ᠹ MONGOLIAN LETTER FA
+- code_point: 0x1839 # ᠹ MONGOLIAN LETTER FA
   ascii_transcription: "f"
 
-0x183B: # ᠻ MONGOLIAN LETTER KHA
+- code_point: 0x183B # ᠻ MONGOLIAN LETTER KHA
   ascii_transcription: "k"
 
-0x183C: # ᠼ MONGOLIAN LETTER TSA
+- code_point: 0x183C # ᠼ MONGOLIAN LETTER TSA
   ascii_transcription: "c"
 
-0x183D: # ᠽ MONGOLIAN LETTER ZA
+- code_point: 0x183D # ᠽ MONGOLIAN LETTER ZA
   ascii_transcription: "z"
 
-0x183E: # ᠾ MONGOLIAN LETTER HAA
+- code_point: 0x183E # ᠾ MONGOLIAN LETTER HAA
   ascii_transcription: "hh"
   single_letter_transcription: "ħ"
 
-0x183F: # ᠿ MONGOLIAN LETTER ZRA
+- code_point: 0x183F # ᠿ MONGOLIAN LETTER ZRA
   ascii_transcription: "rh"
   single_letter_transcription: "ř"
 
-0x1840: # ᡀ MONGOLIAN LETTER LHA
+- code_point: 0x1840 # ᡀ MONGOLIAN LETTER LHA
   ascii_transcription: "lh"
   single_letter_transcription: "ł"
 
-0x1841: # ᡁ MONGOLIAN LETTER ZHI
+- code_point: 0x1841 # ᡁ MONGOLIAN LETTER ZHI
   ascii_transcription: "zr"
   single_letter_transcription: "ž"
 
-0x1842: # ᡂ MONGOLIAN LETTER CHI
+- code_point: 0x1842 # ᡂ MONGOLIAN LETTER CHI
   ascii_transcription: "cr"
   single_letter_transcription: "č"
 

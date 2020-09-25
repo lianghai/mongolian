@@ -1,6 +1,6 @@
---- # Mapping: ascii_transcription to written_unit
+---
 
-"A":
+- ascii_transcription: "A"
   joining_form_to_variant:
     isol: # A.isol
       represented_phonetic_letters: ["a", "e"]
@@ -13,7 +13,7 @@
       represented_phonetic_letters: ["a", "e", "n"]
       orthogonally_joining_types: ["trailing_major"]
 
-"Aa":
+- ascii_transcription: "Aa"
   single_letter_transcription: "Á"
   joining_form_to_variant:
     isol: # Aa.isol
@@ -21,7 +21,7 @@
     fina: # Aa.fina
       represented_phonetic_letters: ["a"]
 
-"I":
+- ascii_transcription: "I"
   joining_form_to_variant:
     isol: # I.isol
       represented_phonetic_letters: ["i", "j"]
@@ -34,7 +34,7 @@
       represented_phonetic_letters: ["i", "y"]
       orthogonally_joining_types: ["trailing_major"]
 
-"Ii":
+- ascii_transcription: "Ii"
   single_letter_transcription: "Ị"
   joining_form_to_variant:
     isol: # Ii.isol
@@ -42,7 +42,7 @@
       note: "Early modern orthographies"
       typographical_decomposition: "I.isol + _dotbelow"
 
-"O":
+- ascii_transcription: "O"
   joining_form_to_variant:
     init: # O.init
       represented_phonetic_letters: ["u", "ue"] # Particles
@@ -53,21 +53,21 @@
       represented_phonetic_letters: ["o", "u", "oe", "ue"] # Marked, orthogonally joined
       orthogonally_joining_types: ["trailing_major"]
 
-"Ue":
+- ascii_transcription: "Ue"
   single_letter_transcription: "Ü"
   joining_form_to_variant:
     fina: # Ue.fina
       represented_phonetic_letters: ["oe", "ue"]
       orthogonally_joining_types: ["trailing_major"]
 
-"U":
+- ascii_transcription: "U"
   joining_form_to_variant:
     isol: # U.isol
       represented_phonetic_letters: ["u", "ue"]
     fina: # U.fina
       represented_phonetic_letters: ["o", "u", "oe", "ue", "w"]
 
-"Uu":
+- ascii_transcription: "Uu"
   single_letter_transcription: "Ụ"
   joining_form_to_variant:
     isol: # Uu.isol
@@ -75,7 +75,7 @@
       note: "Early modern orthographies"
       typographical_decomposition: "U.isol + _dotbelow"
 
-"N":
+- ascii_transcription: "N"
   joining_form_to_variant:
     init: # N.init
       represented_phonetic_letters: ["n"]
@@ -88,7 +88,7 @@
       represented_phonetic_letters: ["n"]
       typographical_decomposition: "A.fina + _dotbelow"
 
-"B":
+- ascii_transcription: "B"
   joining_form_to_variant:
     init: # B.init
       represented_phonetic_letters: ["b"]
@@ -99,7 +99,7 @@
     fina: # B.fina
       represented_phonetic_letters: ["b"]
 
-"P":
+- ascii_transcription: "P"
   joining_form_to_variant:
     init: # P.init
       represented_phonetic_letters: ["p"]
@@ -110,7 +110,7 @@
     fina: # P.fina
       represented_phonetic_letters: ["p"]
 
-"H":
+- ascii_transcription: "H"
   joining_form_to_variant:
     init: # H.init
       represented_phonetic_letters: ["h"]
@@ -121,7 +121,7 @@
       represented_phonetic_letters: ["h", "g"]
       orthogonally_joining_types: ["trailing_minor"]
 
-"Gh":
+- ascii_transcription: "Gh"
   single_letter_transcription: "Ğ"
   joining_form_to_variant:
     init: # Gh.init
@@ -133,7 +133,7 @@
       represented_phonetic_letters: ["g"]
       orthogonally_joining_types: ["trailing_minor"]
 
-"G":
+- ascii_transcription: "G"
   joining_form_to_variant:
     init: # G.init
       represented_phonetic_letters: ["h", "g"]
@@ -144,35 +144,35 @@
     fina: # G.fina
       represented_phonetic_letters: ["g"]
 
-"Gg":
+- ascii_transcription: "Gg"
   single_letter_transcription: "G̈"
 
-"M": {}
+- ascii_transcription: "M"
 
-"L": {}
+- ascii_transcription: "L"
 
-"S": {}
+- ascii_transcription: "S"
 
-"Sh":
+- ascii_transcription: "Sh"
   single_letter_transcription: "Ś"
 
-"T": {}
+- ascii_transcription: "T"
 
-"D": {}
+- ascii_transcription: "D"
 
-"Dd":
+- ascii_transcription: "Dd"
   single_letter_transcription: "Đ"
 
-"Ch":
+- ascii_transcription: "Ch"
   single_letter_transcription: "Ć"
 
-"J": {}
+- ascii_transcription: "J"
 
-"Y": {}
+- ascii_transcription: "Y"
 
-"R": {}
+- ascii_transcription: "R"
 
-"W":
+- ascii_transcription: "W"
   joining_form_to_variant:
     init: # W.init
       represented_phonetic_letters: ["w"]
@@ -183,22 +183,22 @@
       represented_phonetic_letters: ["w", "ee"]
       orthogonally_joining_types: ["trailing_minor"]
 
-"F": {}
+- ascii_transcription: "F"
 
-"K": {}
+- ascii_transcription: "K"
 
-"C": {}
+- ascii_transcription: "C"
 
-"Z": {}
+- ascii_transcription: "Z"
 
-"Hh":
+- ascii_transcription: "Hh"
   single_letter_transcription: "Ħ"
 
-"Rh":
+- ascii_transcription: "Rh"
   single_letter_transcription: "Ř"
 
-"Zr":
+- ascii_transcription: "Zr"
   single_letter_transcription: "Ž"
 
-"Cr":
+- ascii_transcription: "Cr"
   single_letter_transcription: "Č"

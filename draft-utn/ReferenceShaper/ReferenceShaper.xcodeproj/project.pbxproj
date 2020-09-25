@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A20A9442251D1DD0001E1CF7 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = A20A9441251D1DD0001E1CF7 /* Yams */; };
 		A292E7AA251CDE46002C0603 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292E7A9251CDE46002C0603 /* main.swift */; };
 		A2C6A4F3251D2AF6004DCA57 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6A4F2251D2AF6004DCA57 /* data.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20A9442251D1DD0001E1CF7 /* Yams in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +82,6 @@
 			);
 			name = ReferenceShaper;
 			packageProductDependencies = (
-				A20A9441251D1DD0001E1CF7 /* Yams */,
 			);
 			productName = ReferenceShaper;
 			productReference = A292E7A6251CDE46002C0603 /* ReferenceShaper */;
@@ -114,7 +111,6 @@
 			);
 			mainGroup = A292E79D251CDE46002C0603;
 			packageReferences = (
-				A20A9440251D1DD0001E1CF7 /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = A292E7A7251CDE46002C0603 /* Products */;
 			projectDirPath = "";
@@ -297,25 +293,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A20A9440251D1DD0001E1CF7 /* XCRemoteSwiftPackageReference "Yams" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jpsim/Yams.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A20A9441251D1DD0001E1CF7 /* Yams */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A20A9440251D1DD0001E1CF7 /* XCRemoteSwiftPackageReference "Yams" */;
-			productName = Yams;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A292E79E251CDE46002C0603 /* Project object */;
 }
