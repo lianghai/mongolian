@@ -29,10 +29,6 @@ enum WrittenUnit: String {
     }
 }
 
-//dump(WrittenUnit.B.data?[.medi])
-
-typealias Variant = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
-
 enum Character: String {
 //    case MVS, FVS1, FVS2, FVS3
     case aleph
@@ -45,7 +41,8 @@ enum Character: String {
     }
 }
 
-dump(Character.a.data)
+//dump(WrittenUnit.A.data)
+//dump(Character.a.data)
 
 enum Condition: String, Decodable { // Contextual shaping condition
     case fallback

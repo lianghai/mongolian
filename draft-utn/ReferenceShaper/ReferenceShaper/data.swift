@@ -14,26 +14,10 @@ extension WrittenUnit {
     struct Data: Decodable {
         let asciiTranscription: String
         let singleLetterTranscription: String?
-        let joiningFormToVariant: [JoiningForm: Variant]
         subscript(joiningForm: JoiningForm) -> Variant? {
-            return joiningFormToVariant[joiningForm]
+            return joiningFormToVariant?[joiningForm.rawValue]
         }
-        enum CodingKeys: String, CodingKey {
-            case asciiTranscription, singleLetterTranscription, joiningFormToVariant
-        }
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            asciiTranscription = try container.decode(String.self, forKey: .asciiTranscription)
-            singleLetterTranscription = try? container.decode(String.self, forKey: .singleLetterTranscription)
-            let dict = (try? container.decode([String: Variant].self, forKey: .joiningFormToVariant)) ?? [:]
-            joiningFormToVariant = Dictionary(uniqueKeysWithValues: dict.compactMap { key, variant in
-                if let joiningForm = JoiningForm(rawValue: key) {
-                    return (joiningForm, variant)
-                } else {
-                    return nil
-                }
-            })
-        }
+        private let joiningFormToVariant: [String: Variant]?
         struct Variant: Decodable {
             let representedLetters: Set<Character>
             let orthogonallyJoiningTypes: Set<OrthogonallyJoiningType>
@@ -68,27 +52,10 @@ extension Character {
         let codePoint: Unicode.CodePoint
         let asciiTranscription: String
         let singleLetterTranscription: String?
-        let joiningFormToVariants: [JoiningForm: Set<Variant>]
         subscript(joiningForm: JoiningForm) -> Set<Variant> {
-            return joiningFormToVariants[joiningForm] ?? []
+            return Set(joiningFormToVariants?[joiningForm.rawValue] ?? [])
         }
-        enum CodingKeys: String, CodingKey {
-            case codePoint, asciiTranscription, singleLetterTranscription, joiningFormToVariants
-        }
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            codePoint = try container.decode(Unicode.CodePoint.self, forKey: .codePoint)
-            asciiTranscription = try container.decode(String.self, forKey: .asciiTranscription)
-            singleLetterTranscription = try? container.decode(String.self, forKey: .singleLetterTranscription)
-            let dict = (try? container.decode([String: [Variant]].self, forKey: .joiningFormToVariants)) ?? [:]
-            joiningFormToVariants = Dictionary(uniqueKeysWithValues: dict.compactMap { key, variants in
-                if let joiningForm = JoiningForm(rawValue: key) {
-                    return (joiningForm, Set(variants))
-                } else {
-                    return nil
-                }
-            })
-        }
+        private let joiningFormToVariants: [String: [Variant]]?
         struct Variant: Decodable, Hashable {
             let writtenUnits: [WrittenUnit]
             let conditions: Set<Condition>
