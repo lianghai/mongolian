@@ -39,10 +39,17 @@ enum Character: String {
     var data: Data? {
         return Character.dataDictionary[self]
     }
+    init?(codePoint: Unicode.CodePoint) {
+        if let (char, _) = Character.dataDictionary.first(where: { _, data in data.codePoint == codePoint }) {
+            self = char
+        } else {
+            return nil
+        }
+    }
+    func applyCondition(_ condition: Condition, where joiningForm: JoiningForm) -> [WrittenUnit]? {
+        return data?[joiningForm].first { $0.conditions.contains(condition) }?.writtenUnits
+    }
 }
-
-//dump(WrittenUnit.A.data)
-//dump(Character.a.data)
 
 enum Condition: String, Decodable { // Contextual shaping condition
     case fallback
@@ -50,54 +57,26 @@ enum Condition: String, Decodable { // Contextual shaping condition
     case unknown
 }
 
-//static let data: [Character: [JoiningForm: [[WrittenUnit]: Set<Condition>]]] = [
-//    .a: [
-//        .isol: [
-//            [.A, .A]: [.fallback]
-//        ]
-//    ]
-//]
-//lazy var conditionToWrittenUnits: [Condition: [WrittenUnit]]? = {
-//    var conditionToWrittenUnits: [Condition: [WrittenUnit]] = [:]
-//    if let joiningForm = joiningForm, let writtenUnitsToConditions = Letter.data[codePoint]?[joiningForm] {
-//        for (writtenUnits, conditions) in writtenUnitsToConditions {
-//            for condition in conditions {
-//                conditionToWrittenUnits[condition] = writtenUnits
-//            }
-//        }
-//    }
-//    return conditionToWrittenUnits
-//}()
-//
+typealias WrittenForm = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
 
-//struct Element { // Phonetic letter
-//
-//    let character: Character
-//    var joiningForm: JoiningForm?
-//    var writtenUnits: [WrittenUnit]?
-//
-//    init?(codePoint: Unicode.CodePoint) {
-//        guard let character = Character(rawValue: codePoint) else {
-//            return nil
-//        }
-//        self.character = character
-//    }
-//    mutating func applyCondition(_ condition: Condition) {
-//        writtenUnits = conditionToWrittenUnits?[condition]
-//    }
-//}
+//dump(Character.a.applyCondition(.fallback, where: .isol) ?? [])
 
-//for character in Character.allCases {
-//    print(String(Unicode.Scalar(character.rawValue)!))
-//    print(String(character.rawValue, radix: 16, uppercase: true))
-//}
+struct State {
+    var joiningForm: JoiningForm?
+    var condition: Condition?
+}
 
-//var letters = "ᠮᠣᠩᠭᠣᠯ".unicodeScalars.compactMap { Letter(codePoint: $0.value) }
-//
-//var letter = letters[0]
-//
-//print(letter.character.rawValue)
-//
+var buffer = [(character: Character, state: State)]()
+for char in "ᠮᠣᠩᠭᠣᠯ".unicodeScalars.map({ Character(codePoint: $0.value) ?? .unknown }) {
+    buffer.append((char, State()))
+}
+for index in buffer.indices {
+    buffer[index].state.joiningForm = .medi
+}
+for (char, state) in buffer {
+    print(char.rawValue, state.joiningForm ?? "nil", state.condition ?? "nil")
+}
+
 //letter.joiningForm = .isol
 //
 //print(letter.joiningForm ?? "unknown")
@@ -105,11 +84,6 @@ enum Condition: String, Decodable { // Contextual shaping condition
 //letter.applyCondition(.fallback)
 //
 //print(letter.writtenUnits ?? "unknown")
-//
-//struct Context {
-//    let before: [Letter]
-//    let after: [Letter]
-//}
 
 //func resolveVariant(for letter: Letter, in context: Context) -> Variant {
 //
