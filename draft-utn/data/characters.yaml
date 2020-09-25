@@ -15,7 +15,7 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "A"] # a.isol.AA
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["A"] # a.isol.A
         contextual_conditions: ["particle"]
@@ -25,7 +25,7 @@
         fvs: 3
     init:
       - written_units: ["A", "A"] # a.init.AA
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["A"] # a.init.A
         contextual_conditions: ["particle"]
@@ -43,7 +43,7 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A"] # e.isol.A
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["Aa"] # e.isol.Aa
         contextual_conditions: ["chachlag"]
@@ -73,7 +73,7 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "I"] # i.isol.AI
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["I"] # i.isol.I
         contextual_conditions: ["particle"]
@@ -83,14 +83,14 @@
         note: "Early modern orthographies"
     init:
       - written_units: ["A", "I"] # i.init.AI
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["I"] # i.init.I
         contextual_conditions: ["particle"]
         fvs: 2
     medi:
       - written_units: ["I"] # i.medi.I
-        contextual_conditions: ["else"]
+        contextual_conditions: ["fallback"]
         fvs: 1
       - written_units: ["I", "I"] # i.medi.II
         contextual_conditions: ["devsger"]

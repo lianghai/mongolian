@@ -34,9 +34,9 @@ enum WrittenUnit: String {
 typealias Variant = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
 
 enum Character: String {
-    case MVS,
-         aleph,
-         a, e, ee, i, o, u, oe, ue,
+//    case MVS, FVS1, FVS2, FVS3
+    case aleph
+    case a, e, ee, i, o, u, oe, ue,
          n, ng, b, p, h, g, m, l, s, sh, t, d, ch, j, y, r, w,
          f, k, c, z, hh, rh, lh, zr, cr
     case unknown
@@ -48,8 +48,9 @@ enum Character: String {
 dump(Character.a.data)
 
 enum Condition: String, Decodable { // Contextual shaping condition
-    case fallback,
-         chachlag
+    case fallback
+    case chachlag, particle
+    case unknown
 }
 
 //static let data: [Character: [JoiningForm: [[WrittenUnit]: Set<Condition>]]] = [
