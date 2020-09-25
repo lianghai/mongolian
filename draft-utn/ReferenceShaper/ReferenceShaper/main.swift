@@ -1,5 +1,4 @@
 import Foundation
-import Yams
 
 extension Unicode {
     typealias CodePoint = UInt32
@@ -7,40 +6,48 @@ extension Unicode {
     typealias GraphemeCluster = Swift.Character
 }
 
-enum JoiningForm: String, CaseIterable {
+enum JoiningForm: String {
     case isol, `init`, medi, fina
+    case unknown
 }
 
-func loadYaml(path: String) {
-    FileManager.default.urls(for: <#T##FileManager.SearchPathDirectory#>, in: <#T##FileManager.SearchPathDomainMask#>)
+enum OrthogonallyJoiningType: String {
+    case leading, trailing_major, trailing_minor
+    case unknown
 }
 
-enum WrittenUnit: String, CaseIterable {
-    
+enum WrittenUnit: String {
+
     case A, Aa, I, Ii, O, Ue, U, Uu,
          N, B, P, H, Gh, G, Gg, M, L, S, Sh, T, D, Dd, Ch, J, Y, R, W,
          F, K, C, Z, Hh, Rh, Zr, Cr
-    
-    static let dataPath = "../../data/written-units.yaml"
-    static let data = Yams.load(yaml: String(contentsOfFile: <#T##String#>))
+    case unknown
+
+    var data: Data? {
+        return WrittenUnit.data[self] ?? nil
+    }
 }
 
 typealias Variant = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
 
-enum Condition {
-    case fallback
-    case chachlag
-}
+enum Character: String {
 
-enum Character: String, CaseIterable {
-    
     case MVS,
          aleph,
          a, e, ee, i, o, u, oe, ue,
          n, ng, b, p, h, g, m, l, s, sh, t, d, ch, j, y, r, w,
          f, k, c, z, hh, rh, lh, zr, cr
+
+    case unknown
     
-    static let data =
+//    var data: Data? {
+//        return Character.data[self] ?? nil
+//    }
+}
+
+enum Condition: String {
+    case fallback,
+         chachlag
 }
 
 //static let data: [Character: [JoiningForm: [[WrittenUnit]: Set<Condition>]]] = [
@@ -63,46 +70,46 @@ enum Character: String, CaseIterable {
 //}()
 //
 
-struct Letter { // Phonetic letter
-    
-    let character: Character
-    var joiningForm: JoiningForm?
-    var writtenUnits: [WrittenUnit]?
-    
-    init?(codePoint: Unicode.CodePoint) {
-        guard let character = Character(rawValue: codePoint) else {
-            return nil
-        }
-        self.character = character
-    }
-    mutating func applyCondition(_ condition: Condition) {
-        writtenUnits = conditionToWrittenUnits?[condition]
-    }
-}
+//struct Element { // Phonetic letter
+//
+//    let character: Character
+//    var joiningForm: JoiningForm?
+//    var writtenUnits: [WrittenUnit]?
+//
+//    init?(codePoint: Unicode.CodePoint) {
+//        guard let character = Character(rawValue: codePoint) else {
+//            return nil
+//        }
+//        self.character = character
+//    }
+//    mutating func applyCondition(_ condition: Condition) {
+//        writtenUnits = conditionToWrittenUnits?[condition]
+//    }
+//}
 
 //for character in Character.allCases {
 //    print(String(Unicode.Scalar(character.rawValue)!))
 //    print(String(character.rawValue, radix: 16, uppercase: true))
 //}
 
-var letters = "ᠮᠣᠩᠭᠣᠯ".unicodeScalars.compactMap { Letter(codePoint: $0.value) }
-
-var letter = letters[0]
-
-print(letter.character.rawValue)
-
-letter.joiningForm = .isol
-
-print(letter.joiningForm ?? "unknown")
-
-letter.applyCondition(.fallback)
-
-print(letter.writtenUnits ?? "unknown")
-
-struct Context {
-    let before: [Letter]
-    let after: [Letter]
-}
+//var letters = "ᠮᠣᠩᠭᠣᠯ".unicodeScalars.compactMap { Letter(codePoint: $0.value) }
+//
+//var letter = letters[0]
+//
+//print(letter.character.rawValue)
+//
+//letter.joiningForm = .isol
+//
+//print(letter.joiningForm ?? "unknown")
+//
+//letter.applyCondition(.fallback)
+//
+//print(letter.writtenUnits ?? "unknown")
+//
+//struct Context {
+//    let before: [Letter]
+//    let after: [Letter]
+//}
 
 //func resolveVariant(for letter: Letter, in context: Context) -> Variant {
 //

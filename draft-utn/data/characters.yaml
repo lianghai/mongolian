@@ -6,13 +6,13 @@
 0x1807: # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
   ascii_transcription: "aleph"
   single_letter_transcription: "’"
-  cursive_position_to_variants:
+  joining_form_to_variants:
     medi:
       "A": # aleph.medi.A
 
 0x1820: # ᠠ MONGOLIAN LETTER A
   ascii_transcription: "a"
-  cursive_position_to_variants:
+  joining_form_to_variants:
     isol:
       "A A": # a.isol.AA
         contextual_conditions: { "else" }
@@ -40,7 +40,7 @@
 
 0x1821: # ᠡ MONGOLIAN LETTER E
   ascii_transcription: "e"
-  cursive_position_to_variants:
+  joining_form_to_variants:
     isol:
       "A": # e.isol.A
         contextual_conditions: { "else" }
@@ -58,7 +58,7 @@
 0x1827: # ᠧ MONGOLIAN LETTER EE
   ascii_transcription: "ee"
   single_letter_transcription: "é"
-  cursive_position_to_variants:
+  joining_form_to_variants:
     isol:
       "A W": # ee.isol.AW
     init:
@@ -70,7 +70,7 @@
 
 0x1822: # ᠢ MONGOLIAN LETTER I
   ascii_transcription: "i"
-  cursive_position_to_variants:
+  joining_form_to_variants:
     isol:
       "A I": # i.isol.AI
         contextual_conditions: { "else" }
