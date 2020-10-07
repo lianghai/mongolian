@@ -6,12 +6,12 @@ extension Unicode {
     typealias GraphemeCluster = Swift.Character
 }
 
-enum JoiningForm: String {
+enum JoiningForm: String, Decodable {
     case isol, `init`, medi, fina
     case unknown
 }
 
-enum OrthogonallyJoiningType: String {
+enum OrthogonallyJoiningType: String, Decodable {
     case leading, trailing_major, trailing_minor
     case unknown
 }
@@ -19,42 +19,47 @@ enum OrthogonallyJoiningType: String {
 let jsonDecoder = JSONDecoder()
 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
 
-enum WrittenUnit: String {
+enum WrittenUnit: String, CaseIterable, Decodable {
     case A, Aa, I, Ii, O, Ue, U, Uu,
          N, B, P, H, Gh, G, Gg, M, L, S, Sh, T, D, Dd, Ch, J, Y, R, W,
          F, K, C, Z, Hh, Rh, Zr, Cr
     case unknown
-    var data: Data? {
-        return WrittenUnit.dataDictionary[self]
-    }
+    var data: Data? { WrittenUnit.dataDict[self] }
 }
 
-enum Character: String {
+enum Character: String, Decodable {
 //    case MVS, FVS1, FVS2, FVS3
     case aleph
     case a, e, ee, i, o, u, oe, ue,
          n, ng, b, p, h, g, m, l, s, sh, t, d, ch, j, y, r, w,
          f, k, c, z, hh, rh, lh, zr, cr
     case unknown
-    var data: Data? {
-        return Character.dataDictionary[self]
-    }
+    var data: Data? { Character.dataDict[self] }
     init?(codePoint: Unicode.CodePoint) {
-        if let (char, _) = Character.dataDictionary.first(where: { _, data in data.codePoint == codePoint }) {
+        if let (char, _) = Character.dataDict.first(where: { _, data in data.codePoint == codePoint }) {
             self = char
         } else {
             return nil
         }
     }
-    func applyCondition(_ condition: Condition, where joiningForm: JoiningForm) -> [WrittenUnit]? {
-        return data?[joiningForm].first { $0.conditions.contains(condition) }?.writtenUnits
+    func resolveWrittenUnits(where joiningForm: JoiningForm, with condition: Condition) -> [WrittenUnit]? {
+        return data?[joiningForm]?.first { $0.conditions?.contains(condition) ?? false }?.writtenUnits
     }
 }
 
 enum Condition: String, Decodable { // Contextual shaping condition
+    case chachlag, particle, devsger
     case fallback
-    case chachlag, particle
     case unknown
+//    init(rawValue: Condition.RawValue) {
+//        switch rawValue {
+//        case "chachlag": self = .chachlag
+//        case "particle": self = .particle
+//        case "devsger": self = .devsger
+//        case "fallback": self = .fallback
+//        default: self = .unknown
+//        }
+//    }
 }
 
 typealias WrittenForm = (joiningForm: JoiningForm, writtenUnits: [WrittenUnit])
@@ -66,16 +71,29 @@ struct State {
     var condition: Condition?
 }
 
+let str = "ᠮᠣᠩᠭᠣᠯ"
+//let str = "ᠠᠳᠠ"
 var buffer = [(character: Character, state: State)]()
-for char in "ᠮᠣᠩᠭᠣᠯ".unicodeScalars.map({ Character(codePoint: $0.value) ?? .unknown }) {
+for char in str.unicodeScalars.map({ Character(codePoint: $0.value) ?? .unknown }) {
     buffer.append((char, State()))
 }
 for index in buffer.indices {
     buffer[index].state.joiningForm = .medi
 }
 for (char, state) in buffer {
-    print(char.rawValue, state.joiningForm ?? "nil", state.condition ?? "nil")
+    print(
+        char.rawValue,
+        state.joiningForm ?? "[joining form n/a]",
+        state.condition ?? "[condition n/a]",
+        state.joiningForm.flatMap { joiningForm in
+            state.condition.flatMap { condition in
+                char.resolveWrittenUnits(where: joiningForm, with: condition)
+            }
+        } ?? "[variant n/a]"
+    )
 }
+
+//dump(WrittenUnit.A.data?[.medi])
 
 //letter.joiningForm = .isol
 //

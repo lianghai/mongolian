@@ -15,20 +15,22 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "A"] # a.isol.AA
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
+        known_fvs_usage: []
       - written_units: ["A"] # a.isol.A
-        contextual_conditions: ["particle"]
-        fvs: 2
-      - written_units: ["Aa"] # a.isol.Aa
-        contextual_conditions: ["chachlag"]
         fvs: 3
+        known_fvs_usage: ["exclamatory particle: a A"]
+      - written_units: ["Aa"] # a.isol.Aa
+        conditions: ["chachlag"]
+        fvs: 2
+        known_fvs_usage: []
     init:
       - written_units: ["A", "A"] # a.init.AA
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["A"] # a.init.A
-        contextual_conditions: ["particle"]
+        conditions: ["particle"]
         fvs: 2
     medi:
       - written_units: ["A"] # a.medi.A
@@ -36,6 +38,7 @@
       - written_units: ["A"] # a.fina.A
       - written_units: ["Aa"] # a.fina.Aa
         fvs: 1
+        known_fvs_usage: ["Ali Gali, na NÁ"]
         note: "Ali Gali a"
 
 - code_point: 0x1821 # ᠡ MONGOLIAN LETTER E
@@ -43,10 +46,10 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A"] # e.isol.A
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["Aa"] # e.isol.Aa
-        contextual_conditions: ["chachlag"]
+        conditions: ["chachlag"]
         fvs: 2
     init:
       - written_units: ["A"] # e.init.A
@@ -73,27 +76,27 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "I"] # i.isol.AI
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["I"] # i.isol.I
-        contextual_conditions: ["particle"]
+        conditions: ["particle"]
         fvs: 2
       - written_units: ["Ii"] # i.isol.Ii
         fvs: 3
         note: "Early modern orthographies"
     init:
       - written_units: ["A", "I"] # i.init.AI
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["I"] # i.init.I
-        contextual_conditions: ["particle"]
+        conditions: ["particle"]
         fvs: 2
     medi:
       - written_units: ["I"] # i.medi.I
-        contextual_conditions: ["fallback"]
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["I", "I"] # i.medi.II
-        contextual_conditions: ["devsger"]
+        conditions: ["devsger"]
         fvs: 2
     fina:
       - written_units: ["I"] # i.fina.I
