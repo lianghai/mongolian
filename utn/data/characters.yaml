@@ -81,7 +81,7 @@
       - written_units: ["I"] # i.isol.I
         conditions: ["particle"]
         fvs: 2
-      - written_units: ["Ii"] # i.isol.Ii
+      - written_units: ["Ix"] # i.isol.Ix
         fvs: 3
         note: "Early modern orthographies"
     init:

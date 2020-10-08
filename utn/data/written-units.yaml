@@ -34,10 +34,10 @@
       represented_letters: ["i", "y"]
       orthogonally_joining_types: ["trailing_major"]
 
-- ascii_transcription: "Ii"
+- ascii_transcription: "Ix"
   single_letter_transcription: "Ị"
   joining_form_to_variant:
-    isol: # Ii.isol
+    isol: # Ix.isol
       represented_letters: ["i"]
       note: "Early modern orthographies"
       typographical_decomposition: "I.isol + _dotbelow"
@@ -67,10 +67,10 @@
     fina: # U.fina
       represented_letters: ["o", "u", "oe", "ue", "w"]
 
-- ascii_transcription: "Uu"
+- ascii_transcription: "Ux"
   single_letter_transcription: "Ụ"
   joining_form_to_variant:
-    isol: # Uu.isol
+    isol: # Ux.isol
       represented_letters: ["u", "ue"]
       note: "Early modern orthographies"
       typographical_decomposition: "U.isol + _dotbelow"
@@ -144,7 +144,7 @@
     fina: # G.fina
       represented_letters: ["g"]
 
-- ascii_transcription: "Gg"
+- ascii_transcription: "Gx"
   single_letter_transcription: "G̈"
 
 - ascii_transcription: "M"
