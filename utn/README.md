@@ -1,11 +1,9 @@
-[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/draft-utn)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/utn)
 
 # Draft UTN
 
-This is the editor’s draft:
+The editor’s draft of the UTN and related documents are hosted in [this directory](https://github.com/lianghai/mongolian/tree/master/utn) in the PDF format.
 
-- [**draft-utn.pages ↓**](./draft-utn.pages)
-
-Latest published draft:
+See also the latest published draft:
 
 - [**L2/19-368 ↗**](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf), Draft technical note: _Text representation and shaping specification of the Mongolian script_
