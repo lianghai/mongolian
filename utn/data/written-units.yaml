@@ -2,150 +2,159 @@
 
 - ascii_transcription: "A"
   joining_form_to_variant:
-    isol: # A.isol
+    isol:
       represented_letters: ["a", "e"]
-    init: # A.init
+    init:
       represented_letters: ["aleph", "a", "e", "n"]
-    medi: # A.medi
+    medi:
       represented_letters: ["aleph", "a", "e", "n"]
       orthogonally_joining_types: ["trailing_minor"]
-    fina: # A.fina
+    fina:
       represented_letters: ["a", "e", "n"]
       orthogonally_joining_types: ["trailing_major"]
 
 - ascii_transcription: "Aa"
   single_letter_transcription: "Á"
   joining_form_to_variant:
-    isol: # Aa.isol
+    isol:
       represented_letters: ["a", "e"]
-    fina: # Aa.fina
+    fina:
       represented_letters: ["a"]
 
 - ascii_transcription: "I"
   joining_form_to_variant:
-    isol: # I.isol
+    isol:
       represented_letters: ["i", "j"]
-    init: # I.init
+    init:
       represented_letters: ["i", "j", "y"]
-    medi: # I.medi
+    medi:
       represented_letters: ["i", "y"]
       orthogonally_joining_types: ["trailing_minor"]
-    fina: # I.fina
+    fina:
       represented_letters: ["i", "y"]
       orthogonally_joining_types: ["trailing_major"]
 
 - ascii_transcription: "Ix"
   single_letter_transcription: "Ị"
   joining_form_to_variant:
-    isol: # Ix.isol
+    isol:
       represented_letters: ["i"]
       note: "Early modern orthographies"
       typographical_decomposition: "I.isol + _dotbelow"
 
 - ascii_transcription: "O"
   joining_form_to_variant:
-    init: # O.init
-      represented_letters: ["u", "ue"] # Particles
-    medi: # O.medi
+    init:
+      represented_letters: ["u", "ue"]
+      note: "Particles"
+    medi:
       represented_letters: ["o", "u", "oe", "ue"]
       orthogonally_joining_types: ["trailing_major"]
-    fina: # O.fina
-      represented_letters: ["o", "u", "oe", "ue"] # Marked, orthogonally joined
+    fina:
+      represented_letters: ["o", "u", "oe", "ue"]
       orthogonally_joining_types: ["trailing_major"]
+      note: "Marked; orthogonally joined"
 
 - ascii_transcription: "Ue"
   single_letter_transcription: "Ü"
   joining_form_to_variant:
-    fina: # Ue.fina
+    fina:
       represented_letters: ["oe", "ue"]
       orthogonally_joining_types: ["trailing_major"]
 
 - ascii_transcription: "U"
   joining_form_to_variant:
-    isol: # U.isol
+    isol:
       represented_letters: ["u", "ue"]
-    fina: # U.fina
+    fina:
       represented_letters: ["o", "u", "oe", "ue", "w"]
 
 - ascii_transcription: "Ux"
   single_letter_transcription: "Ụ"
   joining_form_to_variant:
-    isol: # Ux.isol
+    isol:
       represented_letters: ["u", "ue"]
       note: "Early modern orthographies"
       typographical_decomposition: "U.isol + _dotbelow"
 
 - ascii_transcription: "N"
   joining_form_to_variant:
-    init: # N.init
+    init:
       represented_letters: ["n"]
       typographical_decomposition: "A.init + _dotbelow"
-    medi: # N.medi
+    medi:
       represented_letters: ["n"]
       orthogonally_joining_types: ["trailing_minor"]
       typographical_decomposition: "A.medi + _dotbelow"
-    fina: # N.fina
+    fina:
       represented_letters: ["n"]
       typographical_decomposition: "A.fina + _dotbelow"
 
 - ascii_transcription: "B"
   joining_form_to_variant:
-    init: # B.init
+    init:
       represented_letters: ["b"]
       orthogonally_joining_types: ["leading"]
-    medi: # B.medi
+    medi:
       represented_letters: ["b"]
       orthogonally_joining_types: ["leading"]
-    fina: # B.fina
+    fina:
       represented_letters: ["b"]
 
 - ascii_transcription: "P"
   joining_form_to_variant:
-    init: # P.init
+    init:
       represented_letters: ["p"]
       orthogonally_joining_types: ["leading"]
-    medi: # P.medi
+    medi:
       represented_letters: ["p"]
       orthogonally_joining_types: ["leading"]
-    fina: # P.fina
+    fina:
       represented_letters: ["p"]
 
 - ascii_transcription: "H"
   joining_form_to_variant:
-    init: # H.init
+    init:
       represented_letters: ["h"]
-    medi: # H.medi
+    medi:
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["trailing_minor"]
-    fina: # H.fina
+    fina:
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["trailing_minor"]
 
 - ascii_transcription: "Gh"
   single_letter_transcription: "Ğ"
   joining_form_to_variant:
-    init: # Gh.init
+    init:
       represented_letters: ["g"]
-    medi: # Gh.medi
+    medi:
       represented_letters: ["g"]
       orthogonally_joining_types: ["trailing_minor"]
-    fina: # Gh.fina
+    fina:
       represented_letters: ["g"]
       orthogonally_joining_types: ["trailing_minor"]
 
 - ascii_transcription: "G"
   joining_form_to_variant:
-    init: # G.init
+    init:
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["leading"]
-    medi: # G.medi
+    medi:
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["leading", "trailing_minor"]
-    fina: # G.fina
+    fina:
       represented_letters: ["g"]
 
 - ascii_transcription: "Gx"
   single_letter_transcription: "G̈"
+  joining_form_to_variant:
+    init:
+      represented_letters: ["(h)"]
+      orthogonally_joining_types: ["leading"]
+    medi:
+      represented_letters: ["(h)"]
+      orthogonally_joining_types: ["leading", "trailing_minor"]
 
 - ascii_transcription: "M"
 
@@ -174,18 +183,36 @@
 
 - ascii_transcription: "W"
   joining_form_to_variant:
-    init: # W.init
+    init:
       represented_letters: ["w"]
-    medi: # W.medi
+    medi:
       represented_letters: ["w", "ee"]
       orthogonally_joining_types: ["trailing_minor"]
-    fina: # W.fina
+    fina:
       represented_letters: ["w", "ee"]
       orthogonally_joining_types: ["trailing_minor"]
 
 - ascii_transcription: "F"
+  joining_form_to_variant:
+    init:
+      represented_letters: ["f"]
+      orthogonally_joining_types: ["leading"]
+    medi:
+      represented_letters: ["f"]
+      orthogonally_joining_types: ["leading"]
+    fina:
+      represented_letters: ["f"]
 
 - ascii_transcription: "K"
+  joining_form_to_variant:
+    init:
+      represented_letters: ["k"]
+      orthogonally_joining_types: ["leading"]
+    medi:
+      represented_letters: ["k"]
+      orthogonally_joining_types: ["leading"]
+    fina:
+      represented_letters: ["k"]
 
 - ascii_transcription: "C"
 
