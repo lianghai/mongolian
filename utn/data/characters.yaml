@@ -1,5 +1,14 @@
 ---
 
+- code_point: 0x200C # ZERO WIDTH NON-JOINER
+  ascii_transcription: "zwnj"
+
+- code_point: 0x200D # ZERO WIDTH JOINER
+  ascii_transcription: "zwj"
+
+- code_point: 0x180A # MONGOLIAN NIRUGU
+  ascii_transcription: "nirugu"
+
 - code_point: 0x180E # MONGOLIAN VOWEL SEPARATOR
   ascii_transcription: "mvs"
 
@@ -11,9 +20,6 @@
 
 - code_point: 0x180D # MONGOLIAN FREE VARIATION SELECTOR THREE
   ascii_transcription: "fvs3"
-
-- code_point: 0x180A # MONGOLIAN NIRUGU
-  ascii_transcription: "nirugu"
 
 - code_point: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
   ascii_transcription: "aleph"
@@ -565,16 +571,12 @@
   joining_form_to_variants:
     init:
       - written_units: ["Zr"]
-    medi:
-      - written_units: ["Zr"]
 
 - code_point: 0x1842 # ᡂ MONGOLIAN LETTER CHI
   ascii_transcription: "cr"
   single_letter_transcription: "č"
   joining_form_to_variants:
     init:
-      - written_units: ["Cr"]
-    medi:
       - written_units: ["Cr"]
 
 ...
