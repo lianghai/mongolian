@@ -14,3 +14,7 @@ feature medi {
 feature fina {
     lookup IIa.fina;
 } fina;
+feature rclt {
+    lookup III.chachlag;
+    lookup III.fvs;
+} rclt;

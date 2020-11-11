@@ -39,7 +39,7 @@
         fvs: 3
         known_fvs_usage: ["exclamatory particle: a A"]
       - written_units: ["Aa"]
-        conditions: ["chachlag"]
+        conditions: ["chachlag", "particle"]
         fvs: 2
     init:
       - written_units: ["A", "A"]

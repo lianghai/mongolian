@@ -1,12 +1,14 @@
 import functools
+import itertools
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any
+from typing import Any, NamedTuple
 
 import yaml
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
-from tptqscripttools.otl import DEFAULT_LANGUAGE_TAG, FeaFile, GlyphSpace
+from tptqscripttools.otl import (DEFAULT_LANGUAGE_TAG, JOINING_FORM_TAGS,
+                                 FeaFile, GlyphSpace)
 
 scripting_path = Path(__file__)
 project_dir = scripting_path.parent
@@ -35,6 +37,9 @@ def main():
     glyph_space = script.glyph_space(source=None, naming=glyph_naming_scheme)  # not checking availability in a source glyph set
 
     otl_path = make_otl_file(glyph_space)
+
+    # return
+
     script.export_otl_dummy_font(
         project_dir / "products", naming=glyph_naming_scheme, feature_file_path=otl_path,
     )
@@ -54,10 +59,12 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             letter = data.characters.__dict__[name]
             for joining_form, variants in letter.joining_form_to_variants.__dict__.items():
                 class_name = "@" + name + "." + joining_form
-                file.classDefinition(class_name, [
-                    mong[name + "." + "".join(v.written_units) + "." + joining_form]
-                    for v in variants
-                ])
+                file.classDefinition(
+                    class_name, [mong[name + "." + joining_form]] + [
+                        mong[name + "." + "".join(v.written_units) + "." + joining_form]
+                        for v in variants
+                    ]
+                )
                 classes.__dict__[name].append(class_name)
 
         for name in data.categories.letter:
@@ -69,13 +76,64 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
     with FeaFile(otl_dir / "lookups.fea", source=scripting_path) as file:
 
-        lookups.IIa = []
-        for joining_form in ["isol", "init", "medi", "fina"]:
+        lookups.IIa = {}
+        for joining_form in JOINING_FORM_TAGS:
             lookup_name = "IIa." + joining_form
             with file.Lookup(lookup_name) as lookup:
                 for name in data.categories.letter:
                     lookup.substitution(mong[name], mong[name + "." + joining_form])
-            lookups.IIa.append(lookup_name)
+            lookups.IIa[joining_form] = lookup_name
+
+        condition_to_substitutions = {}
+        fvs_substitutions = []
+
+        class Substitution(NamedTuple):
+            target: list[str]
+            substitution: list[str]
+            backtrack: list[str]
+            lookahead: list[str]
+
+        for name in data.categories.letter:
+            letter = data.characters.__dict__[name]
+            for joining_form, variants in letter.joining_form_to_variants.__dict__.items():
+                for variant in variants:
+                    sub = "@" + name + "." + joining_form
+                    by = mong[name + "." + "".join(variant.written_units) + "." + joining_form]
+                    for condition in variant.__dict__.get("conditions", []):
+                        condition_to_substitutions.setdefault(condition, {})[sub] = by
+                    if fvs_int := variant.__dict__.get("fvs"):
+                        fvs = mong[f"fvs{fvs_int}"]
+                        fvs_substitutions.append(
+                            Substitution([sub], [by], backtrack=[], lookahead=[fvs])
+                        )
+
+        lookups.condition = {}
+        for condition, substitutions in condition_to_substitutions.items():
+            lookup_name = "condition." + condition
+            with file.Lookup(lookup_name) as lookup:
+                for sub, by in substitutions.items():
+                    lookup.substitution(sub, by)
+            lookups.condition[condition] = lookup_name
+
+        lookups.III = {}
+
+        step = "chachlag"
+        lookup_name = "III." + step
+        with file.Lookup(lookup_name) as lookup:
+            mvs = mong[data.categories.mvs[0]]
+            lookup.raw(
+                f"sub {mvs} [@a.isol @e.isol]' lookup {lookups.condition[step]};"
+            )
+        lookups.III[step] = lookup_name
+
+        step = "fvs"
+        lookup_name = "III." + step
+        with file.Lookup(lookup_name) as lookup:
+            for substitution in fvs_substitutions:
+                lookup.substitution(*substitution)
+        lookups.III[step] = lookup_name
+
+        lookups.IIb = {}
 
     with FeaFile(otl_dir / "main.fea", source=scripting_path) as file:
 
@@ -93,11 +151,14 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         # file.raw("include(lookups.fea);")
 
-        for joining_form in ["isol", "init", "medi", "fina"]:
+        for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
-            feature.lookupReference(
-                next(name for name in lookups.IIa if name.endswith(joining_form))
-            )
+            feature.lookupReference(name)
+
+        feature = file.feature("rclt")
+        # feature.substitution("mvs", "sjdfiwfwo")
+        for name in itertools.chain(lookups.III.values(), lookups.IIb.values()):
+            feature.lookupReference(name)
 
     # feaLib’s include() following somehow fails.
     stitched_otl_path = otl_dir / "stateless.fea"
