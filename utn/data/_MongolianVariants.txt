@@ -1,0 +1,283 @@
+# Format:
+#   Field 0: Unicode code point value
+#   Field 1: Assigned Mongolian Free Variation Selector (FVS)
+#   Field 2: Cursive joining position
+#   Field 3: Written units
+#   Field 4: If the variant is contextually determined
+
+# MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
+
+1807 ;      ; medi ; A     ;
+
+# MONGOLIAN LETTER A
+
+1820 ;      ; medi ; A     ;
+1820 ;      ; fina ; A     ;
+
+1820 ; FVS1 ; isol ; A A   ;   placeholder
+1820 ; FVS1 ; init ; A A   ;   placeholder
+
+1820 ; FVS2 ; isol ; A     ; ¬ placeholder
+1820 ; FVS2 ; init ; A     ; ¬ placeholder
+
+1820 ; FVS3 ; isol ; Á     ;                 chachlag
+
+# MONGOLIAN LETTER E
+
+1821 ;      ; init ; A     ;
+1821 ;      ; medi ; A     ;
+1821 ;      ; fina ; A     ;
+
+1821 ; FVS1 ; isol ; A     ;
+
+1821 ; FVS2 ; isol ; Á     ;   chachlag
+
+# MONGOLIAN LETTER I
+
+1822 ;      ; fina ; I     ;
+
+1822 ; FVS1 ; isol ; A I   ;   placeholder
+1822 ; FVS1 ; init ; A I   ;   placeholder
+1822 ; FVS1 ; medi ; I     ; ¬ placeholder
+
+1822 ; FVS2 ; isol ; I     ; ¬ placeholder
+1822 ; FVS2 ; init ; I     ; ¬ placeholder
+1822 ; FVS2 ; medi ; I I   ; ¬ placeholder   devsger
+
+# MONGOLIAN LETTER O
+
+1823 ;      ; isol ; A O   ;
+1823 ;      ; init ; A U   ;
+1823 ;      ; medi ; U     ;
+
+1823 ; FVS1 ; fina ; U     ; ¬ marked
+
+1823 ; FVS2 ; fina ; O     ;   marked
+
+# MONGOLIAN LETTER U
+
+1824 ;      ; medi ; U     ;
+
+1824 ; FVS1 ; isol ; A O   ;   placeholder   marked
+1824 ; FVS1 ; init ; A U   ;   placeholder ? marked
+1824 ; FVS1 ; fina ; U     ; ¬ placeholder ¬ marked
+
+1824 ; FVS2 ; isol ; U     ; ¬ placeholder ¬ marked
+1824 ; FVS2 ; init ; U     ; ¬ placeholder ¬ marked
+1824 ; FVS2 ; fina ; O     ; ¬ placeholder   marked
+
+# MONGOLIAN LETTER OE
+
+1825 ;      ; isol ; A Ü   ;
+1825 ;      ; init ; A U I ;
+
+1825 ; FVS1 ; medi ; U     ; ¬ placeholder ¬ marked
+1825 ; FVS1 ; fina ; U     ; ¬ placeholder ¬ marked
+
+1825 ; FVS2 ; medi ; U I   ; ¬ placeholder   marked
+1825 ; FVS2 ; fina ; Ü     ; ¬ placeholder   marked
+
+1825 ; FVS3 ; fina ; O     ; ¬ placeholder ¬ marked   post-bowed
+
+# MONGOLIAN LETTER UE
+
+1826 ; FVS1 ; isol ; A Ü   ;   placeholder   marked
+1826 ; FVS1 ; init ; A U I ;   placeholder   marked
+1826 ; FVS1 ; medi ; U     ; ¬ placeholder ¬ marked
+1826 ; FVS1 ; fina ; U     ; ¬ placeholder ¬ marked
+
+1826 ; FVS2 ; isol ; U     ; ¬ placeholder ¬ marked
+1826 ; FVS2 ; init ; U     ; ¬ placeholder ¬ marked
+1826 ; FVS2 ; medi ; U I   ; ¬ placeholder   marked
+1826 ; FVS2 ; fina ; Ü     ; ¬ placeholder   marked
+
+1826 ; FVS3 ; isol ; A U   ;
+1826 ; FVS3 ; fina ; O     ; ¬ placeholder ¬ marked   post-bowed
+
+# MONGOLIAN LETTER EE
+
+1827 ;      ; isol ; A W   ;
+1827 ;      ; init ; A W   ;
+1827 ;      ; medi ; W     ;
+1827 ;      ; fina ; W     ;
+
+# MONGOLIAN LETTER NA
+
+1828 ;      ; init ; N     ;
+
+1828 ; FVS1 ; medi ; N     ; syllable-initial
+1828 ; FVS1 ; fina ; N     ; syllable-initial
+
+1828 ; FVS2 ; medi ; A     ; devsger
+1828 ; FVS2 ; fina ; A     ; devsger
+
+# MONGOLIAN LETTER ANG
+
+1829 ;      ; medi ; A G   ;
+1829 ;      ; fina ; A G   ;
+
+# MONGOLIAN LETTER BA
+
+182A ;      ; init ; B     ;
+182A ;      ; medi ; B     ;
+182A ;      ; fina ; B     ;
+
+# MONGOLIAN LETTER PA
+
+182B ;      ; init ; P     ;
+182B ;      ; medi ; P     ;
+182B ;      ; fina ; P     ;
+
+# MONGOLIAN LETTER QA
+
+182C ; FVS1 ; init ; H     ; syllable-initial masculine
+182C ; FVS1 ; medi ; H     ; syllable-initial masculine
+182C ; FVS1 ; fina ; H     ; syllable-initial masculine
+
+182C ; FVS2 ; init ; G     ; stray feminine
+182C ; FVS2 ; medi ; G     ; stray feminine
+
+# MONGOLIAN LETTER GA
+
+182D ; FVS1 ; init ; Ğ     ; syllable-initial masculine
+182D ; FVS1 ; medi ; Ğ     ; syllable-initial masculine
+182D ; FVS1 ; fina ; Ğ     ; syllable-initial masculine
+
+182D ; FVS2 ; init ; G     ; stray feminine
+182D ; FVS2 ; medi ; G     ; stray feminine
+182D ; FVS2 ; fina ; G     ; stray feminine
+
+182D ; FVS3 ; medi ; H     ; devsger masculine
+182D ; FVS3 ; fina ; H     ; devsger masculine
+
+# MONGOLIAN LETTER MA
+
+182E ;      ; init ; M     ;
+182E ;      ; medi ; M     ;
+182E ;      ; fina ; M     ;
+
+# MONGOLIAN LETTER LA
+
+182F ;      ; init ; L     ;
+182F ;      ; medi ; L     ;
+182F ;      ; fina ; L     ;
+
+# MONGOLIAN LETTER SA
+
+1830 ;      ; init ; S     ;
+1830 ;      ; medi ; S     ;
+1830 ;      ; fina ; S     ;
+
+# MONGOLIAN LETTER SHA
+
+1831 ;      ; init ; Ś     ;
+1831 ;      ; medi ; Ś     ;
+1831 ;      ; fina ; Ś     ;
+
+# MONGOLIAN LETTER TA
+
+1832 ;      ; init ; T     ;
+1832 ;      ; fina ; T     ;
+
+1832 ; FVS1 ; medi ; T     ; devsger | stray
+
+1832 ; FVS2 ; medi ; D     ; syllable-initial
+
+# MONGOLIAN LETTER DA
+
+1833 ; FVS1 ; init ; D     ; stray
+1833 ; FVS1 ; medi ; D     ; syllable-initial | stray
+1833 ; FVS1 ; fina ; D     ; stray
+
+1833 ; FVS2 ; init ; T     ; syllable-initial
+1833 ; FVS2 ; medi ; Đ     ; devsger
+1833 ; FVS2 ; fina ; Đ     ; devsger
+
+# MONGOLIAN LETTER CHA
+
+1834 ;      ; init ; Ć     ;
+1834 ;      ; medi ; Ć     ;
+1834 ;      ; fina ; Ć     ;
+
+# MONGOLIAN LETTER JA
+
+1835 ;      ; init ; I     ;
+1835 ;      ; medi ; J     ;
+1835 ;      ; fina ; J     ;
+
+1835 ; FVS1 ; isol ; I     ; pre-chachlag
+
+# MONGOLIAN LETTER YA
+
+1836 ; FVS1 ; init ; Y     ; ¬ particle
+1836 ; FVS1 ; medi ; Y     ; ¬ particle
+
+1836 ; FVS2 ; init ; I     ; particle
+1836 ; FVS2 ; medi ; I     ; particle
+1836 ; FVS2 ; fina ; I     ; pre-chachlag
+
+# MONGOLIAN LETTER RA
+
+1837 ;      ; init ; R     ;
+1837 ;      ; medi ; R     ;
+1837 ;      ; fina ; R     ;
+
+# MONGOLIAN LETTER WA
+
+1838 ;      ; init ; W     ;
+1838 ;      ; medi ; W     ;
+
+1838 ; FVS1 ; fina ; W     ; ¬ pre-chachlag | in-isolation
+
+1838 ; FVS2 ; fina ; U     ; pre-chachlag
+
+# MONGOLIAN LETTER FA
+
+1839 ;      ; init ; F     ;
+1839 ;      ; medi ; F     ;
+1839 ;      ; fina ; F     ;
+
+# MONGOLIAN LETTER KHA
+
+183B ;      ; init ; K     ;
+183B ;      ; medi ; K     ;
+183B ;      ; fina ; K     ;
+
+# MONGOLIAN LETTER TSA
+
+183C ;      ; init ; C     ;
+183C ;      ; medi ; C     ;
+183C ;      ; fina ; C     ;
+
+# MONGOLIAN LETTER ZA
+
+183D ;      ; init ; Z     ;
+183D ;      ; medi ; Z     ;
+183D ;      ; fina ; Z     ;
+
+# MONGOLIAN LETTER HAA
+
+183E ;      ; init ; Ħ     ;
+183E ;      ; medi ; Ħ     ;
+183E ;      ; fina ; Ħ     ;
+
+# MONGOLIAN LETTER ZRA
+
+183F ;      ; init ; Ř     ;
+183F ;      ; medi ; Ř     ;
+183F ;      ; fina ; Ř     ;
+
+# MONGOLIAN LETTER LHA
+
+1840 ;      ; init ; L Ħ   ;
+1840 ;      ; medi ; L Ħ   ;
+
+# MONGOLIAN LETTER ZHI
+
+1841 ;      ; init ; Ž     ;
+
+# MONGOLIAN LETTER CHI
+
+1842 ;      ; init ; Č     ;
+
+# EOF

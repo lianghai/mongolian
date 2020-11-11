@@ -1,0 +1,26 @@
+
+marked
+
+
+chachlag_onset
+masculine_onset
+masculine_devsger
+feminine
+particle
+dictionary_particle
+post_bowed
+
+# chachlag
+
+@letter.chachlag_eligible -> <chachlag> / MVS _
+
+# syllable_initial
+
+@letter.syllabic -> <syllable_initial> /        _ @vowel
+@letter.syllabic -> <devsger>          / @vowel _ (not @vowel)
+
+# ...
+
+# in_isolation
+
+@letter -> <in_isolation> / mongolian_boundary _ mongolian_boundary

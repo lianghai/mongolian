@@ -1,0 +1,38 @@
+@vowel.masculine = [@a @o @u];
+@vowel.feminine = [@e @e2 @oe @ue];
+@vowel.neuter = [@i];
+
+@vowel = [@masculine_vowel @feminine_vowel @neuter_vowel];
+
+
+@letter.syllabic = [@n @d];
+
+@letter.chachlag_eligible = [@a @e];
+
+lookup syllabic {
+
+    sub
+        @letter.syllabic' lookup condition.syllable_initial
+        @vowel;
+
+    sub
+        @vowel
+        @letter.syllabic' lookup condition.devsger;
+
+} syllabic;
+
+lookup chachlag {
+
+    sub
+        MVS
+        @letter.chachlag_eligible' lookup condition.chachlag;
+
+} chachlag;
+
+lookup pre_chachlag {
+
+    sub
+        MVS
+
+
+} pre_chachlag;
