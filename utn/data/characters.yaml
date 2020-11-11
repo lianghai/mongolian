@@ -58,19 +58,6 @@
     fina:
       - written_units: ["A"] # e.fina.A
 
-- code_point: 0x1827 # ᠧ MONGOLIAN LETTER EE
-  ascii_transcription: "ee"
-  single_letter_transcription: "é"
-  joining_form_to_variants:
-    isol:
-      - written_units: ["A", "W"] # ee.isol.AW
-    init:
-      - written_units: ["A", "W"] # ee.init.AW
-    medi:
-      - written_units: ["A"] # ee.medi.W
-    fina:
-      - written_units: ["A"] # ee.fina.W
-
 - code_point: 0x1822 # ᠢ MONGOLIAN LETTER I
   ascii_transcription: "i"
   joining_form_to_variants:
@@ -114,6 +101,19 @@
 - code_point: 0x1826 # ᠦ MONGOLIAN LETTER UE
   ascii_transcription: "ue"
   single_letter_transcription: "ü"
+
+- code_point: 0x1827 # ᠧ MONGOLIAN LETTER EE
+  ascii_transcription: "eh"
+  single_letter_transcription: "é"
+  joining_form_to_variants:
+    isol:
+      - written_units: ["A", "W"] # eh.isol.AW
+    init:
+      - written_units: ["A", "W"] # eh.init.AW
+    medi:
+      - written_units: ["A"] # eh.medi.W
+    fina:
+      - written_units: ["A"] # eh.fina.W
 
 - code_point: 0x1828 # ᠨ MONGOLIAN LETTER NA
   ascii_transcription: "n"
