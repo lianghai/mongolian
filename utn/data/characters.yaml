@@ -1,36 +1,36 @@
 ---
 
 - code_point: 0x200C # ZERO WIDTH NON-JOINER
-  ascii_transcription: "zwnj"
+  short_name: "zwnj"
 
 - code_point: 0x200D # ZERO WIDTH JOINER
-  ascii_transcription: "zwj"
+  short_name: "zwj"
 
 - code_point: 0x180A # MONGOLIAN NIRUGU
-  ascii_transcription: "nirugu"
+  short_name: "nirugu"
 
 - code_point: 0x180E # MONGOLIAN VOWEL SEPARATOR
-  ascii_transcription: "mvs"
+  short_name: "mvs"
 
 - code_point: 0x180B # MONGOLIAN FREE VARIATION SELECTOR ONE
-  ascii_transcription: "fvs1"
+  short_name: "fvs1"
 
 - code_point: 0x180C # MONGOLIAN FREE VARIATION SELECTOR TWO
-  ascii_transcription: "fvs2"
+  short_name: "fvs2"
 
 - code_point: 0x180D # MONGOLIAN FREE VARIATION SELECTOR THREE
-  ascii_transcription: "fvs3"
+  short_name: "fvs3"
 
 - code_point: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
-  ascii_transcription: "aleph"
+  short_name: "aleph"
   single_letter_transcription: "’"
-  joining_form_to_variants:
+  variants_by_joining_form:
     medi:
       - written_units: ["A"]
 
 - code_point: 0x1820 # ᠠ MONGOLIAN LETTER A
-  ascii_transcription: "a"
-  joining_form_to_variants:
+  short_name: "a"
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "A"]
         conditions: ["fallback"]
@@ -58,8 +58,8 @@
         note: "Ali Gali a"
 
 - code_point: 0x1821 # ᠡ MONGOLIAN LETTER E
-  ascii_transcription: "e"
-  joining_form_to_variants:
+  short_name: "e"
+  variants_by_joining_form:
     isol:
       - written_units: ["A"]
         conditions: ["fallback"]
@@ -75,8 +75,8 @@
       - written_units: ["A"]
 
 - code_point: 0x1822 # ᠢ MONGOLIAN LETTER I
-  ascii_transcription: "i"
-  joining_form_to_variants:
+  short_name: "i"
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "I"]
         conditions: ["fallback"]
@@ -105,8 +105,8 @@
       - written_units: ["I"]
 
 - code_point: 0x1823 # ᠣ MONGOLIAN LETTER O
-  ascii_transcription: "o"
-  joining_form_to_variants:
+  short_name: "o"
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "O"]
     init:
@@ -122,8 +122,8 @@
         fvs: 2
 
 - code_point: 0x1824 # ᠤ MONGOLIAN LETTER U
-  ascii_transcription: "u"
-  joining_form_to_variants:
+  short_name: "u"
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "O"]
         conditions: ["fallback"]
@@ -151,9 +151,9 @@
         fvs: 2
 
 - code_point: 0x1825 # ᠥ MONGOLIAN LETTER OE
-  ascii_transcription: "oe"
+  short_name: "oe"
   single_letter_transcription: "ö"
-  joining_form_to_variants:
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "Ue"]
     init:
@@ -177,9 +177,9 @@
         fvs: 3
 
 - code_point: 0x1826 # ᠦ MONGOLIAN LETTER UE
-  ascii_transcription: "ue"
+  short_name: "ue"
   single_letter_transcription: "ü"
-  joining_form_to_variants:
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "Ue"]
         conditions: ["fallback"]
@@ -217,9 +217,9 @@
         fvs: 3
 
 - code_point: 0x1827 # ᠧ MONGOLIAN LETTER EE
-  ascii_transcription: "eh"
+  short_name: "eh"
   single_letter_transcription: "é"
-  joining_form_to_variants:
+  variants_by_joining_form:
     isol:
       - written_units: ["A", "W"]
     init:
@@ -230,8 +230,8 @@
       - written_units: ["W"]
 
 - code_point: 0x1828 # ᠨ MONGOLIAN LETTER NA
-  ascii_transcription: "n"
-  joining_form_to_variants:
+  short_name: "n"
+  variants_by_joining_form:
     init:
       - written_units: ["N"]
       - written_units: ["A"]
@@ -252,17 +252,17 @@
         fvs: 2
 
 - code_point: 0x1829 # ᠩ MONGOLIAN LETTER ANG
-  ascii_transcription: "ng"
+  short_name: "ng"
   single_letter_transcription: "ŋ"
-  joining_form_to_variants:
+  variants_by_joining_form:
     medi:
       - written_units: ["A", "G"]
     fina:
       - written_units: ["A", "G"]
 
 - code_point: 0x182A # ᠪ MONGOLIAN LETTER BA
-  ascii_transcription: "b"
-  joining_form_to_variants:
+  short_name: "b"
+  variants_by_joining_form:
     init:
       - written_units: ["B"]
     medi:
@@ -271,8 +271,8 @@
       - written_units: ["B"]
 
 - code_point: 0x182B # ᠫ MONGOLIAN LETTER PA
-  ascii_transcription: "p"
-  joining_form_to_variants:
+  short_name: "p"
+  variants_by_joining_form:
     init:
       - written_units: ["P"]
     medi:
@@ -281,8 +281,8 @@
       - written_units: ["P"]
 
 - code_point: 0x182C # ᠬ MONGOLIAN LETTER QA
-  ascii_transcription: "h"
-  joining_form_to_variants:
+  short_name: "h"
+  variants_by_joining_form:
     init:
       - written_units: ["H"]
         conditions: ["masculine_onset"]
@@ -308,8 +308,8 @@
         note: "Not an appriopriate fallback"
 
 - code_point: 0x182D # ᠭ MONGOLIAN LETTER GA
-  ascii_transcription: "g"
-  joining_form_to_variants:
+  short_name: "g"
+  variants_by_joining_form:
     init:
       - written_units: ["Gh"]
         conditions: ["masculine_onset"]
@@ -339,8 +339,8 @@
         fvs: 3
 
 - code_point: 0x182E # ᠮ MONGOLIAN LETTER MA
-  ascii_transcription: "m"
-  joining_form_to_variants:
+  short_name: "m"
+  variants_by_joining_form:
     init:
       - written_units: ["M"]
     medi:
@@ -349,8 +349,8 @@
       - written_units: ["M"]
 
 - code_point: 0x182F # ᠯ MONGOLIAN LETTER LA
-  ascii_transcription: "l"
-  joining_form_to_variants:
+  short_name: "l"
+  variants_by_joining_form:
     init:
       - written_units: ["L"]
     medi:
@@ -359,8 +359,8 @@
       - written_units: ["L"]
 
 - code_point: 0x1830 # ᠰ MONGOLIAN LETTER SA
-  ascii_transcription: "s"
-  joining_form_to_variants:
+  short_name: "s"
+  variants_by_joining_form:
     init:
       - written_units: ["S"]
     medi:
@@ -369,9 +369,9 @@
       - written_units: ["S"]
 
 - code_point: 0x1831 # ᠱ MONGOLIAN LETTER SHA
-  ascii_transcription: "sh"
+  short_name: "sh"
   single_letter_transcription: "ś"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Sh"]
     medi:
@@ -380,8 +380,8 @@
       - written_units: ["Sh"]
 
 - code_point: 0x1832 # ᠲ MONGOLIAN LETTER TA
-  ascii_transcription: "t"
-  joining_form_to_variants:
+  short_name: "t"
+  variants_by_joining_form:
     init:
       - written_units: ["T"]
     medi:
@@ -395,8 +395,8 @@
       - written_units: ["T"]
 
 - code_point: 0x1833 # ᠳ MONGOLIAN LETTER DA
-  ascii_transcription: "d"
-  joining_form_to_variants:
+  short_name: "d"
+  variants_by_joining_form:
     init:
       - written_units: ["T"]
         conditions: ["onset"]
@@ -420,9 +420,9 @@
         fvs: 2
 
 - code_point: 0x1834 # ᠴ MONGOLIAN LETTER CHA
-  ascii_transcription: "ch"
+  short_name: "ch"
   single_letter_transcription: "ć"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Ch"]
     medi:
@@ -431,8 +431,8 @@
       - written_units: ["Ch"]
 
 - code_point: 0x1835 # ᠵ MONGOLIAN LETTER JA
-  ascii_transcription: "j"
-  joining_form_to_variants:
+  short_name: "j"
+  variants_by_joining_form:
     isol:
       - written_units: ["I"]
         conditions: ["chachlag_onset"]
@@ -446,8 +446,8 @@
       - written_units: ["J"]
 
 - code_point: 0x1836 # ᠶ MONGOLIAN LETTER YA
-  ascii_transcription: "y"
-  joining_form_to_variants:
+  short_name: "y"
+  variants_by_joining_form:
     init:
       - written_units: ["Y"]
         conditions: ["fallback", "onset"]
@@ -469,8 +469,8 @@
         note: "Not an appriopriate fallback"
 
 - code_point: 0x1837 # ᠷ MONGOLIAN LETTER RA
-  ascii_transcription: "r"
-  joining_form_to_variants:
+  short_name: "r"
+  variants_by_joining_form:
     init:
       - written_units: ["R"]
     medi:
@@ -479,8 +479,8 @@
       - written_units: ["R"]
 
 - code_point: 0x1838 # ᠸ MONGOLIAN LETTER WA
-  ascii_transcription: "w"
-  joining_form_to_variants:
+  short_name: "w"
+  variants_by_joining_form:
     init:
       - written_units: ["W"]
     medi:
@@ -494,8 +494,8 @@
         fvs: 2
 
 - code_point: 0x1839 # ᠹ MONGOLIAN LETTER FA
-  ascii_transcription: "f"
-  joining_form_to_variants:
+  short_name: "f"
+  variants_by_joining_form:
     init:
       - written_units: ["F"]
     medi:
@@ -504,8 +504,8 @@
       - written_units: ["F"]
 
 - code_point: 0x183B # ᠻ MONGOLIAN LETTER KHA
-  ascii_transcription: "k"
-  joining_form_to_variants:
+  short_name: "k"
+  variants_by_joining_form:
     init:
       - written_units: ["K"]
     medi:
@@ -514,8 +514,8 @@
       - written_units: ["K"]
 
 - code_point: 0x183C # ᠼ MONGOLIAN LETTER TSA
-  ascii_transcription: "c"
-  joining_form_to_variants:
+  short_name: "c"
+  variants_by_joining_form:
     init:
       - written_units: ["C"]
     medi:
@@ -524,8 +524,8 @@
       - written_units: ["C"]
 
 - code_point: 0x183D # ᠽ MONGOLIAN LETTER ZA
-  ascii_transcription: "z"
-  joining_form_to_variants:
+  short_name: "z"
+  variants_by_joining_form:
     init:
       - written_units: ["Z"]
     medi:
@@ -534,9 +534,9 @@
       - written_units: ["Z"]
 
 - code_point: 0x183E # ᠾ MONGOLIAN LETTER HAA
-  ascii_transcription: "hh"
+  short_name: "hh"
   single_letter_transcription: "ħ"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Hh"]
     medi:
@@ -545,9 +545,9 @@
       - written_units: ["Hh"]
 
 - code_point: 0x183F # ᠿ MONGOLIAN LETTER ZRA
-  ascii_transcription: "rh"
+  short_name: "rh"
   single_letter_transcription: "ř"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Rh"]
     medi:
@@ -556,25 +556,25 @@
       - written_units: ["Rh"]
 
 - code_point: 0x1840 # ᡀ MONGOLIAN LETTER LHA
-  ascii_transcription: "lh"
+  short_name: "lh"
   single_letter_transcription: "ł"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["L", "Hh"]
     medi:
       - written_units: ["L", "Hh"]
 
 - code_point: 0x1841 # ᡁ MONGOLIAN LETTER ZHI
-  ascii_transcription: "zr"
+  short_name: "zr"
   single_letter_transcription: "ž"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Zr"]
 
 - code_point: 0x1842 # ᡂ MONGOLIAN LETTER CHI
-  ascii_transcription: "cr"
+  short_name: "cr"
   single_letter_transcription: "č"
-  joining_form_to_variants:
+  variants_by_joining_form:
     init:
       - written_units: ["Cr"]
 

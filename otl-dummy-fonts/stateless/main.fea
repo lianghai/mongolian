@@ -16,5 +16,7 @@ feature fina {
 } fina;
 feature rclt {
     lookup III.chachlag;
+    lookup III.marked;
+    lookup III.fallback;
     lookup III.fvs;
 } rclt;

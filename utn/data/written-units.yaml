@@ -1,7 +1,7 @@
 ---
 
-- ascii_transcription: "A"
-  joining_form_to_variant:
+- short_name: "A"
+  variant_by_joining_form:
     isol:
       represented_letters: ["a", "e"]
     init:
@@ -13,16 +13,16 @@
       represented_letters: ["a", "e", "n"]
       orthogonally_joining_types: ["trailing_major"]
 
-- ascii_transcription: "Aa"
+- short_name: "Aa"
   single_letter_transcription: "Á"
-  joining_form_to_variant:
+  variant_by_joining_form:
     isol:
       represented_letters: ["a", "e"]
     fina:
       represented_letters: ["a"]
 
-- ascii_transcription: "I"
-  joining_form_to_variant:
+- short_name: "I"
+  variant_by_joining_form:
     isol:
       represented_letters: ["i", "j"]
     init:
@@ -34,16 +34,16 @@
       represented_letters: ["i", "y"]
       orthogonally_joining_types: ["trailing_major"]
 
-- ascii_transcription: "Ix"
+- short_name: "Ix"
   single_letter_transcription: "Ị"
-  joining_form_to_variant:
+  variant_by_joining_form:
     isol:
       represented_letters: ["i"]
       note: "Early modern orthographies"
       typographical_decomposition: "I.isol + _dotbelow"
 
-- ascii_transcription: "O"
-  joining_form_to_variant:
+- short_name: "O"
+  variant_by_joining_form:
     init:
       represented_letters: ["u", "ue"]
       note: "Particles"
@@ -55,30 +55,30 @@
       orthogonally_joining_types: ["trailing_major"]
       note: "Marked; orthogonally joined"
 
-- ascii_transcription: "Ue"
+- short_name: "Ue"
   single_letter_transcription: "Ü"
-  joining_form_to_variant:
+  variant_by_joining_form:
     fina:
       represented_letters: ["oe", "ue"]
       orthogonally_joining_types: ["trailing_major"]
 
-- ascii_transcription: "U"
-  joining_form_to_variant:
+- short_name: "U"
+  variant_by_joining_form:
     isol:
       represented_letters: ["u", "ue"]
     fina:
       represented_letters: ["o", "u", "oe", "ue", "w"]
 
-- ascii_transcription: "Ux"
+- short_name: "Ux"
   single_letter_transcription: "Ụ"
-  joining_form_to_variant:
+  variant_by_joining_form:
     isol:
       represented_letters: ["u", "ue"]
       note: "Early modern orthographies"
       typographical_decomposition: "U.isol + _dotbelow"
 
-- ascii_transcription: "N"
-  joining_form_to_variant:
+- short_name: "N"
+  variant_by_joining_form:
     init:
       represented_letters: ["n"]
       typographical_decomposition: "A.init + _dotbelow"
@@ -90,8 +90,8 @@
       represented_letters: ["n"]
       typographical_decomposition: "A.fina + _dotbelow"
 
-- ascii_transcription: "B"
-  joining_form_to_variant:
+- short_name: "B"
+  variant_by_joining_form:
     init:
       represented_letters: ["b"]
       orthogonally_joining_types: ["leading"]
@@ -101,8 +101,8 @@
     fina:
       represented_letters: ["b"]
 
-- ascii_transcription: "P"
-  joining_form_to_variant:
+- short_name: "P"
+  variant_by_joining_form:
     init:
       represented_letters: ["p"]
       orthogonally_joining_types: ["leading"]
@@ -112,8 +112,8 @@
     fina:
       represented_letters: ["p"]
 
-- ascii_transcription: "H"
-  joining_form_to_variant:
+- short_name: "H"
+  variant_by_joining_form:
     init:
       represented_letters: ["h"]
     medi:
@@ -123,9 +123,9 @@
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["trailing_minor"]
 
-- ascii_transcription: "Gh"
+- short_name: "Gh"
   single_letter_transcription: "Ğ"
-  joining_form_to_variant:
+  variant_by_joining_form:
     init:
       represented_letters: ["g"]
     medi:
@@ -135,8 +135,8 @@
       represented_letters: ["g"]
       orthogonally_joining_types: ["trailing_minor"]
 
-- ascii_transcription: "G"
-  joining_form_to_variant:
+- short_name: "G"
+  variant_by_joining_form:
     init:
       represented_letters: ["h", "g"]
       orthogonally_joining_types: ["leading"]
@@ -146,9 +146,9 @@
     fina:
       represented_letters: ["g"]
 
-- ascii_transcription: "Gx"
+- short_name: "Gx"
   single_letter_transcription: "G̈"
-  joining_form_to_variant:
+  variant_by_joining_form:
     init:
       represented_letters: ["(h)"]
       orthogonally_joining_types: ["leading"]
@@ -156,33 +156,33 @@
       represented_letters: ["(h)"]
       orthogonally_joining_types: ["leading", "trailing_minor"]
 
-- ascii_transcription: "M"
+- short_name: "M"
 
-- ascii_transcription: "L"
+- short_name: "L"
 
-- ascii_transcription: "S"
+- short_name: "S"
 
-- ascii_transcription: "Sh"
+- short_name: "Sh"
   single_letter_transcription: "Ś"
 
-- ascii_transcription: "T"
+- short_name: "T"
 
-- ascii_transcription: "D"
+- short_name: "D"
 
-- ascii_transcription: "Dd"
+- short_name: "Dd"
   single_letter_transcription: "Đ"
 
-- ascii_transcription: "Ch"
+- short_name: "Ch"
   single_letter_transcription: "Ć"
 
-- ascii_transcription: "J"
+- short_name: "J"
 
-- ascii_transcription: "Y"
+- short_name: "Y"
 
-- ascii_transcription: "R"
+- short_name: "R"
 
-- ascii_transcription: "W"
-  joining_form_to_variant:
+- short_name: "W"
+  variant_by_joining_form:
     init:
       represented_letters: ["w"]
     medi:
@@ -192,8 +192,8 @@
       represented_letters: ["w", "ee"]
       orthogonally_joining_types: ["trailing_minor"]
 
-- ascii_transcription: "F"
-  joining_form_to_variant:
+- short_name: "F"
+  variant_by_joining_form:
     init:
       represented_letters: ["f"]
       orthogonally_joining_types: ["leading"]
@@ -203,8 +203,8 @@
     fina:
       represented_letters: ["f"]
 
-- ascii_transcription: "K"
-  joining_form_to_variant:
+- short_name: "K"
+  variant_by_joining_form:
     init:
       represented_letters: ["k"]
       orthogonally_joining_types: ["leading"]
@@ -214,18 +214,18 @@
     fina:
       represented_letters: ["k"]
 
-- ascii_transcription: "C"
+- short_name: "C"
 
-- ascii_transcription: "Z"
+- short_name: "Z"
 
-- ascii_transcription: "Hh"
+- short_name: "Hh"
   single_letter_transcription: "Ħ"
 
-- ascii_transcription: "Rh"
+- short_name: "Rh"
   single_letter_transcription: "Ř"
 
-- ascii_transcription: "Zr"
+- short_name: "Zr"
   single_letter_transcription: "Ž"
 
-- ascii_transcription: "Cr"
+- short_name: "Cr"
   single_letter_transcription: "Č"
