@@ -65,7 +65,7 @@
         conditions: ["fallback"]
         fvs: 1
       - written_units: ["Aa"]
-        conditions: ["chachlag"]
+        conditions: ["chachlag", "particle"]
         fvs: 2
     init:
       - written_units: ["A"]
@@ -115,10 +115,10 @@
       - written_units: ["O"]
     fina:
       - written_units: ["O"]
-        conditions: []
+        conditions: ["marked", "post_bowed"]
         fvs: 1
       - written_units: ["U"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 2
 
 - code_point: 0x1824 # ᠤ MONGOLIAN LETTER U
@@ -126,28 +126,28 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "O"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["U"]
-        conditions: []
+        conditions: ["particle"]
         fvs: 2
       - written_units: ["Ux"]
         fvs: 3
     init:
       - written_units: ["A", "O"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["particle"]
         fvs: 2
     medi:
       - written_units: ["O"]
     fina:
       - written_units: ["O"]
-        conditions: []
+        conditions: ["marked", "post_bowed"]
         fvs: 1
       - written_units: ["U"]
-        conditions: []
+        conditions: ["fallback", "particle"]
         fvs: 2
 
 - code_point: 0x1825 # ᠥ MONGOLIAN LETTER OE
@@ -160,20 +160,20 @@
       - written_units: ["A", "O", "I"]
     medi:
       - written_units: ["O", "I"]
-        conditions: []
+        conditions: ["marked"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 2
     fina:
       - written_units: ["Ue"]
-        conditions: []
+        conditions: ["marked"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["post_bowed"]
         fvs: 2
       - written_units: ["U"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 3
 
 - code_point: 0x1826 # ᠦ MONGOLIAN LETTER UE
@@ -182,39 +182,38 @@
   joining_form_to_variants:
     isol:
       - written_units: ["A", "Ue"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["A", "U"]
         fvs: 2
       - written_units: ["U"]
-        conditions: []
+        conditions: ["particle"]
         fvs: 3
       - written_units: ["Ux"]
-        conditions: []
         fvs: 4
     init:
       - written_units: ["A", "O", "I"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["particle"]
         fvs: 2
     medi:
       - written_units: ["O", "I"]
-        conditions: []
+        conditions: ["marked"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["fallback", "particle"]
         fvs: 2
     fina:
       - written_units: ["Ue"]
-        conditions: []
+        conditions: ["marked"]
         fvs: 1
       - written_units: ["O"]
-        conditions: []
+        conditions: ["post_bowed"]
         fvs: 2
       - written_units: ["U"]
-        conditions: []
+        conditions: ["fallback", "particle"]
         fvs: 3
 
 - code_point: 0x1827 # ᠧ MONGOLIAN LETTER EE
@@ -239,17 +238,17 @@
         fvs: 1
     medi:
       - written_units: ["N"]
-        conditions: []
+        conditions: ["fallback", "onset"]
         fvs: 1
       - written_units: ["A"]
-        conditions: []
+        conditions: ["devsger"]
         fvs: 2
     fina:
       - written_units: ["N"]
-        conditions: []
+        conditions: ["fallback", "chachlag_onset"]
         fvs: 1
       - written_units: ["A"]
-        conditions: []
+        conditions: ["devsger"]
         fvs: 2
 
 - code_point: 0x1829 # ᠩ MONGOLIAN LETTER ANG
@@ -286,25 +285,25 @@
   joining_form_to_variants:
     init:
       - written_units: ["H"]
-        conditions: []
+        conditions: ["masculine_onset"]
         fvs: 1
       - written_units: ["G"]
-        conditions: []
+        conditions: ["fallback", "feminine"]
         fvs: 2
       - written_units: ["Gx"]
         fvs: 3
     medi:
       - written_units: ["H"]
-        conditions: []
+        conditions: ["masculine_onset"]
         fvs: 1
       - written_units: ["G"]
-        conditions: []
+        conditions: ["fallback", "feminine"]
         fvs: 2
       - written_units: ["Gx"]
         fvs: 3
     fina:
       - written_units: ["H"]
-        conditions: []
+        conditions: ["chachlag_onset"]
         fvs: 1
         note: "Not an appriopriate fallback"
 
@@ -313,30 +312,30 @@
   joining_form_to_variants:
     init:
       - written_units: ["Gh"]
-        conditions: []
+        conditions: ["masculine_onset"]
         fvs: 1
       - written_units: ["G"]
-        conditions: []
+        conditions: ["fallback", "feminine"]
         fvs: 2
     medi:
       - written_units: ["Gh"]
-        conditions: []
+        conditions: ["masculine_onset"]
         fvs: 1
       - written_units: ["G"]
-        conditions: []
+        conditions: ["fallback", "feminine"]
         fvs: 2
       - written_units: ["H"]
-        conditions: []
+        conditions: ["masculine_devsger"]
         fvs: 3
     fina:
       - written_units: ["Gh"]
-        conditions: []
+        conditions: ["chachlag_onset"]
         fvs: 1
       - written_units: ["G"]
-        conditions: []
+        conditions: ["fallback", "feminine"]
         fvs: 2
       - written_units: ["H"]
-        conditions: []
+        conditions: ["masculine_devsger"]
         fvs: 3
 
 - code_point: 0x182E # ᠮ MONGOLIAN LETTER MA
@@ -387,10 +386,10 @@
       - written_units: ["T"]
     medi:
       - written_units: ["T"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["D"]
-        conditions: []
+        conditions: ["onset"]
         fvs: 2
     fina:
       - written_units: ["T"]
@@ -400,24 +399,24 @@
   joining_form_to_variants:
     init:
       - written_units: ["T"]
-        conditions: []
+        conditions: ["onset"]
         fvs: 1
       - written_units: ["D"]
-        conditions: []
+        conditions: ["fallback", "particle"]
         fvs: 2
     medi:
       - written_units: ["D"]
-        conditions: []
+        conditions: ["fallback", "onset"]
         fvs: 1
       - written_units: ["Dd"]
-        conditions: []
+        conditions: ["devsger"]
         fvs: 2
     fina:
       - written_units: ["D"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["Dd"]
-        conditions: []
+        conditions: ["devsger"]
         fvs: 2
 
 - code_point: 0x1834 # ᠴ MONGOLIAN LETTER CHA
@@ -436,7 +435,7 @@
   joining_form_to_variants:
     isol:
       - written_units: ["I"]
-        conditions: []
+        conditions: ["chachlag_onset"]
         fvs: 1
         note: "Not an appriopriate fallback"
     init:
@@ -451,21 +450,21 @@
   joining_form_to_variants:
     init:
       - written_units: ["Y"]
-        conditions: []
+        conditions: ["fallback", "onset"]
         fvs: 1
       - written_units: ["I"]
-        conditions: []
+        conditions: ["dictionary_particle"]
         fvs: 2
     medi:
       - written_units: ["Y"]
-        conditions: []
+        conditions: ["fallback", "onset"]
         fvs: 1
       - written_units: ["I"]
-        conditions: []
+        conditions: ["dictionary_particle"]
         fvs: 2
     fina:
       - written_units: ["I"]
-        conditions: []
+        conditions: ["chachlag_onset"]
         fvs: 1
         note: "Not an appriopriate fallback"
 
@@ -488,10 +487,10 @@
       - written_units: ["W"]
     fina:
       - written_units: ["W"]
-        conditions: []
+        conditions: ["fallback"]
         fvs: 1
       - written_units: ["U"]
-        conditions: []
+        conditions: ["chachlag_onset"]
         fvs: 2
 
 - code_point: 0x1839 # ᠹ MONGOLIAN LETTER FA
