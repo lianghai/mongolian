@@ -1,5 +1,4 @@
 .DS_Store
+.venv/
+.vscode/
 * (Autosaved).glyphs
-*.pyc
-/temp/
-.mypy_cache
