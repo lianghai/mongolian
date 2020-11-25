@@ -1,427 +1,423 @@
 ---
 
-- short_name: "A"
+- id: "A"
   variant_by_joining_form:
     isol:
-      represented_letters: ["a", "e"]
+      represented_letters: [.a, .e]
       menksoft_pua: 0xE265
     init:
-      represented_letters: ["aleph", "a", "e", "(n)"]
+      represented_letters: [.aleph, .a, .e, {type: .early_modern, letter: .n}]
       menksoft_pua: 0xE267
     medi:
-      represented_letters: ["aleph", "a", "e", "n"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.aleph, .a, .e, .n]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE26C
     fina:
-      represented_letters: ["a", "e", "n"]
-      orthogonally_joining_types: ["trailing_major"]
+      represented_letters: [.a, .e, .n]
+      orthogonally_joining_types: [.trailing_major]
       menksoft_pua: 0xE268
 
-- short_name: "Aa"
-  single_letter_transcription: "Á"
+- id: "Aa"
+  transcription: "Á"
   variant_by_joining_form:
     isol:
-      represented_letters: ["a", "e"]
+      represented_letters: [.a, .e]
       menksoft_pua: 0xE26A
     fina:
-      represented_letters: ["a"]
+      represented_letters: [.a]
       menksoft_pua: 0xE269
 
-- short_name: "I"
+- id: "I"
   variant_by_joining_form:
     isol:
-      represented_letters: ["i", "j"]
+      represented_letters: [.i, .j]
       menksoft_pua: 0xE282
     init:
-      represented_letters: ["i", "j", "y"]
+      represented_letters: [.i, .j, .y]
       menksoft_pua: 0xE280
     medi:
-      represented_letters: ["i", "y"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.i, .y]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE27E
     fina:
-      represented_letters: ["i", "y"]
-      orthogonally_joining_types: ["trailing_major"]
+      represented_letters: [.i, .y]
+      orthogonally_joining_types: [.trailing_major]
       menksoft_pua: 0xE27B
 
-- short_name: "Ix"
-  single_letter_transcription: "Ị"
+- id: "Ix"
+  transcription: "Ị"
   variant_by_joining_form:
     isol:
-      represented_letters: ["(i)"]
-      note: "Early modern orthographies"
-      typographical_decomposition: "I.isol + _dotbelow"
+      represented_letters: [{type: .early_modern, letter: .i}]
+      typographical_decomposition: "I.isol dotbelow"
 
-- short_name: "O"
+- id: "O"
   variant_by_joining_form:
     init:
-      represented_letters: ["u", "ue"]
+      represented_letters: [.u, .ue]
       note: "Particles"
       menksoft_pua: 0xE289
     medi:
-      represented_letters: ["o", "u", "oe", "ue"]
-      orthogonally_joining_types: ["trailing_major"]
+      represented_letters: [.o, .u, .oe, .ue]
+      orthogonally_joining_types: [.trailing_major]
       menksoft_pua: 0xE289
     fina:
-      represented_letters: ["o", "u", "oe", "ue"]
-      orthogonally_joining_types: ["trailing_major"]
+      represented_letters: [.o, .u, .oe, .ue]
+      orthogonally_joining_types: [.trailing_major]
       note: "Marked; orthogonally joined"
       menksoft_pua: 0xE286
 
-- short_name: "Ue"
-  single_letter_transcription: "Ü"
+- id: "Ue"
+  transcription: "Ü"
   variant_by_joining_form:
     fina:
-      represented_letters: ["oe", "ue"]
-      orthogonally_joining_types: ["trailing_major"]
+      represented_letters: [.oe, .ue]
+      orthogonally_joining_types: [.trailing_major]
       menksoft_pua: 0xE297
 
-- short_name: "U"
+- id: "U"
   variant_by_joining_form:
     isol:
-      represented_letters: ["u", "ue"]
+      represented_letters: [.u, .ue]
       menksoft_pua: 0xE285
     fina:
-      represented_letters: ["o", "u", "oe", "ue", "w"]
+      represented_letters: [.o, .u, .oe, .ue, .w]
       menksoft_pua: 0xE285
 
-- short_name: "Ux"
-  single_letter_transcription: "Ụ"
+- id: "Ux"
+  transcription: "Ụ"
   variant_by_joining_form:
     isol:
-      represented_letters: ["(u)", "(ue)"]
-      note: "Early modern orthographies"
-      typographical_decomposition: "U.isol + _dotbelow"
+      represented_letters: [{type: .early_modern, letter: .u}, {type: .early_modern, letter: .ue}]
+      typographical_decomposition: "U.isol dotbelow"
 
-- short_name: "N"
+- id: "N"
   variant_by_joining_form:
     init:
-      represented_letters: ["n"]
-      typographical_decomposition: "A.init + _dotbelow"
+      represented_letters: [.n]
+      typographical_decomposition: "A.init dotbelow"
       menksoft_pua: 0xE2B3
     medi:
-      represented_letters: ["n"]
-      orthogonally_joining_types: ["trailing_minor"]
-      typographical_decomposition: "A.medi + _dotbelow"
+      represented_letters: [.n]
+      orthogonally_joining_types: [.trailing_minor]
+      typographical_decomposition: "A.medi dotbelow"
       menksoft_pua: 0xE2B7
     fina:
-      represented_letters: ["n"]
-      typographical_decomposition: "A.fina + _dotbelow"
+      represented_letters: [.n]
+      typographical_decomposition: "A.fina dotbelow"
       menksoft_pua: 0xE2B6
 
-- short_name: "B"
+- id: "B"
   variant_by_joining_form:
     init:
-      represented_letters: ["b"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.b]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2C7
     medi:
-      represented_letters: ["b"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.b]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2C7
     fina:
-      represented_letters: ["b"]
+      represented_letters: [.b]
       menksoft_pua: 0xE2C3
 
-- short_name: "P"
+- id: "P"
   variant_by_joining_form:
     init:
-      represented_letters: ["p"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.p]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2CD
     medi:
-      represented_letters: ["p"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.p]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2CD
     fina:
-      represented_letters: ["p"]
+      represented_letters: [.p]
       menksoft_pua: 0xE2CA
 
-- short_name: "H"
+- id: "H"
   variant_by_joining_form:
     init:
-      represented_letters: ["h"]
+      represented_letters: [.h]
       menksoft_pua: 0xE2D2
     medi:
-      represented_letters: ["h", "g"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.h, .g]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2D8
     fina:
-      represented_letters: ["h", "g"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.h, .g]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2D6
 
-- short_name: "Gh"
-  single_letter_transcription: "Ğ"
+- id: "Gh"
+  transcription: "Ğ"
   variant_by_joining_form:
     init:
-      represented_letters: ["g"]
+      represented_letters: [.g]
       menksoft_pua: 0xE2D3
     medi:
-      represented_letters: ["g"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.g]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2D9
     fina:
-      represented_letters: ["g"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.g]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2D7
 
-- short_name: "G"
+- id: "G"
   variant_by_joining_form:
     init:
-      represented_letters: ["h", "g"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.h, .g]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2DF
     medi:
-      represented_letters: ["h", "g"]
-      orthogonally_joining_types: ["leading", "trailing_minor"]
+      represented_letters: [.h, .g]
+      orthogonally_joining_types: [.leading, .trailing_minor]
       menksoft_pua: 0xE2DF
     fina:
-      represented_letters: ["g"]
+      represented_letters: [.g]
       menksoft_pua: 0xE2E8
 
-- short_name: "Gx"
-  single_letter_transcription: "G̈"
+- id: "Gx"
+  transcription: "G̈"
   variant_by_joining_form:
     init:
-      represented_letters: ["(h)"]
-      orthogonally_joining_types: ["leading"]
-      note: "Early modern orthographies"
+      represented_letters: [{type: .early_modern, letter: .h}]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2E0
     medi:
-      represented_letters: ["(h)"]
-      orthogonally_joining_types: ["leading", "trailing_minor"]
-      note: "Early modern orthographies"
+      represented_letters: [{type: .early_modern, letter: .h}]
+      orthogonally_joining_types: [.leading, .trailing_minor]
       menksoft_pua: 0xE2E0
 
-- short_name: "M"
+- id: "M"
   variant_by_joining_form:
       init:
-        represented_letters: ["m"]
+        represented_letters: [.m]
         menksoft_pua: 0xE2F2
       medi:
-        represented_letters: ["m"]
+        represented_letters: [.m]
         menksoft_pua: 0xE2F4
       fina:
-        represented_letters: ["m"]
+        represented_letters: [.m]
         menksoft_pua: 0xE2F3
 
-- short_name: "L"
+- id: "L"
   variant_by_joining_form:
       init:
-        represented_letters: ["l"]
+        represented_letters: [.l]
         menksoft_pua: 0xE2F8
       medi:
-        represented_letters: ["l"]
+        represented_letters: [.l]
         menksoft_pua: 0xE2FA
       fina:
-        represented_letters: ["l"]
+        represented_letters: [.l]
         menksoft_pua: 0xE2F9
 
-- short_name: "S"
+- id: "S"
   variant_by_joining_form:
       init:
-        represented_letters: ["s"]
+        represented_letters: [.s]
         menksoft_pua: 0xE2FE
       medi:
-        represented_letters: ["s"]
+        represented_letters: [.s]
         menksoft_pua: 0xE301
       fina:
-        represented_letters: ["s"]
+        represented_letters: [.s]
         menksoft_pua: 0xE2FF
 
-- short_name: "Sh"
-  single_letter_transcription: "Ś"
+- id: "Sh"
+  transcription: "Ś"
   variant_by_joining_form:
       init:
-        represented_letters: ["sh"]
+        represented_letters: [.sh]
         menksoft_pua: 0xE304
       medi:
-        represented_letters: ["sh"]
+        represented_letters: [.sh]
         menksoft_pua: 0xE306
       fina:
-        represented_letters: ["sh"]
+        represented_letters: [.sh]
         menksoft_pua: 0xE305
 
-- short_name: "T"
+- id: "T"
   variant_by_joining_form:
       init:
-        represented_letters: ["t", "d"]
+        represented_letters: [.t, .d]
         menksoft_pua: 0xE309
       medi:
-        represented_letters: ["t"]
+        represented_letters: [.t]
         menksoft_pua: 0xE30C
       fina:
-        represented_letters: ["t"]
+        represented_letters: [.t]
         menksoft_pua: 0xE30A
 
-- short_name: "D"
+- id: "D"
   variant_by_joining_form:
       init:
-        represented_letters: ["d"]
+        represented_letters: [.d]
         menksoft_pua: 0xE310
       medi:
-        represented_letters: ["t", "d"]
+        represented_letters: [.t, .d]
         menksoft_pua: 0xE30B
       fina:
-        represented_letters: ["d"]
+        represented_letters: [.d]
         menksoft_pua: 0xE312
 
-- short_name: "Dd"
-  single_letter_transcription: "Đ"
+- id: "Dd"
+  transcription: "Đ"
   variant_by_joining_form:
       medi:
-        represented_letters: ["d"]
+        represented_letters: [.d]
         menksoft_pua: 0xE314
       fina:
-        represented_letters: ["d"]
+        represented_letters: [.d]
         menksoft_pua: 0xE311
 
-- short_name: "Ch"
-  single_letter_transcription: "Ć"
+- id: "Ch"
+  transcription: "Ć"
   variant_by_joining_form:
       init:
-        represented_letters: ["ch"]
+        represented_letters: [.ch]
         menksoft_pua: 0xE315
       medi:
-        represented_letters: ["ch"]
+        represented_letters: [.ch]
         menksoft_pua: 0xE317
       fina:
-        represented_letters: ["ch"]
+        represented_letters: [.ch]
         menksoft_pua: 0xE316
 
-- short_name: "J"
+- id: "J"
   variant_by_joining_form:
       medi:
-        represented_letters: ["j"]
+        represented_letters: [.j]
         menksoft_pua: 0xE31D
       fina:
-        represented_letters: ["j"]
+        represented_letters: [.j]
         menksoft_pua: 0xE31B
 
-- short_name: "Y"
+- id: "Y"
   variant_by_joining_form:
       init:
-        represented_letters: ["y"]
+        represented_letters: [.y]
         menksoft_pua: 0xE31E
       medi:
-        represented_letters: ["y"]
+        represented_letters: [.y]
         menksoft_pua: 0xE320
 
-- short_name: "R"
+- id: "R"
   variant_by_joining_form:
       init:
-        represented_letters: ["r"]
+        represented_letters: [.r]
         menksoft_pua: 0xE322
       medi:
-        represented_letters: ["r"]
+        represented_letters: [.r]
         menksoft_pua: 0xE326
       fina:
-        represented_letters: ["r"]
+        represented_letters: [.r]
         menksoft_pua: 0xE325
 
-- short_name: "W"
+- id: "W"
   variant_by_joining_form:
     init:
-      represented_letters: ["w"]
+      represented_letters: [.w]
       menksoft_pua: 0xE329
     medi:
-      represented_letters: ["w", "eh"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.w, .eh]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2B0
     fina:
-      represented_letters: ["w", "eh"]
-      orthogonally_joining_types: ["trailing_minor"]
+      represented_letters: [.w, .eh]
+      orthogonally_joining_types: [.trailing_minor]
       menksoft_pua: 0xE2AF
 
-- short_name: "F"
+- id: "F"
   variant_by_joining_form:
     init:
-      represented_letters: ["f"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.f]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE332
     medi:
-      represented_letters: ["f"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.f]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE332
     fina:
-      represented_letters: ["f"]
+      represented_letters: [.f]
       menksoft_pua: 0xE32F
 
-- short_name: "K"
+- id: "K"
   variant_by_joining_form:
     init:
-      represented_letters: ["k"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.k]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE33E
     medi:
-      represented_letters: ["k"]
-      orthogonally_joining_types: ["leading"]
+      represented_letters: [.k]
+      orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE33E
     fina:
-      represented_letters: ["k"]
+      represented_letters: [.k]
       menksoft_pua: 0xE33B
 
-- short_name: "C"
+- id: "C"
   variant_by_joining_form:
       init:
-        represented_letters: ["c"]
+        represented_letters: [.c]
         menksoft_pua: 0xE33F
       medi:
-        represented_letters: ["c"]
+        represented_letters: [.c]
         menksoft_pua: 0xE341
       fina:
-        represented_letters: ["c"]
+        represented_letters: [.c]
         menksoft_pua: 0xE340
 
-- short_name: "Z"
+- id: "Z"
   variant_by_joining_form:
       init:
-        represented_letters: ["z"]
+        represented_letters: [.z]
         menksoft_pua: 0xE342
       medi:
-        represented_letters: ["z"]
+        represented_letters: [.z]
         menksoft_pua: 0xE344
       fina:
-        represented_letters: ["z"]
+        represented_letters: [.z]
         menksoft_pua: 0xE343
 
-- short_name: "Hh"
-  single_letter_transcription: "Ħ"
+- id: "Hh"
+  transcription: "Ħ"
   variant_by_joining_form:
       init:
-        represented_letters: ["hh"]
+        represented_letters: [.hh]
         menksoft_pua: 0xE345
       medi:
-        represented_letters: ["hh"]
+        represented_letters: [.hh]
         menksoft_pua: 0xE347
       fina:
-        represented_letters: ["hh"]
+        represented_letters: [.hh]
         menksoft_pua: 0xE346
 
-- short_name: "Rh"
-  single_letter_transcription: "Ř"
+- id: "Rh"
+  transcription: "Ř"
   variant_by_joining_form:
       init:
-        represented_letters: ["rh"]
+        represented_letters: [.rh]
         menksoft_pua: 0xE349
       medi:
-        represented_letters: ["rh"]
+        represented_letters: [.rh]
         menksoft_pua: 0xE349
       fina:
-        represented_letters: ["rh"]
+        represented_letters: [.rh]
         menksoft_pua: 0xE34A
 
-- short_name: "Zr"
-  single_letter_transcription: "Ž"
+- id: "Zr"
+  transcription: "Ž"
   variant_by_joining_form:
       init:
-        represented_letters: ["zr"]
+        represented_letters: [.zr]
         menksoft_pua: 0xE34E
 
-- short_name: "Cr"
-  single_letter_transcription: "Č"
+- id: "Cr"
+  transcription: "Č"
   variant_by_joining_form:
       init:
-        represented_letters: ["cr"]
+        represented_letters: [.cr]
         menksoft_pua: 0xE34F
