@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import enum
 import functools
 from itertools import chain
 from pathlib import Path
@@ -156,7 +157,19 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         lookups.IIb = {}
 
-        # To-do: Build a lookup registered to a ssXX to wipe phonetic letter information (a.AA.init -> AA.init)
+        lookups.stylistic = {}
+        number = "01"
+        with file.Lookup("test." + "wipe_phonetic_information") as lookup:
+            lookups.stylistic[number] = lookup.name
+            for name, letter in characters.items():
+                if name not in categorization.letter.members():
+                    continue
+                for joining_form, variants in letter.variants_by_joining_form.items():
+                    for variant in variants:
+                        lookup.substitution(
+                            ".".join([name, "_".join(variant.written_units), joining_form]),
+                            [".".join([wu, sliced_joining_form]) for wu, sliced_joining_form in zip(variant.written_units, slice_joining_form(joining_form, len(variant.written_units)))],
+                        )
 
     with FeaFile(otl_dir / "main.fea", source=scripting_path) as file:
 
@@ -182,8 +195,11 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             feature.lookupReference(name)
 
         feature = file.feature("rclt")
-        # feature.substitution("mvs", "sjdfiwfwo")
         for name in chain(lookups.III.values(), lookups.IIb.values()):
+            feature.lookupReference(name)
+
+        for number, name in lookups.stylistic.items():
+            feature = file.feature("ss" + number)
             feature.lookupReference(name)
 
     # feaLib’s include() following somehow fails.
@@ -210,6 +226,29 @@ def make_class_definitions(writer: Writer, category_chain: list[str], category: 
 
     if members:
         writer.classDefinition(class_name, members)
+
+
+def slice_joining_form(joining_form: str, slice_into: int) -> list[str]:
+    name_to_joinedness = {
+        "isol": (False, False),
+        "init": (False, True),
+        "medi": (True, True),
+        "fina": (True, False),
+    }
+    joinedness_to_name = {v: k for k, v in name_to_joinedness.items()}
+    is_joined_before, is_joined_after = name_to_joinedness[joining_form]
+    joining_forms = []
+    if slice_into == 1:
+        joining_forms.append(joining_form)
+    elif slice_into > 1:
+        for i in range(slice_into):
+            if i == 0:
+                joining_forms.append(joinedness_to_name[(is_joined_before, True)])
+            elif i == slice_into - 1:
+                joining_forms.append(joinedness_to_name[(True, is_joined_after)])
+            else:
+                joining_forms.append(joinedness_to_name[(True, True)])
+    return joining_forms
 
 
 if __name__ == "__main__":

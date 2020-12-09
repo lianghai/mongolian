@@ -22,3 +22,6 @@ feature rclt {
     lookup III.fallback;
     lookup III.fvs;
 } rclt;
+feature ss01 {
+    lookup test.wipe_phonetic_information;
+} ss01;
