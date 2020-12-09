@@ -23,9 +23,9 @@
     isol:
       represented_letters: [.a, .e]
       menksoft_pua: 0xE26A
-    fina:
-      represented_letters: [.a]
-      menksoft_pua: 0xE269
+    # fina:
+    #   represented_letters: [.a]
+    #   menksoft_pua: 0xE269
 
 - id: "I"
   variant_by_joining_form:

@@ -52,10 +52,10 @@
       - written_units: [.A]
     fina:
       - written_units: [.A]
-      - written_units: [.Aa]
-        fvs: 1
-        known_fvs_usage: ["Ali Gali, na NÁ"]
-        note: "Ali Gali a"
+      # - written_units: [.Aa]
+      #   fvs: 1
+      #   known_fvs_usage: ["Ali Gali, na NÁ"]
+      #   note: "Ali Gali a"
 
 - cp: 0x1821 # ᠡ MONGOLIAN LETTER E
   id: "e"
