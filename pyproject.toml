@@ -2,13 +2,12 @@
 name = "mongolian"
 version = "0.1.0"
 description = ""
-authors = ["梁海 Liang Hai <lianghai@gmail.com>"]
+authors = ["Liang Hai <lianghai@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fonttools = { version = "^4.8.0", extras = ["ufo"] }  # Can’t be installed editably as a tptqscripttools dependency becsuse of pyclipper.
+tptqscripttools = { path = "../tptq/script-tools/", develop = true }
 PyYAML = "^5.3.1"
-# tptqscripttools = { path = "../tptq/script-tools/", develop = true }
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
