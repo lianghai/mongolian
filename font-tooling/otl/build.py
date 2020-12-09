@@ -1,37 +1,33 @@
+from __future__ import annotations
+
 import functools
-import itertools
+from itertools import chain
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any, NamedTuple
 
-import yaml
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
-from tptqscripttools.otl import (DEFAULT_LANGUAGE_TAG, JOINING_FORM_TAGS,
-                                 FeaFile, GlyphSpace, Writer)
+from tptqscripttools.otl import FeaFile, GlyphSpace, Writer
+
+from data import Category, categorization, characters, otl, written_units
 
 scripting_path = Path(__file__)
 project_dir = scripting_path.parent
 
-data_dir = project_dir / ".." / "utn" / "data"
+data_dir = project_dir / ".." / ".." / "utn" / "data"
 otl_dir = project_dir / "stateless"
 product_dir = project_dir / "products"
 
-class SimpleNaming(DevelopmentNaming):
-    make_name = functools.partial(
-        DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
-    )
-
-data = SimpleNamespace()
+# class SimpleNaming(DevelopmentNaming):
+#     make_name = functools.partial(
+#         DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
+#     )
 
 
 def main():
 
     glyph_naming_scheme = SimpleNaming
-
-    for filename in ["written-units", "characters", "category"]:
-        text = (data_dir / filename).with_suffix(".yaml").read_text()
-        data.__dict__[filename.replace("-", "_")] = make_namespace(yaml.safe_load(text))
 
     script = REGISTER.script_by_code["Mong"]
     glyph_space = script.glyph_space(source=None, naming=glyph_naming_scheme)  # not checking availability in a source glyph set
@@ -51,10 +47,10 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
     lookups = SimpleNamespace()
 
     with FeaFile(otl_dir / "classes.fea", source=scripting_path) as file:
-        for name in unpack_nested_namespace(data.category.letter):
+        for name in categorization.letter.members:
             classes.__dict__[name] = []
-            letter = data.characters.__dict__[name]
-            for joining_form in JOINING_FORM_TAGS:
+            letter = characters.__dict__[name]
+            for joining_form in otl.JOINING_FORM_TAGS:
                 class_name = "@" + name + "." + joining_form
                 classes.__dict__[name].append(class_name)
                 abstract_variant = mong[name + "." + joining_form]
@@ -64,20 +60,20 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                 ]
                 file.classDefinition(class_name, [abstract_variant] + variants)
 
-        for name in unpack_nested_namespace(data.category.letter):
+        for name in categorization.letter.all_members():
             class_name = "@" + name
             file.classDefinition(class_name, classes.__dict__[name])
 
-        for category, value in data.category.letter.__dict__.items():
+        for category, value in categorization.letter.__dict__.items():
             make_class_definitions(file, [category], value)
 
     with FeaFile(otl_dir / "lookups.fea", source=scripting_path) as file:
 
         lookups.IIa = {}
-        for joining_form in JOINING_FORM_TAGS:
+        for joining_form in otl.JOINING_FORM_TAGS:
             with file.Lookup("IIa." + joining_form) as lookup:
                 lookups.IIa[joining_form] = lookup.name
-                for name in unpack_nested_namespace(data.category.letter):
+                for name in categorization.letter.all_members():
                     lookup.substitution(mong[name], mong[name + "." + joining_form])
 
         class Substitution(NamedTuple):
@@ -89,8 +85,8 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         condition_to_substitutions = {}
         fallback_substitutions = []
         fvs_substitutions = []
-        for name in unpack_nested_namespace(data.category.letter):
-            letter = data.characters.__dict__[name]
+        for name in categorization.letter.all_members():
+            letter = characters.__dict__[name]
             for joining_form, variants in letter.variants_by_joining_form.__dict__.items():
                 for variant in variants:
                     abstract_variant = mong[name + "." + joining_form]
@@ -123,7 +119,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             # @letter.chachlag_eligible -> <chachlag> / MVS _
-            mvs = mong[data.category.format_control.mvs[0]]
+            mvs = mong[categorization.format_control.mvs[0]]
             lookup.raw(
                 f"sub {mvs} [@a.isol @e.isol]' lookup {lookups.condition[step]};"
             )
@@ -132,7 +128,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             lookup.classDefinition("@consonant.init", [
-                "@" + name + ".init" for name in data.category.letter.consonant
+                "@" + name + ".init" for name in categorization.letter.consonant
             ])
             lookup.raw(
                 f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition[step]};"
@@ -163,7 +159,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             "    GlyphClassDef , , [{}], ;".format(
                 " ".join(
                     mong[name] for name in
-                    data.category.format_control.joining_control + data.category.format_control.fvs
+                    categorization.format_control.joining_control + categorization.format_control.fvs
                 )
             ),
             "} GDEF;",
@@ -179,7 +175,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         feature = file.feature("rclt")
         # feature.substitution("mvs", "sjdfiwfwo")
-        for name in itertools.chain(lookups.III.values(), lookups.IIb.values()):
+        for name in chain(lookups.III.values(), lookups.IIb.values()):
             feature.lookupReference(name)
 
     # feaLib’s include() following somehow fails.
@@ -191,46 +187,20 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
     return stitched_otl_path
 
 
-def make_namespace(content: Any) -> Any:
-    name_key = "short_name"
-    if isinstance(content, dict):
-        return SimpleNamespace(**{k: make_namespace(v) for k, v in content.items()})
-    elif isinstance(content, list):
-        if content and isinstance(item := content[0], dict) and item.get(name_key):
-            return SimpleNamespace(**{
-                make_namespace(item[name_key]): make_namespace(item) for item in content
-            })
-        else:
-            return [make_namespace(item) for item in content]
-    elif isinstance(content, str):
-        return {"zwnj": ":zero-width-non-joiner", "zwj": ":zero-width-joiner"}.get(content, content)
-    else:
-        return content
+def make_class_definitions(writer: Writer, category_chain: list[str], data: Category):
 
-def unpack_nested_namespace(namespace: SimpleNamespace, /) -> list[str]:
-    items = []
-    for value in namespace.__dict__.values():
-        if isinstance(value, SimpleNamespace):
-            items.extend(unpack_nested_namespace(value))
-        elif isinstance(value, list):
-            items.extend(value)
-        else:
-            continue
-    return items
-
-def make_class_definitions(writer: Writer, category_chain: list[str], data: Any):
+    _members = data._members
 
     class_name = "@" + ".".join(category_chain)
     members = []
-
-    if isinstance(data, SimpleNamespace):
-        for category, value in data.__dict__.items():
-            sub_category_chain = category_chain[:] + [category]
-            sub_class_name = "@" + ".".join(sub_category_chain)
-            make_class_definitions(writer, category_chain[:] + [category], value)
-            members.append(sub_class_name)
-    elif isinstance(data, list):
-        members.extend(data)
+    if isinstance(_members, dict):
+        for sub_category, value in _members.items():
+            category_chain = category_chain[:] + [sub_category]
+            nested_class_name = "@" + ".".join(category_chain)
+            make_class_definitions(writer, category_chain, value)
+            members.append(nested_class_name)
+    elif isinstance(_members, list):
+        members.extend(_members)
 
     if members:
         writer.classDefinition(class_name, members)
