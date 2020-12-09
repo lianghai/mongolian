@@ -269,7 +269,6 @@ lookup III.fvs {
     sub @a.isol' fvs2 by a.Aa.isol;
     sub @a.init' fvs1 by a.A_A.init;
     sub @a.init' fvs2 by a.A.init;
-    sub @a.fina' fvs1 by a.Aa.fina;
     sub @o.fina' fvs1 by o.O.fina;
     sub @o.fina' fvs2 by o.U.fina;
     sub @u.isol' fvs1 by u.A_O.isol;

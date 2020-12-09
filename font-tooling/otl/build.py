@@ -8,7 +8,8 @@ from typing import Any, NamedTuple
 
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
-from tptqscripttools.otl import FeaFile, GlyphSpace, Writer
+from tptqscripttools.otl import (DEFAULT_LANGUAGE_TAG, FeaFile, GlyphSpace,
+                                 Writer)
 
 from data import Category, categorization, characters, otl, written_units
 
@@ -19,10 +20,10 @@ data_dir = project_dir / ".." / ".." / "utn" / "data"
 otl_dir = project_dir / "stateless"
 product_dir = project_dir / "products"
 
-# class SimpleNaming(DevelopmentNaming):
-#     make_name = functools.partial(
-#         DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
-#     )
+class SimpleNaming(DevelopmentNaming):
+    make_name = functools.partial(
+        DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
+    )
 
 
 def main():
@@ -33,9 +34,8 @@ def main():
     glyph_space = script.glyph_space(source=None, naming=glyph_naming_scheme)  # not checking availability in a source glyph set
 
     otl_path = make_otl_file(glyph_space)
-
     script.export_otl_dummy_font(
-        project_dir / "products", naming=glyph_naming_scheme, feature_file_path=otl_path,
+        product_dir, naming=glyph_naming_scheme, feature_file_path=otl_path,
     )
 
 
@@ -43,29 +43,30 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
     mong = glyph_space
 
-    classes = SimpleNamespace()
-    lookups = SimpleNamespace()
-
     with FeaFile(otl_dir / "classes.fea", source=scripting_path) as file:
-        for name in categorization.letter.members:
+
+        classes = SimpleNamespace()
+
+        for name in categorization.letter.members():
             classes.__dict__[name] = []
-            letter = characters.__dict__[name]
+            letter = characters[name]
             for joining_form in otl.JOINING_FORM_TAGS:
                 class_name = "@" + name + "." + joining_form
                 classes.__dict__[name].append(class_name)
                 abstract_variant = mong[name + "." + joining_form]
                 variants = [
                     mong[name + "." + "_".join(v.written_units) + "." + joining_form]
-                    for v in letter.variants_by_joining_form.__dict__.get(joining_form, [])
+                    for v in letter.variants_by_joining_form.get(joining_form, [])
                 ]
                 file.classDefinition(class_name, [abstract_variant] + variants)
 
-        for name in categorization.letter.all_members():
-            class_name = "@" + name
-            file.classDefinition(class_name, classes.__dict__[name])
+        for name in categorization.letter.members():
+            file.classDefinition("@" + name, classes.__dict__[name])
 
-        for category, value in categorization.letter.__dict__.items():
+        for category, value in categorization.letter._members.items():
             make_class_definitions(file, [category], value)
+
+    lookups = SimpleNamespace()
 
     with FeaFile(otl_dir / "lookups.fea", source=scripting_path) as file:
 
@@ -73,7 +74,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         for joining_form in otl.JOINING_FORM_TAGS:
             with file.Lookup("IIa." + joining_form) as lookup:
                 lookups.IIa[joining_form] = lookup.name
-                for name in categorization.letter.all_members():
+                for name in categorization.letter.members():
                     lookup.substitution(mong[name], mong[name + "." + joining_form])
 
         class Substitution(NamedTuple):
@@ -85,21 +86,21 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         condition_to_substitutions = {}
         fallback_substitutions = []
         fvs_substitutions = []
-        for name in categorization.letter.all_members():
-            letter = characters.__dict__[name]
-            for joining_form, variants in letter.variants_by_joining_form.__dict__.items():
+        for name in categorization.letter.members():
+            letter = characters[name]
+            for joining_form, variants in letter.variants_by_joining_form.items():
                 for variant in variants:
                     abstract_variant = mong[name + "." + joining_form]
                     sub = "@" + name + "." + joining_form
                     by = mong[name + "." + "_".join(variant.written_units) + "." + joining_form]
-                    for condition in variant.__dict__.get("conditions", []):
+                    for condition in variant.conditions:
                         if condition == "fallback":
                             fallback_substitutions.append(
                                 Substitution([abstract_variant], [by], backtrack=[], lookahead=[])
                             )
                         else:
                             condition_to_substitutions.setdefault(condition, {})[sub] = by
-                    if fvs_int := variant.__dict__.get("fvs"):
+                    if fvs_int := variant.fvs:
                         fvs = mong[f"fvs{fvs_int}"]
                         fvs_substitutions.append(
                             Substitution([sub], [by], backtrack=[], lookahead=[fvs])
@@ -119,7 +120,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             # @letter.chachlag_eligible -> <chachlag> / MVS _
-            mvs = mong[categorization.format_control.mvs[0]]
+            mvs = mong[categorization.format_control.mvs.members()[0]]
             lookup.raw(
                 f"sub {mvs} [@a.isol @e.isol]' lookup {lookups.condition[step]};"
             )
@@ -128,7 +129,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             lookup.classDefinition("@consonant.init", [
-                "@" + name + ".init" for name in categorization.letter.consonant
+                "@" + name + ".init" for name in categorization.letter.consonant.members()
             ])
             lookup.raw(
                 f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition[step]};"
@@ -152,22 +153,22 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
     with FeaFile(otl_dir / "main.fea", source=scripting_path) as file:
 
-        # file.raw("include(classes.fea);")
+        from fontTools.feaLib import ast
 
-        file.raw([
-            "table GDEF {",  # Bases, ligatures, marks, components
-            "    GlyphClassDef , , [{}], ;".format(
-                " ".join(
-                    mong[name] for name in
-                    categorization.format_control.joining_control + categorization.format_control.fvs
-                )
+        table = ast.TableBlock("GDEF")
+        statement = ast.GlyphClassDefStatement(
+            baseGlyphs=None,
+            ligatureGlyphs=None,
+            markGlyphs = ast.GlyphClass(
+                mong[name] for name in categorization.format_control.joining_control.members()
+                + categorization.format_control.fvs.members()
             ),
-            "} GDEF;",
-        ])
+            componentGlyphs=None,
+        )
+        table.statements.append(statement)
+        file.raw(table.asFea())
 
-        # file.languageSystem(mong.script.info.otl.tags[0], DEFAULT_LANGUAGE_TAG)
-
-        # file.raw("include(lookups.fea);")
+        file.languageSystem(mong.script.info.otl.tags[0], DEFAULT_LANGUAGE_TAG)
 
         for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
@@ -179,7 +180,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             feature.lookupReference(name)
 
     # feaLib’s include() following somehow fails.
-    stitched_otl_path = otl_dir / "stateless.fea"
+    stitched_otl_path = project_dir / "stateless.fea"
     with stitched_otl_path.open("w") as f:
         for filename in ["classes.fea", "lookups.fea", "main.fea"]:
             f.write((otl_dir / filename).read_text() + "\n")
@@ -187,20 +188,18 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
     return stitched_otl_path
 
 
-def make_class_definitions(writer: Writer, category_chain: list[str], data: Category):
-
-    _members = data._members
+def make_class_definitions(writer: Writer, category_chain: list[str], category: Category):
 
     class_name = "@" + ".".join(category_chain)
     members = []
-    if isinstance(_members, dict):
-        for sub_category, value in _members.items():
-            category_chain = category_chain[:] + [sub_category]
-            nested_class_name = "@" + ".".join(category_chain)
-            make_class_definitions(writer, category_chain, value)
+    if isinstance(category._members, dict):
+        for sub_category, value in category._members.items():
+            sub_category_chain = category_chain[:] + [sub_category]
+            nested_class_name = "@" + ".".join(sub_category_chain)
+            make_class_definitions(writer, sub_category_chain, value)
             members.append(nested_class_name)
-    elif isinstance(_members, list):
-        members.extend(_members)
+    elif isinstance(category._members, list):
+        members.extend("@" + i for i in category._members)
 
     if members:
         writer.classDefinition(class_name, members)

@@ -39,12 +39,17 @@ class Category:
 
     _members: Union[list[str], dict[str, Category]]
 
-    @property
+    def __getattr__(self, name) -> Category:
+        if isinstance(self._members, dict):
+            return self._members[name]
+        else:
+            raise AttributeError
+
     def members(self) -> list[str]:
         if isinstance(self._members, list):
             return self._members
         else:
-            return list(chain.from_iterable(sc.members for sc in self._members.values()))
+            return list(chain.from_iterable(sc.members() for sc in self._members.values()))
 
     @classmethod
     def load(cls, data) -> Category:
