@@ -4,21 +4,21 @@ import functools
 from itertools import chain
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any, NamedTuple
+from typing import NamedTuple
 
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
-from tptqscripttools.otl import (DEFAULT_LANGUAGE_TAG, FeaFile, GlyphSpace,
-                                 Writer)
+from tptqscripttools.otl import FeaFile, GlyphSpace, Writer
 
-from data import Category, categorization, characters, otl, written_units
+from data import Category, categorization, characters, otl
 
 scripting_path = Path(__file__)
 project_dir = scripting_path.parent
 
 data_dir = project_dir / ".." / ".." / "utn" / "data"
 otl_dir = project_dir / "stateless"
-product_dir = project_dir / "products"
+glyphs_dir = project_dir / ".." / "glyphs"
+product_dir = project_dir / ".." / "products"
 
 class SimpleNaming(DevelopmentNaming):
     make_name = functools.partial(
@@ -31,11 +31,18 @@ def main():
     glyph_naming_scheme = SimpleNaming
 
     script = REGISTER.script_by_code["Mong"]
-    glyph_space = script.glyph_space(source=None, naming=glyph_naming_scheme)  # not checking availability in a source glyph set
+
+    source_ufo_path = glyphs_dir / "variants.ufo"
+    glyph_space = GlyphSpace(
+        script=script,
+        source_path=source_ufo_path,
+        validate_glyph_availability=False,  # not checking availability in a source glyph set
+        naming=glyph_naming_scheme,
+    )
 
     otl_path = make_otl_file(glyph_space)
     script.export_otl_dummy_font(
-        product_dir, naming=glyph_naming_scheme, feature_file_path=otl_path,
+        product_dir, source_ufo_path=source_ufo_path, naming=glyph_naming_scheme, feature_file_path=otl_path,
     )
 
 
@@ -168,7 +175,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         table.statements.append(statement)
         file.raw(table.asFea())
 
-        file.languageSystem(mong.script.info.otl.tags[0], DEFAULT_LANGUAGE_TAG)
+        file.languageSystem(mong.script.info.otl.tags[0], otl.DEFAULT_LANGUAGE_TAG)
 
         for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
