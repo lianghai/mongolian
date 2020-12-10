@@ -29,8 +29,6 @@ class SimpleNaming(DevelopmentNaming):
 
 def main():
 
-    glyph_naming_scheme = SimpleNaming
-
     script = REGISTER.script_by_code["Mong"]
 
     source_ufo_path = glyphs_dir / "variants.ufo"
@@ -38,12 +36,12 @@ def main():
         script=script,
         source_path=source_ufo_path,
         validate_glyph_availability=False,  # not checking availability in a source glyph set
-        naming=glyph_naming_scheme,
+        naming=SimpleNaming,
     )
 
     otl_path = make_otl_file(glyph_space)
     script.export_otl_dummy_font(
-        product_dir, source_ufo_path=source_ufo_path, naming=glyph_naming_scheme, feature_file_path=otl_path,
+        product_dir, source_ufo_path=source_ufo_path, naming=glyph_space.naming, feature_file_path=otl_path,
     )
 
 
@@ -55,15 +53,16 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         classes = SimpleNamespace()
 
-        for name in categorization.letter.members():
+        for name, letter in characters.items():
+            if name not in categorization.letter.members():
+                continue
             classes.__dict__[name] = []
-            letter = characters[name]
             for joining_form in otl.JOINING_FORM_TAGS:
                 class_name = "@" + name + "." + joining_form
                 classes.__dict__[name].append(class_name)
                 abstract_variant = mong[name + "." + joining_form]
                 variants = [
-                    mong[name + "." + "_".join(v.written_units) + "." + joining_form]
+                    mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(v.written_units) + "." + joining_form]
                     for v in letter.variants_by_joining_form.get(joining_form, [])
                 ]
                 file.classDefinition(class_name, [abstract_variant] + variants)
@@ -92,7 +91,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             lookahead: list[str]
 
         condition_to_substitutions = {}
-        fallback_substitutions = []
+        abstract_variant_to_fallback_substitution = {}
         fvs_substitutions = []
         for name in categorization.letter.members():
             letter = characters[name]
@@ -100,19 +99,19 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                 for variant in variants:
                     abstract_variant = mong[name + "." + joining_form]
                     sub = "@" + name + "." + joining_form
-                    by = mong[name + "." + "_".join(variant.written_units) + "." + joining_form]
-                    for condition in variant.conditions:
-                        if condition == "fallback":
-                            fallback_substitutions.append(
-                                Substitution([abstract_variant], [by], backtrack=[], lookahead=[])
+                    by = mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                    if not variant.conditions and not variant.fvs:
+                        abstract_variant_to_fallback_substitution[abstract_variant] = by
+                    else:
+                        for condition in variant.conditions:
+                            if condition == "fallback":
+                                abstract_variant_to_fallback_substitution[abstract_variant] = by
+                            else:
+                                condition_to_substitutions.setdefault(condition, {})[sub] = by
+                        if number := variant.fvs:
+                            fvs_substitutions.append(
+                                Substitution([sub], [by], backtrack=[], lookahead=[mong[f"fvs{number}"]])
                             )
-                        else:
-                            condition_to_substitutions.setdefault(condition, {})[sub] = by
-                    if fvs_int := variant.fvs:
-                        fvs = mong[f"fvs{fvs_int}"]
-                        fvs_substitutions.append(
-                            Substitution([sub], [by], backtrack=[], lookahead=[fvs])
-                        )
 
         lookups.condition = {}
 
@@ -146,8 +145,8 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         step = "fallback"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            for substitution in fallback_substitutions:
-                lookup.substitution(*substitution)
+            for sub, by in abstract_variant_to_fallback_substitution.items():
+                lookup.substitution(sub, by)
 
         step = "fvs"
         with file.Lookup("III." + step) as lookup:
@@ -167,11 +166,13 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                 for joining_form, variants in letter.variants_by_joining_form.items():
                     for variant in variants:
                         lookup.substitution(
-                            ".".join([name, "_".join(variant.written_units), joining_form]),
-                            [".".join([wu, sliced_joining_form]) for wu, sliced_joining_form in zip(variant.written_units, slice_joining_form(joining_form, len(variant.written_units)))],
+                            mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form],
+                            [mong[".".join([wu, sliced_joining_form])] for wu, sliced_joining_form in zip(variant.written_units, slice_joining_form(joining_form, len(variant.written_units)))],
                         )
 
     with FeaFile(otl_dir / "main.fea", source=scripting_path) as file:
+
+        # file.raw("include(classes.fea);")
 
         from fontTools.feaLib import ast
 
@@ -189,6 +190,8 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         file.raw(table.asFea())
 
         file.languageSystem(mong.script.info.otl.tags[0], otl.DEFAULT_LANGUAGE_TAG)
+
+        # file.raw("include(lookups.fea);")
 
         for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
