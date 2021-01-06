@@ -1,11 +1,10 @@
 from __future__ import annotations
 
-import enum
 import functools
+import re
 from itertools import chain
 from pathlib import Path
 from types import SimpleNamespace
-from typing import NamedTuple
 
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
@@ -40,8 +39,25 @@ def main():
     )
 
     otl_path = make_otl_file(glyph_space)
+
+    # feaLib’s include() following somehow fails.
+    inlined_otl_path = project_dir / "stateless.fea"
+    include_statement_pattern = re.compile(r"include\((.+)\);\n")
+    with inlined_otl_path.open("w") as inlined_otl:
+        with otl_path.open() as main_otl:
+            for line in main_otl:
+                if match := include_statement_pattern.fullmatch(line):
+                    included_otl_path = otl_path.parent / match.group(1)
+                    inlined_otl.write(included_otl_path.read_text())
+                else:
+                    inlined_otl.write(line)
+
+    otl_path = inlined_otl_path
     script.export_otl_dummy_font(
-        product_dir, source_ufo_path=source_ufo_path, naming=glyph_space.naming, feature_file_path=otl_path,
+        product_dir,
+        source_ufo_path=source_ufo_path,
+        naming=glyph_space.naming,
+        feature_file_path=otl_path,
     )
 
 
@@ -84,77 +100,127 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                 for name in categorization.letter.members():
                     lookup.substitution(mong[name], mong[name + "." + joining_form])
 
-        class Substitution(NamedTuple):
-            target: list[str]
-            substitution: list[str]
-            backtrack: list[str]
-            lookahead: list[str]
-
+        abstract_variant_to_definite = {}
         condition_to_substitutions = {}
-        abstract_variant_to_fallback_substitution = {}
-        fvs_substitutions = []
+        abstract_variant_to_fallback = {}
+        joining_form_class_and_fvs_to_manual = {}
         for name in categorization.letter.members():
             letter = characters[name]
             for joining_form, variants in letter.variants_by_joining_form.items():
                 for variant in variants:
                     abstract_variant = mong[name + "." + joining_form]
-                    sub = "@" + name + "." + joining_form
-                    by = mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                    joining_form_class = "@" + name + "." + joining_form
+                    variant_glyph = mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
                     if not variant.conditions and not variant.fvs:
-                        abstract_variant_to_fallback_substitution[abstract_variant] = by
+                        abstract_variant_to_definite[abstract_variant] = variant_glyph
                     else:
                         for condition in variant.conditions:
                             if condition == "fallback":
-                                abstract_variant_to_fallback_substitution[abstract_variant] = by
+                                abstract_variant_to_fallback[abstract_variant] = variant_glyph
                             else:
-                                condition_to_substitutions.setdefault(condition, {})[sub] = by
-                        if number := variant.fvs:
-                            fvs_substitutions.append(
-                                Substitution([sub], [by], backtrack=[], lookahead=[mong[f"fvs{number}"]])
-                            )
+                                condition_to_substitutions.setdefault(condition, {})[joining_form_class] = variant_glyph
+                        fvs = mong[f"fvs{variant.fvs}"]
+                        joining_form_class_and_fvs_to_manual[joining_form_class, fvs] = variant_glyph
 
         lookups.condition = {}
 
         for condition, substitutions in condition_to_substitutions.items():
             with file.Lookup("condition." + condition) as lookup:
                 lookups.condition[condition] = lookup.name
-                for sub, by in substitutions.items():
-                    lookup.substitution(sub, by)
+                for joining_form_class, variant in substitutions.items():
+                    lookup.substitution(joining_form_class, variant)
 
         lookups.III = {}
 
-        step = "chachlag"
+        step = "definite"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            for abstract, definite in abstract_variant_to_definite.items():
+                lookup.substitution(abstract, definite)
+
+        step = "a_e.chachlag"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             # @letter.chachlag_eligible -> <chachlag> / MVS _
-            mvs = mong[categorization.format_control.mvs.members()[0]]
             lookup.raw(
-                f"sub {mvs} [@a.isol @e.isol]' lookup {lookups.condition[step]};"
+                f"sub mvs [@a.isol @e.isol]' lookup {lookups.condition['chachlag']};"
             )
 
-        step = "marked"
+        step = "o_u_oe_ue.marked"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             lookup.classDefinition("@consonant.init", [
                 "@" + name + ".init" for name in categorization.letter.consonant.members()
             ])
             lookup.raw(
-                f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition[step]};"
+                f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition['marked']};"
             )
 
-        step = "fallback"
+        step = "n_j_y_w_h_g.chachlag_onset"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            for sub, by in abstract_variant_to_fallback_substitution.items():
-                lookup.substitution(sub, by)
+            lookup.raw([
+                f"sub [@n @j @y @w]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol @e.isol];",
+                f"sub [@h @g]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol];",
+            ])
+
+        step = "n_d.onset_and_devsger"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            lookup.raw([
+                f"sub [@n @d]' lookup {lookups.condition['onset']} @vowel;",
+                f"sub @vowel [@n @d]' lookup {lookups.condition['devsger']};",
+            ])
+
+        step = "h_g.onset_and_devsger_and_gender"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            lookup.raw([
+                f"sub [@h @g]' lookup {lookups.condition['masculine_onset']} @vowel.masculine;",
+                f"sub [@h @g]' lookup {lookups.condition['feminine']} [@vowel.feminine @vowel.neuter];",
+                f"sub @vowel.masculine @g' lookup {lookups.condition['masculine_devsger']};",
+                f"sub @vowel.feminine @g' lookup {lookups.condition['feminine']};",
+                f"sub @vowel.masculine @consonant @i @g' lookup {lookups.condition['masculine_devsger']};",  # To be completed
+                f"sub @g' lookup {lookups.condition['feminine']};",
+            ])
+
+        step = "a_i_u_ue_d.particle"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            lookup.raw([
+                f"sub mvs [@a @i @u @ue @d]' lookup {lookups.condition['particle']};",
+                f"sub mvs @consonant.init [@u @ue]' lookup {lookups.condition['particle']};",
+            ])
+
+        step = "y.dictionary_particle"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            lookup.raw([
+                f"sub mvs i.I.init y.Y.medi' lookup {lookups.condition['dictionary_particle']} [a.A.medi e.A.medi] [n.A.fina r.R.fina];",
+                f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.fina;",
+                f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.medi n.A.fina;",
+            ])
+
+        step = "fallback"
+        # h.medi fallback is not appropriate for the undefined devsger.
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            for abstract, fallback in abstract_variant_to_fallback.items():
+                lookup.substitution(abstract, fallback)
 
         step = "fvs"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            for substitution in fvs_substitutions:
-                lookup.substitution(*substitution)
+            for (joining_form_class, fvs), manual in joining_form_class_and_fvs_to_manual.items():
+                lookup.substitution(joining_form_class, manual, lookahead=[fvs])
 
         lookups.IIb = {}
+
+        step = "preserve_format_controls"
+        with file.Lookup("Ib." + step) as lookup:
+            lookups.III[step] = lookup.name
+            for (joining_form_class, fvs), manual in joining_form_class_and_fvs_to_manual.items():
+                lookup.substitution(joining_form_class, manual, lookahead=[fvs])
 
         lookups.stylistic = {}
         number = "01"
@@ -170,9 +236,10 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                             [mong[".".join([wu, sliced_joining_form])] for wu, sliced_joining_form in zip(variant.written_units, slice_joining_form(joining_form, len(variant.written_units)))],
                         )
 
-    with FeaFile(otl_dir / "main.fea", source=scripting_path) as file:
+    main_otl_path = otl_dir / "main.fea"
+    with FeaFile(main_otl_path, source=scripting_path) as file:
 
-        # file.raw("include(classes.fea);")
+        file.raw("include(classes.fea);")
 
         from fontTools.feaLib import ast
 
@@ -191,7 +258,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         file.languageSystem(mong.script.info.otl.tags[0], otl.DEFAULT_LANGUAGE_TAG)
 
-        # file.raw("include(lookups.fea);")
+        file.raw("include(lookups.fea);")
 
         for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
@@ -205,13 +272,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
             feature = file.feature("ss" + number)
             feature.lookupReference(name)
 
-    # feaLib’s include() following somehow fails.
-    stitched_otl_path = project_dir / "stateless.fea"
-    with stitched_otl_path.open("w") as f:
-        for filename in ["classes.fea", "lookups.fea", "main.fea"]:
-            f.write((otl_dir / filename).read_text() + "\n")
-
-    return stitched_otl_path
+    return main_otl_path
 
 
 def make_class_definitions(writer: Writer, category_chain: list[str], category: Category):

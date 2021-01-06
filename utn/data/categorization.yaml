@@ -3,6 +3,7 @@
 format_control:
 
   joining_control: [.zwnj, .zwj, .nirugu]
+  nnbsp: [.nnbsp]
   mvs: [.mvs]
   fvs: [.fvs1, .fvs2, .fvs3]
 

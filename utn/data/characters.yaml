@@ -6,6 +6,9 @@
 - cp: 0x200D # ZERO WIDTH JOINER
   id: "zwj"
 
+- cp: 0x202F # NARROW NO-BREAK SPACE
+  id: "nnbsp"
+
 - cp: 0x180A # MONGOLIAN NIRUGU
   id: "nirugu"
 
