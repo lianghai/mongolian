@@ -1,70 +1,18 @@
-from __future__ import annotations
-
-import functools
-import re
 from itertools import chain
 from pathlib import Path
 from types import SimpleNamespace
 
-from tptqscripttools.data import REGISTER
-from tptqscripttools.objects import DevelopmentNaming, Script
-from tptqscripttools.otl import FeaFile, GlyphSpace, Writer
+from tptqscripttools.otl import FeaFile, GlyphSpace
 
-from data import Category, categorization, characters, otl
-
-scripting_path = Path(__file__)
-project_dir = scripting_path.parent
-
-otl_dir = project_dir / "stateless"
-glyphs_dir = project_dir / ".." / "glyphs"
-product_dir = project_dir / ".." / "products"
-
-class SimpleNaming(DevelopmentNaming):
-    make_name = functools.partial(
-        DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
-    )
+from data import categorization, characters, otl
+from utils import make_class_definitions, slice_joining_form
 
 
-def main():
-
-    script = REGISTER.script_by_code["Mong"]
-
-    source_ufo_path = glyphs_dir / "variants.ufo"
-    glyph_space = GlyphSpace(
-        script=script,
-        source_path=source_ufo_path,
-        validate_glyph_availability=False,  # not checking availability in a source glyph set
-        naming=SimpleNaming,
-    )
-
-    otl_path = make_otl_file(glyph_space)
-
-    # feaLib’s include() following somehow fails.
-    inlined_otl_path = project_dir / "stateless.fea"
-    include_statement_pattern = re.compile(r"include\((.+)\);\n")
-    with inlined_otl_path.open("w") as inlined_otl:
-        with otl_path.open() as main_otl:
-            for line in main_otl:
-                if match := include_statement_pattern.fullmatch(line):
-                    included_otl_path = otl_path.parent / match.group(1)
-                    inlined_otl.write(included_otl_path.read_text())
-                else:
-                    inlined_otl.write(line)
-
-    otl_path = inlined_otl_path
-    script.export_otl_dummy_font(
-        product_dir,
-        source_ufo_path=source_ufo_path,
-        naming=glyph_space.naming,
-        feature_file_path=otl_path,
-    )
-
-
-def make_otl_file(glyph_space: GlyphSpace) -> Path:
+def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace):
 
     mong = glyph_space
 
-    with FeaFile(otl_dir / "classes.fea", source=scripting_path) as file:
+    with FeaFile(otl_path.parent / "classes.fea", source=scripting_path) as file:
 
         for name in categorization.letter.members():
             letter = characters[name]
@@ -85,7 +33,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
     lookups = SimpleNamespace()
 
-    with FeaFile(otl_dir / "lookups.fea", source=scripting_path) as file:
+    with FeaFile(otl_path.parent / "lookups.fea", source=scripting_path) as file:
 
         lookups.IIa = {}
         for joining_form in otl.JOINING_FORM_TAGS:
@@ -203,6 +151,24 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                     f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.medi n.A.fina;",
                 ])
 
+        step = "i.devsger"
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                context_class_name = "@vowel.not_ending_with_I"
+                flagged.classDefinition(context_class_name, [
+                    mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                    for name in categorization.letter.vowel.members()
+                    for joining_form, variants in characters[name].variants_by_joining_form.items()
+                    for variant in variants
+                    if variant.written_units[-1] != "I"
+                ])
+                flagged.raw(f"sub {context_class_name} @i' lookup {lookups.condition['devsger']};")
+
+        # step = "o_u_oe_ue.post_bowed"
+        # with file.Lookup("III." + step) as lookup:
+        #     lookups.III[step] = lookup.name
+
         step = "fallback"
         # h.medi fallback is not appropriate for the undefined devsger.
         with file.Lookup("III." + step) as lookup:
@@ -226,14 +192,14 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("IIb." + step) as lookup:
             lookups.IIb[step] = lookup.name
             for name in preserved_format_controls:
-                lookup.substitution(name, [f"_{name}", "_"])
+                lookup.substitution(name, [f"_{name}", "_helper"])
         step = "preserve_format_controls.B"
         with file.Lookup("IIb." + step) as lookup:
             lookups.IIb[step] = lookup.name
             for name in preserved_format_controls:
-                lookup.substitution([f"_{name}", "_"], name)
+                lookup.substitution([f"_{name}", "_helper"], name)
 
-        # Fails to restore advance in HarfBuzz. Shifting x placement works.
+        # Fails to restore advance in HarfBuzz. Shifting x placement works. Use GSUB instead?
         # lookups.dist = {}
         # step = "restore_advance"
         # with file.Lookup("IIb." + step) as lookup:
@@ -258,8 +224,7 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
                             [mong[".".join([wu, sliced_joining_form])] for wu, sliced_joining_form in zip(variant.written_units, slice_joining_form(joining_form, len(variant.written_units)))],
                         )
 
-    main_otl_path = otl_dir / "main.fea"
-    with FeaFile(main_otl_path, source=scripting_path) as file:
+    with FeaFile(otl_path, source=scripting_path) as file:
 
         file.raw("include(classes.fea);")
 
@@ -298,49 +263,3 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         for tag, name in lookups.stylistic.items():
             feature = file.feature(tag)
             feature.lookupReference(name)
-
-    return main_otl_path
-
-
-def make_class_definitions(writer: Writer, category_chain: list[str], category: Category):
-
-    class_name = "@" + ".".join(category_chain)
-    members = []
-    if isinstance(category._members, dict):
-        for sub_category, value in category._members.items():
-            sub_category_chain = category_chain[:] + [sub_category]
-            nested_class_name = "@" + ".".join(sub_category_chain)
-            make_class_definitions(writer, sub_category_chain, value)
-            members.append(nested_class_name)
-    elif isinstance(category._members, list):
-        members.extend("@" + i for i in category._members)
-
-    if members:
-        writer.classDefinition(class_name, members)
-
-
-def slice_joining_form(joining_form: str, slice_into: int) -> list[str]:
-    name_to_joinedness = {
-        "isol": (False, False),
-        "init": (False, True),
-        "medi": (True, True),
-        "fina": (True, False),
-    }
-    joinedness_to_name = {v: k for k, v in name_to_joinedness.items()}
-    is_joined_before, is_joined_after = name_to_joinedness[joining_form]
-    joining_forms = []
-    if slice_into == 1:
-        joining_forms.append(joining_form)
-    elif slice_into > 1:
-        for i in range(slice_into):
-            if i == 0:
-                joining_forms.append(joinedness_to_name[(is_joined_before, True)])
-            elif i == slice_into - 1:
-                joining_forms.append(joinedness_to_name[(True, is_joined_after)])
-            else:
-                joining_forms.append(joinedness_to_name[(True, True)])
-    return joining_forms
-
-
-if __name__ == "__main__":
-    main()
