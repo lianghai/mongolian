@@ -174,8 +174,3 @@
 @cr.medi = [cr.medi];
 @cr.fina = [cr.fina];
 @cr = [@cr.isol @cr.init @cr.medi @cr.fina];
-@vowel.masculine = [@a @o @u];
-@vowel.feminine = [@e @oe @ue @eh];
-@vowel.neuter = [@i];
-@vowel = [@vowel.masculine @vowel.feminine @vowel.neuter];
-@consonant = [@aleph @n @ng @b @p @h @g @m @l @s @sh @t @d @ch @j @y @r @w @f @k @c @z @hh @rh @lh @zr @cr];

@@ -12,8 +12,7 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
 
     mong = glyph_space
 
-    with FeaFile(otl_path.parent / "classes.fea", source=scripting_path) as file:
-
+    with FeaFile(otl_path.parent / "classes-letters.fea", source=scripting_path) as file:
         for name in categorization.letter.members():
             letter = characters[name]
             subclasses = []
@@ -28,51 +27,52 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
                 file.classDefinition(class_name, [abstract_variant] + variants)
             file.classDefinition("@" + name, subclasses)
 
+    with FeaFile(otl_path.parent / "classes-categories.fea", source=scripting_path) as file:
         for category, value in categorization.letter._members.items():
             make_class_definitions(file, [category], value)
 
     lookups = SimpleNamespace()
 
-    with FeaFile(otl_path.parent / "lookups.fea", source=scripting_path) as file:
-
-        lookups.IIa = {}
+    lookups.IIa = {}
+    with FeaFile(otl_path.parent / "lookups-joining.fea", source=scripting_path) as file:
         for joining_form in otl.JOINING_FORM_TAGS:
             with file.Lookup("IIa." + joining_form) as lookup:
                 lookups.IIa[joining_form] = lookup.name
                 for name in categorization.letter.members():
                     lookup.substitution(mong[name], mong[name + "." + joining_form])
 
-        abstract_variant_to_definite = {}
-        condition_to_substitutions = {}
-        abstract_variant_to_fallback = {}
-        joining_form_class_and_fvs_to_manual = {}
-        for name in categorization.letter.members():
-            letter = characters[name]
-            for joining_form, variants in letter.variants_by_joining_form.items():
-                for variant in variants:
-                    abstract_variant = mong[name + "." + joining_form]
-                    joining_form_class = "@" + name + "." + joining_form
-                    variant_glyph = mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
-                    if not variant.conditions and not variant.fvs:
-                        abstract_variant_to_definite[abstract_variant] = variant_glyph
-                    else:
-                        for condition in variant.conditions:
-                            if condition == "fallback":
-                                abstract_variant_to_fallback[abstract_variant] = variant_glyph
-                            else:
-                                condition_to_substitutions.setdefault(condition, {})[joining_form_class] = variant_glyph
-                        fvs = mong[f"fvs{variant.fvs}"]
-                        joining_form_class_and_fvs_to_manual[joining_form_class, fvs] = variant_glyph
+    abstract_variant_to_definite = {}
+    condition_to_substitutions = {}
+    abstract_variant_to_fallback = {}
+    joining_form_class_and_fvs_to_manual = {}
+    for name in categorization.letter.members():
+        letter = characters[name]
+        for joining_form, variants in letter.variants_by_joining_form.items():
+            for variant in variants:
+                abstract_variant = mong[name + "." + joining_form]
+                joining_form_class = "@" + name + "." + joining_form
+                variant_glyph = mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                if not variant.conditions and not variant.fvs:
+                    abstract_variant_to_definite[abstract_variant] = variant_glyph
+                else:
+                    for condition in variant.conditions:
+                        if condition == "fallback":
+                            abstract_variant_to_fallback[abstract_variant] = variant_glyph
+                        else:
+                            condition_to_substitutions.setdefault(condition, {})[joining_form_class] = variant_glyph
+                    fvs = mong[f"fvs{variant.fvs}"]
+                    joining_form_class_and_fvs_to_manual[joining_form_class, fvs] = variant_glyph
 
-        lookups.condition = {}
-
+    lookups.condition = {}
+    with FeaFile(otl_path.parent / "lookups-conditions.fea", source=scripting_path) as file:
         for condition, substitutions in condition_to_substitutions.items():
             with file.Lookup("condition." + condition) as lookup:
                 lookups.condition[condition] = lookup.name
                 for joining_form_class, variant in substitutions.items():
                     lookup.substitution(joining_form_class, variant)
 
-        lookups.III = {}
+    lookups.III = {}
+    with FeaFile(otl_path.parent / "lookups-general.fea", source=scripting_path) as file:
 
         file.classDefinition("@consonant.init", [
             "@" + name + ".init" for name in categorization.letter.consonant.members()
@@ -225,7 +225,8 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
         #     lookup.raw(f"pos nirugu {glyph_object.width};")
         #     lookup.raw("pos fvs1 <500 0 500 0>;")
 
-        lookups.stylistic = {}
+    lookups.stylistic = {}
+    with FeaFile(otl_path.parent / "lookups-test.fea", source=scripting_path) as file:
         tag = "ss01"
         with file.Lookup("test." + "wipe_phonetic_information") as lookup:
             lookups.stylistic[tag] = lookup.name
@@ -241,7 +242,8 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
 
     with FeaFile(otl_path, source=scripting_path) as file:
 
-        file.raw("include(classes.fea);")
+        file.raw("include(classes-letters.fea);")
+        file.raw("include(classes-categories.fea);")
 
         from fontTools.feaLib import ast
 
@@ -261,11 +263,14 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
 
         file.languageSystem(mong.script.info.otl.tags[0], otl.DEFAULT_LANGUAGE_TAG)
 
-        file.raw("include(lookups.fea);")
+        file.raw("include(lookups-joining.fea);")
 
         for joining_form, name in lookups.IIa.items():
             feature = file.feature(joining_form)
             feature.lookupReference(name)
+
+        file.raw("include(lookups-conditions.fea);")
+        file.raw("include(lookups-general.fea);")
 
         feature = file.feature("rclt")
         for name in chain(lookups.III.values(), lookups.IIb.values()):
@@ -274,6 +279,8 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
         # feature = file.feature("dist")
         # for name in lookups.dist.values():
         #     feature.lookupReference(name)
+
+        file.raw("include(lookups-test.fea);")
 
         for tag, name in lookups.stylistic.items():
             feature = file.feature(tag)
