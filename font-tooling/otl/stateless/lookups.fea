@@ -224,6 +224,7 @@ lookup condition.dictionary_particle {
     sub @y.init by y.I.init;
     sub @y.medi by y.I.medi;
 } condition.dictionary_particle;
+@consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
 lookup III.definite {
     sub a.medi by a.A.medi;
     sub a.fina by a.A.fina;
@@ -300,36 +301,49 @@ lookup III.definite {
     sub cr.init by cr.Cr.init;
 } III.definite;
 lookup III.a_e.chachlag {
+    lookupflag IgnoreLigatures;
     sub mvs [@a.isol @e.isol]' lookup condition.chachlag;
+    lookupflag 0;
 } III.a_e.chachlag;
 lookup III.o_u_oe_ue.marked {
-    @consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
+    lookupflag IgnoreLigatures;
     sub @consonant.init [@o @u @oe @ue]' lookup condition.marked;
+    lookupflag 0;
 } III.o_u_oe_ue.marked;
 lookup III.n_j_y_w_h_g.chachlag_onset {
+    lookupflag IgnoreLigatures;
     sub [@n @j @y @w]' lookup condition.chachlag_onset mvs [@a.isol @e.isol];
     sub [@h @g]' lookup condition.chachlag_onset mvs [@a.isol];
+    lookupflag 0;
 } III.n_j_y_w_h_g.chachlag_onset;
 lookup III.n_d.onset_and_devsger {
+    lookupflag IgnoreLigatures;
     sub [@n @d]' lookup condition.onset @vowel;
     sub @vowel [@n @d]' lookup condition.devsger;
+    lookupflag 0;
 } III.n_d.onset_and_devsger;
 lookup III.h_g.onset_and_devsger_and_gender {
+    lookupflag IgnoreLigatures;
     sub [@h @g]' lookup condition.masculine_onset @vowel.masculine;
     sub [@h @g]' lookup condition.feminine [@vowel.feminine @vowel.neuter];
     sub @vowel.masculine @g' lookup condition.masculine_devsger;
     sub @vowel.feminine @g' lookup condition.feminine;
     sub @vowel.masculine @consonant @i @g' lookup condition.masculine_devsger;
     sub @g' lookup condition.feminine;
+    lookupflag 0;
 } III.h_g.onset_and_devsger_and_gender;
 lookup III.a_i_u_ue_d.particle {
+    lookupflag IgnoreLigatures;
     sub mvs [@a @i @u @ue @d]' lookup condition.particle;
     sub mvs @consonant.init [@u @ue]' lookup condition.particle;
+    lookupflag 0;
 } III.a_i_u_ue_d.particle;
 lookup III.y.dictionary_particle {
+    lookupflag IgnoreLigatures;
     sub mvs i.I.init y.Y.medi' lookup condition.dictionary_particle [a.A.medi e.A.medi] [n.A.fina r.R.fina];
     sub mvs y.Y.init' lookup condition.dictionary_particle i.I.fina;
     sub mvs y.Y.init' lookup condition.dictionary_particle i.I.medi n.A.fina;
+    lookupflag 0;
 } III.y.dictionary_particle;
 lookup III.fallback {
     sub a.isol by a.A_A.isol;
@@ -440,83 +454,18 @@ lookup III.fvs {
     sub @w.fina' fvs1 by w.W.fina;
     sub @w.fina' fvs2 by w.U.fina;
 } III.fvs;
-lookup Ib.preserve_format_controls {
-    sub @a.isol' fvs1 by a.A_A.isol;
-    sub @a.isol' fvs3 by a.A.isol;
-    sub @a.isol' fvs2 by a.Aa.isol;
-    sub @a.init' fvs1 by a.A_A.init;
-    sub @a.init' fvs2 by a.A.init;
-    sub @o.fina' fvs1 by o.O.fina;
-    sub @o.fina' fvs2 by o.U.fina;
-    sub @u.isol' fvs1 by u.A_O.isol;
-    sub @u.isol' fvs2 by u.U.isol;
-    sub @u.isol' fvs3 by u.Ux.isol;
-    sub @u.init' fvs1 by u.A_O.init;
-    sub @u.init' fvs2 by u.O.init;
-    sub @u.fina' fvs1 by u.O.fina;
-    sub @u.fina' fvs2 by u.U.fina;
-    sub @e.isol' fvs1 by e.A.isol;
-    sub @e.isol' fvs2 by e.Aa.isol;
-    sub @oe.medi' fvs1 by oe.O_I.medi;
-    sub @oe.medi' fvs2 by oe.O.medi;
-    sub @oe.fina' fvs1 by oe.Ue.fina;
-    sub @oe.fina' fvs2 by oe.O.fina;
-    sub @oe.fina' fvs3 by oe.U.fina;
-    sub @ue.isol' fvs1 by ue.A_Ue.isol;
-    sub @ue.isol' fvs2 by ue.A_U.isol;
-    sub @ue.isol' fvs3 by ue.U.isol;
-    sub @ue.isol' fvs4 by ue.Ux.isol;
-    sub @ue.init' fvs1 by ue.A_O_I.init;
-    sub @ue.init' fvs2 by ue.O.init;
-    sub @ue.medi' fvs1 by ue.O_I.medi;
-    sub @ue.medi' fvs2 by ue.O.medi;
-    sub @ue.fina' fvs1 by ue.Ue.fina;
-    sub @ue.fina' fvs2 by ue.O.fina;
-    sub @ue.fina' fvs3 by ue.U.fina;
-    sub @i.isol' fvs1 by i.A_I.isol;
-    sub @i.isol' fvs2 by i.I.isol;
-    sub @i.isol' fvs3 by i.Ix.isol;
-    sub @i.init' fvs1 by i.A_I.init;
-    sub @i.init' fvs2 by i.I.init;
-    sub @i.medi' fvs1 by i.I.medi;
-    sub @i.medi' fvs2 by i.I_I.medi;
-    sub @n.init' fvs1 by n.A.init;
-    sub @n.medi' fvs1 by n.N.medi;
-    sub @n.medi' fvs2 by n.A.medi;
-    sub @n.fina' fvs1 by n.N.fina;
-    sub @n.fina' fvs2 by n.A.fina;
-    sub @h.init' fvs1 by h.H.init;
-    sub @h.init' fvs2 by h.G.init;
-    sub @h.init' fvs3 by h.Gx.init;
-    sub @h.medi' fvs1 by h.H.medi;
-    sub @h.medi' fvs2 by h.G.medi;
-    sub @h.medi' fvs3 by h.Gx.medi;
-    sub @h.fina' fvs1 by h.H.fina;
-    sub @g.init' fvs1 by g.Gh.init;
-    sub @g.init' fvs2 by g.G.init;
-    sub @g.medi' fvs1 by g.Gh.medi;
-    sub @g.medi' fvs2 by g.G.medi;
-    sub @g.medi' fvs3 by g.H.medi;
-    sub @g.fina' fvs1 by g.Gh.fina;
-    sub @g.fina' fvs2 by g.G.fina;
-    sub @g.fina' fvs3 by g.H.fina;
-    sub @t.medi' fvs1 by t.T.medi;
-    sub @t.medi' fvs2 by t.D.medi;
-    sub @d.init' fvs1 by d.T.init;
-    sub @d.init' fvs2 by d.D.init;
-    sub @d.medi' fvs1 by d.D.medi;
-    sub @d.medi' fvs2 by d.Dd.medi;
-    sub @d.fina' fvs1 by d.D.fina;
-    sub @d.fina' fvs2 by d.Dd.fina;
-    sub @j.isol' fvs1 by j.I.isol;
-    sub @y.init' fvs1 by y.Y.init;
-    sub @y.init' fvs2 by y.I.init;
-    sub @y.medi' fvs1 by y.Y.medi;
-    sub @y.medi' fvs2 by y.I.medi;
-    sub @y.fina' fvs1 by y.I.fina;
-    sub @w.fina' fvs1 by w.W.fina;
-    sub @w.fina' fvs2 by w.U.fina;
-} Ib.preserve_format_controls;
+lookup IIb.preserve_format_controls.A {
+    sub mvs by _mvs _;
+    sub fvs1 by _fvs1 _;
+    sub fvs2 by _fvs2 _;
+    sub fvs3 by _fvs3 _;
+} IIb.preserve_format_controls.A;
+lookup IIb.preserve_format_controls.B {
+    sub _mvs _ by mvs;
+    sub _fvs1 _ by fvs1;
+    sub _fvs2 _ by fvs2;
+    sub _fvs3 _ by fvs3;
+} IIb.preserve_format_controls.B;
 lookup test.wipe_phonetic_information {
     sub aleph.A.medi by A.medi;
     sub a.A_A.isol by A.init A.fina;

@@ -10,9 +10,7 @@ import yaml
 scripting_path = Path(__file__)
 project_dir = scripting_path.parent
 
-data_dir = project_dir / ".." / ".." / "utn" / "data"
-otl_dir = project_dir / "stateless"
-product_dir = project_dir / "products"
+utn_dir = project_dir / ".." / ".." / "utn"
 
 
 class otl:
@@ -22,7 +20,7 @@ class otl:
 
 
 def parse_yaml(filename: str):
-    path = (data_dir / filename).with_suffix(".yaml")
+    path = (utn_dir / "data" / filename).with_suffix(".yaml")
     return yaml.safe_load(path.read_text())
 
 

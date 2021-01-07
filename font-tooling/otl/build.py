@@ -15,7 +15,6 @@ from data import Category, categorization, characters, otl
 scripting_path = Path(__file__)
 project_dir = scripting_path.parent
 
-data_dir = project_dir / ".." / ".." / "utn" / "data"
 otl_dir = project_dir / "stateless"
 glyphs_dir = project_dir / ".." / "glyphs"
 product_dir = project_dir / ".." / "products"
@@ -67,24 +66,19 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
     with FeaFile(otl_dir / "classes.fea", source=scripting_path) as file:
 
-        classes = SimpleNamespace()
-
-        for name, letter in characters.items():
-            if name not in categorization.letter.members():
-                continue
-            classes.__dict__[name] = []
+        for name in categorization.letter.members():
+            letter = characters[name]
+            subclasses = []
             for joining_form in otl.JOINING_FORM_TAGS:
                 class_name = "@" + name + "." + joining_form
-                classes.__dict__[name].append(class_name)
+                subclasses.append(class_name)
                 abstract_variant = mong[name + "." + joining_form]
                 variants = [
                     mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(v.written_units) + "." + joining_form]
                     for v in letter.variants_by_joining_form.get(joining_form, [])
                 ]
                 file.classDefinition(class_name, [abstract_variant] + variants)
-
-        for name in categorization.letter.members():
-            file.classDefinition("@" + name, classes.__dict__[name])
+            file.classDefinition("@" + name, subclasses)
 
         for category, value in categorization.letter._members.items():
             make_class_definitions(file, [category], value)
@@ -132,6 +126,10 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         lookups.III = {}
 
+        file.classDefinition("@consonant.init", [
+            "@" + name + ".init" for name in categorization.letter.consonant.members()
+        ])
+
         step = "definite"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
@@ -142,64 +140,68 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             # @letter.chachlag_eligible -> <chachlag> / MVS _
-            lookup.raw(
-                f"sub mvs [@a.isol @e.isol]' lookup {lookups.condition['chachlag']};"
-            )
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw(
+                    f"sub mvs [@a.isol @e.isol]' lookup {lookups.condition['chachlag']};"
+                )
 
         step = "o_u_oe_ue.marked"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.classDefinition("@consonant.init", [
-                "@" + name + ".init" for name in categorization.letter.consonant.members()
-            ])
-            lookup.raw(
-                f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition['marked']};"
-            )
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw(
+                    f"sub @consonant.init [@o @u @oe @ue]' lookup {lookups.condition['marked']};"
+                )
 
         step = "n_j_y_w_h_g.chachlag_onset"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.raw([
-                f"sub [@n @j @y @w]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol @e.isol];",
-                f"sub [@h @g]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol];",
-            ])
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw([
+                    f"sub [@n @j @y @w]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol @e.isol];",
+                    f"sub [@h @g]' lookup {lookups.condition['chachlag_onset']} mvs [@a.isol];",
+                ])
 
         step = "n_d.onset_and_devsger"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.raw([
-                f"sub [@n @d]' lookup {lookups.condition['onset']} @vowel;",
-                f"sub @vowel [@n @d]' lookup {lookups.condition['devsger']};",
-            ])
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw([
+                    f"sub [@n @d]' lookup {lookups.condition['onset']} @vowel;",
+                    f"sub @vowel [@n @d]' lookup {lookups.condition['devsger']};",
+                ])
 
         step = "h_g.onset_and_devsger_and_gender"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.raw([
-                f"sub [@h @g]' lookup {lookups.condition['masculine_onset']} @vowel.masculine;",
-                f"sub [@h @g]' lookup {lookups.condition['feminine']} [@vowel.feminine @vowel.neuter];",
-                f"sub @vowel.masculine @g' lookup {lookups.condition['masculine_devsger']};",
-                f"sub @vowel.feminine @g' lookup {lookups.condition['feminine']};",
-                f"sub @vowel.masculine @consonant @i @g' lookup {lookups.condition['masculine_devsger']};",  # To be completed
-                f"sub @g' lookup {lookups.condition['feminine']};",
-            ])
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw([
+                    f"sub [@h @g]' lookup {lookups.condition['masculine_onset']} @vowel.masculine;",
+                    f"sub [@h @g]' lookup {lookups.condition['feminine']} [@vowel.feminine @vowel.neuter];",
+                    f"sub @vowel.masculine @g' lookup {lookups.condition['masculine_devsger']};",
+                    f"sub @vowel.feminine @g' lookup {lookups.condition['feminine']};",
+                    f"sub @vowel.masculine @consonant @i @g' lookup {lookups.condition['masculine_devsger']};",  # To be completed
+                    f"sub @g' lookup {lookups.condition['feminine']};",
+                ])
 
         step = "a_i_u_ue_d.particle"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.raw([
-                f"sub mvs [@a @i @u @ue @d]' lookup {lookups.condition['particle']};",
-                f"sub mvs @consonant.init [@u @ue]' lookup {lookups.condition['particle']};",
-            ])
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw([
+                    f"sub mvs [@a @i @u @ue @d]' lookup {lookups.condition['particle']};",
+                    f"sub mvs @consonant.init [@u @ue]' lookup {lookups.condition['particle']};",
+                ])
 
         step = "y.dictionary_particle"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            lookup.raw([
-                f"sub mvs i.I.init y.Y.medi' lookup {lookups.condition['dictionary_particle']} [a.A.medi e.A.medi] [n.A.fina r.R.fina];",
-                f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.fina;",
-                f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.medi n.A.fina;",
-            ])
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.raw([
+                    f"sub mvs i.I.init y.Y.medi' lookup {lookups.condition['dictionary_particle']} [a.A.medi e.A.medi] [n.A.fina r.R.fina];",
+                    f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.fina;",
+                    f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.medi n.A.fina;",
+                ])
 
         step = "fallback"
         # h.medi fallback is not appropriate for the undefined devsger.
@@ -216,16 +218,36 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
 
         lookups.IIb = {}
 
-        step = "preserve_format_controls"
-        with file.Lookup("Ib." + step) as lookup:
-            lookups.III[step] = lookup.name
-            for (joining_form_class, fvs), manual in joining_form_class_and_fvs_to_manual.items():
-                lookup.substitution(joining_form_class, manual, lookahead=[fvs])
+        preserved_format_controls = [
+            mong[name] for name in categorization.format_control.mvs.members()
+            + categorization.format_control.fvs.members()
+        ]
+        step = "preserve_format_controls.A"
+        with file.Lookup("IIb." + step) as lookup:
+            lookups.IIb[step] = lookup.name
+            for name in preserved_format_controls:
+                lookup.substitution(name, [f"_{name}", "_"])
+        step = "preserve_format_controls.B"
+        with file.Lookup("IIb." + step) as lookup:
+            lookups.IIb[step] = lookup.name
+            for name in preserved_format_controls:
+                lookup.substitution([f"_{name}", "_"], name)
+
+        # Fails to restore advance in HarfBuzz. Shifting x placement works.
+        # lookups.dist = {}
+        # step = "restore_advance"
+        # with file.Lookup("IIb." + step) as lookup:
+        #     lookups.dist[step] = lookup.name
+        #     from fontTools.ufoLib.glifLib import Glyph
+        #     glyph_object = Glyph(None, None)
+        #     mong.source.getGlyphSet().readGlyph("nirugu", glyph_object)
+        #     lookup.raw(f"pos nirugu {glyph_object.width};")
+        #     lookup.raw("pos fvs1 <500 0 500 0>;")
 
         lookups.stylistic = {}
-        number = "01"
+        tag = "ss01"
         with file.Lookup("test." + "wipe_phonetic_information") as lookup:
-            lookups.stylistic[number] = lookup.name
+            lookups.stylistic[tag] = lookup.name
             for name, letter in characters.items():
                 if name not in categorization.letter.members():
                     continue
@@ -244,16 +266,17 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         from fontTools.feaLib import ast
 
         table = ast.TableBlock("GDEF")
-        statement = ast.GlyphClassDefStatement(
-            baseGlyphs=None,
-            ligatureGlyphs=None,
-            markGlyphs = ast.GlyphClass(
-                mong[name] for name in categorization.format_control.joining_control.members()
-                + categorization.format_control.fvs.members()
+        table.statements = [
+            ast.GlyphClassDefStatement(
+                baseGlyphs=None,
+                ligatureGlyphs=ast.GlyphClass(
+                    mong[name] for name in categorization.format_control.joining_control.members()
+                    + categorization.format_control.fvs.members()
+                ),
+                markGlyphs=None,  # Somehow cannot restore advance in hist.
+                componentGlyphs=None,
             ),
-            componentGlyphs=None,
-        )
-        table.statements.append(statement)
+        ]
         file.raw(table.asFea())
 
         file.languageSystem(mong.script.info.otl.tags[0], otl.DEFAULT_LANGUAGE_TAG)
@@ -268,8 +291,12 @@ def make_otl_file(glyph_space: GlyphSpace) -> Path:
         for name in chain(lookups.III.values(), lookups.IIb.values()):
             feature.lookupReference(name)
 
-        for number, name in lookups.stylistic.items():
-            feature = file.feature("ss" + number)
+        # feature = file.feature("dist")
+        # for name in lookups.dist.values():
+        #     feature.lookupReference(name)
+
+        for tag, name in lookups.stylistic.items():
+            feature = file.feature(tag)
             feature.lookupReference(name)
 
     return main_otl_path
