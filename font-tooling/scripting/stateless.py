@@ -151,12 +151,18 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
                     f"sub mvs y.Y.init' lookup {lookups.condition['dictionary_particle']} i.I.medi n.A.fina;",
                 ])
 
+        step = "fallback"
+        # h.medi fallback is not appropriate for the undefined devsger.
+        with file.Lookup("III." + step) as lookup:
+            lookups.III[step] = lookup.name
+            for abstract, fallback in abstract_variant_to_fallback.items():
+                lookup.substitution(abstract, fallback)
+
         step = "i.devsger"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
             with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
-                context_class_name = "@vowel.not_ending_with_I"
-                flagged.classDefinition(context_class_name, [
+                flagged.classDefinition(context_class_name := "@vowel.not_ending_with_I", [
                     mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
                     for name in categorization.letter.vowel.members()
                     for joining_form, variants in characters[name].variants_by_joining_form.items()
@@ -165,16 +171,25 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
                 ])
                 flagged.raw(f"sub {context_class_name} @i' lookup {lookups.condition['devsger']};")
 
-        # step = "o_u_oe_ue.post_bowed"
-        # with file.Lookup("III." + step) as lookup:
-        #     lookups.III[step] = lookup.name
-
-        step = "fallback"
-        # h.medi fallback is not appropriate for the undefined devsger.
+        step = "o_u_oe_ue.post_bowed"
         with file.Lookup("III." + step) as lookup:
             lookups.III[step] = lookup.name
-            for abstract, fallback in abstract_variant_to_fallback.items():
-                lookup.substitution(abstract, fallback)
+            with lookup.set_lookup_flag("IgnoreLigatures") as flagged:
+                flagged.classDefinition(context_class_name := "@B_P_G_Gx_F_K", [
+                    mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                    for name in categorization.letter.members()
+                    for joining_form, variants in characters[name].variants_by_joining_form.items()
+                    for variant in variants
+                    if variant.written_units[-1] in ["B", "P", "G", "Gx", "F", "K"]
+                ])
+                flagged.classDefinition(target_class_name := "@o_u_oe_ue.U", [
+                    mong[name + "." + glyph_space.naming.COMPONENT_SEP.join(variant.written_units) + "." + joining_form]
+                    for name in ["o", "u", "oe", "ue"]
+                    for joining_form, variants in characters[name].variants_by_joining_form.items()
+                    for variant in variants
+                    if variant.written_units == ["U"]
+                ])
+                flagged.raw(f"sub {context_class_name} {target_class_name}' lookup {lookups.condition['post_bowed']};")
 
         step = "fvs"
         with file.Lookup("III." + step) as lookup:
