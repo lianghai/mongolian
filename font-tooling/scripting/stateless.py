@@ -1,11 +1,39 @@
+from contextlib import contextmanager
 from itertools import chain
 from pathlib import Path
 from types import SimpleNamespace
 
+from fontTools.feaLib import ast
 from tptqscripttools.otl import FeaFile, GlyphSpace
 
 from data import categorization, characters, otl
 from utils import make_class_definitions, slice_joining_form
+
+
+class Writer:
+
+    @contextmanager
+    def File(self, path: Path):
+        file = ast.FeatureFile()
+        try:
+            yield file
+        finally:
+            self.wrapped.statements.append(lookup)
+
+    @contextmanager
+    def Lookup(self, name: str):
+        lookup = ast.LookupBlock(name)
+        try:
+            yield lookup
+        finally:
+            self.wrapped.statements.append(lookup)
+
+
+def sandbox():
+
+    with File(path) as file:
+
+        with file.
 
 
 def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace):
@@ -244,8 +272,6 @@ def make_otl_file(scripting_path: Path, otl_path: Path, glyph_space: GlyphSpace)
 
         file.raw("include(classes-letters.fea);")
         file.raw("include(classes-categories.fea);")
-
-        from fontTools.feaLib import ast
 
         table = ast.TableBlock("GDEF")
         table.statements = [

@@ -4,9 +4,11 @@ import functools
 import re
 from pathlib import Path
 
+from fontmake.font_project import FontProject
 from tptqscripttools.data import REGISTER
 from tptqscripttools.objects import DevelopmentNaming, Script
 from tptqscripttools.otl import GlyphSpace
+from ufoLib2.objects import Font
 
 from stateless import make_otl_file as make_stateless_otl_file
 
@@ -17,10 +19,31 @@ glyphs_dir = project_dir / "glyphs"
 otl_dir = project_dir / "otl"
 product_dir = project_dir / "products"
 
+product_format = "otf"
+
 
 class SimpleNaming(DevelopmentNaming):
     make_name = functools.partial(
         DevelopmentNaming.make_name, implied_script_codes = [Script.COMMON_CODE, "Mong"],
+    )
+
+
+def _build():
+
+    ufo = Font.open(glyphs_dir / "variants.ufo")
+    ufo.info.familyName = "Sandbox"
+    ufo.info.styleName = "Regular"
+
+    project = FontProject()
+    output_path = project._output_path(ufo, ext=product_format, output_dir=product_dir)
+
+    project.run_from_ufos(
+        [ufo],
+        output=[product_format],
+        # For .save_otfs:
+        remove_overlaps=False,
+        output_path=output_path,
+        debug_feature_file=(product_dir / "debug.fea").open("w")
     )
 
 
