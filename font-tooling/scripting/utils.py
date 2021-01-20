@@ -7,14 +7,15 @@ def make_class_definitions(writer: Writer, category_chain: list[str], category: 
 
     class_name = "@" + ".".join(category_chain)
     members = []
-    if isinstance(category._members, dict):
-        for sub_category, value in category._members.items():
-            sub_category_chain = category_chain[:] + [sub_category]
+
+    for key, value in category.immediate_members.items():
+        if value:
+            sub_category_chain = category_chain[:] + [key]
             nested_class_name = "@" + ".".join(sub_category_chain)
             make_class_definitions(writer, sub_category_chain, value)
             members.append(nested_class_name)
-    elif isinstance(category._members, list):
-        members.extend("@" + i for i in category._members)
+        else:
+            members.append("@" + key)
 
     if members:
         writer.classDefinition(class_name, members)

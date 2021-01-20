@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from itertools import chain
 from pathlib import Path
-from typing import Iterable, Optional, Union
+from typing import Optional, Union
 
 import yaml
 
@@ -35,28 +35,27 @@ def validate_case(case: str, /) -> str:
 @dataclass
 class Category:
 
-    _members: Union[list[str], dict[str, Category]]
+    immediate_members: dict[str, Optional[Category]]
 
     def __getattr__(self, name) -> Category:
-        if isinstance(self._members, dict):
-            return self._members[name]
+        if category := self.immediate_members.get(name):
+            return category
         else:
             raise AttributeError
 
     def members(self) -> list[str]:
-        if isinstance(self._members, list):
-            return self._members
-        else:
-            return list(chain.from_iterable(sc.members() for sc in self._members.values()))
+        return list(chain.from_iterable(
+            v.members() if v else [k] for k, v in self.immediate_members.items()
+        ))
 
     @classmethod
     def load(cls, data) -> Category:
-        _members = []
+        immediate_members = {}
         if isinstance(data, list):
-            _members = [validate_case(i) for i in data]
+            immediate_members = {validate_case(i): None for i in data}
         elif isinstance(data, dict):
-            _members = {k: Category.load(v) for k, v in data.items()}
-        return cls(_members)
+            immediate_members = {k: Category.load(v) for k, v in data.items()}
+        return cls(immediate_members)  # type: ignore
 
 
 @dataclass
