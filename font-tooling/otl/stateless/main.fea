@@ -2,7 +2,7 @@
 include(classes-letters.fea);
 include(classes-categories.fea);
 table GDEF {
-    GlyphClassDef , [zwnj zwj nirugu fvs1 fvs2 fvs3], , ;
+    GlyphClassDef , , [zwnj zwj nirugu fvs1 fvs2 fvs3 masculine], ;
 } GDEF;
 
 languagesystem mong dflt;
@@ -22,12 +22,17 @@ feature fina {
 include(lookups-conditions.fea);
 include(lookups-general.fea);
 feature rclt {
+    lookup III.ig.preprocessing.A;
+    lookup III.ig.preprocessing.B;
+    lookup III.ig.preprocessing.C;
     lookup III.definite;
     lookup III.a_e.chachlag;
     lookup III.o_u_oe_ue.marked;
     lookup III.n_j_y_w_h_g.chachlag_onset;
     lookup III.n_d.onset_and_devsger;
-    lookup III.h_g.onset_and_devsger_and_gender;
+    lookup III.h_g.onset_and_devsger_and_gender.A;
+    lookup III.h_g.onset_and_devsger_and_gender.B;
+    lookup III.ig.postprocessing;
     lookup III.a_i_u_ue_d.particle;
     lookup III.y.dictionary_particle;
     lookup III.fallback;
@@ -36,6 +41,7 @@ feature rclt {
     lookup III.fvs;
     lookup IIb.preserve_format_controls.A;
     lookup IIb.preserve_format_controls.B;
+    lookup IIb.restore_GDEF_mark_advances;
 } rclt;
 include(lookups-test.fea);
 feature ss01 {

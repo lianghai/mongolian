@@ -18,6 +18,12 @@ class Lookup:
 
 
 @dataclass
+class Block:
+    name: str
+    statements: list[ast.Statement]
+
+
+@dataclass
 class Writer:
 
     statements: list = []
