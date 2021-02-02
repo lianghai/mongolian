@@ -24,6 +24,9 @@
 - cp: 0x180D # MONGOLIAN FREE VARIATION SELECTOR THREE
   id: "fvs3"
 
+- cp: 0x180F # MONGOLIAN FREE VARIATION SELECTOR FOUR; draft candidate character for Unicode 14.0
+  id: "fvs4"
+
 - cp: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
   id: "aleph"
   transcription: "’"
