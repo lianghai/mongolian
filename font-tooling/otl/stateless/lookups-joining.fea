@@ -36,6 +36,7 @@ lookup IIa.isol {
     sub zr by zr.isol;
     sub cr by cr.isol;
 } IIa.isol;
+
 lookup IIa.init {
     sub a by a.init;
     sub o by o.init;
@@ -73,6 +74,7 @@ lookup IIa.init {
     sub zr by zr.init;
     sub cr by cr.init;
 } IIa.init;
+
 lookup IIa.medi {
     sub a by a.medi;
     sub o by o.medi;
@@ -110,6 +112,7 @@ lookup IIa.medi {
     sub zr by zr.medi;
     sub cr by cr.medi;
 } IIa.medi;
+
 lookup IIa.fina {
     sub a by a.fina;
     sub o by o.fina;

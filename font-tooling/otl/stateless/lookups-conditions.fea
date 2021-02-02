@@ -3,6 +3,7 @@ lookup condition.chachlag {
     sub @a.isol by a.Aa.isol;
     sub @e.isol by e.Aa.isol;
 } condition.chachlag;
+
 lookup condition.particle {
     sub @a.isol by a.Aa.isol;
     sub @a.init by a.A.init;
@@ -18,6 +19,7 @@ lookup condition.particle {
     sub @i.init by i.I.init;
     sub @d.init by d.D.init;
 } condition.particle;
+
 lookup condition.marked {
     sub @o.fina by o.O.fina;
     sub @u.fina by u.O.fina;
@@ -26,12 +28,14 @@ lookup condition.marked {
     sub @ue.medi by ue.O_I.medi;
     sub @ue.fina by ue.Ue.fina;
 } condition.marked;
+
 lookup condition.post_bowed {
     sub @o.fina by o.O.fina;
     sub @u.fina by u.O.fina;
     sub @oe.fina by oe.O.fina;
     sub @ue.fina by ue.O.fina;
 } condition.post_bowed;
+
 lookup condition.devsger {
     sub @i.medi by i.I_I.medi;
     sub @n.medi by n.A.medi;
@@ -39,6 +43,7 @@ lookup condition.devsger {
     sub @d.medi by d.Dd.medi;
     sub @d.fina by d.Dd.fina;
 } condition.devsger;
+
 lookup condition.onset {
     sub @n.medi by n.N.medi;
     sub @t.medi by t.D.medi;
@@ -47,6 +52,7 @@ lookup condition.onset {
     sub @y.init by y.Y.init;
     sub @y.medi by y.Y.medi;
 } condition.onset;
+
 lookup condition.chachlag_onset {
     sub @n.fina by n.N.fina;
     sub @h.fina by h.H.fina;
@@ -55,12 +61,14 @@ lookup condition.chachlag_onset {
     sub @y.fina by y.I.fina;
     sub @w.fina by w.U.fina;
 } condition.chachlag_onset;
+
 lookup condition.masculine_onset {
     sub @h.init by h.H.init;
     sub @h.medi by h.H.medi;
     sub @g.init by g.Gh.init;
     sub @g.medi by g.Gh.medi;
 } condition.masculine_onset;
+
 lookup condition.feminine {
     sub @h.init by h.G.init;
     sub @h.medi by h.G.medi;
@@ -68,10 +76,12 @@ lookup condition.feminine {
     sub @g.medi by g.G.medi;
     sub @g.fina by g.G.fina;
 } condition.feminine;
+
 lookup condition.masculine_devsger {
     sub @g.medi by g.H.medi;
     sub @g.fina by g.H.fina;
 } condition.masculine_devsger;
+
 lookup condition.dictionary_particle {
     sub @y.init by y.I.init;
     sub @y.medi by y.I.medi;

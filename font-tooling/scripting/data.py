@@ -3,20 +3,15 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from itertools import chain
 from pathlib import Path
-from typing import Optional, Union
+from typing import Optional
 
 import yaml
+from tptqutils.script import Script
 
-scripting_path = Path(__file__)
-project_dir = scripting_path.parent
+scripting_dir = Path(__file__).parent
+project_dir = scripting_dir / ".."
 
-utn_dir = project_dir / ".." / ".." / "utn"
-
-
-class otl:
-    DEFAULT_SCRIPT_TAG = "DFLT"  # fontTools.unicodedata.OTTags.DEFAULT_SCRIPT
-    DEFAULT_LANGUAGE_TAG = "dflt"
-    JOINING_FORM_TAGS = ["isol", "init", "medi", "fina"]
+utn_dir = project_dir / ".." / "utn"
 
 
 def parse_yaml(filename: str):
@@ -43,10 +38,8 @@ class Category:
         else:
             raise AttributeError
 
-    def members(self) -> list[str]:
-        return list(chain.from_iterable(
-            v.members() if v else [k] for k, v in self.immediate_members.items()
-        ))
+    def __iter__(self):
+        yield from chain.from_iterable(v if v else [k] for k, v in self.immediate_members.items())
 
     @classmethod
     def load(cls, data) -> Category:
@@ -105,6 +98,18 @@ class Character:
             else:
                 return instance
 
+        @property
+        def is_definite(self) -> bool:
+            return self.fvs is None and len(self.conditions) == 0
+
+        @property
+        def is_contextual(self) -> bool:
+            return self.fvs is not None and len(self.conditions) > 0
+
+        @property
+        def is_manual(self) -> bool:
+            return self.fvs is not None and len(self.conditions) == 0
+
 
 @dataclass
 class WrittenUnit:
@@ -152,14 +157,21 @@ class WrittenUnit:
                 return instance
 
 
-categorization = Category.load(parse_yaml("categorization"))
+class Mongolian(Script):
 
-characters = {}
-for data in parse_yaml("characters"):
-    character = Character.load(data)
-    characters[character.id] = character
+    code = "Mong"
 
-written_units = {}
-for data in parse_yaml("written-units"):
-    written_unit = WrittenUnit.load(data)
-    written_units[written_unit.id] = written_unit
+    categorization = Category.load(parse_yaml("categorization"))
+
+    characters = dict[str, Character]()
+    for data in parse_yaml("characters"):
+        character = Character.load(data)
+        characters[character.id] = character
+
+    written_units = dict[str, WrittenUnit]()
+    for data in parse_yaml("written-units"):
+        written_unit = WrittenUnit.load(data)
+        written_units[written_unit.id] = written_unit
+
+    def __init__(self):
+        raise NotImplementedError

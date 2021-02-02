@@ -10,15 +10,19 @@ include(lookups-joining.fea);
 feature isol {
     lookup IIa.isol;
 } isol;
+
 feature init {
     lookup IIa.init;
 } init;
+
 feature medi {
     lookup IIa.medi;
 } medi;
+
 feature fina {
     lookup IIa.fina;
 } fina;
+
 include(lookups-conditions.fea);
 include(lookups-general.fea);
 feature rclt {
@@ -43,7 +47,8 @@ feature rclt {
     lookup IIb.preserve_format_controls.B;
     lookup IIb.restore_GDEF_mark_advances;
 } rclt;
+
 include(lookups-test.fea);
 feature ss01 {
-    lookup test.wipe_phonetic_information;
+    lookup test.ss01.wipe_phonetic_information;
 } ss01;
