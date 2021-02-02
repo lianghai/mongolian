@@ -6,9 +6,10 @@ authors = ["Liang Hai <lianghai@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-tptqscripttools = { path = "../tptq/script-tools/", develop = true }
 PyYAML = "^5.3.1"
 ufoLib2 = "^0.10.0"
+tptqutils = { path = "../tptq/tptqutils/", develop = true }
+fontmake = "^2.3.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
