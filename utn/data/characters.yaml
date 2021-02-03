@@ -41,40 +41,40 @@
       - written_units: [.A, .A]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE264
+        menksoft_puas: [0xE264]
       - written_units: [.A]
         fvs: 3
         known_fvs_usage: ["exclamatory particle: a A"]
-        menksoft_pua: 0xE265
+        menksoft_puas: [0xE265]
       - written_units: [.Aa]
         conditions: [.chachlag, .particle]
         fvs: 2
-        menksoft_pua: 0xE26A
+        menksoft_puas: [0xE26A]
     init:
       - written_units: [.A, .A]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE266
+        menksoft_puas: [0xE266]
       - written_units: [.A]
         conditions: [.particle]
         fvs: 2
-        menksoft_pua: 0xE267
+        menksoft_puas: [0xE267]
     medi:
       - written_units: [.A]
-        menksoft_pua: [0xE26C, 0xE26D, 0xE26F]
+        menksoft_puas: [0xE26C, 0xE26D, 0xE26F]
     fina:
       - written_units: [.A]
-        menksoft_pua: [0xE268, 0xE26B]
+        menksoft_puas: [0xE268, 0xE26B]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.A, .A]
-        menksoft_pua: 0xE26E
+        menksoft_puas: [0xE26E]
     # fina:
     #   - written_units: [.Aa]
     #     fvs: 1
     #     known_fvs_usage: ["Ali Gali, na NÁ"]
     #     note: "Ali Gali a"
-    #     menksoft_pua: 0xE269
+    #     menksoft_puas: [0xE269]
 
 - cp: 0x1821 # ᠡ MONGOLIAN LETTER E
   id: "e"
@@ -83,24 +83,24 @@
       - written_units: [.A]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE270
+        menksoft_puas: [0xE270]
       - written_units: [.Aa]
         conditions: [.chachlag, .particle]
         fvs: 2
-        menksoft_pua: 0xE274
+        menksoft_puas: [0xE274]
     init:
       - written_units: [.A]
-        menksoft_pua: 0xE271
+        menksoft_puas: [0xE271]
     medi:
       - written_units: [.A]
-        menksoft_pua: [0xE276, 0xE277, 0xE278]
+        menksoft_puas: [0xE276, 0xE277, 0xE278]
     fina:
       - written_units: [.A]
-        menksoft_pua: [0xE273, 0xE275]
+        menksoft_puas: [0xE273, 0xE275]
   extra_variants_by_joining_form:
     init:
       - written_units: [.A, .A]
-        menksoft_pua: 0xE272
+        menksoft_puas: [0xE272]
 
 - cp: 0x1822 # ᠢ MONGOLIAN LETTER I
   id: "i"
@@ -109,20 +109,20 @@
       - written_units: [.A, .I]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE279
+        menksoft_puas: [0xE279]
       - written_units: [.I]
         conditions: [.particle]
         fvs: 2
-        menksoft_pua: 0xE282
+        menksoft_puas: [0xE282]
       - written_units: [.Ix]
         fvs: 3
         note: "Early modern orthographies"
-        menksoft_pua: 0xE350
+        menksoft_puas: [0xE350]
     init:
       - written_units: [.A, .I]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE27A
+        menksoft_puas: [0xE27A]
       - written_units: [.I]
         conditions: [.particle]
         fvs: 2
@@ -130,44 +130,44 @@
       - written_units: [.I]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: [0xE27E, 0xE27F, 0xE280]
+        menksoft_puas: [0xE27E, 0xE27F, 0xE280]
       - written_units: [.I, .I]
         conditions: [.devsger]
         fvs: 2
-        menksoft_pua: 0xE281
+        menksoft_puas: [0xE281]
     fina:
       - written_units: [.I]
-        menksoft_pua: [0xE27B, 0xE27C]
+        menksoft_puas: [0xE27B, 0xE27C]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.A, .I]
-        menksoft_pua: 0xE27D
+        menksoft_puas: [0xE27D]
 
 - cp: 0x1823 # ᠣ MONGOLIAN LETTER O
   id: "o"
   variants_by_joining_form:
     isol:
       - written_units: [.A, .O]
-        menksoft_pua: 0xE283
+        menksoft_puas: [0xE283]
     init:
       - written_units: [.A, .O]
-        menksoft_pua: 0xE284
+        menksoft_puas: [0xE284]
     medi:
       - written_units: [.O]
-        menksoft_pua: [0xE289, 0xE28A]
+        menksoft_puas: [0xE289, 0xE28A]
     fina:
       - written_units: [.O]
         conditions: [.marked, .post_bowed]
         fvs: 1
-        menksoft_pua: [0xE286, 0xE287]
+        menksoft_puas: [0xE286, 0xE287]
       - written_units: [.U]
         conditions: [.fallback]
         fvs: 2
-        menksoft_pua: 0xE285
+        menksoft_puas: [0xE285]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.A, .O]
-        menksoft_pua: 0xE288
+        menksoft_puas: [0xE288]
 
 - cp: 0x1824 # ᠤ MONGOLIAN LETTER U
   id: "u"
@@ -176,37 +176,37 @@
       - written_units: [.A, .O]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE28B
+        menksoft_puas: [0xE28B]
       - written_units: [.U]
         conditions: [.particle]
         fvs: 2
       - written_units: [.Ux]
         fvs: 3
-        menksoft_pua: 0xE351
+        menksoft_puas: [0xE351]
     init:
       - written_units: [.A, .O]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE28C
+        menksoft_puas: [0xE28C]
       - written_units: [.O]
         conditions: [.particle]
         fvs: 2
     medi:
       - written_units: [.O]
-        menksoft_pua: [0xE291, 0xE292]
+        menksoft_puas: [0xE291, 0xE292]
     fina:
       - written_units: [.O]
         conditions: [.marked, .post_bowed]
         fvs: 1
-        menksoft_pua: [0xE28E, 0xE28F]
+        menksoft_puas: [0xE28E, 0xE28F]
       - written_units: [.U]
         conditions: [.fallback, .particle]
         fvs: 2
-        menksoft_pua: 0xE28D
+        menksoft_puas: [0xE28D]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.A, .O]
-        menksoft_pua: 0xE290
+        menksoft_puas: [0xE290]
 
 - cp: 0x1825 # ᠥ MONGOLIAN LETTER OE
   id: "oe"
@@ -214,39 +214,39 @@
   variants_by_joining_form:
     isol:
       - written_units: [.A, .Ue]
-        menksoft_pua: 0xE293
+        menksoft_puas: [0xE293]
     init:
       - written_units: [.A, .O, .I]
-        menksoft_pua: 0xE295
+        menksoft_puas: [0xE295]
     medi:
       - written_units: [.O, .I]
         conditions: [.marked]
         fvs: 1
-        menksoft_pua: [0xE29C, 0xE29D]
+        menksoft_puas: [0xE29C, 0xE29D]
       - written_units: [.O]
         conditions: [.fallback]
         fvs: 2
-        menksoft_pua: [0xE29E, 0xE29F]
+        menksoft_puas: [0xE29E, 0xE29F]
     fina:
       - written_units: [.Ue]
         conditions: [.marked]
         fvs: 1
-        menksoft_pua: [0xE297, 0xE298]
+        menksoft_puas: [0xE297, 0xE298]
       - written_units: [.O]
         conditions: [.post_bowed]
         fvs: 2
-        menksoft_pua: [0xE299, 0xE29A]
+        menksoft_puas: [0xE299, 0xE29A]
       - written_units: [.U]
         conditions: [.fallback]
         fvs: 3
-        menksoft_pua: 0xE296
+        menksoft_puas: [0xE296]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.A, .U]
-        menksoft_pua: 0xE294
+        menksoft_puas: [0xE294]
     medi:
       - written_units: [.A, .O, .I]
-        menksoft_pua: 0xE29B
+        menksoft_puas: [0xE29B]
 
 - cp: 0x1826 # ᠦ MONGOLIAN LETTER UE
   id: "ue"
@@ -256,21 +256,21 @@
       - written_units: [.A, .Ue]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE2A0
+        menksoft_puas: [0xE2A0]
       - written_units: [.A, .U]
         fvs: 2
-        menksoft_pua: 0xE2A1
+        menksoft_puas: [0xE2A1]
       - written_units: [.U]
         conditions: [.particle]
         fvs: 3
       - written_units: [.Ux]
         fvs: 4
-        menksoft_pua: 0xE351
+        menksoft_puas: [0xE351]
     init:
       - written_units: [.A, .O, .I]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE2A2
+        menksoft_puas: [0xE2A2]
       - written_units: [.O]
         conditions: [.particle]
         fvs: 2
@@ -278,28 +278,28 @@
       - written_units: [.O, .I]
         conditions: [.marked]
         fvs: 1
-        menksoft_pua: [0xE2A9, 0xE2AA]
+        menksoft_puas: [0xE2A9, 0xE2AA]
       - written_units: [.O]
         conditions: [.fallback, .particle]
         fvs: 2
-        menksoft_pua: [0xE2AB, 0xE2AC]
+        menksoft_puas: [0xE2AB, 0xE2AC]
     fina:
       - written_units: [.Ue]
         conditions: [.marked]
         fvs: 1
-        menksoft_pua: [0xE2A4, 0xE2A5]
+        menksoft_puas: [0xE2A4, 0xE2A5]
       - written_units: [.O]
         conditions: [.post_bowed]
         fvs: 2
-        menksoft_pua: [0xE2A6, 0xE2A7]
+        menksoft_puas: [0xE2A6, 0xE2A7]
       - written_units: [.U]
         conditions: [.fallback, .particle]
         fvs: 3
-        menksoft_pua: 0xE2A3
+        menksoft_puas: [0xE2A3]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.A, .O, .I]
-        menksoft_pua: 0xE2A8
+        menksoft_puas: [0xE2A8]
 
 - cp: 0x1827 # ᠧ MONGOLIAN LETTER EE
   id: "eh"
@@ -307,50 +307,50 @@
   variants_by_joining_form:
     isol:
       - written_units: [.A, .W]
-        menksoft_pua: 0xE2AD
+        menksoft_puas: [0xE2AD]
     init:
       - written_units: [.A, .W]
-        menksoft_pua: 0xE2AE
+        menksoft_puas: [0xE2AE]
     medi:
       - written_units: [.W]
-        menksoft_pua: 0xE2B0
+        menksoft_puas: [0xE2B0]
     fina:
       - written_units: [.W]
-        menksoft_pua: 0xE2AF
+        menksoft_puas: [0xE2AF]
 
 - cp: 0x1828 # ᠨ MONGOLIAN LETTER NA
   id: "n"
   variants_by_joining_form:
     init:
       - written_units: [.N]
-        menksoft_pua: 0xE2B3
+        menksoft_puas: [0xE2B3]
       - written_units: [.A]
         fvs: 1
-        menksoft_pua: 0xE2B4
+        menksoft_puas: [0xE2B4]
     medi:
       - written_units: [.N]
         conditions: [.fallback, .onset]
         fvs: 1
-        menksoft_pua: [0xE2B7, 0xE2B9]
+        menksoft_puas: [0xE2B7, 0xE2B9]
       - written_units: [.A]
         conditions: [.devsger]
         fvs: 2
-        menksoft_pua: [0xE2B8, 0xE2BA]
+        menksoft_puas: [0xE2B8, 0xE2BA]
     fina:
       - written_units: [.N]
         conditions: [.fallback, .chachlag_onset]
         fvs: 1
-        menksoft_pua: 0xE2B6
+        menksoft_puas: [0xE2B6]
       - written_units: [.A]
         conditions: [.devsger]
         fvs: 2
-        menksoft_pua: 0xE2B5
+        menksoft_puas: [0xE2B5]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.N]
-        menksoft_pua: 0xE2B1
+        menksoft_puas: [0xE2B1]
       - written_units: [.A]
-        menksoft_pua: 0xE2B2
+        menksoft_puas: [0xE2B2]
 
 - cp: 0x1829 # ᠩ MONGOLIAN LETTER ANG
   id: "ng"
@@ -358,46 +358,46 @@
   variants_by_joining_form:
     medi:
       - written_units: [.A, .G]
-        menksoft_pua: [0xE2BC, 0xE2BD, 0xE2BE]
+        menksoft_puas: [0xE2BC, 0xE2BD, 0xE2BE]
     fina:
       - written_units: [.A, .G]
-        menksoft_pua: 0xE2BB
+        menksoft_puas: [0xE2BB]
   extra_variants_by_joining_form:
     medi:
       - written_units: [.N]
-        menksoft_pua: 0xE2BF
+        menksoft_puas: [0xE2BF]
       - written_units: [.A]
-        menksoft_pua: 0xE2C0
+        menksoft_puas: [0xE2C0]
 
 - cp: 0x182A # ᠪ MONGOLIAN LETTER BA
   id: "b"
   variants_by_joining_form:
     init:
       - written_units: [.B]
-        menksoft_pua: [0xE2C1, 0xE2C2]
+        menksoft_puas: [0xE2C1, 0xE2C2]
     medi:
       - written_units: [.B]
-        menksoft_pua: [0xE2C5, 0xE2C6, 0xE2C7]
+        menksoft_puas: [0xE2C5, 0xE2C6, 0xE2C7]
     fina:
       - written_units: [.B]
-        menksoft_pua: 0xE2C3
+        menksoft_puas: [0xE2C3]
   # extra_variants_by_joining_form:
   #   fina:
   #     - written_units: [.Bb]
-  #       menksoft_pua: 0xE2C4
+  #       menksoft_puas: [0xE2C4]
 
 - cp: 0x182B # ᠫ MONGOLIAN LETTER PA
   id: "p"
   variants_by_joining_form:
     init:
       - written_units: [.P]
-        menksoft_pua: [0xE2C8, 0xE2C9]
+        menksoft_puas: [0xE2C8, 0xE2C9]
     medi:
       - written_units: [.P]
-        menksoft_pua: [0xE2CB, 0xE2CC, 0xE2CD]
+        menksoft_puas: [0xE2CB, 0xE2CC, 0xE2CD]
     fina:
       - written_units: [.P]
-        menksoft_pua: 0xE2CA
+        menksoft_puas: [0xE2CA]
 
 - cp: 0x182C # ᠬ MONGOLIAN LETTER QA
   id: "h"
@@ -406,51 +406,51 @@
       - written_units: [.H]
         conditions: [.masculine_onset]
         fvs: 1
-        menksoft_pua: 0xE2D2
+        menksoft_puas: [0xE2D2]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
-        menksoft_pua: 0xE2D4
+        menksoft_puas: [0xE2D4]
       - written_units: [.Gx]
         fvs: 3
-        menksoft_pua: 0xE2D5
+        menksoft_puas: [0xE2D5]
     medi:
       - written_units: [.H]
         conditions: [.masculine_onset]
         fvs: 1
-        menksoft_pua: [0xE2D8, 0xE2DC]
+        menksoft_puas: [0xE2D8, 0xE2DC]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
-        menksoft_pua: [0xE2DA, 0xE2DD, 0xE2DF]
+        menksoft_puas: [0xE2DA, 0xE2DD, 0xE2DF]
       - written_units: [.Gx]
         fvs: 3
-        menksoft_pua: [0xE2DB, 0xE2DE, 0xE2E0]
+        menksoft_puas: [0xE2DB, 0xE2DE, 0xE2E0]
     fina:
       - written_units: [.H]
         conditions: [.chachlag_onset]
         fvs: 1
         note: "Not an appriopriate fallback"
-        menksoft_pua: 0xE2D6
+        menksoft_puas: [0xE2D6]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.H]
-        menksoft_pua: 0xE2CE
+        menksoft_puas: [0xE2CE]
       - written_units: [.Gh]
-        menksoft_pua: 0xE2CF
+        menksoft_puas: [0xE2CF]
       - written_units: [.G]
-        menksoft_pua: 0xE2D0
+        menksoft_puas: [0xE2D0]
       - written_units: [.Gx]
-        menksoft_pua: 0xE2D1
+        menksoft_puas: [0xE2D1]
     init:
       - written_units: [.Gh]
-        menksoft_pua: 0xE2D3
+        menksoft_puas: [0xE2D3]
     medi:
       - written_units: [.Gh]
-        menksoft_pua: 0xE2D9
+        menksoft_puas: [0xE2D9]
     fina:
       - written_units: [.Gh]
-        menksoft_pua: 0xE2D7
+        menksoft_puas: [0xE2D7]
 
 - cp: 0x182D # ᠭ MONGOLIAN LETTER GA
   id: "g"
@@ -459,102 +459,102 @@
       - written_units: [.Gh]
         conditions: [.masculine_onset]
         fvs: 1
-        menksoft_pua: 0xE2E4
+        menksoft_puas: [0xE2E4]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
-        menksoft_pua: 0xE2E6
+        menksoft_puas: [0xE2E6]
     medi:
       - written_units: [.Gh]
         conditions: [.masculine_onset]
         fvs: 1
-        menksoft_pua: [0xE2EA, 0xE2EC]
+        menksoft_puas: [0xE2EA, 0xE2EC]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
-        menksoft_pua: [0xE2EB, 0xE2ED, 0xE2EF, 0xE2F0]
+        menksoft_puas: [0xE2EB, 0xE2ED, 0xE2EF, 0xE2F0]
       - written_units: [.H]
         conditions: [.masculine_devsger]
         fvs: 3
-        menksoft_pua: 0xE2EE
+        menksoft_puas: [0xE2EE]
     fina:
       - written_units: [.Gh]
         conditions: [.chachlag_onset]
         fvs: 1
-        menksoft_pua: 0xE2E9
+        menksoft_puas: [0xE2E9]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
-        menksoft_pua: 0xE2E8
+        menksoft_puas: [0xE2E8]
       - written_units: [.H]
         conditions: [.masculine_devsger]
         fvs: 3
-        menksoft_pua: 0xE2E7
+        menksoft_puas: [0xE2E7]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.Gh]
-        menksoft_pua: 0xE2E1
+        menksoft_puas: [0xE2E1]
       - written_units: [.H]
-        menksoft_pua: 0xE2E2
+        menksoft_puas: [0xE2E2]
       - written_units: [.G]
-        menksoft_pua: 0xE2E3
+        menksoft_puas: [0xE2E3]
     init:
       - written_units: [.H]
-        menksoft_pua: 0xE2E5
+        menksoft_puas: [0xE2E5]
 
 - cp: 0x182E # ᠮ MONGOLIAN LETTER MA
   id: "m"
   variants_by_joining_form:
     init:
       - written_units: [.M]
-        menksoft_pua: 0xE2F2
+        menksoft_puas: [0xE2F2]
     medi:
       - written_units: [.M]
-        menksoft_pua: [0xE2F4, 0xE2F5, 0xE2F6]
+        menksoft_puas: [0xE2F4, 0xE2F5, 0xE2F6]
     fina:
       - written_units: [.M]
-        menksoft_pua: 0xE2F3
+        menksoft_puas: [0xE2F3]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.M]
-        menksoft_pua: 0xE2F1
+        menksoft_puas: [0xE2F1]
 
 - cp: 0x182F # ᠯ MONGOLIAN LETTER LA
   id: "l"
   variants_by_joining_form:
     init:
       - written_units: [.L]
-        menksoft_pua: 0xE2F8
+        menksoft_puas: [0xE2F8]
     medi:
       - written_units: [.L]
-        menksoft_pua: [0xE2FA, 0xE2FB, 0xE2FC]
+        menksoft_puas: [0xE2FA, 0xE2FB, 0xE2FC]
     fina:
       - written_units: [.L]
-        menksoft_pua: 0xE2F9
+        menksoft_puas: [0xE2F9]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.L]
-        menksoft_pua: 0xE2F7
+        menksoft_puas: [0xE2F7]
 
 - cp: 0x1830 # ᠰ MONGOLIAN LETTER SA
   id: "s"
   variants_by_joining_form:
     init:
       - written_units: [.S]
-        menksoft_pua: 0xE2FE
+        menksoft_puas: [0xE2FE]
     medi:
       - written_units: [.S]
-        menksoft_pua: [0xE301, 0xE302]
+        menksoft_puas: [0xE301, 0xE302]
     fina:
       - written_units: [.S]
-        menksoft_pua: 0xE2FF
+        menksoft_puas: [0xE2FF]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.S]
-        menksoft_pua: 0xE2FD
+        menksoft_puas: [0xE2FD]
     # fina:
     #   - written_units: [.Ss]
-    #     menksoft_pua: 0xE300
+    #     menksoft_puas: [0xE300]
 
 - cp: 0x1831 # ᠱ MONGOLIAN LETTER SHA
   id: "sh"
@@ -562,40 +562,40 @@
   variants_by_joining_form:
     init:
       - written_units: [.Sh]
-        menksoft_pua: 0xE304
+        menksoft_puas: [0xE304]
     medi:
       - written_units: [.Sh]
-        menksoft_pua: [0xE306, 0xE307]
+        menksoft_puas: [0xE306, 0xE307]
     fina:
       - written_units: [.Sh]
-        menksoft_pua: 0xE305
+        menksoft_puas: [0xE305]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.Sh]
-        menksoft_pua: 0xE303
+        menksoft_puas: [0xE303]
 
 - cp: 0x1832 # ᠲ MONGOLIAN LETTER TA
   id: "t"
   variants_by_joining_form:
     init:
       - written_units: [.T]
-        menksoft_pua: 0xE309
+        menksoft_puas: [0xE309]
     medi:
       - written_units: [.T]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: [0xE30C, 0xE30D]
+        menksoft_puas: [0xE30C, 0xE30D]
       - written_units: [.D]
         conditions: [.onset]
         fvs: 2
-        menksoft_pua: 0xE30B
+        menksoft_puas: [0xE30B]
     fina:
       - written_units: [.T]
-        menksoft_pua: 0xE30A
+        menksoft_puas: [0xE30A]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.T]
-        menksoft_pua: 0xE308
+        menksoft_puas: [0xE308]
 
 - cp: 0x1833 # ᠳ MONGOLIAN LETTER DA
   id: "d"
@@ -604,33 +604,33 @@
       - written_units: [.T]
         conditions: [.onset]
         fvs: 1
-        menksoft_pua: 0xE30F
+        menksoft_puas: [0xE30F]
       - written_units: [.D]
         conditions: [.fallback, .particle]
         fvs: 2
-        menksoft_pua: 0xE310
+        menksoft_puas: [0xE310]
     medi:
       - written_units: [.D]
         conditions: [.fallback, .onset]
         fvs: 1
-        menksoft_pua: 0xE313
+        menksoft_puas: [0xE313]
       - written_units: [.Dd]
         conditions: [.devsger]
         fvs: 2
-        menksoft_pua: 0xE314
+        menksoft_puas: [0xE314]
     fina:
       - written_units: [.D]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE312
+        menksoft_puas: [0xE312]
       - written_units: [.Dd]
         conditions: [.devsger]
         fvs: 2
-        menksoft_pua: 0xE311
+        menksoft_puas: [0xE311]
   extra_variants_by_joining_form:
     isol:
       - written_units: [.T]
-        menksoft_pua: 0xE30E
+        menksoft_puas: [0xE30E]
 
 - cp: 0x1834 # ᠴ MONGOLIAN LETTER CHA
   id: "ch"
@@ -638,13 +638,13 @@
   variants_by_joining_form:
     init:
       - written_units: [.Ch]
-        menksoft_pua: 0xE315
+        menksoft_puas: [0xE315]
     medi:
       - written_units: [.Ch]
-        menksoft_pua: 0xE317
+        menksoft_puas: [0xE317]
     fina:
       - written_units: [.Ch]
-        menksoft_pua: 0xE316
+        menksoft_puas: [0xE316]
 
 - cp: 0x1835 # ᠵ MONGOLIAN LETTER JA
   id: "j"
@@ -654,20 +654,20 @@
         conditions: [.chachlag_onset]
         fvs: 1
         note: "Not an appriopriate fallback"
-        menksoft_pua: 0xE31C
+        menksoft_puas: [0xE31C]
     init:
       - written_units: [.I]
-        menksoft_pua: [0xE318, 0xE319, 0xE31A]
+        menksoft_puas: [0xE318, 0xE319, 0xE31A]
     medi:
       - written_units: [.J]
-        menksoft_pua: 0xE31D
+        menksoft_puas: [0xE31D]
     fina:
       - written_units: [.J]
-        menksoft_pua: 0xE31B
+        menksoft_puas: [0xE31B]
   extra_variants_by_joining_form:
     fina:
       - written_units: [.I]
-        menksoft_pua: 0xE31C
+        menksoft_puas: [0xE31C]
 
 - cp: 0x1836 # ᠶ MONGOLIAN LETTER YA
   id: "y"
@@ -676,110 +676,110 @@
       - written_units: [.Y]
         conditions: [.fallback, .onset]
         fvs: 1
-        menksoft_pua: 0xE31E
+        menksoft_puas: [0xE31E]
       - written_units: [.I]
         conditions: [.dictionary_particle]
         fvs: 2
-        menksoft_pua: 0xE321
+        menksoft_puas: [0xE321]
     medi:
       - written_units: [.Y]
         conditions: [.fallback, .onset]
         fvs: 1
-        menksoft_pua: 0xE320
+        menksoft_puas: [0xE320]
       - written_units: [.I]
         conditions: [.dictionary_particle]
         fvs: 2
-        menksoft_pua: 0xE321
+        menksoft_puas: [0xE321]
     fina:
       - written_units: [.I]
         conditions: [.chachlag_onset]
         fvs: 1
         note: "Not an appriopriate fallback"
-        menksoft_pua: 0xE31F
+        menksoft_puas: [0xE31F]
 
 - cp: 0x1837 # ᠷ MONGOLIAN LETTER RA
   id: "r"
   variants_by_joining_form:
     init:
       - written_units: [.R]
-        menksoft_pua: [0xE322, 0xE323, 0xE324]
+        menksoft_puas: [0xE322, 0xE323, 0xE324]
     medi:
       - written_units: [.R]
-        menksoft_pua: [0xE326, 0xE327, 0xE328]
+        menksoft_puas: [0xE326, 0xE327, 0xE328]
     fina:
       - written_units: [.R]
-        menksoft_pua: 0xE325
+        menksoft_puas: [0xE325]
 
 - cp: 0x1838 # ᠸ MONGOLIAN LETTER WA
   id: "w"
   variants_by_joining_form:
     init:
       - written_units: [.W]
-        menksoft_pua: 0xE329
+        menksoft_puas: [0xE329]
     medi:
       - written_units: [.W]
-        menksoft_pua: 0xE32C
+        menksoft_puas: [0xE32C]
     fina:
       - written_units: [.W]
         conditions: [.fallback]
         fvs: 1
-        menksoft_pua: 0xE32A
+        menksoft_puas: [0xE32A]
       - written_units: [.U]
         conditions: [.chachlag_onset]
         fvs: 2
-        menksoft_pua: 0xE32B
+        menksoft_puas: [0xE32B]
 
 - cp: 0x1839 # ᠹ MONGOLIAN LETTER FA
   id: "f"
   variants_by_joining_form:
     init:
       - written_units: [.F]
-        menksoft_pua: [0xE32D, 0xE32E]
+        menksoft_puas: [0xE32D, 0xE32E]
     medi:
       - written_units: [.F]
-        menksoft_pua: [0xE330, 0xE331, 0xE332]
+        menksoft_puas: [0xE330, 0xE331, 0xE332]
     fina:
       - written_units: [.F]
-        menksoft_pua: 0xE32F
+        menksoft_puas: [0xE32F]
 
 - cp: 0x183B # ᠻ MONGOLIAN LETTER KHA
   id: "k"
   variants_by_joining_form:
     init:
       - written_units: [.K]
-        menksoft_pua: [0xE333, 0xE334, 0xE339, 0xE33A]
+        menksoft_puas: [0xE333, 0xE334, 0xE339, 0xE33A]
     medi:
       - written_units: [.K]
-        menksoft_pua: [0xE336, 0xE337, 0xE338, 0xE33C, 0xE33D, 0xE33E]
+        menksoft_puas: [0xE336, 0xE337, 0xE338, 0xE33C, 0xE33D, 0xE33E]
     fina:
       - written_units: [.K]
-        menksoft_pua: [0xE335, 0xE33B]
+        menksoft_puas: [0xE335, 0xE33B]
 
 - cp: 0x183C # ᠼ MONGOLIAN LETTER TSA
   id: "c"
   variants_by_joining_form:
     init:
       - written_units: [.C]
-        menksoft_pua: 0xE33F
+        menksoft_puas: [0xE33F]
     medi:
       - written_units: [.C]
-        menksoft_pua: 0xE341
+        menksoft_puas: [0xE341]
     fina:
       - written_units: [.C]
-        menksoft_pua: 0xE340
+        menksoft_puas: [0xE340]
 
 - cp: 0x183D # ᠽ MONGOLIAN LETTER ZA
   id: "z"
   variants_by_joining_form:
     init:
       - written_units: [.Z]
-        menksoft_pua: 0xE342
+        menksoft_puas: [0xE342]
     medi:
       - written_units: [.Z]
-        menksoft_pua: 0xE344
+        menksoft_puas: [0xE344]
     fina:
       - written_units: [.Z]
-        menksoft_pua: 0xE343
+        menksoft_puas: [0xE343]
 
 - cp: 0x183E # ᠾ MONGOLIAN LETTER HAA
   id: "hh"
@@ -787,13 +787,13 @@
   variants_by_joining_form:
     init:
       - written_units: [.Hh]
-        menksoft_pua: 0xE345
+        menksoft_puas: [0xE345]
     medi:
       - written_units: [.Hh]
-        menksoft_pua: 0xE347
+        menksoft_puas: [0xE347]
     fina:
       - written_units: [.Hh]
-        menksoft_pua: 0xE346
+        menksoft_puas: [0xE346]
 
 - cp: 0x183F # ᠿ MONGOLIAN LETTER ZRA
   id: "rh"
@@ -801,13 +801,13 @@
   variants_by_joining_form:
     init:
       - written_units: [.Rh]
-        menksoft_pua: 0xE348
+        menksoft_puas: [0xE348]
     medi:
       - written_units: [.Rh]
-        menksoft_pua: 0xE349
+        menksoft_puas: [0xE349]
     fina:
       - written_units: [.Rh]
-        menksoft_pua: 0xE34A
+        menksoft_puas: [0xE34A]
 
 - cp: 0x1840 # ᡀ MONGOLIAN LETTER LHA
   id: "lh"
@@ -815,10 +815,10 @@
   variants_by_joining_form:
     init:
       - written_units: [.L, .Hh]
-        menksoft_pua: 0xE34B
+        menksoft_puas: [0xE34B]
     medi:
       - written_units: [.L, .Hh]
-        menksoft_pua: [0xE34C, 0xE34D]
+        menksoft_puas: [0xE34C, 0xE34D]
 
 - cp: 0x1841 # ᡁ MONGOLIAN LETTER ZHI
   id: "zr"
@@ -826,7 +826,7 @@
   variants_by_joining_form:
     init:
       - written_units: [.Zr]
-        menksoft_pua: 0xE34E
+        menksoft_puas: [0xE34E]
 
 - cp: 0x1842 # ᡂ MONGOLIAN LETTER CHI
   id: "cr"
@@ -834,6 +834,6 @@
   variants_by_joining_form:
     init:
       - written_units: [.Cr]
-        menksoft_pua: 0xE34F
+        menksoft_puas: [0xE34F]
 
 ...

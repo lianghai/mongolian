@@ -8,18 +8,16 @@ from data import Mongolian
 from utils import make_glyph_classes, slice_joining_form
 
 
-def Id(phonetic_letter: str, written_units: list[str] = None, joining_form: str = None) -> Identity:
-
+def mong(phonetic_letter: str, written_units: list[str] = None, joining_form: str = None) -> Identity:
     suffixes = []
     if written_units:
         suffixes.append(DevelopmentNaming.body(written_units))
     if joining_form:
         suffixes.append(joining_form)
-
     return Identity(phonetic_letter, suffix=suffixes, script_code=Mongolian.code)
 
 def make_class_name(phonetic_letter: str, joining_form: str = None) -> str:
-    return "@" + Id(phonetic_letter, joining_form=joining_form).imply_script(Mongolian.code).name()
+    return "@" + mong(phonetic_letter, joining_form=joining_form).imply_script(Mongolian.code).name()
 
 
 def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
@@ -38,9 +36,9 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             for joining_form in otl.JOINING_FORM_TAGS:
                 class_name = make_class_name(name, joining_form)
                 subclasses.append(class_name)
-                abstract_variant = Id(name, None, joining_form)
+                abstract_variant = mong(name, None, joining_form)
                 variants = [
-                    Id(name, v.written_units, joining_form)
+                    mong(name, v.written_units, joining_form)
                     for v in letter.variants_by_joining_form.get(joining_form, [])
                     if not v.is_manual
                 ]
@@ -56,7 +54,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
         for joining_form in otl.JOINING_FORM_TAGS:
             with f.Lookup(f"IIa.{joining_form}") as lookup:
                 for name in Mong.categorization.letter:
-                    lookup.sub(name, by = Id(name, None, joining_form))
+                    lookup.sub(name, by = mong(name, None, joining_form))
 
     abstract_variant_to_definite = {}
     condition_to_substitutions = {}
@@ -66,8 +64,8 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
         letter = Mong.characters[name]
         for joining_form, variants in letter.variants_by_joining_form.items():
             for variant in variants:
-                abstract_variant = Id(name, None, joining_form)
-                variant_glyph = Id(name, variant.written_units, joining_form)
+                abstract_variant = mong(name, None, joining_form)
+                variant_glyph = mong(name, variant.written_units, joining_form)
                 if variant.is_definite:
                     abstract_variant_to_definite[abstract_variant] = variant_glyph
                 else:
@@ -94,7 +92,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
         with f.Lookup("III.ig.preprocessing.A") as lookup:
             for name in Mong.categorization.letter.vowel.masculine:
                 for joining_form in otl.JOINING_FORM_TAGS:
-                    abstract_variant = Id(name, None, joining_form)
+                    abstract_variant = mong(name, None, joining_form)
                     lookup.sub(abstract_variant, by = (abstract_variant, "masculine"))
 
         f.glyph_class("@signal.masculine", ["masculine"])
@@ -105,7 +103,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 *Mong.categorization.letter.consonant
             ]:
                 for joining_form in otl.JOINING_FORM_TAGS:
-                    abstract_variant = Id(name, None, joining_form)
+                    abstract_variant = mong(name, None, joining_form)
                     lookup.sub(prefix="masculine", target=abstract_variant, by = (abstract_variant, "masculine"))
 
         with f.Lookup("III.ig.preprocessing.C") as lookup:
@@ -117,7 +115,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 if name == "g":
                     continue
                 for joining_form in otl.JOINING_FORM_TAGS:
-                    abstract_variant = Id(name, None, joining_form)
+                    abstract_variant = mong(name, None, joining_form)
                     lookup.sub((abstract_variant, "masculine"), by=abstract_variant)
 
         f.glyph_class("@consonant.init", [
@@ -162,7 +160,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             name = "g"
             for joining_form, variants in Mong.characters[name].variants_by_joining_form.items():
                 for variant in variants:
-                    variant = Id(name, variant.written_units, joining_form)
+                    variant = mong(name, variant.written_units, joining_form)
                     lookup.sub((variant, "masculine"), by=variant)
 
         with f.Lookup("III.a_i_u_ue_d.particle").flag("IgnoreMarks") as lookup:
@@ -181,7 +179,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         with f.Lookup("III.i.devsger").flag("IgnoreMarks") as lookup:
             lookup.glyph_class(context_class_name := "@vowel.not_ending_with_I", [
-                Id(name, v.written_units, joining_form)
+                mong(name, v.written_units, joining_form)
                 for name in Mong.categorization.letter.vowel
                 for joining_form, variants in Mong.characters[name].variants_by_joining_form.items()
                 for v in variants
@@ -191,14 +189,14 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         with f.Lookup("III.o_u_oe_ue.post_bowed").flag("IgnoreMarks") as lookup:
             lookup.glyph_class(context_class_name := "@B_P_G_Gx_F_K", [
-                Id(name, v.written_units, joining_form)
+                mong(name, v.written_units, joining_form)
                 for name in Mong.categorization.letter
                 for joining_form, variants in Mong.characters[name].variants_by_joining_form.items()
                 for v in variants
                 if (not v.is_manual) and v.written_units[-1] in ["B", "P", "G", "Gx", "F", "K"]
             ])
             lookup.glyph_class(target_class_name := "@o_u_oe_ue.U", [
-                Id(name, v.written_units, joining_form)
+                mong(name, v.written_units, joining_form)
                 for name in ["o", "u", "oe", "ue"]
                 for joining_form, variants in Mong.characters[name].variants_by_joining_form.items()
                 for v in variants
@@ -231,9 +229,9 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                     continue
                 for joining_form, variants in letter.variants_by_joining_form.items():
                     for variant in variants:
-                        origin = Id(name, variant.written_units, joining_form)
+                        origin = mong(name, variant.written_units, joining_form)
                         parts = tuple(
-                            Id(written_unit, None, sliced_joining_form)
+                            mong(written_unit, None, sliced_joining_form)
                             for written_unit, sliced_joining_form in zip(
                                 variant.written_units,
                                 slice_joining_form(joining_form, len(variant.written_units)),
@@ -250,7 +248,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             table.glyph_class_definition(
                 bases=None,
                 ligatures=None,
-                marks = [  # Somehow cannot restore advance in dist.
+                marks=[  # Somehow cannot restore advance in dist.
                     *Mong.categorization.format_control.joining_control,
                     *Mong.categorization.format_control.fvs,
                     "masculine",

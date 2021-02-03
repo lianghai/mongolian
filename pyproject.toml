@@ -9,6 +9,7 @@ python = "^3.9"
 PyYAML = "^5.3.1"
 ufoLib2 = "^0.10.0"
 tptqutils = { path = "../tptq/tptqutils/", develop = true }
+tptqscripttools = { path = "../tptq/script-tools/", develop = true }
 fontmake = "^2.3.0"
 
 [tool.poetry.dev-dependencies]

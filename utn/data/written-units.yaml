@@ -50,6 +50,7 @@
     isol:
       represented_letters: [{type: .early_modern, letter: .i}]
       typographical_decomposition: "I.isol dotbelow"
+      menksoft_pua: 0xE350
 
 - id: "O"
   variant_by_joining_form:
@@ -90,6 +91,7 @@
     isol:
       represented_letters: [{type: .early_modern, letter: .u}, {type: .early_modern, letter: .ue}]
       typographical_decomposition: "U.isol dotbelow"
+      menksoft_pua: 0xE351
 
 - id: "N"
   variant_by_joining_form:

@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import re
+from functools import partial
 from pathlib import Path
 
 from fontmake.font_project import FontProject
+from tptqscripttools.data import REGISTER as LegacyScriptRegister
+from tptqscripttools.objects import \
+    DevelopmentNaming as LegacyDevelopmentNaming
 from tptqutils.otl import CodeBuilder, GlyphNotInSourceFontError
 from tptqutils.script import Common
 from ufoLib2.objects import Font
@@ -73,12 +77,19 @@ def main():
                 else:
                     inlined_otl.write(line)
 
-    # script.export_otl_dummy_font(
-    #     product_dir,
-    #     source_ufo_path=source_ufo_path,
-    #     naming=glyph_space.naming,
-    #     feature_file_path=inlined_otl_path,
-    # )
+    class LegacySimpleNaming(LegacyDevelopmentNaming):
+        make_name = partial(
+            LegacyDevelopmentNaming.make_name,
+            implied_script_codes = [Common.code, Mongolian.code],
+        )
+
+    legacy_script = LegacyScriptRegister.script_by_code[Mongolian.code]
+    legacy_script.export_otl_dummy_font(
+        product_dir,
+        source_ufo_path = source_ufo_path,
+        naming = LegacySimpleNaming,
+        feature_file_path = inlined_otl_path,
+    )
 
 
 if __name__ == "__main__":

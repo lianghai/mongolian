@@ -268,6 +268,26 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "tptqscripttools"
+version = "0.6.0"
+description = ""
+category = "main"
+optional = false
+python-versions = "^3.9"  # 3.9: PEP 585, 616, …; 3.8: PEP 572, 570, 589…
+develop = true
+
+[package.dependencies]
+defcon = "^0.7.2"
+fontmake = "^2.2.1"
+fonttools = "^4.18.1"
+regex = "^2020.10.15"
+uharfbuzz = "^0.14.0"
+
+[package.source]
+type = "directory"
+url = "../tptq/script-tools"
+
+[[package]]
 name = "tptqutils"
 version = "0.1.0"
 description = ""
@@ -320,10 +340,18 @@ fonttools = {version = ">=4.0.0", extras = ["ufo"]}
 [package.extras]
 lxml = ["lxml"]
 
+[[package]]
+name = "uharfbuzz"
+version = "0.14.0"
+description = "Streamlined Cython bindings for the harfbuzz shaping engine"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "61f0d1e3494549608aae63eb97095f2ef3e9b418b889e27cad7360a8e3f35201"
+content-hash = "9372cfd722ac6d0c7f6e5b3e3cc80ee1cf23d96fde07e45c2a09a5cd7c39d26e"
 
 [metadata.files]
 appdirs = [
@@ -561,6 +589,7 @@ six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
 ]
+tptqscripttools = []
 tptqutils = []
 ufo2ft = [
     {file = "ufo2ft-2.19.1-py2.py3-none-any.whl", hash = "sha256:bef229cffc3a860b74347987e10fd995e1a210bdffb6d3edd29f6e1405b1b85d"},
@@ -569,4 +598,22 @@ ufo2ft = [
 ufolib2 = [
     {file = "ufoLib2-0.10.1-py3-none-any.whl", hash = "sha256:899d0a90c7ca9a2793d8feb56dfec8bf945201cc640f0fb8909e57e8cfe4ca72"},
     {file = "ufoLib2-0.10.1.zip", hash = "sha256:47cce22f08902af0e65120621fa9a6311fe25a8f0f5c3de32808da9af736e3a4"},
+]
+uharfbuzz = [
+    {file = "uharfbuzz-0.14.0-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:16447dc00a677da00dc7197cf4b36cfd65c2ad7a67c2d42b18b27f71574c7785"},
+    {file = "uharfbuzz-0.14.0-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:e76a05508cfc998208770a62e3c16c0899ed61646563dd4e5ffbe95cec996761"},
+    {file = "uharfbuzz-0.14.0-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:290ae80e3a7dc95e47d6541010f2fc9e3c8f80e5e99a682482b643798e344349"},
+    {file = "uharfbuzz-0.14.0-cp36-cp36m-win32.whl", hash = "sha256:06016a146b586fb3f858d1af217897905ba57bf6047fda5a1610a875714378e6"},
+    {file = "uharfbuzz-0.14.0-cp36-cp36m-win_amd64.whl", hash = "sha256:2b079d984a3cae2be5557db645408b3c35b1d03fe0ee8ef6fb50e76539d34657"},
+    {file = "uharfbuzz-0.14.0-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:5cf96b2cbe517481f16906dbc0462d72dc3b009b7eea858e322b1e9578e3fa14"},
+    {file = "uharfbuzz-0.14.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:f4739674b94a7dc9140e0c5d5d5e375d3281f176548eacd2f32b120a89566556"},
+    {file = "uharfbuzz-0.14.0-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:4455a3e8b8fcc509a00858e71511e2d93e8cc0bd6ec6d1c4778f4a7ab762ee40"},
+    {file = "uharfbuzz-0.14.0-cp37-cp37m-win32.whl", hash = "sha256:cd138723129c8ecdfd5fe735e1467360f85b38242c899dc7770799b42eb69b34"},
+    {file = "uharfbuzz-0.14.0-cp37-cp37m-win_amd64.whl", hash = "sha256:6c9fdddaec55c01b4357c9bb4b777ba8e0d48e49decdbbd2e6b8a00688ac2de8"},
+    {file = "uharfbuzz-0.14.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f152923c952e6520bef0c2f91c8d3cd57a01c12b88a47c838d6093cbf7a425a9"},
+    {file = "uharfbuzz-0.14.0-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:13adcd98898adbfc59808b4affc3593b38a7098d52da77c4daf3bcac50173df1"},
+    {file = "uharfbuzz-0.14.0-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:1ca88dd044d82f91b320e16c634f642fac7ffdf3916b3663bc5b8f66fd8ffef4"},
+    {file = "uharfbuzz-0.14.0-cp38-cp38-win32.whl", hash = "sha256:610d3b1cf4266a09c840864630fb81863caf7d28f2947b753011966ea64917d4"},
+    {file = "uharfbuzz-0.14.0-cp38-cp38-win_amd64.whl", hash = "sha256:8ed530cc60a2689f9dba642be2e5dc5e1e7efce7cfb3da85178abd37d25a51fe"},
+    {file = "uharfbuzz-0.14.0.zip", hash = "sha256:965d79ec2d884937431cc627ce87a32052073a92a10ebd7224a707a8084388c5"},
 ]
