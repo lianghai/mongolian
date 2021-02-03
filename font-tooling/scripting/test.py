@@ -38,15 +38,15 @@ def main():
                 expectation: str = case["shape"]
                 graphically_folded_expectation = "".join(
                     fold_phonetic_pua(cp, phonetic_pua_to_folded_mapping) for cp in expectation
-                )
+                ).strip()
                 utn_result = "".join(
                     convert_glyph_name_to_graphical_pua(i)
                     for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
-                )
+                ).strip()
                 diffing = ""
                 if graphically_folded_expectation != utn_result:
                     failure_count += 1
-                    diffing = f"! {failure_count}"
+                    diffing = f"!{failure_count}"
                 print("#" + rule_id, string, expectation, graphically_folded_expectation, utn_result, diffing, sep=";", file=f)
 
     for cp_int in unknown_cps:
@@ -55,21 +55,31 @@ def main():
     print(case_count, failure_count)
 
 
-def convert_glyph_name_to_graphical_pua(glyph_name: str) -> str:
-    if glyph_name.startswith("pua"):
-        return chr(int(glyph_name.removeprefix("pua"), 16))
-    elif (character := Mong.characters.get(glyph_name)) and (cp_int := character.menksoft_pua):
-        return chr(cp_int)
-    elif glyph_name in ["_nil"]:
+def convert_glyph_name_to_graphical_pua(name: str) -> str:
+    if name in ["nirugu"]:
         return ""
+    elif name.startswith("pua"):
+        return chr(int(name.removeprefix("pua"), 16))
     else:
-        return f"[{glyph_name}]"
+        if name in ["_" + i for i in [*Mong.categorization.format_control.mvs, *Mong.categorization.format_control.fvs]]:
+            name = name.removeprefix("_")
+        if (character := Mong.characters.get(name)) and (cp_int := character.menksoft_pua):
+            return chr(cp_int)
+        elif name in ["_nil"]:
+            return ""
+        else:
+            return f"[{name}]"
 
 
 def fold_phonetic_pua(cp: str, mapping: dict) -> str:
     cp_int = ord(cp)
     normalized_cp = None
-    if folded := mapping.get(cp):
+    if cp in [
+        chr(0xE23A),  # MONGOLIAN TODO SOFT HYPHEN
+        chr(0xE23E),  # nirugu
+    ]:
+        return ""
+    elif folded := mapping.get(cp):
         return folded
     else:
         if cp_int in [

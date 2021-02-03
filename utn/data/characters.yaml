@@ -15,15 +15,19 @@
 
 - cp: 0x180E # MONGOLIAN VOWEL SEPARATOR
   id: "mvs"
+  menksoft_pua: 0xE357
 
 - cp: 0x180B # MONGOLIAN FREE VARIATION SELECTOR ONE
   id: "fvs1"
+  menksoft_pua: 0xE354
 
 - cp: 0x180C # MONGOLIAN FREE VARIATION SELECTOR TWO
   id: "fvs2"
+  menksoft_pua: 0xE355
 
 - cp: 0x180D # MONGOLIAN FREE VARIATION SELECTOR THREE
   id: "fvs3"
+  menksoft_pua: 0xE356
 
 - cp: 0x180F # Draft candidate character for Unicode 14.0: MONGOLIAN FREE VARIATION SELECTOR FOUR
   id: "fvs4"
