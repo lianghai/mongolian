@@ -60,6 +60,8 @@ def convert_glyph_name_to_graphical_pua(glyph_name: str) -> str:
         return chr(int(glyph_name.removeprefix("pua"), 16))
     elif (character := Mong.characters.get(glyph_name)) and (cp_int := character.menksoft_pua):
         return chr(cp_int)
+    elif glyph_name in ["_nil"]:
+        return ""
     else:
         return f"[{glyph_name}]"
 

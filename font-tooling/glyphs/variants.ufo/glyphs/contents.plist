@@ -184,6 +184,8 @@
 	<string>Z_.medi.glif</string>
 	<key>Zr.init</key>
 	<string>Z_r.init.glif</string>
+	<key>_nil</key>
+	<string>_nil.glif</string>
 	<key>a.A.fina</key>
 	<string>a.A_.fina.glif</string>
 	<key>a.A.init</key>
@@ -354,6 +356,8 @@
 	<string>ng.A__G_.fina.glif</string>
 	<key>ng.A_G.medi</key>
 	<string>ng.A__G_.medi.glif</string>
+	<key>nil</key>
+	<string>nil.glif</string>
 	<key>nirugu</key>
 	<string>nirugu.glif</string>
 	<key>o.A_O.init</key>

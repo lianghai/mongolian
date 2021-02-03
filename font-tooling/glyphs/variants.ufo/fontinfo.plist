@@ -11,7 +11,7 @@
 	<key>familyName</key>
 	<string>Variants</string>
 	<key>openTypeHeadCreated</key>
-	<string>2020/12/10 04:16:20</string>
+	<string>2021/02/04 03:22:15</string>
 	<key>openTypeNamePreferredSubfamilyName</key>
 	<string>Regular</string>
 	<key>openTypeOS2WeightClass</key>
@@ -31,7 +31,7 @@
 	<key>unitsPerEm</key>
 	<integer>1000</integer>
 	<key>versionMajor</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>versionMinor</key>
 	<integer>0</integer>
 	<key>xHeight</key>

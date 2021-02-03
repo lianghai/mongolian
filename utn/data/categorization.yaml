@@ -5,7 +5,7 @@ format_control:
   joining_control: [.zwnj, .zwj, .nirugu]
   nnbsp: [.nnbsp]
   mvs: [.mvs]
-  fvs: [.fvs1, .fvs2, .fvs3]
+  fvs: [.fvs1, .fvs2, .fvs3, .fvs4]
 
 letter:
 

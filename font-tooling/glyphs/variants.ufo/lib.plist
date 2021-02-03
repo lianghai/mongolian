@@ -15,6 +15,7 @@
 			<array>
 				<string>.notdef</string>
 				<string>space</string>
+				<string>nil</string>
 				<string>nirugu</string>
 				<string>A.isol</string>
 				<string>A.init</string>
@@ -263,6 +264,7 @@
 			<array>
 				<string>.notdef</string>
 				<string>space</string>
+				<string>nil</string>
 				<string>nirugu</string>
 				<string>A.isol</string>
 				<string>A.init</string>
@@ -511,6 +513,7 @@
 	<array>
 		<string>.notdef</string>
 		<string>space</string>
+		<string>nil</string>
 		<string>nirugu</string>
 		<string>A.isol</string>
 		<string>A.init</string>
@@ -757,6 +760,7 @@
 	<array>
 		<string>.notdef</string>
 		<string>space</string>
+		<string>nil</string>
 		<string>nirugu</string>
 		<string>A.isol</string>
 		<string>A.init</string>
@@ -996,6 +1000,7 @@
 		<string>lh.L_Hh.medi</string>
 		<string>zr.Zr.init</string>
 		<string>cr.Cr.init</string>
+		<string>_nil</string>
 	</array>
 	<key>public.postscriptNames</key>
 	<dict>

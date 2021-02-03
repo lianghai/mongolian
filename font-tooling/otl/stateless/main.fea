@@ -2,7 +2,7 @@
 include(classes-letters.fea);
 include(classes-categories.fea);
 table GDEF {
-    GlyphClassDef , , [zwnj zwj nirugu fvs1 fvs2 fvs3 masculine], ;
+    GlyphClassDef , , [zwnj zwj nirugu fvs1 fvs2 fvs3 fvs4 nil masculine], ;
 } GDEF;
 
 languagesystem mong dflt;
@@ -36,7 +36,6 @@ feature rclt {
     lookup III.ig.preprocessing.A;
     lookup III.ig.preprocessing.B;
     lookup III.ig.preprocessing.C;
-    lookup III.definite;
     lookup III.a_e.chachlag;
     lookup III.o_u_oe_ue.marked;
     lookup III.n_j_y_w_h_g.chachlag_onset;
@@ -45,11 +44,13 @@ feature rclt {
     lookup III.h_g.onset_and_devsger_and_gender.B;
     lookup III.ig.postprocessing;
     lookup III.a_i_u_ue_d.particle;
-    lookup III.y.dictionary_particle;
+    lookup III.definite;
     lookup III.fallback;
+    lookup III.y.dictionary_particle;
     lookup III.i.devsger;
     lookup III.o_u_oe_ue.post_bowed;
     lookup III.fvs;
+    lookup IIb.hide_effective_format_controls;
     lookup IIb.preserve_format_controls.A;
     lookup IIb.preserve_format_controls.B;
     lookup IIb.restore_GDEF_mark_advances;
