@@ -59,6 +59,7 @@ class Character:
     cp: int
     id: str
     transcription: Optional[str] = None
+    menksoft_pua: Optional[int] = None
     variants_by_joining_form: VariantsByJoiningForm = field(default_factory=dict)
     extra_variants_by_joining_form: VariantsByJoiningForm = field(default_factory=dict)
 
@@ -68,6 +69,7 @@ class Character:
             data.pop("cp"),
             character_id := data.pop("id"),
             data.pop("transcription", None),
+            data.pop("menksoft_pua", None),
             variants_by_joining_form = {
                 joining_form: [
                     Character.Variant.load(character_id, joining_form, variant_data)

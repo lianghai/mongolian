@@ -11,6 +11,7 @@
 
 - cp: 0x180A # MONGOLIAN NIRUGU
   id: "nirugu"
+  menksoft_pua: 0xE23E
 
 - cp: 0x180E # MONGOLIAN VOWEL SEPARATOR
   id: "mvs"

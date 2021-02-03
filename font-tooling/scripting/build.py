@@ -56,11 +56,17 @@ def main():
         validate_glyph_availability_in_source_font = False,
         implied_script_codes = [Common.code, Mongolian.code],
     )
+
     for name in Mongolian.characters.keys():
         try:
             name = builder.glyph_space[name]
         except GlyphNotInSourceFontError:
             continue
+        builder.shaped_glyph_names[name] = None
+
+    additional_cmaps = ["k2"]
+    for name in additional_cmaps:
+        name = builder.glyph_space.__getitem__(name, validate_glyph_availability_in_source_font=False)
         builder.shaped_glyph_names[name] = None
 
     stateless.make_otl_code_file(builder, otl_path)

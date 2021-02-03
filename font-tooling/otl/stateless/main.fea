@@ -6,6 +6,13 @@ table GDEF {
 } GDEF;
 
 languagesystem mong dflt;
+feature ccmp {
+    lookup Ia.unification {
+        sub k2 by k;
+    } Ia.unification;
+
+} ccmp;
+
 include(lookups-joining.fea);
 feature isol {
     lookup IIa.isol;
@@ -52,3 +59,7 @@ include(lookups-test.fea);
 feature ss01 {
     lookup test.ss01.wipe_phonetic_information;
 } ss01;
+
+feature ss02 {
+    lookup test.ss02.menksoft_pua;
+} ss02;

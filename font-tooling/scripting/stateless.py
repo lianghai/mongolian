@@ -223,21 +223,37 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             lookup.sub("masculine", by="_masculine")
 
     with builder.File(directory / "lookups-test.fea") as f:
-        with f.Lookup("test.ss01.wipe_phonetic_information") as lookup:
-            for name, letter in Mong.characters.items():
-                if name not in Mong.categorization.letter:
-                    continue
-                for joining_form, variants in letter.variants_by_joining_form.items():
-                    for variant in variants:
-                        origin = mong(name, variant.written_units, joining_form)
-                        parts = tuple(
-                            mong(written_unit, None, sliced_joining_form)
-                            for written_unit, sliced_joining_form in zip(
-                                variant.written_units,
-                                slice_joining_form(joining_form, len(variant.written_units)),
-                            )
+
+        origin_to_alts = dict[Identity, tuple[tuple[Identity, ...], tuple[str, ...]]]()
+        for name, letter in Mong.characters.items():
+            if name not in Mong.categorization.letter:
+                continue
+            for joining_form, variants in letter.variants_by_joining_form.items():
+                for variant in variants:
+                    origin = mong(name, variant.written_units, joining_form)
+                    written_unit_parts = tuple(
+                        mong(written_unit, None, sliced_joining_form)
+                        for written_unit, sliced_joining_form in zip(
+                            variant.written_units,
+                            slice_joining_form(joining_form, len(variant.written_units)),
                         )
-                        lookup.sub(origin, by=parts)
+                    )
+                    pua_parts = tuple(
+                        f":pua{Mong.written_units[written_unit].variant_by_joining_form[sliced_joining_form].menksoft_pua:04X}"
+                        for written_unit, sliced_joining_form in zip(
+                            variant.written_units,
+                            slice_joining_form(joining_form, len(variant.written_units)),
+                        )
+                    )
+                    origin_to_alts[origin] = written_unit_parts, pua_parts
+
+        with f.Lookup("test.ss01.wipe_phonetic_information") as lookup:
+            for origin, (written_unit_parts, _) in origin_to_alts.items():
+                lookup.sub(origin, by=written_unit_parts)
+
+        with f.Lookup("test.ss02.menksoft_pua") as lookup:
+            for origin, (_, pua_parts) in origin_to_alts.items():
+                lookup.sub(origin, by=pua_parts)
 
     with builder.File(path) as f:
 
@@ -258,15 +274,21 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         f.language_system(Mong.otl_tags()[0])
 
+        with f.Feature("ccmp") as feature:
+            with feature.Lookup("Ia.unification") as lookup:
+                lookup.sub("k2", by="k")
+
         f.include("lookups-joining.fea")
+
         for name in otl.Lookup.namespace.keys():
-            stage, _, joining_form = name.partition(".")
+            stage, _, joining_form_feature_tag = name.partition(".")
             if stage == "IIa":
-                with f.Feature(joining_form) as feature:
+                with f.Feature(joining_form_feature_tag) as feature:
                     feature.lookup(name)
 
         f.include("lookups-conditions.fea")
         f.include("lookups-general.fea")
+
         with f.Feature("rclt") as feature:
             for name in otl.Lookup.namespace.keys():
                 stage, *_ = name.split(".")
@@ -274,6 +296,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                     feature.lookup(name)
 
         f.include("lookups-test.fea")
+
         for name in otl.Lookup.namespace.keys():
             stage, feature_tag, *_ = name.split(".")
             if stage == "test":
