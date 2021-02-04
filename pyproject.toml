@@ -11,6 +11,7 @@ ufoLib2 = "^0.10.0"
 tptqutils = { path = "../tptq/tptqutils/", develop = true }
 tptqscripttools = { path = "../tptq/script-tools/", develop = true }
 fontmake = "^2.3.0"
+yattag = "^1.14.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"

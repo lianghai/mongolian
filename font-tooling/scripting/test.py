@@ -1,9 +1,12 @@
 import json
-from pathlib import Path
+from collections import Counter
+from pathlib import Path, WindowsPath
 
+import yattag
 from fontTools import unicodedata
 from tptqutils.shaping import Shaper
 
+from data import Character
 from data import Mongolian as Mong
 from utils import slice_joining_form
 
@@ -13,7 +16,7 @@ repo_dir = scripting_dir / ".." / ".."
 private_repo_dir = repo_dir / ".." / "mongolian-private"
 mongoltoli_data_dir = private_repo_dir / "misc/liangjinbao/20210107/rule.mongoltoli.cn"
 
-unknown_cps = dict[int, None]()
+unknown_cps = Counter()
 
 def main():
 
@@ -29,30 +32,56 @@ def main():
     case_count = 0
     failure_count = 0
 
-    with (scripting_dir / "output.txt").open("w") as f:
-        for rule in json.loads(data)["rulelist"]:
-            rule_id = rule["ruleindex"]
-            for case in rule["rulewords"]:
-                case_count += 1
-                string = case["word"]
-                expectation: str = case["shape"]
-                graphically_folded_expectation = "".join(
-                    fold_phonetic_pua(cp, phonetic_pua_to_folded_mapping) for cp in expectation
-                ).strip()
-                utn_result = "".join(
-                    convert_glyph_name_to_graphical_pua(i)
-                    for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
-                ).strip()
-                diffing = ""
-                if graphically_folded_expectation != utn_result:
-                    failure_count += 1
-                    diffing = f"!{failure_count}"
-                print("#" + rule_id, string, expectation, graphically_folded_expectation, utn_result, diffing, sep=";", file=f)
+    doc, tag, text = yattag.Doc().tagtext()
 
-    for cp_int in unknown_cps:
-        print(f"U+{cp_int:04X}", unicodedata.name(chr(cp_int), "—"))
+    cp_to_name = {chr(character.cp): character_id for character_id, character in Mong.characters.items()}
 
-    print(case_count, failure_count)
+    with tag("html"):
+        with tag("head"):
+            doc.stag("link", rel="stylesheet", href="style.css")
+        with tag("table"):
+            with tag("thead"):
+                with tag("tr"):
+                    for content in ["rule", "string", "expectation", "graphically folded", "UTN", "diffing"]:
+                        with tag("th"):
+                            text(content)
+            for rule in json.loads(data)["rulelist"]:
+                rule_id = rule["ruleindex"]
+                for case in rule["rulewords"]:
+                    case_count += 1
+                    string = case["word"]
+                    string_annotation = " ".join(
+                        cp_to_name.get(i, f"[{i}]") for i in string
+                    )
+                    expectation = case["shape"]
+                    graphically_folded_expectation = "".join(
+                        fold_phonetic_pua(cp, phonetic_pua_to_folded_mapping) for cp in expectation
+                    ).strip()
+                    utn_result = "".join(
+                        convert_glyph_name_to_graphical_pua(i)
+                        for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
+                    ).strip()
+                    diffing = ""
+                    if graphically_folded_expectation != utn_result:
+                        failure_count += 1
+                        diffing = f"!{failure_count}"
+                    with tag("tr"):
+                        with tag("td"):
+                            text(rule_id)
+                        with tag("td"):
+                            text(string)
+                            doc.stag("br")
+                            text(string_annotation)
+                        for content in [expectation, graphically_folded_expectation, utn_result, diffing]:
+                            with tag("td"):
+                                text(content)
+
+    for cp_int, count in unknown_cps.most_common():
+        print(count, f"U+{cp_int:04X}", unicodedata.name(chr(cp_int), "—"), end=", ")
+    print()
+    print(f"{failure_count} differences out of {case_count} test cases.")
+
+    (project_dir / "tests" / "index.html").write_text(yattag.indent(doc.getvalue()))
 
 
 def convert_glyph_name_to_graphical_pua(name: str) -> str:
@@ -87,7 +116,7 @@ def fold_phonetic_pua(cp: str, mapping: dict) -> str:
         ]:
             normalized_cp = cp
         else:
-            unknown_cps[cp_int] = None
+            unknown_cps.update([cp_int])
     if normalized_cp is None:
         normalized_cp = f"[{cp}]"
     return normalized_cp

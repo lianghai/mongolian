@@ -348,10 +348,18 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
+[[package]]
+name = "yattag"
+version = "1.14.0"
+description = "Generate HTML or XML in a pythonic way. Pure python alternative to web template engines.Can fill HTML forms with default values and error messages."
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9372cfd722ac6d0c7f6e5b3e3cc80ee1cf23d96fde07e45c2a09a5cd7c39d26e"
+content-hash = "1df152cc6964bad0507b75bd9cb90d0cb47e84a3942ffbec8a71d506f7e6c3cf"
 
 [metadata.files]
 appdirs = [
@@ -616,4 +624,7 @@ uharfbuzz = [
     {file = "uharfbuzz-0.14.0-cp38-cp38-win32.whl", hash = "sha256:610d3b1cf4266a09c840864630fb81863caf7d28f2947b753011966ea64917d4"},
     {file = "uharfbuzz-0.14.0-cp38-cp38-win_amd64.whl", hash = "sha256:8ed530cc60a2689f9dba642be2e5dc5e1e7efce7cfb3da85178abd37d25a51fe"},
     {file = "uharfbuzz-0.14.0.zip", hash = "sha256:965d79ec2d884937431cc627ce87a32052073a92a10ebd7224a707a8084388c5"},
+]
+yattag = [
+    {file = "yattag-1.14.0.tar.gz", hash = "sha256:5731a31cb7452c0c6930dd1a284e0170b39eee959851a2aceb8d6af4134a5fa8"},
 ]
