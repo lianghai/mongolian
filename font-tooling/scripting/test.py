@@ -65,7 +65,8 @@ def main():
                     if graphically_folded_expectation != utn_result:
                         failure_count += 1
                         diffing = f"!{failure_count}"
-                    with tag("tr"):
+                    attributes = [("class", "diff")] if diffing else []
+                    with tag("tr", *attributes):
                         with tag("td"):
                             text(rule_id)
                         with tag("td"):

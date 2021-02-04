@@ -7,34 +7,39 @@ body {
     font-family: monospace;
 }
 
-td {
-    border-top: 1px solid black;
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    height: 50px;
+}
+
+tr.diff {
+    background-color: lightcoral;
 }
 
 td {
+    border-top: 1px solid black;
     text-align: center;
 }
 
 td:nth-child(1) {
     width: 100px;
 }
-
 td:nth-child(2) {
     width: 200px;
 }
-
 td:nth-child(3) {
     width: 100px;
     font-family: "Menksoft PUA";
     font-size: 20px;
 }
-
 td:nth-child(4), td:nth-child(5) {
     width: 200px;
     font-family: "Menksoft PUA";
     font-size: 30px;
 }
-
 td:nth-child(6) {
     width: 100px;
 }
