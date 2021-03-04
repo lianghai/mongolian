@@ -39,7 +39,7 @@ feature rclt {
     lookup III.a_e.chachlag;
     lookup III.o_u_oe_ue.marked;
     lookup III.n_j_y_w_h_g.chachlag_onset;
-    lookup III.n_d.onset_and_devsger;
+    lookup III.n_t_d.onset_and_devsger;
     lookup III.h_g.onset_and_devsger_and_gender.A;
     lookup III.h_g.onset_and_devsger_and_gender.B;
     lookup III.ig.postprocessing;
