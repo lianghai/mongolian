@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Optional
 
 import yaml
-from tptqutils.script import Script
+from tptqutils.script import BaseScript
 
 scripting_dir = Path(__file__).parent
 project_dir = scripting_dir / ".."
@@ -183,9 +183,10 @@ class WrittenUnit:
                 return instance
 
 
-class Mongolian(Script):
+class Mongolian(BaseScript):
 
     code = "Mong"
+    source_glyph_name_to_standard = {}
 
     categorization = Category.load(parse_yaml("categorization"))
 
@@ -199,5 +200,4 @@ class Mongolian(Script):
         written_unit = WrittenUnit.load(data)
         written_units[written_unit.id] = written_unit
 
-    def __init__(self):
-        raise NotImplementedError
+mongolian = Mongolian()

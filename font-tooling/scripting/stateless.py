@@ -60,7 +60,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
         for joining_form in otl.JOINING_FORM_TAGS:
             with f.Lookup(f"IIa.{joining_form}") as lookup:
                 for name in Mong.categorization.letter:
-                    lookup.sub(name, by = mong(name, None, joining_form))
+                    lookup.sub(name).by(mong(name, None, joining_form))
 
     abstract_variant_to_definite = {}
     condition_to_substitutions = dict[str, dict[tuple[str, tuple[Identity, ...]], Identity]]()
@@ -76,20 +76,21 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                     abstract_variant_to_definite[abstract_variant] = variant_glyph
                 else:
                     # Prevent the validation of contextual availability from failing in Lookup.sub:
-                    builder.shaped_glyph_names[builder.glyph_space[variant_glyph]] = None
+                    builder.shaped_glyph_names.update([builder.glyph_space[variant_glyph]])
                     joining_form_class_name = make_class_name(name, joining_form)
                     affected_variants: tuple[Identity, ...] = tuple(
-                        identity for variant in variants
-                        if (identity := mong(name, variant.written_units, joining_form)) != variant_glyph
-                        and not variant.is_manual
+                        [abstract_variant] + [
+                            identity for variant in variants
+                            if (identity := mong(name, variant.written_units, joining_form)) != variant_glyph
+                            and not variant.is_manual
+                        ]
                     )
                     for condition in variant.conditions:
                         if condition == "fallback":
                             abstract_variant_to_fallback[abstract_variant] = variant_glyph
                         else:
-                            condition_to_substitutions.setdefault(condition, {})[
-                                joining_form_class_name, (abstract_variant, *affected_variants),
-                            ] = variant_glyph
+                            substitutions = condition_to_substitutions.setdefault(condition, {})
+                            substitutions[joining_form_class_name, affected_variants] = variant_glyph
                     fvs = f"fvs{variant.fvs}"
                     affected_variants_and_fvs_to_manual[
                         joining_form_class_name, affected_variants, fvs,
@@ -101,7 +102,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 for (joining_form_class_name, affected_variants), variant in substitutions.items():
                     class_name = f"{joining_form_class_name}.for_{condition}"
                     f.glyph_class(class_name, [*affected_variants])
-                    lookup.sub(class_name, by=variant)
+                    lookup.sub(class_name).by(variant)
 
     format_controls = [*format_control.mvs, *format_control.fvs]
     effective_format_controls = [f"{i}.effective" for i in format_controls]
@@ -112,7 +113,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             for name in Mong.categorization.letter.vowel.masculine:
                 for joining_form in otl.JOINING_FORM_TAGS:
                     abstract_variant = mong(name, None, joining_form)
-                    lookup.sub(abstract_variant, by = (abstract_variant, "masculine"))
+                    lookup.sub(abstract_variant).by(abstract_variant, "masculine")
 
         f.glyph_class("@signal.masculine", ["masculine"])
 
@@ -123,7 +124,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
             ]:
                 for joining_form in otl.JOINING_FORM_TAGS:
                     abstract_variant = mong(name, None, joining_form)
-                    lookup.sub(prefix="masculine", target=abstract_variant, by = (abstract_variant, "masculine"))
+                    lookup.prefix("masculine").sub(abstract_variant).by(abstract_variant, "masculine")
 
         with f.Lookup("III.ig.preprocessing.C") as lookup:
             for name in [
@@ -135,7 +136,8 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                     continue
                 for joining_form in otl.JOINING_FORM_TAGS:
                     abstract_variant = mong(name, None, joining_form)
-                    lookup.sub((abstract_variant, "masculine"), by=abstract_variant)
+                    # lookup.sub(abstract_variant, "masculine").by(abstract_variant)
+                    lookup.sub(abstract_variant, "masculine").by(abstract_variant)
 
         f.glyph_class("@consonant.init", [
             make_class_name(name, "init") for name in Mong.categorization.letter.consonant
@@ -163,90 +165,63 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         with f.Lookup("_.effective") as _effective:
             for origin, effective in zip(format_controls, effective_format_controls):
-                _effective.sub(origin, by=effective)
+                _effective.sub(origin).by(effective)
 
         with f.Lookup("III.a_e.chachlag").flag("IgnoreMarks") as lookup:
             # @letter.chachlag_eligible -> <chachlag> / MVS _
             c = "chachlag"
-            lookup.sub(
-                ("mvs", for_condition(c, ["@a", "@e"])),  # type: ignore
-                chain=(_effective, conditions(c)),
-            )
+            lookup.sub("mvs", for_condition(c, ["@a", "@e"])).chain(_effective, conditions(c))  # type: ignore
 
         with f.Lookup("III.o_u_oe_ue.marked").flag("IgnoreMarks") as lookup:
-            lookup.sub(
-                prefix="@consonant.init", target=["@o", "@u", "@oe", "@ue"],
-                chain=conditions("marked"),
-            )
+            lookup.prefix("@consonant.init").sub(["@o", "@u", "@oe", "@ue"]).chain(conditions("marked"))
 
         with f.Lookup("III.n_j_y_w_h_g.chachlag_onset").flag("IgnoreMarks") as lookup:
             c = "chachlag_onset"
-            lookup.sub(
-                for_condition(c, ["@n", "@j", "@y", "@w"]), suffix=("mvs.effective", ["a.Aa.isol", "e.Aa.isol"]),  # type: ignore
-                chain=conditions(c),
-            )
-            lookup.sub(
-                for_condition(c, ["@h", "@g"]), suffix=("mvs.effective", "a.Aa.isol"),  # type: ignore
-                chain=conditions(c),
-            )
+            lookup.sub(for_condition(c, ["@n", "@j", "@y", "@w"])).suffix("mvs.effective", ["a.Aa.isol", "e.Aa.isol"]).chain(conditions(c))  # type: ignore
+            lookup.sub(for_condition(c, ["@h", "@g"])).suffix("mvs.effective", "a.Aa.isol").chain(conditions(c))  # type: ignore
 
-        with f.Lookup("III.n_d.onset_and_devsger").flag("IgnoreMarks") as lookup:
-            lookup.sub(["@n", "@d"], suffix="@vowel", chain=conditions("onset"))
-            lookup.sub(prefix="@vowel", target=["@n", "@d"], chain=conditions("devsger"))
+        with f.Lookup("III.n_t_d.onset_and_devsger").flag("IgnoreMarks") as lookup:
+            lookup.sub(["@n", "@t", "@d"]).chain(conditions("onset")).suffix("@vowel")
+            lookup.prefix("@vowel").sub(["@n", "@d"]).chain(conditions("devsger"))
 
         with f.Lookup("III.h_g.onset_and_devsger_and_gender.A").flag("IgnoreMarks") as lookup:
-            lookup.sub(["@h", "@g"], suffix="@vowel.masculine", chain=conditions("masculine_onset"))
-            lookup.sub(["@h", "@g"], suffix=["@vowel.feminine", "@vowel.neuter"], chain=conditions("feminine"))
-            lookup.sub(prefix="@vowel.masculine", target="@g", chain=conditions("masculine_devsger"))
-            lookup.sub(prefix="@vowel.feminine", target="@g", chain=conditions("feminine"))
+            lookup.sub(["@h", "@g"]).chain(conditions("masculine_onset")).suffix("@vowel.masculine")
+            lookup.sub(["@h", "@g"]).chain(conditions("feminine")).suffix(["@vowel.feminine", "@vowel.neuter"])
+            lookup.prefix("@vowel.masculine").sub("@g").chain(conditions("masculine_devsger"))
+            lookup.prefix("@vowel.feminine").sub("@g").chain(conditions("feminine"))
 
         with f.Lookup("III.h_g.onset_and_devsger_and_gender.B").flag(mark_filtering_set="@signal.masculine") as lookup:
-            lookup.sub(ignore=True, target="@g", suffix="@vowel")
-            lookup.sub(ignore=True, target="@g", suffix=("masculine", "@vowel"))
-            lookup.sub(prefix="@i", target="@g", suffix="masculine", chain=conditions("masculine_devsger"))
-            lookup.sub(prefix="@i", target="@g", chain=conditions("feminine"))
+            lookup.ignore().sub("@g").suffix("@vowel")
+            lookup.ignore().sub("@g").suffix("masculine", "@vowel")
+            lookup.prefix("@i").sub("@g").chain(conditions("masculine_devsger")).suffix("masculine")
+            lookup.prefix("@i").sub("@g").chain(conditions("feminine"))
 
         with f.Lookup("III.ig.postprocessing") as lookup:
             name = "g"
             for joining_form, variants in Mong.characters[name].variants_by_joining_form.items():
                 for variant in variants:
                     variant = mong(name, variant.written_units, joining_form)
-                    lookup.sub((variant, "masculine"), by=variant)
+                    lookup.sub(variant, "masculine").by(variant)
 
         with f.Lookup("III.a_i_u_ue_d.particle").flag("IgnoreMarks") as lookup:
             c = "particle"
-            lookup.sub(
-                ("mvs", for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])),  # type: ignore
-                chain=(_effective, conditions(c)),
-            )
-            lookup.sub(
-                ("mvs", "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])),  # type: ignore
-                chain=(_effective, None, conditions(c)),
-            )
+            lookup.sub("mvs", for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])).chain(_effective, conditions(c))  # type: ignore
+            lookup.sub("mvs", "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])).chain(_effective, None, conditions(c))  # type: ignore
 
         with f.Lookup("III.definite") as lookup:
             for abstract, definite in abstract_variant_to_definite.items():
-                lookup.sub(abstract, by=definite)
+                lookup.sub(abstract).by(definite)
 
         # h.medi fallback is not appropriate for the undefined devsger.
         with f.Lookup("III.fallback") as lookup:
             for abstract, fallback in abstract_variant_to_fallback.items():
-                lookup.sub(abstract, by=fallback)
+                lookup.sub(abstract).by(fallback)
 
         with f.Lookup("III.y.dictionary_particle").flag("IgnoreMarks") as lookup:
             c = "dictionary_particle"
-            lookup.sub(
-                prefix=("mvs.effective", "i.I.init"), target="y.Y.medi", suffix=(["a.A.medi", "e.A.medi"], ["n.A.fina", "r.R.fina"]),
-                chain=conditions(c),
-            )
-            lookup.sub(
-                ("mvs", "y.Y.init"), suffix="i.I.fina",
-                chain=(_effective, conditions(c)),
-            )
-            lookup.sub(
-                ("mvs", "y.Y.init"), suffix=("i.I.medi", "n.A.fina"),
-                chain=(_effective, conditions(c)),
-            )
+            lookup.prefix("mvs.effective", "i.I.init").sub("y.Y.medi").chain(conditions(c)).suffix(["a.A.medi", "e.A.medi"], ["n.A.fina", "r.R.fina"])
+            lookup.sub("mvs", "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.fina")
+            lookup.sub("mvs", "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.medi", "n.A.fina")
 
         with f.Lookup("III.i.devsger").flag("IgnoreMarks") as lookup:
             lookup.glyph_class(context_class_name := "@vowel.not_ending_with_I", [
@@ -256,7 +231,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 for v in variants
                 if (not v.is_manual) and v.written_units[-1] != "I"
             ])
-            lookup.sub(prefix=context_class_name, target="@i", chain=conditions("devsger"))
+            lookup.prefix(context_class_name).sub("@i").chain(conditions("devsger"))
 
         with f.Lookup("III.o_u_oe_ue.post_bowed").flag("IgnoreMarks") as lookup:
             lookup.glyph_class(context_class_name := "@B_P_G_Gx_F_K", [
@@ -273,7 +248,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 for v in variants
                 if (not v.is_manual) and v.written_units == ["U"]
             ])
-            lookup.sub(prefix=context_class_name, target=target_class_name, chain=conditions("post_bowed"))
+            lookup.prefix(context_class_name).sub(target_class_name).chain(conditions("post_bowed"))
 
         with f.Lookup("III.fvs") as lookup:
 
@@ -281,26 +256,26 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
                 for (joining_form_class_name, affected_variants, fvs), manual in affected_variants_and_fvs_to_manual.items():
                     class_name = f"{joining_form_class_name}.for_{fvs}"
                     f.glyph_class(class_name, [*affected_variants])
-                    _manual.sub(class_name, suffix=fvs, by=manual)
+                    _manual.sub(class_name).suffix(fvs).by(manual)
 
             for (joining_form_class_name, _, fvs), manual in affected_variants_and_fvs_to_manual.items():
                 class_name = f"{joining_form_class_name}.for_{fvs}"
-                lookup.sub((class_name, fvs), chain=(_manual, _effective))
+                lookup.sub(class_name, fvs).chain(_manual, _effective)
 
         with f.Lookup("IIb.hide_effective_format_controls") as lookup:
-            lookup.sub([*effective_format_controls], by="nil")
+            lookup.sub([*effective_format_controls]).by("nil")
 
         preserved_format_controls = [*format_control.mvs, *format_control.fvs, "nil"]
         with f.Lookup("IIb.preserve_format_controls.A") as lookup:
             for name in preserved_format_controls:
-                lookup.sub(name, by = (f"_{name}", "_helper"))
+                lookup.sub(name).by(f"_{name}", "_helper")
         with f.Lookup("IIb.preserve_format_controls.B") as lookup:
             for name in preserved_format_controls:
-                lookup.sub((f"_{name}", "_helper"), by=f"_{name}")
+                lookup.sub(f"_{name}", "_helper").by(f"_{name}")
 
         # Fails to restore advance for GDEF marks in HarfBuzz. Using GSUB instead.
         with f.Lookup("IIb.restore_GDEF_mark_advances") as lookup:
-            lookup.sub("masculine", by="_masculine")
+            lookup.sub("masculine").by("_masculine")
 
     with builder.File(directory / "lookups-test.fea") as f:
 
@@ -329,11 +304,11 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         with f.Lookup("test.ss01.wipe_phonetic_information") as lookup:
             for origin, (written_unit_parts, _) in origin_to_alts.items():
-                lookup.sub(origin, by=written_unit_parts)
+                lookup.sub(origin).by(*written_unit_parts)
 
         with f.Lookup("test.ss02.menksoft_pua") as lookup:
             for origin, (_, pua_parts) in origin_to_alts.items():
-                lookup.sub(origin, by=pua_parts)
+                lookup.sub(origin).by(*pua_parts)
 
     with builder.File(path) as f:
 
@@ -354,7 +329,7 @@ def make_otl_code_file(builder: otl.CodeBuilder, path: Path):
 
         with f.Feature("ccmp") as feature:
             with feature.Lookup("Ia.unification") as lookup:
-                lookup.sub("k2", by="k")
+                lookup.sub("k2").by("k")
 
         f.include("lookups-joining.fea")
 

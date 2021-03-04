@@ -4,16 +4,12 @@ import re
 from functools import partial
 from pathlib import Path
 
-from fontmake.font_project import FontProject
-from tptqscripttools.data import REGISTER as LegacyScriptRegister
-from tptqscripttools.objects import \
-    DevelopmentNaming as LegacyDevelopmentNaming
+import defcon
 from tptqutils.otl import CodeBuilder, GlyphNotInSourceFontError
 from tptqutils.script import Common
-from ufoLib2.objects import Font
 
 import stateless
-from data import Mongolian
+from data import mongolian
 
 scripting_dir = Path(__file__).parent
 project_dir = scripting_dir / ".."
@@ -51,23 +47,23 @@ product_format = "otf"
 def main():
 
     builder = CodeBuilder(
-        script = Mongolian,
-        source_font = source_ufo_path,
-        validate_glyph_availability_in_source_font = False,
-        implied_script_codes = [Common.code, Mongolian.code],
+        script=mongolian,
+        source_font=defcon.Font(source_ufo_path),
+        validate_glyph_availability=False,
+        implied_script_codes=[Common.code, mongolian.code],
     )
 
-    for name in Mongolian.characters.keys():
+    for name in mongolian.characters.keys():
         try:
             name = builder.glyph_space[name]
         except GlyphNotInSourceFontError:
             continue
-        builder.shaped_glyph_names[name] = None
+        builder.shaped_glyph_names.update([name])
 
     additional_cmaps = ["k2"]
     for name in additional_cmaps:
-        name = builder.glyph_space.__getitem__(name, validate_glyph_availability_in_source_font=False)
-        builder.shaped_glyph_names[name] = None
+        name = builder.glyph_space.__getitem__(name, validate_glyph_availability=False)
+        builder.shaped_glyph_names.update([name])
 
     stateless.make_otl_code_file(builder, otl_path)
 
@@ -83,18 +79,21 @@ def main():
                 else:
                     inlined_otl.write(line)
 
+    from tptqscripttools.data import REGISTER as LegacyScriptRegister
+    from tptqscripttools.objects import DevelopmentNaming as LegacyDevelopmentNaming
+
     class LegacySimpleNaming(LegacyDevelopmentNaming):
         make_name = partial(
             LegacyDevelopmentNaming.make_name,
-            implied_script_codes = [Common.code, Mongolian.code],
+            implied_script_codes = [Common.code, mongolian.code],
         )
 
-    legacy_script = LegacyScriptRegister.script_by_code[Mongolian.code]
+    legacy_script = LegacyScriptRegister.script_by_code[mongolian.code]
     legacy_script.export_otl_dummy_font(
         product_dir,
-        source_ufo_path = source_ufo_path,
-        naming = LegacySimpleNaming,
-        feature_file_path = inlined_otl_path,
+        source_ufo_path,
+        naming=LegacySimpleNaming,
+        feature_file_path=inlined_otl_path,
     )
 
 
