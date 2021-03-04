@@ -10,6 +10,21 @@ from data import Character
 from data import Mongolian as Mong
 from utils import slice_joining_form
 
+NON_HUDUM_CODE_POINTS = "᠆᠈᠉ᡃᡄᡅᡆᡇᡈᡉᡊᡋᡌᡍᡎᡏᡐᡑᡒᡓᡔᡕᡖᡗᡘᡙᡚᡛᡜᡝᡞᡟᡠᡡᡢᡣᡤᡥᡦᡧᡨᡩᡪᡫᡬᡭᡮᡯᡰᡱᡲᡳᡴᡵᡶᡷᡸᢀᢁᢂᢃᢄᢅᢆᢇᢈᢉᢊᢋᢌᢍᢎᢏᢐᢑᢒᢓᢔᢕᢖᢗᢘᢙᢚᢛᢜᢝᢞᢟᢠᢡᢢᢣᢤᢥᢦᢧᢨᢩᢪ𑙠𑙡𑙢𑙣𑙤𑙥𑙦𑙧𑙨𑙩𑙪𑙫𑙬"
+
+FURTHER_FOLDING = str.maketrans({
+    0xE27E: 0xE280,
+    0xE31D: 0xE280,
+    0xE30C: 0xE309,
+    0xE30B: 0xE310,
+    0xE317: 0xE315,
+    0xE320: 0xE31E,
+    0xE326: 0xE322,
+    0xE2B0: 0xE329,
+    0xE341: 0xE33F,
+    0xE344: 0xE342,
+})
+
 scripting_dir = Path(__file__).parent
 project_dir = scripting_dir / ".."
 repo_dir = scripting_dir / ".." / ".."
@@ -48,19 +63,23 @@ def main():
             for rule in json.loads(data)["rulelist"]:
                 rule_id = rule["ruleindex"]
                 for case in rule["rulewords"]:
-                    case_count += 1
                     string = case["word"]
+                    if any(i in NON_HUDUM_CODE_POINTS for i in string):
+                        continue
+                    case_count += 1
                     string_annotation = " ".join(
                         cp_to_name.get(i, f"[{i}]") for i in string
                     )
                     expectation = case["shape"]
                     graphically_folded_expectation = "".join(
                         fold_phonetic_pua(cp, phonetic_pua_to_folded_mapping) for cp in expectation
-                    ).strip()
+                    ).strip().translate(FURTHER_FOLDING)
                     utn_result = "".join(
-                        convert_glyph_name_to_graphical_pua(i)
-                        for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
-                    ).strip()
+                        FURTHER_FOLDING.get(i) or i for i in (
+                            convert_glyph_name_to_graphical_pua(i)
+                            for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
+                        )
+                    ).strip().translate(FURTHER_FOLDING)
                     diffing = ""
                     if graphically_folded_expectation != utn_result:
                         failure_count += 1
@@ -89,7 +108,8 @@ def convert_glyph_name_to_graphical_pua(name: str) -> str:
     if name in ["nirugu"]:
         return ""
     elif name.startswith("pua"):
-        return chr(int(name.removeprefix("pua"), 16))
+        cp = chr(int(name.removeprefix("pua"), 16))
+        return cp
     else:
         if name in ["_" + i for i in [*Mong.categorization.format_control.mvs, *Mong.categorization.format_control.fvs]]:
             name = name.removeprefix("_")
@@ -104,9 +124,9 @@ def convert_glyph_name_to_graphical_pua(name: str) -> str:
 def fold_phonetic_pua(cp: str, mapping: dict) -> str:
     cp_int = ord(cp)
     normalized_cp = None
-    if cp in [
-        chr(0xE23A),  # MONGOLIAN TODO SOFT HYPHEN
-        chr(0xE23E),  # nirugu
+    if cp_int in [
+        0xE23A,  # MONGOLIAN TODO SOFT HYPHEN
+        0xE23E,  # nirugu
     ]:
         return ""
     elif folded := mapping.get(cp):
