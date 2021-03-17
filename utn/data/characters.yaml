@@ -747,6 +747,19 @@
       - written_units: [.F]
         menksoft_puas: [0xE32F]
 
+- cp: 0x183A # ᠺ MONGOLIAN LETTER KA  # EAC compatibility
+  id: "k2"
+  variants_by_joining_form:
+    init:
+      - written_units: [.K2]
+        # menksoft_puas: [0xE333, 0xE334, 0xE339, 0xE33A]
+    medi:
+      - written_units: [.K2]
+        # menksoft_puas: [0xE336, 0xE337, 0xE338, 0xE33C, 0xE33D, 0xE33E]
+    fina:
+      - written_units: [.K2]
+        # menksoft_puas: [0xE335, 0xE33B]
+
 - cp: 0x183B # ᠻ MONGOLIAN LETTER KHA
   id: "k"
   variants_by_joining_form:

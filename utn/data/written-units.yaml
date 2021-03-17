@@ -346,6 +346,20 @@
       represented_letters: [.f]
       menksoft_pua: 0xE32F
 
+- id: "K2"  # EAC compatibility
+  variant_by_joining_form:
+    init:
+      represented_letters: [.k2]
+      orthogonally_joining_types: [.leading]
+      menksoft_pua: 0xE338
+    medi:
+      represented_letters: [.k2]
+      orthogonally_joining_types: [.leading]
+      menksoft_pua: 0xE338
+    fina:
+      represented_letters: [.k2]
+      menksoft_pua: 0xE335
+
 - id: "K"
   variant_by_joining_form:
     init:

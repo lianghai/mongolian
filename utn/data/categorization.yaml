@@ -18,7 +18,7 @@ letter:
   consonant: [
     .aleph,
     .n, .ng, .b, .p, .h, .g, .m, .l, .s, .sh, .t, .d, .ch, .j, .y, .r, .w,
-    .f, .k, .c, .z, .hh, .rh, .lh, .zr, .cr,
+    .f, .k2, .k, .c, .z, .hh, .rh, .lh, .zr, .cr,
   ]
 
 ...
