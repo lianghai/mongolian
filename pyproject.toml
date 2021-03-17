@@ -1,17 +1,17 @@
 [tool.poetry]
 name = "mongolian"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Liang Hai <lianghai@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+fontmake = "^2.3.0"
 PyYAML = "^5.3.1"
 ufoLib2 = "^0.10.0"
-tptqscripttools = { path = "../tptq/script-tools/", develop = true }
-"tptq.utils" = { path = "../tptq/utils/", develop = true }
-fontmake = "^2.3.0"
 yattag = "^1.14.0"
+tptqscripttools = { git = "https://github.com/typotheque/script-tools.git", rev = "f435ec1" }
+"tptq.utils" = { git = "https://github.com/typotheque/utils.git", rev = "2257f0d" }
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"

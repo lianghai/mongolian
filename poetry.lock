@@ -301,7 +301,7 @@ description = ""
 category = "main"
 optional = false
 python-versions = "^3.9"
-develop = true
+develop = false
 
 [package.dependencies]
 defcon = "^0.7.2"
@@ -314,8 +314,10 @@ ufo2ft = "^2.19.2"
 uharfbuzz = "^0.14.0"
 
 [package.source]
-type = "directory"
-url = "../tptq/utils"
+type = "git"
+url = "https://github.com/typotheque/utils.git"
+reference = "2257f0d"
+resolved_reference = "2257f0d2b2021facfbad52a23fda67e96a2ceea9"
 
 [[package]]
 name = "tptqscripttools"
@@ -324,7 +326,7 @@ description = ""
 category = "main"
 optional = false
 python-versions = "^3.9"  # 3.9: PEP 585, 616, …; 3.8: PEP 572, 570, 589…
-develop = true
+develop = false
 
 [package.dependencies]
 defcon = "^0.7.2"
@@ -334,8 +336,10 @@ regex = "^2020.10.15"
 uharfbuzz = "^0.14.0"
 
 [package.source]
-type = "directory"
-url = "../tptq/script-tools"
+type = "git"
+url = "https://github.com/typotheque/script-tools.git"
+reference = "f435ec1"
+resolved_reference = "f435ec1abc154a2184620c8a4f3db41595f3be8d"
 
 [[package]]
 name = "ufo2ft"
@@ -390,7 +394,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "29abc28074e85432f579c710ddfcd3d442543759d9c28ccb7d133433542d1aab"
+content-hash = "46bcb1983a9c880e9ededce4682ad3967b55286c27b22db8da437d35b01a330b"
 
 [metadata.files]
 appdirs = [
