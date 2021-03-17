@@ -33,8 +33,22 @@ fonttools = ">=4.0.2"
 pyclipper = ">=1.1.0.post1"
 
 [[package]]
+name = "cattrs"
+version = "1.3.0"
+description = "Composable complex class support for attrs."
+category = "main"
+optional = false
+python-versions = "~=3.7"
+
+[package.dependencies]
+attrs = ">=20.1.0"
+
+[package.extras]
+dev = ["bumpversion", "wheel", "watchdog", "flake8", "tox", "coverage", "sphinx", "pytest", "pytest-benchmark", "hypothesis", "pendulum", "isort", "black"]
+
+[[package]]
 name = "cffsubr"
-version = "0.2.7"
+version = "0.2.8"
 description = "Standalone CFF subroutinizer based on the AFDKO tx tool"
 category = "main"
 optional = false
@@ -88,20 +102,20 @@ pens = ["fontPens (>=0.1.0)"]
 
 [[package]]
 name = "flake8"
-version = "3.8.4"
+version = "3.9.0"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [package.dependencies]
 mccabe = ">=0.6.0,<0.7.0"
-pycodestyle = ">=2.6.0a1,<2.7.0"
-pyflakes = ">=2.2.0,<2.3.0"
+pycodestyle = ">=2.7.0,<2.8.0"
+pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "fontmake"
-version = "2.3.0"
+version = "2.3.1"
 description = "Compile fonts from sources (UFO, Glyphs) to binary (OpenType, TrueType)."
 category = "main"
 optional = false
@@ -134,7 +148,7 @@ fonttools = ">=3.32.0"
 
 [[package]]
 name = "fonttools"
-version = "4.19.1"
+version = "4.21.1"
 description = "Tools to manipulate font files"
 category = "main"
 optional = false
@@ -221,7 +235,7 @@ python-versions = "*"
 
 [[package]]
 name = "pycodestyle"
-version = "2.6.0"
+version = "2.7.0"
 description = "Python style guide checker"
 category = "dev"
 optional = false
@@ -229,7 +243,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pyflakes"
-version = "2.2.0"
+version = "2.3.0"
 description = "passive checker of Python programs"
 category = "dev"
 optional = false
@@ -268,8 +282,44 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "statmake"
+version = "0.3.0"
+description = "Applies STAT information from a Stylespace to a variable font."
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[package.dependencies]
+attrs = ">=18.2"
+cattrs = ">=1.0,<2.0"
+fonttools = {version = ">=4.11,<5.0", extras = ["ufo"]}
+
+[[package]]
+name = "tptq.utils"
+version = "0.2.5"
+description = ""
+category = "main"
+optional = false
+python-versions = "^3.9"
+develop = true
+
+[package.dependencies]
+defcon = "^0.7.2"
+fontmake = "^2.3.1"
+fonttools = "^4.18.1"
+glyphsLib = "^5.3.1"
+regex = "^2020.11.13"
+statmake = "^0.3.0"
+ufo2ft = "^2.19.2"
+uharfbuzz = "^0.14.0"
+
+[package.source]
+type = "directory"
+url = "../tptq/utils"
+
+[[package]]
 name = "tptqscripttools"
-version = "0.6.0"
+version = "0.6.1"
 description = ""
 category = "main"
 optional = false
@@ -288,27 +338,8 @@ type = "directory"
 url = "../tptq/script-tools"
 
 [[package]]
-name = "tptqutils"
-version = "0.1.0"
-description = ""
-category = "main"
-optional = false
-python-versions = "^3.9"
-develop = true
-
-[package.dependencies]
-defcon = "^0.7.2"
-fonttools = "^4.18.1"
-glyphsLib = "^5.3.1"
-regex = "^2020.11.13"
-
-[package.source]
-type = "directory"
-url = "../tptq/tptqutils"
-
-[[package]]
 name = "ufo2ft"
-version = "2.19.1"
+version = "2.19.2"
 description = "A bridge between UFOs and FontTools."
 category = "main"
 optional = false
@@ -359,7 +390,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1df152cc6964bad0507b75bd9cb90d0cb47e84a3942ffbec8a71d506f7e6c3cf"
+content-hash = "29abc28074e85432f579c710ddfcd3d442543759d9c28ccb7d133433542d1aab"
 
 [metadata.files]
 appdirs = [
@@ -374,12 +405,16 @@ booleanoperations = [
     {file = "booleanOperations-0.9.0-py3-none-any.whl", hash = "sha256:86c291c2fba9faedff6f007c932d7f242dd9b4304e9c6ca8149f864d07877a59"},
     {file = "booleanOperations-0.9.0.zip", hash = "sha256:8cfa821c32ad374fa120d6b2e0b444ebeac57c91e6631528645fa19ac2a281b8"},
 ]
+cattrs = [
+    {file = "cattrs-1.3.0-py3-none-any.whl", hash = "sha256:f92ca39ccb7373289f9cccf71b86849a29a2d75370bc983e7bf579ce95bfccd8"},
+    {file = "cattrs-1.3.0.tar.gz", hash = "sha256:12688f56fbb7f54cf647d031669840e1ab0b9a198bf374a217fcb5be821855df"},
+]
 cffsubr = [
-    {file = "cffsubr-0.2.7-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:2bbb3465427e6ec314e7285648c2990ca1d9870e482a0b1e979f70ccda9f4f9a"},
-    {file = "cffsubr-0.2.7-py3-none-manylinux1_x86_64.whl", hash = "sha256:88a1520fa0f25f2334812c031ddba02dbce06cd6af0629a51204cb2066a3ec5c"},
-    {file = "cffsubr-0.2.7-py3-none-win32.whl", hash = "sha256:d0c7e740343c9a401b7907b956be43a1c3413656be48a9fcf175bf1a2712f389"},
-    {file = "cffsubr-0.2.7-py3-none-win_amd64.whl", hash = "sha256:30a59b59f67673e03b211e011456cd79e761297972ec4bb67f767807c7117f06"},
-    {file = "cffsubr-0.2.7.tar.gz", hash = "sha256:c30a35d2ffcc2d23826757cba9917884cbdb999760d847c6d83b708ebb80c973"},
+    {file = "cffsubr-0.2.8-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:20e63bc558742c6ef8ba3e0fbc47fb3e09d15b0ed8a2ee399ee0c777ff822b4b"},
+    {file = "cffsubr-0.2.8-py3-none-manylinux1_x86_64.whl", hash = "sha256:ba1d2404f66f95bd0616ec30c6d99d36785afb8be20cd98652e20677ef60b359"},
+    {file = "cffsubr-0.2.8-py3-none-win32.whl", hash = "sha256:9536983368abef185d5abaa4a8c1acade7281a4d1f2b38efc32daadb22d4eaa9"},
+    {file = "cffsubr-0.2.8-py3-none-win_amd64.whl", hash = "sha256:2f9f4b2559fbb0084e54d62ebb122e31cc4d5653c0328d4ee5fd003fda98a4ec"},
+    {file = "cffsubr-0.2.8.tar.gz", hash = "sha256:e24bd03c94944e1536ec8437ab83fb4ac38477412426c1ffd4e056dd16cde235"},
 ]
 compreffor = [
     {file = "compreffor-0.5.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:57c738383a05b3d0745fa12576475706d2853694b645b1aad97d25b220edb373"},
@@ -430,20 +465,20 @@ defcon = [
     {file = "defcon-0.7.2.zip", hash = "sha256:1967eaa23dcc8e1cbe3bd130aae4d9ddb72027b62d3e23eeb640065cfbd6d8d1"},
 ]
 flake8 = [
-    {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
-    {file = "flake8-3.8.4.tar.gz", hash = "sha256:aadae8761ec651813c24be05c6f7b4680857ef6afaae4651a4eccaef97ce6c3b"},
+    {file = "flake8-3.9.0-py2.py3-none-any.whl", hash = "sha256:12d05ab02614b6aee8df7c36b97d1a3b2372761222b19b58621355e82acddcff"},
+    {file = "flake8-3.9.0.tar.gz", hash = "sha256:78873e372b12b093da7b5e5ed302e8ad9e988b38b063b61ad937f26ca58fc5f0"},
 ]
 fontmake = [
-    {file = "fontmake-2.3.0-py3-none-any.whl", hash = "sha256:2a974d44764429affb954ab6e47a02e22d2bb95a59f316f76056c2ca3a0b1325"},
-    {file = "fontmake-2.3.0.zip", hash = "sha256:8e6c5ba20e124d56fe68a9fcfa94caf20f5335f287b481decf2bd66c855e4ced"},
+    {file = "fontmake-2.3.1-py3-none-any.whl", hash = "sha256:2bc48bce15cf4d1c3992cdc3fcd4627e3bbf85661f60ec2ba19e0fa32ea4c7f3"},
+    {file = "fontmake-2.3.1.zip", hash = "sha256:02c34081f7e8a98f777d5f9e96b8c80270cc9d2b83ed558df4f5dcbc80dec8e8"},
 ]
 fontmath = [
     {file = "fontMath-0.6.0-py2.py3-none-any.whl", hash = "sha256:c823e0e607866f0740ba17f1933e7004a472879af1211f6751bda6b532c47c9d"},
     {file = "fontMath-0.6.0.zip", hash = "sha256:5a93002bfdcacd16b117b498f6e5ffa5d8fd263ccd8c587d9aa553e965c3ad27"},
 ]
 fonttools = [
-    {file = "fonttools-4.19.1-py3-none-any.whl", hash = "sha256:ccbdbde68b4a9f23d46178ef9ac8ad785b369db0d33a85802967121b3202fb7f"},
-    {file = "fonttools-4.19.1.zip", hash = "sha256:4a2b8450bd3b1c23e6259d37c0f1e403519c91b8373b83bb9e3c6e70748cf07b"},
+    {file = "fonttools-4.21.1-py3-none-any.whl", hash = "sha256:3e990e6de10c2d708fa79f1d0d93022d7e5fae1ff8cb94f69ee8d916e2512df8"},
+    {file = "fonttools-4.21.1.zip", hash = "sha256:d9cf618ab76afb42a79dcc0b4b5e5ee7ec1534f7ad9da3809bb15ddfcedc073d"},
 ]
 fs = [
     {file = "fs-2.4.12-py2.py3-none-any.whl", hash = "sha256:da6cc360677712ae27ac4be8a3ef404dd7970dbd1c3eebe87a25bebd94e84b4c"},
@@ -516,12 +551,12 @@ pyclipper = [
     {file = "pyclipper-1.2.1.zip", hash = "sha256:ca3751e93559f0438969c46f17459d07f983281dac170c3479de56492e152855"},
 ]
 pycodestyle = [
-    {file = "pycodestyle-2.6.0-py2.py3-none-any.whl", hash = "sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367"},
-    {file = "pycodestyle-2.6.0.tar.gz", hash = "sha256:c58a7d2815e0e8d7972bf1803331fb0152f867bd89adf8a01dfd55085434192e"},
+    {file = "pycodestyle-2.7.0-py2.py3-none-any.whl", hash = "sha256:514f76d918fcc0b55c6680472f0a37970994e07bbb80725808c17089be302068"},
+    {file = "pycodestyle-2.7.0.tar.gz", hash = "sha256:c389c1d06bf7904078ca03399a4816f974a1d590090fecea0c63ec26ebaf1cef"},
 ]
 pyflakes = [
-    {file = "pyflakes-2.2.0-py2.py3-none-any.whl", hash = "sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92"},
-    {file = "pyflakes-2.2.0.tar.gz", hash = "sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8"},
+    {file = "pyflakes-2.3.0-py2.py3-none-any.whl", hash = "sha256:910208209dcea632721cb58363d0f72913d9e8cf64dc6f8ae2e02a3609aba40d"},
+    {file = "pyflakes-2.3.0.tar.gz", hash = "sha256:e59fd8e750e588358f1b8885e5a4751203a0516e0ee6d34811089ac294c8806f"},
 ]
 pytz = [
     {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
@@ -597,11 +632,15 @@ six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
 ]
+statmake = [
+    {file = "statmake-0.3.0-py3-none-any.whl", hash = "sha256:dda870933a1623a77f826854cb9f95142c52241b1f8f47da40232ff5a564f758"},
+    {file = "statmake-0.3.0.tar.gz", hash = "sha256:465de5c91f03a6acd58a4e3daa44175a3c5d4c7de6c577da3858ad65ebcde21f"},
+]
+"tptq.utils" = []
 tptqscripttools = []
-tptqutils = []
 ufo2ft = [
-    {file = "ufo2ft-2.19.1-py2.py3-none-any.whl", hash = "sha256:bef229cffc3a860b74347987e10fd995e1a210bdffb6d3edd29f6e1405b1b85d"},
-    {file = "ufo2ft-2.19.1.zip", hash = "sha256:6062ffed395e0a596e4a524d6bc3186f21ab218b9c874b9efd9f40c8718b0396"},
+    {file = "ufo2ft-2.19.2-py2.py3-none-any.whl", hash = "sha256:bcbe45a1714a4dbe8bc62486b2ec62c5ebe1b9491e3a76f98c52ace30ea8db33"},
+    {file = "ufo2ft-2.19.2.zip", hash = "sha256:1a9db2fc52866fa025f8d15142804daf95a1ba1ddc19cc9d8511dcc274963f7a"},
 ]
 ufolib2 = [
     {file = "ufoLib2-0.10.1-py3-none-any.whl", hash = "sha256:899d0a90c7ca9a2793d8feb56dfec8bf945201cc640f0fb8909e57e8cfe4ca72"},

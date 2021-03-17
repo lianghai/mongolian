@@ -1,4 +1,4 @@
-from tptqutils.otl import File
+from tptq.utils.otl import File
 
 from data import Category
 

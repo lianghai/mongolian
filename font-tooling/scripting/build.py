@@ -5,8 +5,9 @@ from functools import partial
 from pathlib import Path
 
 import defcon
-from tptqutils.otl import CodeBuilder, GlyphNotInSourceFontError
-from tptqutils.script import Common
+from tptq.utils.glyph_set import SourceGlyphSet
+from tptq.utils.otl import GlyphNotInSourceFontError
+from tptq.utils.script import Common
 
 import stateless
 from data import mongolian
@@ -46,26 +47,23 @@ product_format = "otf"
 
 def main():
 
-    builder = CodeBuilder(
+    glyph_set = SourceGlyphSet(
         script=mongolian,
-        source_font=defcon.Font(source_ufo_path),
-        validate_glyph_availability=False,
+        font=defcon.Font(source_ufo_path),
         implied_script_codes=[Common.code, mongolian.code],
+        validate_glyph_availability=False,
     )
+
+    builder = glyph_set.otl_code_builder()
 
     for name in mongolian.characters.keys():
         try:
-            name = builder.glyph_space[name]
+            name = glyph_set[name]
         except GlyphNotInSourceFontError:
             continue
         builder.shaped_glyph_names.update([name])
 
-    additional_cmaps = ["k2"]
-    for name in additional_cmaps:
-        name = builder.glyph_space.__getitem__(name, validate_glyph_availability=False)
-        builder.shaped_glyph_names.update([name])
-
-    stateless.make_otl_code_file(builder, otl_path)
+    builder.build_with_writer(stateless.writer)
 
     # feaLib’s include() following somehow fails.
     inlined_otl_path = otl_dir / "stateless.fea"
