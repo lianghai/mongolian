@@ -135,6 +135,11 @@
 @f.medi = [f.medi];
 @f.fina = [f.fina];
 @f = [@f.isol @f.init @f.medi @f.fina];
+@k2.isol = [k2.isol];
+@k2.init = [k2.init];
+@k2.medi = [k2.medi];
+@k2.fina = [k2.fina];
+@k2 = [@k2.isol @k2.init @k2.medi @k2.fina];
 @k.isol = [k.isol];
 @k.init = [k.init];
 @k.medi = [k.medi];

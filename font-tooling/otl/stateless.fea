@@ -136,6 +136,11 @@
 @f.medi = [f.medi];
 @f.fina = [f.fina];
 @f = [@f.isol @f.init @f.medi @f.fina];
+@k2.isol = [k2.isol];
+@k2.init = [k2.init];
+@k2.medi = [k2.medi];
+@k2.fina = [k2.fina];
+@k2 = [@k2.isol @k2.init @k2.medi @k2.fina];
 @k.isol = [k.isol];
 @k.init = [k.init];
 @k.medi = [k.medi];
@@ -180,7 +185,7 @@
 @vowel.feminine = [@e @oe @ue @eh];
 @vowel.neuter = [@i];
 @vowel = [@vowel.masculine @vowel.feminine @vowel.neuter];
-@consonant = [@aleph @n @ng @b @p @h @g @m @l @s @sh @t @d @ch @j @y @r @w @f @k @c @z @hh @rh @lh @zr @cr];table GDEF {
+@consonant = [@aleph @n @ng @b @p @h @g @m @l @s @sh @t @d @ch @j @y @r @w @f @k2 @k @c @z @hh @rh @lh @zr @cr];table GDEF {
     GlyphClassDef , , [zwnj zwj nirugu fvs1 fvs2 fvs3 fvs4 nil masculine], ;
 } GDEF;
 
@@ -221,6 +226,7 @@ lookup IIa.isol {
     sub r by r.isol;
     sub w by w.isol;
     sub f by f.isol;
+    sub k2 by k2.isol;
     sub k by k.isol;
     sub c by c.isol;
     sub z by z.isol;
@@ -259,6 +265,7 @@ lookup IIa.init {
     sub r by r.init;
     sub w by w.init;
     sub f by f.init;
+    sub k2 by k2.init;
     sub k by k.init;
     sub c by c.init;
     sub z by z.init;
@@ -297,6 +304,7 @@ lookup IIa.medi {
     sub r by r.medi;
     sub w by w.medi;
     sub f by f.medi;
+    sub k2 by k2.medi;
     sub k by k.medi;
     sub c by c.medi;
     sub z by z.medi;
@@ -335,6 +343,7 @@ lookup IIa.fina {
     sub r by r.fina;
     sub w by w.fina;
     sub f by f.fina;
+    sub k2 by k2.fina;
     sub k by k.fina;
     sub c by c.fina;
     sub z by z.fina;
@@ -602,6 +611,10 @@ lookup III.ig.preprocessing.B {
     sub masculine f.init' by f.init masculine;
     sub masculine f.medi' by f.medi masculine;
     sub masculine f.fina' by f.fina masculine;
+    sub masculine k2.isol' by k2.isol masculine;
+    sub masculine k2.init' by k2.init masculine;
+    sub masculine k2.medi' by k2.medi masculine;
+    sub masculine k2.fina' by k2.fina masculine;
     sub masculine k.isol' by k.isol masculine;
     sub masculine k.init' by k.init masculine;
     sub masculine k.medi' by k.medi masculine;
@@ -726,6 +739,10 @@ lookup III.ig.preprocessing.C {
     sub f.init masculine by f.init;
     sub f.medi masculine by f.medi;
     sub f.fina masculine by f.fina;
+    sub k2.isol masculine by k2.isol;
+    sub k2.init masculine by k2.init;
+    sub k2.medi masculine by k2.medi;
+    sub k2.fina masculine by k2.fina;
     sub k.isol masculine by k.isol;
     sub k.init masculine by k.init;
     sub k.medi masculine by k.medi;
@@ -760,7 +777,7 @@ lookup III.ig.preprocessing.C {
     sub cr.fina masculine by cr.fina;
 } III.ig.preprocessing.C;
 
-@consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
+@consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k2.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
 lookup _.effective {
     sub mvs by mvs.effective;
     sub fvs1 by fvs1.effective;
@@ -886,6 +903,9 @@ lookup III.definite {
     sub f.init by f.F.init;
     sub f.medi by f.F.medi;
     sub f.fina by f.F.fina;
+    sub k2.init by k2.K2.init;
+    sub k2.medi by k2.K2.medi;
+    sub k2.fina by k2.K2.fina;
     sub k.init by k.K.init;
     sub k.medi by k.K.medi;
     sub k.fina by k.K.fina;
@@ -1374,6 +1394,9 @@ lookup test.ss01.wipe_phonetic_information {
     sub f.F.init by F.init;
     sub f.F.medi by F.medi;
     sub f.F.fina by F.fina;
+    sub k2.K2.init by K2.init;
+    sub k2.K2.medi by K2.medi;
+    sub k2.K2.fina by K2.fina;
     sub k.K.init by K.init;
     sub k.K.medi by K.medi;
     sub k.K.fina by K.fina;
@@ -1525,6 +1548,9 @@ lookup test.ss02.menksoft_pua {
     sub f.F.init by puaE332;
     sub f.F.medi by puaE332;
     sub f.F.fina by puaE32F;
+    sub k2.K2.init by puaE338;
+    sub k2.K2.medi by puaE338;
+    sub k2.K2.fina by puaE335;
     sub k.K.init by puaE33E;
     sub k.K.medi by puaE33E;
     sub k.K.fina by puaE33B;

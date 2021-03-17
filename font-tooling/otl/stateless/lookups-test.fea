@@ -129,6 +129,9 @@ lookup test.ss01.wipe_phonetic_information {
     sub f.F.init by F.init;
     sub f.F.medi by F.medi;
     sub f.F.fina by F.fina;
+    sub k2.K2.init by K2.init;
+    sub k2.K2.medi by K2.medi;
+    sub k2.K2.fina by K2.fina;
     sub k.K.init by K.init;
     sub k.K.medi by K.medi;
     sub k.K.fina by K.fina;
@@ -280,6 +283,9 @@ lookup test.ss02.menksoft_pua {
     sub f.F.init by puaE332;
     sub f.F.medi by puaE332;
     sub f.F.fina by puaE32F;
+    sub k2.K2.init by puaE338;
+    sub k2.K2.medi by puaE338;
+    sub k2.K2.fina by puaE335;
     sub k.K.init by puaE33E;
     sub k.K.medi by puaE33E;
     sub k.K.fina by puaE33B;

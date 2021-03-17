@@ -4,7 +4,7 @@ from pathlib import Path, WindowsPath
 
 import yattag
 from fontTools import unicodedata
-from tptqutils.shaping import Shaper
+from tptq.utils.shaping import Shaper
 
 from data import Character
 from data import Mongolian as Mong
@@ -75,10 +75,8 @@ def main():
                         fold_phonetic_pua(cp, phonetic_pua_to_folded_mapping) for cp in expectation
                     ).strip().translate(FURTHER_FOLDING)
                     utn_result = "".join(
-                        FURTHER_FOLDING.get(i) or i for i in (
-                            convert_glyph_name_to_graphical_pua(i)
-                            for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
-                        )
+                        convert_glyph_name_to_graphical_pua(i)
+                        for i in shaper.shape_text_to_glyph_names(string, features={"ss02": True})
                     ).strip().translate(FURTHER_FOLDING)
                     diffing = ""
                     if graphically_folded_expectation != utn_result:

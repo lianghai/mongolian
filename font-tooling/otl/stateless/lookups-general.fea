@@ -97,6 +97,10 @@ lookup III.ig.preprocessing.B {
     sub masculine f.init' by f.init masculine;
     sub masculine f.medi' by f.medi masculine;
     sub masculine f.fina' by f.fina masculine;
+    sub masculine k2.isol' by k2.isol masculine;
+    sub masculine k2.init' by k2.init masculine;
+    sub masculine k2.medi' by k2.medi masculine;
+    sub masculine k2.fina' by k2.fina masculine;
     sub masculine k.isol' by k.isol masculine;
     sub masculine k.init' by k.init masculine;
     sub masculine k.medi' by k.medi masculine;
@@ -221,6 +225,10 @@ lookup III.ig.preprocessing.C {
     sub f.init masculine by f.init;
     sub f.medi masculine by f.medi;
     sub f.fina masculine by f.fina;
+    sub k2.isol masculine by k2.isol;
+    sub k2.init masculine by k2.init;
+    sub k2.medi masculine by k2.medi;
+    sub k2.fina masculine by k2.fina;
     sub k.isol masculine by k.isol;
     sub k.init masculine by k.init;
     sub k.medi masculine by k.medi;
@@ -255,7 +263,7 @@ lookup III.ig.preprocessing.C {
     sub cr.fina masculine by cr.fina;
 } III.ig.preprocessing.C;
 
-@consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
+@consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k2.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
 lookup _.effective {
     sub mvs by mvs.effective;
     sub fvs1 by fvs1.effective;
@@ -381,6 +389,9 @@ lookup III.definite {
     sub f.init by f.F.init;
     sub f.medi by f.F.medi;
     sub f.fina by f.F.fina;
+    sub k2.init by k2.K2.init;
+    sub k2.medi by k2.K2.medi;
+    sub k2.fina by k2.K2.fina;
     sub k.init by k.K.init;
     sub k.medi by k.K.medi;
     sub k.fina by k.K.fina;

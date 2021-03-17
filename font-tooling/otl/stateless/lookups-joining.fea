@@ -27,6 +27,7 @@ lookup IIa.isol {
     sub r by r.isol;
     sub w by w.isol;
     sub f by f.isol;
+    sub k2 by k2.isol;
     sub k by k.isol;
     sub c by c.isol;
     sub z by z.isol;
@@ -65,6 +66,7 @@ lookup IIa.init {
     sub r by r.init;
     sub w by w.init;
     sub f by f.init;
+    sub k2 by k2.init;
     sub k by k.init;
     sub c by c.init;
     sub z by z.init;
@@ -103,6 +105,7 @@ lookup IIa.medi {
     sub r by r.medi;
     sub w by w.medi;
     sub f by f.medi;
+    sub k2 by k2.medi;
     sub k by k.medi;
     sub c by c.medi;
     sub z by z.medi;
@@ -141,6 +144,7 @@ lookup IIa.fina {
     sub r by r.fina;
     sub w by w.fina;
     sub f by f.fina;
+    sub k2 by k2.fina;
     sub k by k.fina;
     sub c by c.fina;
     sub z by z.fina;
