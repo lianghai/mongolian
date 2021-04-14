@@ -17,19 +17,29 @@ private_repo_dir = repo_dir / ".." / "mongolian-private"
 font_dir = private_repo_dir / "misc/liangjinbao/20210303"
 corpus_dir = private_repo_dir / "misc/jirimutu/mongol_corpus"
 
-IGNORED_CODE_POINTS = "᠊᠂᠃᠄"
-
 def main():
 
     # text = "\n".join((corpus_dir / f"almas_{i:03}.txt").read_text() for i in range(1, 65))
     text = (corpus_dir / "almas_005.txt").read_text()
-    # .replace("\u202F", " \u180E")
+
+    def normalize_text(text: str) -> str:
+        for k, v in {
+            "\uFEFF": "",
+            "᠊": "",
+            "\u202F": " \u202F",
+            "᠂": " ",
+            "᠃": " ",
+            "᠄": " ",
+            "«": " ",
+            "»": " ",
+        }.items():
+            text = text.replace(k, v)
+        return text
 
     cases = []
-    for line in text.splitlines():
-        for word in line.split():
-            if case := "".join(i for i in word.strip() if i not in IGNORED_CODE_POINTS):
-                cases.append(case)
+    for line in normalize_text(text).splitlines():
+        for word in line.split(" "):
+            cases.append(word)
 
     # cases = cases[:10]
 
@@ -91,7 +101,9 @@ def normalize_eac(names: list[str]) -> list[str]:
 def normalize_utn(names: list[str]) -> list[str]:
     normalized = []
     for standard_name in names:
-        if standard_name.startswith("_"):
+        if standard_name in ["_nil"]:
+            continue
+        if standard_name in ["_fvs1", "_fvs2", "_fvs3", "_fvs4"]:
             continue
         normalized.extend(split_ligature(standard_name))
     return normalized
