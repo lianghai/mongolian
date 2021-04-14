@@ -316,8 +316,8 @@ uharfbuzz = "^0.14.0"
 [package.source]
 type = "git"
 url = "https://github.com/typotheque/utils.git"
-reference = "2257f0d"
-resolved_reference = "2257f0d2b2021facfbad52a23fda67e96a2ceea9"
+reference = "c065ec4"
+resolved_reference = "c065ec48b136205e067d7c2bd3eee4817386823f"
 
 [[package]]
 name = "tptqscripttools"
@@ -394,7 +394,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "46bcb1983a9c880e9ededce4682ad3967b55286c27b22db8da437d35b01a330b"
+content-hash = "b68a742e2bbd73da9e218ac291fb124068f3402c1fd6b9c27b74e286d7f3f5ce"
 
 [metadata.files]
 appdirs = [

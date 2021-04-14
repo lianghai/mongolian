@@ -11,7 +11,7 @@ PyYAML = "^5.3.1"
 ufoLib2 = "^0.10.0"
 yattag = "^1.14.0"
 tptqscripttools = { git = "https://github.com/typotheque/script-tools.git", rev = "f435ec1" }
-"tptq.utils" = { git = "https://github.com/typotheque/utils.git", rev = "2257f0d" }
+"tptq.utils" = { git = "https://github.com/typotheque/utils.git", rev = "c065ec4" }
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
