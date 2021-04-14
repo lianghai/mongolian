@@ -1,4 +1,13 @@
 eac_name_to_standard = {
+    # "uni1802.comma": "comma",
+    # "uni1802.comma_00": "comma.Comma.isol",
+    # "uni180A.nirugu": "nirugu",
+    # "uni180A.nirugu_00": "nirugu.Nirugu.isol",
+    # "uni180A.nirugu_10": "nirugu.Nirugu.init",
+    # "uni180A.nirugu_20": "nirugu.Nirugu.medi",
+    # "uni180A.nirugu_30": "nirugu.Nirugu.fina",
+    # "uni180A.nirugu_31": "nirugu.Nirugu2.fina",
+    # "uni202F.msc": "nnbsp",
     "uni1820.a": "a",
     "uni1820.a_00": "a.A_A.isol",
     "uni1820.a_01": "a.A.isol",
