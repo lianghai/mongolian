@@ -43,7 +43,8 @@ feature rclt {
     lookup III.h_g.onset_and_devsger_and_gender.A;
     lookup III.h_g.onset_and_devsger_and_gender.B;
     lookup III.ig.postprocessing;
-    lookup III.a_i_u_ue_d.particle;
+    lookup III.a_i_u_ue_d.particle.A;
+    lookup III.a_i_u_ue_d.particle.B;
     lookup III.definite;
     lookup III.fallback;
     lookup III.y.dictionary_particle;

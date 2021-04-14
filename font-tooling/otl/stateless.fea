@@ -842,12 +842,17 @@ lookup III.ig.postprocessing {
     sub g.H.fina masculine by g.H.fina;
 } III.ig.postprocessing;
 
-lookup III.a_i_u_ue_d.particle {
+lookup III.a_i_u_ue_d.particle.A {
     lookupflag IgnoreMarks;
     sub [mvs nnbsp]' lookup _.effective [@a.init.for_particle @i.isol.for_particle @i.init.for_particle @u.isol.for_particle @u.init.for_particle @u.fina.for_particle @ue.isol.for_particle @ue.init.for_particle @ue.medi.for_particle @ue.fina.for_particle @d.init.for_particle]' lookup condition.particle;
-    sub [mvs nnbsp]' lookup _.effective @consonant.init' [@u.fina.for_particle @ue.medi.for_particle @ue.fina.for_particle]' lookup condition.particle;
     lookupflag 0;
-} III.a_i_u_ue_d.particle;
+} III.a_i_u_ue_d.particle.A;
+
+lookup III.a_i_u_ue_d.particle.B {
+    lookupflag IgnoreMarks;
+    sub [mvs mvs.effective nnbsp nnbsp.effective]' lookup _.effective @consonant.init' [@u.fina.for_particle @ue.medi.for_particle @ue.fina.for_particle]' lookup condition.particle;
+    lookupflag 0;
+} III.a_i_u_ue_d.particle.B;
 
 lookup III.definite {
     sub a.medi by a.A.medi;
@@ -1216,11 +1221,17 @@ lookup III.fvs {
 } III.fvs;
 
 lookup IIb.hide_effective_format_controls {
-    sub [mvs.effective nnbsp.effective fvs1.effective fvs2.effective fvs3.effective fvs4.effective] by nil;
+    sub mvs.effective by nil;
+    sub nnbsp.effective by nnbsp;
+    sub fvs1.effective by nil;
+    sub fvs2.effective by nil;
+    sub fvs3.effective by nil;
+    sub fvs4.effective by nil;
 } IIb.hide_effective_format_controls;
 
 lookup IIb.preserve_format_controls.A {
     sub mvs by _mvs _helper;
+    sub nnbsp by _nnbsp _helper;
     sub fvs1 by _fvs1 _helper;
     sub fvs2 by _fvs2 _helper;
     sub fvs3 by _fvs3 _helper;
@@ -1230,6 +1241,7 @@ lookup IIb.preserve_format_controls.A {
 
 lookup IIb.preserve_format_controls.B {
     sub _mvs _helper by _mvs;
+    sub _nnbsp _helper by _nnbsp;
     sub _fvs1 _helper by _fvs1;
     sub _fvs2 _helper by _fvs2;
     sub _fvs3 _helper by _fvs3;
@@ -1251,7 +1263,8 @@ feature rclt {
     lookup III.h_g.onset_and_devsger_and_gender.A;
     lookup III.h_g.onset_and_devsger_and_gender.B;
     lookup III.ig.postprocessing;
-    lookup III.a_i_u_ue_d.particle;
+    lookup III.a_i_u_ue_d.particle.A;
+    lookup III.a_i_u_ue_d.particle.B;
     lookup III.definite;
     lookup III.fallback;
     lookup III.y.dictionary_particle;

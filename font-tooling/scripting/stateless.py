@@ -205,10 +205,14 @@ def writer(builder: otl.CodeBuilder):
                     variant = mong(name, variant.written_units, joining_form)
                     lookup.sub(variant, "masculine").by(variant)
 
-        with f.Lookup("III.a_i_u_ue_d.particle").flag("IgnoreMarks") as lookup:
+        with f.Lookup("III.a_i_u_ue_d.particle.A").flag("IgnoreMarks") as lookup:
             c = "particle"
             lookup.sub(["mvs", "nnbsp"], for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])).chain(_effective, conditions(c))  # type: ignore
-            lookup.sub(["mvs", "nnbsp"], "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])).chain(_effective, None, conditions(c))  # type: ignore
+
+        with f.Lookup("III.a_i_u_ue_d.particle.B").flag("IgnoreMarks") as lookup:
+            c = "particle"
+            # Including .effective because @consonant.init may be a partical-initial d.
+            lookup.sub(["mvs", "mvs.effective", "nnbsp", "nnbsp.effective"], "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])).chain(_effective, None, conditions(c))  # type: ignore
 
         with f.Lookup("III.definite") as lookup:
             for abstract, definite in abstract_variant_to_definite.items():
@@ -265,9 +269,13 @@ def writer(builder: otl.CodeBuilder):
                 lookup.sub(class_name, fvs).chain(_manual, _effective)
 
         with f.Lookup("IIb.hide_effective_format_controls") as lookup:
-            lookup.sub([*effective_format_controls]).by("nil")
+            for name in effective_format_controls:
+                if name == "nnbsp.effective":
+                    lookup.sub(name).by("nnbsp")
+                else:
+                    lookup.sub(name).by("nil")
 
-        preserved_format_controls = [*format_control.mvs, *format_control.fvs, "nil"]
+        preserved_format_controls = [*format_control.mvs, *format_control.nnbsp, *format_control.fvs, "nil"]
         with f.Lookup("IIb.preserve_format_controls.A") as lookup:
             for name in preserved_format_controls:
                 lookup.sub(name).by(f"_{name}", "_helper")
