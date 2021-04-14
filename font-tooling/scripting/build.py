@@ -87,6 +87,8 @@ def main():
         )
 
     legacy_script = LegacyScriptRegister.script_by_code[mongolian.code]
+    nnbsp = next(i for i in legacy_script.glyphs if i.formal_notation() == "Mong:nnbsp")
+    nnbsp.info.code_point = 0x202F
     legacy_script.export_otl_dummy_font(
         product_dir,
         source_ufo_path,

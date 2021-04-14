@@ -106,7 +106,7 @@ def writer(builder: otl.CodeBuilder):
                     f.glyph_class(class_name, [*affected_variants])
                     lookup.sub(class_name).by(variant)
 
-    format_controls = [*format_control.mvs, *format_control.fvs]
+    format_controls = [*format_control.mvs, *format_control.nnbsp, *format_control.fvs]
     effective_format_controls = [f"{i}.effective" for i in format_controls]
 
     with builder.File(directory / "lookups-general.fea") as f:
@@ -207,8 +207,8 @@ def writer(builder: otl.CodeBuilder):
 
         with f.Lookup("III.a_i_u_ue_d.particle").flag("IgnoreMarks") as lookup:
             c = "particle"
-            lookup.sub("mvs", for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])).chain(_effective, conditions(c))  # type: ignore
-            lookup.sub("mvs", "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])).chain(_effective, None, conditions(c))  # type: ignore
+            lookup.sub(["mvs", "nnbsp"], for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])).chain(_effective, conditions(c))  # type: ignore
+            lookup.sub(["mvs", "nnbsp"], "@consonant.init", for_condition(c, ["@u.fina", "@ue.medi", "@ue.fina"])).chain(_effective, None, conditions(c))  # type: ignore
 
         with f.Lookup("III.definite") as lookup:
             for abstract, definite in abstract_variant_to_definite.items():
@@ -221,9 +221,9 @@ def writer(builder: otl.CodeBuilder):
 
         with f.Lookup("III.y.dictionary_particle").flag("IgnoreMarks") as lookup:
             c = "dictionary_particle"
-            lookup.prefix("mvs.effective", "i.I.init").sub("y.Y.medi").chain(conditions(c)).suffix(["a.A.medi", "e.A.medi"], ["n.A.fina", "r.R.fina"])
-            lookup.sub("mvs", "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.fina")
-            lookup.sub("mvs", "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.medi", "n.A.fina")
+            lookup.prefix(["mvs.effective", "nnbsp.effective"], "i.I.init").sub("y.Y.medi").chain(conditions(c)).suffix(["a.A.medi", "e.A.medi"], ["n.A.fina", "r.R.fina"])
+            lookup.sub(["mvs", "nnbsp"], "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.fina")
+            lookup.sub(["mvs", "nnbsp"], "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.medi", "n.A.fina")
 
         with f.Lookup("III.i.devsger").flag("IgnoreMarks") as lookup:
             lookup.glyph_class(context_class_name := "@vowel.not_ending_with_I", [

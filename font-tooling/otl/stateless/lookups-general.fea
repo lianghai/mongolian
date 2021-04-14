@@ -266,6 +266,7 @@ lookup III.ig.preprocessing.C {
 @consonant.init = [@aleph.init @n.init @ng.init @b.init @p.init @h.init @g.init @m.init @l.init @s.init @sh.init @t.init @d.init @ch.init @j.init @y.init @r.init @w.init @f.init @k2.init @k.init @c.init @z.init @hh.init @rh.init @lh.init @zr.init @cr.init];
 lookup _.effective {
     sub mvs by mvs.effective;
+    sub nnbsp by nnbsp.effective;
     sub fvs1 by fvs1.effective;
     sub fvs2 by fvs2.effective;
     sub fvs3 by fvs3.effective;
@@ -329,8 +330,8 @@ lookup III.ig.postprocessing {
 
 lookup III.a_i_u_ue_d.particle {
     lookupflag IgnoreMarks;
-    sub mvs' lookup _.effective [@a.init.for_particle @i.isol.for_particle @i.init.for_particle @u.isol.for_particle @u.init.for_particle @u.fina.for_particle @ue.isol.for_particle @ue.init.for_particle @ue.medi.for_particle @ue.fina.for_particle @d.init.for_particle]' lookup condition.particle;
-    sub mvs' lookup _.effective @consonant.init' [@u.fina.for_particle @ue.medi.for_particle @ue.fina.for_particle]' lookup condition.particle;
+    sub [mvs nnbsp]' lookup _.effective [@a.init.for_particle @i.isol.for_particle @i.init.for_particle @u.isol.for_particle @u.init.for_particle @u.fina.for_particle @ue.isol.for_particle @ue.init.for_particle @ue.medi.for_particle @ue.fina.for_particle @d.init.for_particle]' lookup condition.particle;
+    sub [mvs nnbsp]' lookup _.effective @consonant.init' [@u.fina.for_particle @ue.medi.for_particle @ue.fina.for_particle]' lookup condition.particle;
     lookupflag 0;
 } III.a_i_u_ue_d.particle;
 
@@ -448,9 +449,9 @@ lookup III.fallback {
 
 lookup III.y.dictionary_particle {
     lookupflag IgnoreMarks;
-    sub mvs.effective i.I.init y.Y.medi' lookup condition.dictionary_particle [a.A.medi e.A.medi] [n.A.fina r.R.fina];
-    sub mvs' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.fina;
-    sub mvs' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.medi n.A.fina;
+    sub [mvs.effective nnbsp.effective] i.I.init y.Y.medi' lookup condition.dictionary_particle [a.A.medi e.A.medi] [n.A.fina r.R.fina];
+    sub [mvs nnbsp]' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.fina;
+    sub [mvs nnbsp]' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.medi n.A.fina;
     lookupflag 0;
 } III.y.dictionary_particle;
 
@@ -701,7 +702,7 @@ lookup III.fvs {
 } III.fvs;
 
 lookup IIb.hide_effective_format_controls {
-    sub [mvs.effective fvs1.effective fvs2.effective fvs3.effective fvs4.effective] by nil;
+    sub [mvs.effective nnbsp.effective fvs1.effective fvs2.effective fvs3.effective fvs4.effective] by nil;
 } IIb.hide_effective_format_controls;
 
 lookup IIb.preserve_format_controls.A {
