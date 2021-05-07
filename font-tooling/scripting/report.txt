@@ -1,0 +1,2015 @@
+Total word count: 531905
+Failed case (word count 3404 ≈ 0.64 %): nnbsp, ue, g, e, i
+     nnbsp
+    -A.init
+    -O.medi
+    -I.medi
+    +O.init
+     G.medi
+     A.medi
+     I.fina
+Failed case (word count 618 ≈ 0.1162 %): d, oe
+    -D.init
+    +T.init
+     Ue.fina
+Failed case (word count 385 ≈ 0.0724 %): e, l, w, m, w, n, t
+     W.medi
+     M.medi
+     W.medi
+    -A.medi
+    +N.medi
+     T.fina
+Failed case (word count 313 ≈ 0.0588 %): nirugu, d
+     nirugu
+    -Dd.fina
+    +D.fina
+Failed case (word count 301 ≈ 0.0566 %): j, i, sh, i, y, e, l, e, b, e, l
+     I.init
+     I.medi
+    -S.medi
+    +Sh.medi
+     I.medi
+     Y.medi
+     A.medi
+Failed case (word count 285 ≈ 0.0536 %): j, i, n, n
+     I.init
+     I.medi
+     A.medi
+    -A.fina
+    +N.fina
+Failed case (word count 263 ≈ 0.0494 %): d, fvs1, a
+    -D.init
+    +T.init
+     A.fina
+Failed case (word count 189 ≈ 0.0355 %): a, n, g, g, i
+     A.medi
+     A.medi
+     G.medi
+    +_masculine
+     G.medi
+     I.fina
+Failed case (word count 184 ≈ 0.0346 %): nnbsp, d, e, h, e, n
+     nnbsp
+    -T.init
+    +D.init
+     A.medi
+     G.medi
+     A.medi
+Failed case (word count 162 ≈ 0.0305 %): b, a, i, h, s, a, n
+     A.medi
+     I.medi
+     I.medi
+    -H.medi
+    +G.medi
+     S.medi
+     A.medi
+     A.fina
+Failed case (word count 148 ≈ 0.0278 %): h, u, b, i, s, g, a, l
+     B.medi
+     I.medi
+     S.medi
+    -H.medi
+    +Gh.medi
+     A.medi
+     L.fina
+Failed case (word count 137 ≈ 0.0258 %): u, d, u, r, i, d, g, u
+     R.medi
+     I.medi
+     Dd.medi
+    -H.medi
+    +Gh.medi
+     U.fina
+Failed case (word count 117 ≈ 0.022 %): d, e, r, n
+     T.init
+     A.medi
+     R.medi
+    -A.fina
+    +N.fina
+Failed case (word count 111 ≈ 0.0209 %): m, w, t, r
+     M.init
+     W.medi
+    -D.medi
+    +T.medi
+     R.fina
+Failed case (word count 108 ≈ 0.0203 %): h, i, n, a, h, ch, i
+     I.medi
+     N.medi
+     A.medi
+    -H.medi
+    +G.medi
+     Ch.medi
+     I.fina
+Failed case (word count 108 ≈ 0.0203 %): h, u, r, i, h, l, a, h, ch, i
+     O.medi
+     R.medi
+     I.medi
+    -H.medi
+    +G.medi
+     L.medi
+     A.medi
+    -H.medi
+    +G.medi
+     Ch.medi
+     I.fina
+Failed case (word count 99 ≈ 0.0186 %): t, u, s, g, a, i
+     T.init
+     O.medi
+     S.medi
+    -H.medi
+    +Gh.medi
+     A.medi
+     I.fina
+Failed case (word count 88 ≈ 0.0165 %): j, i, l, u, g, u, d, g, u
+     Gh.medi
+     O.medi
+     Dd.medi
+    -H.medi
+    +Gh.medi
+     U.fina
+Failed case (word count 85 ≈ 0.016 %): b
+    -B.isol
+    +b.isol
+Failed case (word count 85 ≈ 0.016 %): d, fvs1, a, g, a, n
+    -D.init
+    +T.init
+     A.medi
+     Gh.medi
+     A.medi
+Failed case (word count 76 ≈ 0.0143 %): d, o
+    -D.init
+    +T.init
+     O.fina
+Failed case (word count 74 ≈ 0.0139 %): j, i, sh, i, y, mvs, a
+     I.init
+     I.medi
+    -S.medi
+    +Sh.medi
+     I.medi
+     I.fina
+     Aa.isol
+Failed case (word count 74 ≈ 0.0139 %): j, w, n
+     I.init
+     W.medi
+    -A.fina
+    +N.fina
+Failed case (word count 69 ≈ 0.013 %): nnbsp, b
+     nnbsp
+    -B.isol
+    +b.isol
+Failed case (word count 65 ≈ 0.0122 %): b, u, l, u, h, s, a, n
+     O.medi
+     L.medi
+     O.medi
+    -H.medi
+    +G.medi
+     S.medi
+     A.medi
+     A.fina
+Failed case (word count 63 ≈ 0.0118 %): b, a, h, s, i
+     B.init
+     A.medi
+    -H.medi
+    +G.medi
+     S.medi
+     I.fina
+Failed case (word count 62 ≈ 0.0117 %): w, w, n
+     W.init
+     W.medi
+    -A.fina
+    +N.fina
+Failed case (word count 58 ≈ 0.0109 %): g, fvs1, r, a, n, d, eh, t
+    -H.init
+    +Gh.init
+     R.medi
+     A.medi
+     A.medi
+Failed case (word count 58 ≈ 0.0109 %): d, u, s, g, a, i
+     T.init
+     O.medi
+     S.medi
+    -H.medi
+    +Gh.medi
+     A.medi
+     I.fina
+Failed case (word count 55 ≈ 0.0103 %): b, a, t, u, oe, fvs2, l, j, e, i
+     A.medi
+     D.medi
+     O.medi
+    -A.medi
+     O.medi
+    -I.medi
+     L.medi
+     J.medi
+     A.medi
+Failed case (word count 54 ≈ 0.0102 %): a, g, u, l, n
+     Gh.medi
+     O.medi
+     L.medi
+    -A.fina
+    +N.fina
+Failed case (word count 54 ≈ 0.0102 %): n, a, i, r, a, g, u, l, u, h, ch, i
+     O.medi
+     L.medi
+     O.medi
+    -H.medi
+    +G.medi
+     Ch.medi
+     I.fina
+Failed case (word count 53 ≈ 0.01 %): nnbsp, d, u, g, e, r
+     nnbsp
+    -T.init
+    +D.init
+     O.medi
+     G.medi
+     A.medi
+Failed case (word count 48 < 0.01 %): t, u, s, g, a, l
+Failed case (word count 47 < 0.01 %): u, ng, s, i, h, ch, i, d
+Failed case (word count 46 < 0.01 %): t, o, s, g, u, n
+Failed case (word count 46 < 0.01 %): k2, u, m, p, i, oe, i, t, w, r
+Failed case (word count 46 < 0.01 %): d, nirugu
+Failed case (word count 45 < 0.01 %): n, i, g, d, a
+Failed case (word count 41 < 0.01 %): e, ch, n
+Failed case (word count 40 < 0.01 %): h, a, r, i, ch, a, n, g, g, u, i
+Failed case (word count 39 < 0.01 %): t, u, s, g, a, i, l, a, n
+Failed case (word count 39 < 0.01 %): s, u, r, g, a, h, ch, i
+Failed case (word count 38 < 0.01 %): s, i, s, t, w, m, ch, e
+Failed case (word count 38 < 0.01 %): j, i, sh, i, l, d, e
+Failed case (word count 37 < 0.01 %): a, m, i, s, g, u, l
+Failed case (word count 36 < 0.01 %): b, i, l, n
+Failed case (word count 35 < 0.01 %): d, u, r, a, s, g, a, l
+Failed case (word count 35 < 0.01 %): ch, w, n
+Failed case (word count 34 < 0.01 %): g, fvs3, l, u, b, a
+Failed case (word count 34 < 0.01 %): a, d, a, l, i, d, g, a, m, j, i
+Failed case (word count 33 < 0.01 %): m, u, s, k2, w, n
+Failed case (word count 32 < 0.01 %): j, i, sh, i, g, s, e, n
+Failed case (word count 31 < 0.01 %): u, l, u, h, s, a, n
+Failed case (word count 29 < 0.01 %): j, i, g, s, a, g, a, l
+Failed case (word count 29 < 0.01 %): b, a, g, a, s, g, a, j, u
+Failed case (word count 29 < 0.01 %): nnbsp, i, i, n, n
+Failed case (word count 29 < 0.01 %): s, u, r, b, u, l, j, i, l, a, h, ch, i
+Failed case (word count 28 < 0.01 %): sh, w, n
+Failed case (word count 28 < 0.01 %): d, u, s, g, a, i, l, a, n
+Failed case (word count 28 < 0.01 %): g, a, r, u, h, s, a, n
+Failed case (word count 28 < 0.01 %): t, o, s, g, o, n
+Failed case (word count 28 < 0.01 %): nirugu, zr, i
+Failed case (word count 27 < 0.01 %): ue, fvs1
+Failed case (word count 27 < 0.01 %): nirugu, p, w, t, w, r, b, ue, i, r, e, g
+Failed case (word count 26 < 0.01 %): u, r, u, s, g, a, l
+Failed case (word count 26 < 0.01 %): t
+Failed case (word count 25 < 0.01 %): d, fvs1, ue, ng
+Failed case (word count 25 < 0.01 %): h, u, b, i, s, g, a, l, t, u
+Failed case (word count 25 < 0.01 %): s, e, n, t, i, m, w, t, r
+Failed case (word count 24 < 0.01 %): j, u, h, s, u, h, u
+Failed case (word count 24 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, l
+Failed case (word count 24 < 0.01 %): n, a, i, r, a, g, u, l, u, h, s, a, n
+Failed case (word count 23 < 0.01 %): b, a, g, a, s, g, a, h, u
+Failed case (word count 23 < 0.01 %): t, u, s, g, a, j, u
+Failed case (word count 23 < 0.01 %): t, u, h, d, a, g, a, l
+Failed case (word count 23 < 0.01 %): j, u, h, i, y, a, h, ch, i
+Failed case (word count 23 < 0.01 %): b, a, i, g, u, l, u, h, d, a, h, s, a, n
+Failed case (word count 22 < 0.01 %): m, a, h, d, a, n
+Failed case (word count 21 < 0.01 %): d, a, d, g, a, l
+Failed case (word count 21 < 0.01 %): j, i, sh, i, y, mvs, e
+Failed case (word count 21 < 0.01 %): b, u, l, g, a, h, s, a, n
+Failed case (word count 21 < 0.01 %): b, a, i, g, u, l, u, h, s, a, n
+Failed case (word count 21 < 0.01 %): i, n, j, w, n, w, r, i, ng
+Failed case (word count 20 < 0.01 %): a, fvs1
+Failed case (word count 20 < 0.01 %): nnbsp, d, e, g, i
+Failed case (word count 20 < 0.01 %): j, a, n, g, g, i
+Failed case (word count 20 < 0.01 %): n, i, g, d, a, l, a, n
+Failed case (word count 20 < 0.01 %): t, u, h, d, a, g, a, h, s, a, n
+Failed case (word count 19 < 0.01 %): s, u, n, u, s, g, u
+Failed case (word count 19 < 0.01 %): s, u, n, g, g, u, l, d, a
+Failed case (word count 19 < 0.01 %): j, i, sh, i, g, d, e, g, s, e, d
+Failed case (word count 19 < 0.01 %): j, i, h, s, a, g, a, l
+Failed case (word count 19 < 0.01 %): g, a, r, g, a, h, s, a, n
+Failed case (word count 19 < 0.01 %): ch, i, h, u, l, n
+Failed case (word count 19 < 0.01 %): g, e, l, n
+Failed case (word count 18 < 0.01 %): d, fvs1, e
+Failed case (word count 18 < 0.01 %): h, u, b, i, s, g, a, h, u
+Failed case (word count 18 < 0.01 %): d, u, s, g, a, l
+Failed case (word count 18 < 0.01 %): h, u, l, b, u, h, d, a, l
+Failed case (word count 17 < 0.01 %): d, fvs1, eh, ng
+Failed case (word count 17 < 0.01 %): p, l, y, ue, sh, k2, i, n
+Failed case (word count 17 < 0.01 %): e, l, w, k2, t, r, u, n
+Failed case (word count 17 < 0.01 %): h, a, n, g, g, a, h, u
+Failed case (word count 17 < 0.01 %): j, a, h, mvs, e
+Failed case (word count 17 < 0.01 %): b, a, h, d, a, n, mvs, a
+Failed case (word count 17 < 0.01 %): a, s, i, h, l, a, j, oe
+Failed case (word count 17 < 0.01 %): d, i
+Failed case (word count 16 < 0.01 %): a, ng, g, l, i
+Failed case (word count 16 < 0.01 %): ch, i, ng, g, a, d, g, a, h, u
+Failed case (word count 16 < 0.01 %): t, u, s, g, a, g, s, a, n
+Failed case (word count 16 < 0.01 %): ch, u, h, i, h, s, a, n
+Failed case (word count 16 < 0.01 %): h, u, l, n
+Failed case (word count 16 < 0.01 %): u, ng, s, i, h, s, a, n
+Failed case (word count 15 < 0.01 %): u, d, g, mvs, a
+Failed case (word count 15 < 0.01 %): k2, a, t, r
+Failed case (word count 15 < 0.01 %): a, b, u, h, s, a, n
+Failed case (word count 15 < 0.01 %): h, u, w, n
+Failed case (word count 15 < 0.01 %): t, u, r, a, s, g, a, l
+Failed case (word count 15 < 0.01 %): s, u, r, u, h, ch, i
+Failed case (word count 14 < 0.01 %): t, u, s, g, a, i, j, i, g, s, a, n
+Failed case (word count 14 < 0.01 %): d, a, l, b, i, h, s, a, n
+Failed case (word count 14 < 0.01 %): j, u, h, s, u, l, d, a
+Failed case (word count 14 < 0.01 %): j, w, n, w, w, a
+Failed case (word count 14 < 0.01 %): nirugu, p, w, t, w, r, s
+Failed case (word count 13 < 0.01 %): h, u, b, i, s, g, a, l, ch, i
+Failed case (word count 13 < 0.01 %): k2, r, ue, sh, eh, w
+Failed case (word count 13 < 0.01 %): d, fvs1, u
+Failed case (word count 13 < 0.01 %): a, s, i, h, d, a, i
+Failed case (word count 13 < 0.01 %): t, u, h, d, a, g, a, h, u
+Failed case (word count 13 < 0.01 %): ch, i, ng, g, a, d, g, a, j, u
+Failed case (word count 13 < 0.01 %): a, s, i, h, l, a, h, u
+Failed case (word count 13 < 0.01 %): t, u, s, g, a, d, a, g
+Failed case (word count 13 < 0.01 %): r, w, n
+Failed case (word count 13 < 0.01 %): nirugu, p, w, t, w, r
+Failed case (word count 13 < 0.01 %): n, a, r, n
+Failed case (word count 13 < 0.01 %): u, d, a, h, s, a, n
+Failed case (word count 13 < 0.01 %): a, ng, h, a, d, a, h, ch, i
+Failed case (word count 12 < 0.01 %): d, fvs1, e, h, i
+Failed case (word count 12 < 0.01 %): b, a, y, a, s, g, u, l, a, ng
+Failed case (word count 12 < 0.01 %): a, d, g, u, j, u
+Failed case (word count 12 < 0.01 %): j, i, sh, i, y, a, l, a, b, a, l
+Failed case (word count 12 < 0.01 %): a, ng, g, fvs3, l, i
+Failed case (word count 12 < 0.01 %): a, d, a, l, i, d, g, a, l
+Failed case (word count 12 < 0.01 %): d, w, ng
+Failed case (word count 12 < 0.01 %): t, u, s, g, a, h, u
+Failed case (word count 12 < 0.01 %): i, l, a, n, g, g, u, y, mvs, a
+Failed case (word count 12 < 0.01 %): b, u, s, g, a, n
+Failed case (word count 12 < 0.01 %): b, u, r, u, g, u, d, a, h, s, a, n
+Failed case (word count 12 < 0.01 %): u, r, u, h, s, a, n
+Failed case (word count 12 < 0.01 %): u, r, a, l, i, h, ch, i, n
+Failed case (word count 12 < 0.01 %): u, l, w, g, w, r
+Failed case (word count 12 < 0.01 %): d, u, s, g, u, n
+Failed case (word count 12 < 0.01 %): w, w, n, w, z, i, y, mvs, a
+Failed case (word count 11 < 0.01 %): a, m, i, s, g, u, g, mvs, a
+Failed case (word count 11 < 0.01 %): a, d, g, u, h, u
+Failed case (word count 11 < 0.01 %): p, w, t, w, r
+Failed case (word count 11 < 0.01 %): a, d, a, l, i, d, g, a, n
+Failed case (word count 11 < 0.01 %): u, r, u, g, u, l, u, h, s, a, n
+Failed case (word count 11 < 0.01 %): d, w
+Failed case (word count 11 < 0.01 %): y, a, b, u, h, s, a, n
+Failed case (word count 11 < 0.01 %): u, r, u, l, ch, a, h, ch, i, u, n
+Failed case (word count 11 < 0.01 %): u, r, u, l, ch, a, h, s, a, n
+Failed case (word count 11 < 0.01 %): u, u, m, w, n
+Failed case (word count 11 < 0.01 %): b, a, h, d, a, g, a, h, s, a, n
+Failed case (word count 11 < 0.01 %): d, a, g, u, l, a, h, s, a, n
+Failed case (word count 10 < 0.01 %): d, o, r, u, s, g, mvs, a
+Failed case (word count 10 < 0.01 %): k2, u, u, n, t, z
+Failed case (word count 10 < 0.01 %): i, n, j, w, n, w, r
+Failed case (word count 10 < 0.01 %): t, a, d, g, a, l
+Failed case (word count 10 < 0.01 %): ch, i, n, a, h, s, i, l, a, b, a, l
+Failed case (word count 10 < 0.01 %): t, u, r, a, d, g, u
+Failed case (word count 10 < 0.01 %): s, u, n, g, g, u, h, u
+Failed case (word count 10 < 0.01 %): f, y, w, d, l, w, r
+Failed case (word count 10 < 0.01 %): s, u, l, i, h, s, a, n
+Failed case (word count 10 < 0.01 %): t, a, g, u, s, u, h, s, a, n
+Failed case (word count 10 < 0.01 %): a, d, g, u, j, ue
+Failed case (word count 10 < 0.01 %): k2, i, l, u, m, w, t, r
+Failed case (word count 10 < 0.01 %): h, u, y, a, g, u, l, n
+Failed case (word count 10 < 0.01 %): y, a, r, i, h, s, a, n
+Failed case (word count 10 < 0.01 %): h, a, r, a, h, d, a, n, mvs, a
+Failed case (word count 9 < 0.01 %): n, i, g, t, a
+Failed case (word count 9 < 0.01 %): a, d, a, l, i, d, g, a, b, a, l
+Failed case (word count 9 < 0.01 %): a, d, g, u
+Failed case (word count 9 < 0.01 %): s, u, d, u, l, u, h, s, a, n
+Failed case (word count 9 < 0.01 %): j, i, sh, i, g, oe
+Failed case (word count 9 < 0.01 %): t, u, s, g, u, n
+Failed case (word count 9 < 0.01 %): a, j, i, l, l, a, h, s, a, n
+Failed case (word count 9 < 0.01 %): h, i, n, a, h, ch, i, u, n
+Failed case (word count 9 < 0.01 %): h, a, r, a, h, ch, i
+Failed case (word count 9 < 0.01 %): g, a, h, ch, a
+Failed case (word count 9 < 0.01 %): d, u, l, n
+Failed case (word count 9 < 0.01 %): y, e, r, u, n, g, g, e, i
+Failed case (word count 8 < 0.01 %): d, fvs1, u, n, i
+Failed case (word count 8 < 0.01 %): n, i, g, t, a, l, a, n
+Failed case (word count 8 < 0.01 %): a, d, a, l, i, d, g, a, j, u
+Failed case (word count 8 < 0.01 %): y, fvs1, i, n
+Failed case (word count 8 < 0.01 %): s, i, s, t, w, m, l, i, g
+Failed case (word count 8 < 0.01 %): j, i, sh, i, n
+Failed case (word count 8 < 0.01 %): a, d, a, l, i, d, g, a, h, u
+Failed case (word count 8 < 0.01 %): b, u, s, g, a, j, u
+Failed case (word count 8 < 0.01 %): d, u, r, a, d, g, u
+Failed case (word count 8 < 0.01 %): d, u, r, a, d, u, h, s, a, n
+Failed case (word count 8 < 0.01 %): j, i, sh, i, y, e, ch, i
+Failed case (word count 8 < 0.01 %): n, i, h, d, a
+Failed case (word count 8 < 0.01 %): sh, a, n, g, n, a, l
+Failed case (word count 8 < 0.01 %): h, a, n, g, g, a, g, ch, i
+Failed case (word count 8 < 0.01 %): s, a, g, u, h, d, a, l
+Failed case (word count 8 < 0.01 %): h, a, s, u, h, s, a, n
+Failed case (word count 8 < 0.01 %): y, a, b, u, h, d, a, h, u
+Failed case (word count 8 < 0.01 %): s, a, g, a, d, a, g, u, l, u, h, s, a, n
+Failed case (word count 8 < 0.01 %): u, r, a, l, i, h, ch, i, d
+Failed case (word count 8 < 0.01 %): j, a, m, i, y, a, n, g, j, a, m, s, u
+Failed case (word count 8 < 0.01 %): d, u, s, g, a, j, a, i
+Failed case (word count 8 < 0.01 %): t, i, t, l, i, s
+Failed case (word count 8 < 0.01 %): u, ch, i, h, s, a, n
+Failed case (word count 8 < 0.01 %): s, u, r, u, h, ch, i, d
+Failed case (word count 8 < 0.01 %): j, u, h, i, y, a, h, s, a, n
+Failed case (word count 8 < 0.01 %): ch, i, d, a, h, s, a, n
+Failed case (word count 7 < 0.01 %): d, fvs1, eh, ng, l, ue
+Failed case (word count 7 < 0.01 %): u, i, d, g, a, r
+Failed case (word count 7 < 0.01 %): k2, u, w, n, l, w, n, k2, u
+Failed case (word count 7 < 0.01 %): j, i, g, s, a, g, a, l, t, a
+Failed case (word count 7 < 0.01 %): nirugu, n
+Failed case (word count 7 < 0.01 %): h, u, b, i, s, g, a, l, d, u
+Failed case (word count 7 < 0.01 %): s, u, n, g, g, u, d, a, g
+Failed case (word count 7 < 0.01 %): b, a, r, n, a, r, d
+Failed case (word count 7 < 0.01 %): d, w, r, oe, i, k2
+Failed case (word count 7 < 0.01 %): j, i, g, s, a, g, a, g, s, a, n
+Failed case (word count 7 < 0.01 %): h, u, b, i, y, a, h, s, a, n
+Failed case (word count 7 < 0.01 %): s, u, n, g, g, u, j, u
+Failed case (word count 7 < 0.01 %): b, u, s, g, a, h, u
+Failed case (word count 7 < 0.01 %): t, u, s, g, u
+Failed case (word count 7 < 0.01 %): j, i, r, u, h, s, a, n
+Failed case (word count 7 < 0.01 %): s, w, k2, ue, i, n, d
+Failed case (word count 7 < 0.01 %): b, u, s, g, a, j, ue
+Failed case (word count 7 < 0.01 %): m, a, s, a, l, u, w, n
+Failed case (word count 7 < 0.01 %): s, o, n, u, s, g, u, l, a, r
+Failed case (word count 7 < 0.01 %): h, a, r, a, g, u, l, u, h, s, a, n
+Failed case (word count 7 < 0.01 %): e, g, ue, l, a, n, g, h, u, w, a, r
+Failed case (word count 6 < 0.01 %): g, fvs1, eh, n, eh, r, e, l
+Failed case (word count 6 < 0.01 %): b, o, s, g, a, j, u
+Failed case (word count 6 < 0.01 %): w, a, r, w, n, k2, a
+Failed case (word count 6 < 0.01 %): d, fvs1, i
+Failed case (word count 6 < 0.01 %): d, fvs1, i, y, a, ng, h, u, w, a
+Failed case (word count 6 < 0.01 %): m
+Failed case (word count 6 < 0.01 %): d, fvs1, m, i, t, fvs1, r, i
+Failed case (word count 6 < 0.01 %): a, d, g, u, g, s, a, n
+Failed case (word count 6 < 0.01 %): j, i, sh, i, y, e, l, e, b, a, l
+Failed case (word count 6 < 0.01 %): g, a, n, t, t
+Failed case (word count 6 < 0.01 %): h, a, r, w, a, r, d
+Failed case (word count 6 < 0.01 %): j, u, r, i, h, d, a, i
+Failed case (word count 6 < 0.01 %): u, i, r, a, d, g, u
+Failed case (word count 6 < 0.01 %): b, u, s, g, a, g, s, a, n
+Failed case (word count 6 < 0.01 %): j, i, sh, i, j, u
+Failed case (word count 6 < 0.01 %): ch, i, ng, g, a, d, g, a, n
+Failed case (word count 6 < 0.01 %): n, i, g, d, a, r, a, l
+Failed case (word count 6 < 0.01 %): h, a, n, g, g, a, l, g, mvs, a
+Failed case (word count 6 < 0.01 %): j, u, r, i, h, j, i, g, u, l, h, u
+Failed case (word count 6 < 0.01 %): b, a, r, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): u, zr, i, u
+Failed case (word count 6 < 0.01 %): s, u, d, u, l, u, h, ch, i, d
+Failed case (word count 6 < 0.01 %): u, i, l, a, g, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): b, a, i, n, g, g, u
+Failed case (word count 6 < 0.01 %): a, s, i, h, l, a, n
+Failed case (word count 6 < 0.01 %): k2, u, m, p, i, ue, t, w, r
+Failed case (word count 6 < 0.01 %): h, a, n, g, g, a, j, ue
+Failed case (word count 6 < 0.01 %): h, a, n, g, g, a, g, s, a, n
+Failed case (word count 6 < 0.01 %): g, u, y, u, ch, i, l, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): u, n, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): s, u, n, u, s, g, u, l, mvs, a
+Failed case (word count 6 < 0.01 %): l, a, m, n
+Failed case (word count 6 < 0.01 %): j, i, y, n
+Failed case (word count 6 < 0.01 %): i, l, n
+Failed case (word count 6 < 0.01 %): d, w, e, g
+Failed case (word count 6 < 0.01 %): u, k2, t, y, a, b, a, r
+Failed case (word count 6 < 0.01 %): s, u, n, u, s, g, u, l, a, r
+Failed case (word count 6 < 0.01 %): k2, i, l, o, m, w, t, r
+Failed case (word count 6 < 0.01 %): nirugu, d, a, n, t, w
+Failed case (word count 6 < 0.01 %): o, ng, s, i, h, ch, i, d
+Failed case (word count 6 < 0.01 %): e, n, n
+Failed case (word count 6 < 0.01 %): ch, u, h, l, a, g, u, l, h, u
+Failed case (word count 6 < 0.01 %): n, a, i, r, a, g, u, l, u, h, ch, i, d
+Failed case (word count 6 < 0.01 %): g, a, h, ch, a, h, a, n
+Failed case (word count 6 < 0.01 %): b, i, l, h, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): s, u, r, b, u, l, j, i, l, a, h, s, a, n
+Failed case (word count 6 < 0.01 %): g, a, i, h, a, m, s, i, h, d, u
+Failed case (word count 5 < 0.01 %): b, o, s, g, a, g, s, a, n
+Failed case (word count 5 < 0.01 %): d, fvs1, i, w, i, z, i
+Failed case (word count 5 < 0.01 %): h, a, d, g, u, n
+Failed case (word count 5 < 0.01 %): g, fvs1, h, i, r
+Failed case (word count 5 < 0.01 %): h, a, m, t, u, d, g, a, g, s, a, n
+Failed case (word count 5 < 0.01 %): t, o, g, u, s, g, mvs, a
+Failed case (word count 5 < 0.01 %): j, i, sh, fvs1, i, y, e, l, e, b, e, l
+Failed case (word count 5 < 0.01 %): d, fvs1, ue
+Failed case (word count 5 < 0.01 %): n, a, s, u, n, u, fvs1, r, t, u
+Failed case (word count 5 < 0.01 %): nnbsp, d, ue, i, ng
+Failed case (word count 5 < 0.01 %): g, a, d, a, h, s, i
+Failed case (word count 5 < 0.01 %): i, n, t, w, r, n, w, t
+Failed case (word count 5 < 0.01 %): g, u, h, ch, u, g, mvs, a
+Failed case (word count 5 < 0.01 %): t, a, g, u, s, g, u
+Failed case (word count 5 < 0.01 %): a, n, g, h, mvs, a
+Failed case (word count 5 < 0.01 %): sh, oe, m, p, w, t, w, r
+Failed case (word count 5 < 0.01 %): ch, u, h, ch, a
+Failed case (word count 5 < 0.01 %): h, u, l, b, u, h, d, a, h, u
+Failed case (word count 5 < 0.01 %): t, u, h, d, a, g, a, j, u
+Failed case (word count 5 < 0.01 %): j, u, h, s, u, h, s, a, n
+Failed case (word count 5 < 0.01 %): d, u, s, g, a, g, s, a, n
+Failed case (word count 5 < 0.01 %): t, oe, j, i, y, n
+Failed case (word count 5 < 0.01 %): b, a, y, a, s, g, u
+Failed case (word count 5 < 0.01 %): d, ue, j, i, y, n
+Failed case (word count 5 < 0.01 %): rh, w, n
+Failed case (word count 5 < 0.01 %): ue, i, l, n
+Failed case (word count 5 < 0.01 %): e, h, ue, l, n
+Failed case (word count 5 < 0.01 %): a, s, g, a, n
+Failed case (word count 5 < 0.01 %): h, e, l, n
+Failed case (word count 5 < 0.01 %): d, u, n, g, r, u, b, w, a, n, g, b, u, n
+Failed case (word count 5 < 0.01 %): a, r, b, a, g, u, l, n
+Failed case (word count 5 < 0.01 %): b, a, r, i, h, ch, i
+Failed case (word count 5 < 0.01 %): f, a, sh, i, s
+Failed case (word count 5 < 0.01 %): m, w, n
+Failed case (word count 5 < 0.01 %): b, u, i, j, i, h, s, a, n
+Failed case (word count 5 < 0.01 %): nirugu, cr, i
+Failed case (word count 5 < 0.01 %): h, a, r, i, g, u, ch, a, h, s, a, n
+Failed case (word count 5 < 0.01 %): a, l, d, a, r, s, i, h, s, a, n
+Failed case (word count 5 < 0.01 %): s, a, n, a, h, d, a, l, mvs, a
+Failed case (word count 5 < 0.01 %): b, u, i, j, i, g, u, l, u, h, s, a, n
+Failed case (word count 5 < 0.01 %): j, u, r, i, h, d, u
+Failed case (word count 4 < 0.01 %): d, a, g, u, s, g, a, h, u
+Failed case (word count 4 < 0.01 %): d, a, g, u, s, g, a, g, s, a, n
+Failed case (word count 4 < 0.01 %): b, a, y, a, s, g, u, l, a, ng, t, u
+Failed case (word count 4 < 0.01 %): sh, i, z, ue
+Failed case (word count 4 < 0.01 %): a, d, g, u, g, a, d
+Failed case (word count 4 < 0.01 %): d, fvs1, a, ch, a, ng
+Failed case (word count 4 < 0.01 %): b, o, s, g, a, n
+Failed case (word count 4 < 0.01 %): u, s, a, d, g, a, h, u
+Failed case (word count 4 < 0.01 %): h, a, d, g, u, g, s, a, n
+Failed case (word count 4 < 0.01 %): ch, i, d, g, u, l, a, n
+Failed case (word count 4 < 0.01 %): h, u, b, i, s, g, a, j, u
+Failed case (word count 4 < 0.01 %): d, fvs1, a, g
+Failed case (word count 4 < 0.01 %): a, d, g, u, n
+Failed case (word count 4 < 0.01 %): d, fvs1, i, ng
+Failed case (word count 4 < 0.01 %): nirugu, g
+Failed case (word count 4 < 0.01 %): l
+Failed case (word count 4 < 0.01 %): u, fvs1, u
+Failed case (word count 4 < 0.01 %): s, i, s, t, w, m, j, i, g, s, e, n
+Failed case (word count 4 < 0.01 %): b, u, g, u, n, i, s, g, a, h, u
+Failed case (word count 4 < 0.01 %): b, a, g, a, s, g, a, n, mvs, a
+Failed case (word count 4 < 0.01 %): b, w, t, hh, l, w, hh, w, m
+Failed case (word count 4 < 0.01 %): a, n, g, h, a, r, h, u
+Failed case (word count 4 < 0.01 %): h, u, b, i, s, g, u
+Failed case (word count 4 < 0.01 %): t, a, g, a, d, g, a, l
+Failed case (word count 4 < 0.01 %): b, u, l, b, a, s, u, r, a, n, g, g, u, i
+Failed case (word count 4 < 0.01 %): h, u, r, i, h, l, a, h, u
+Failed case (word count 4 < 0.01 %): b, a, h, d, a, g, a, n, mvs, a
+Failed case (word count 4 < 0.01 %): j, i, g, s, a, g, a, j, u
+Failed case (word count 4 < 0.01 %): d, w, l, f, i
+Failed case (word count 4 < 0.01 %): j, i, sh, i, n, mvs, a
+Failed case (word count 4 < 0.01 %): j, i, sh, i, b, e, l
+Failed case (word count 4 < 0.01 %): h, a, r, oe, l, d
+Failed case (word count 4 < 0.01 %): u, h, a, h, d, a, h, u, n
+Failed case (word count 4 < 0.01 %): u, r, u, h, s, i
+Failed case (word count 4 < 0.01 %): ch, u, h, ch, a, l, a, l, d, a
+Failed case (word count 4 < 0.01 %): j, i, g, s, a, g, a, n
+Failed case (word count 4 < 0.01 %): u, h, s, a, g, mvs, a
+Failed case (word count 4 < 0.01 %): b, a, d, u, d, g, a, h, u
+Failed case (word count 4 < 0.01 %): m, k2, l, w, l, a, n, d
+Failed case (word count 4 < 0.01 %): e, l, w, k2, t, r, ue, n
+Failed case (word count 4 < 0.01 %): a, j, i, h, l, a, n
+Failed case (word count 4 < 0.01 %): a, s, i, h, l, a, m, j, i
+Failed case (word count 4 < 0.01 %): j, u, r, i, h, j, i, g, u, l, j, u
+Failed case (word count 4 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, n
+Failed case (word count 4 < 0.01 %): a, n, g, h, a, r, u, l
+Failed case (word count 4 < 0.01 %): a, n, g, h, a, r, ch, ue
+Failed case (word count 4 < 0.01 %): s, i, s, t, w, m, ch, a
+Failed case (word count 4 < 0.01 %): a, d, a, l, i, d, g, a, j, ue
+Failed case (word count 4 < 0.01 %): j, i, g, s, a, g, a, l, d, u
+Failed case (word count 4 < 0.01 %): t, u, h, d, a, g, a, n, mvs, a
+Failed case (word count 4 < 0.01 %): t, u, r, a, d, u, h, s, a, n
+Failed case (word count 4 < 0.01 %): n, u, d, a, l, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): y, a, b, u, h, d, a, j, u
+Failed case (word count 4 < 0.01 %): j, u, h, s, u, g, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): s, a, l, u, h, s, a, n
+Failed case (word count 4 < 0.01 %): j, u, h, s, u, j, u
+Failed case (word count 4 < 0.01 %): t, a, s, u, l, d, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): a, n, g, h, a, r, a, g, u, l, h, u
+Failed case (word count 4 < 0.01 %): a, i, r, m, i, t, w
+Failed case (word count 4 < 0.01 %): nnbsp, ue, nirugu
+Failed case (word count 4 < 0.01 %): h, i, g, s, a, n
+Failed case (word count 4 < 0.01 %): u, ng, s, i, h, ch, i
+Failed case (word count 4 < 0.01 %): d, a, g, u, s, g, a, g, a, d
+Failed case (word count 4 < 0.01 %): u, r, u, s, g, u
+Failed case (word count 4 < 0.01 %): nirugu, p, w, t, w, r, b, ue, r, e, g
+Failed case (word count 4 < 0.01 %): a, n, g, h, a, d, a, g, ch, i
+Failed case (word count 4 < 0.01 %): k2, i, l, ue, m, w, t, r
+Failed case (word count 4 < 0.01 %): s, a, ch, u, r, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): s, o, r, b, u, l, j, i, l, a, h, ch, i
+Failed case (word count 4 < 0.01 %): s, a, n, a, h, d, a, n, mvs, a
+Failed case (word count 4 < 0.01 %): m, a, r, d, a, h, d, a, h, u
+Failed case (word count 4 < 0.01 %): s, a, n, a, h, d, a, b, a
+Failed case (word count 4 < 0.01 %): a, g, u, l, u, h, d, a, h, u, n
+Failed case (word count 4 < 0.01 %): m, a, n, d, u, h, s, a, n
+Failed case (word count 4 < 0.01 %): sh, u, h, l, i, g
+Failed case (word count 4 < 0.01 %): b, u, h, d, a
+Failed case (word count 4 < 0.01 %): u, h, d, a, r, g, u, i
+Failed case (word count 4 < 0.01 %): h, a, r, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): j, i, r, u, h, ch, i, n
+Failed case (word count 4 < 0.01 %): b, u, r, u, h, j, i, g, u, n
+Failed case (word count 4 < 0.01 %): sh, a, g, a, r, d, a, h, d, a, n, mvs, a
+Failed case (word count 4 < 0.01 %): s, a, n, a, h, s, a, n
+Failed case (word count 4 < 0.01 %): d, u, h, d, u, l, j, ue
+Failed case (word count 4 < 0.01 %): u, r, g, u, h, s, a, n
+Failed case (word count 4 < 0.01 %): s, a, m, a, g, u, r, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): n
+Failed case (word count 3 < 0.01 %): b, a, y, a, s, g, u, l, a, ng, t, a, i
+Failed case (word count 3 < 0.01 %): u, i, d, g, a, r, l, a, n
+Failed case (word count 3 < 0.01 %): i, d, g, a, h, u
+Failed case (word count 3 < 0.01 %): ch, i, g, d, a, n
+Failed case (word count 3 < 0.01 %): t, u, r, u, s, g, mvs, a
+Failed case (word count 3 < 0.01 %): ch, o, m, h, a, d, g, a, l
+Failed case (word count 3 < 0.01 %): k2, a, t, r, ch, u, d
+Failed case (word count 3 < 0.01 %): d, u, s, g, a, n
+Failed case (word count 3 < 0.01 %): d, fvs1, w, ng
+Failed case (word count 3 < 0.01 %): j, i, sh, fvs1, i, y, mvs, e
+Failed case (word count 3 < 0.01 %): h, a, d, g, u, m, a, l
+Failed case (word count 3 < 0.01 %): a, d, g, u, l, ch, a, n
+Failed case (word count 3 < 0.01 %): u, s, a, d, g, a, j, u
+Failed case (word count 3 < 0.01 %): a, s, g, a, j, u
+Failed case (word count 3 < 0.01 %): i, fvs1
+Failed case (word count 3 < 0.01 %): u, r, u, s, g, a, g, s, a, n
+Failed case (word count 3 < 0.01 %): ch, a, d, g, u, l, a, ng
+Failed case (word count 3 < 0.01 %): i, d, g, a, n
+Failed case (word count 3 < 0.01 %): d, fvs1, a, ng
+Failed case (word count 3 < 0.01 %): t, u, s, g, a, n
+Failed case (word count 3 < 0.01 %): d, fvs1, g, a, n
+Failed case (word count 3 < 0.01 %): a, s, g, a, r, a, g, u, l, u, n
+Failed case (word count 3 < 0.01 %): i, d, g, a, g, s, a, n
+Failed case (word count 3 < 0.01 %): d, u, r, a, s, g, a, n
+Failed case (word count 3 < 0.01 %): h, u, b, i, s, g, a, l, ch, i, d
+Failed case (word count 3 < 0.01 %): n, i, g, t, a, l, a, j, u
+Failed case (word count 3 < 0.01 %): sh, i, r, u
+Failed case (word count 3 < 0.01 %): d, a, g, u, s, g, a, b, a
+Failed case (word count 3 < 0.01 %): g
+Failed case (word count 3 < 0.01 %): ch
+Failed case (word count 3 < 0.01 %): r
+Failed case (word count 3 < 0.01 %): s
+Failed case (word count 3 < 0.01 %): d, fvs1, e, g, e, n
+Failed case (word count 3 < 0.01 %): j, i, g, s, a, g, a, h, u
+Failed case (word count 3 < 0.01 %): t, oe, n, n, w, i
+Failed case (word count 3 < 0.01 %): u, d, u, r, i, d, u, h, ch, i
+Failed case (word count 3 < 0.01 %): t, u, s, g, a, i, j, i, l, d, a
+Failed case (word count 3 < 0.01 %): h, a, w, u, t, hh, u, r, n, w
+Failed case (word count 3 < 0.01 %): t, u, h, d, a, g, a, d, a, g
+Failed case (word count 3 < 0.01 %): t, o, s, g, a, i
+Failed case (word count 3 < 0.01 %): f, r, w, d, m, e, n
+Failed case (word count 3 < 0.01 %): t, u, h, d, a, g, u, n
+Failed case (word count 3 < 0.01 %): u, l, a, n, g, g, i
+Failed case (word count 3 < 0.01 %): j, i, sh, i, d, e, g
+Failed case (word count 3 < 0.01 %): ch, i, ng, g, a, d, g, a, g, s, a, n
+Failed case (word count 3 < 0.01 %): ch, i, ng, g, a, d, g, a, b, a
+Failed case (word count 3 < 0.01 %): b, e, l, n
+Failed case (word count 3 < 0.01 %): j, a, n, g, g, i, j, i, ch, a
+Failed case (word count 3 < 0.01 %): j, i, g, s, a, g, a, d, a, g
+Failed case (word count 3 < 0.01 %): p, u, r, t, w, r
+Failed case (word count 3 < 0.01 %): ch, i, n, g, g, a, d, g, a, h, u
+Failed case (word count 3 < 0.01 %): t, u, h, a, i, l, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): j, a, n, g, j, u, n
+Failed case (word count 3 < 0.01 %): g, w, n, w, r, e, l
+Failed case (word count 3 < 0.01 %): j, u, h, s, u, g, a, h, u
+Failed case (word count 3 < 0.01 %): b, a, g, a, s, g, a, n
+Failed case (word count 3 < 0.01 %): n, i, g, d, a, r, a, g, u, l, h, u
+Failed case (word count 3 < 0.01 %): ch, a, r, d
+Failed case (word count 3 < 0.01 %): nnbsp, d, ue, i, s, i, y, a, ng
+Failed case (word count 3 < 0.01 %): a, b, ch, i, r, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): h, u, r, i, h, l, a, l, d, a
+Failed case (word count 3 < 0.01 %): b, a, g, a, s, g, a, j, oe
+Failed case (word count 3 < 0.01 %): b, u, g, u, n, i, s, g, a, j, oe
+Failed case (word count 3 < 0.01 %): j, i, sh, i, h, oe
+Failed case (word count 3 < 0.01 %): n, i, h, d, a, l, a, n
+Failed case (word count 3 < 0.01 %): s, u, n, g, g, u, j, ue
+Failed case (word count 3 < 0.01 %): h, a, n, g, g, a, d, a, g
+Failed case (word count 3 < 0.01 %): s, u, n, g, g, u, g, s, a, n
+Failed case (word count 3 < 0.01 %): h, a, n, g, g, a, g, d, a, h, u
+Failed case (word count 3 < 0.01 %): s, u, n, g, g, u, n, mvs, a
+Failed case (word count 3 < 0.01 %): h, u, r, i, h, l, a, h, ch, i, u, n
+Failed case (word count 3 < 0.01 %): ch, i, r, m, a, i, h, s, a, n
+Failed case (word count 3 < 0.01 %): t, a, m, j, i, g, u, l, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): u, i, l, a, g, a, h, d, a, h, u, n
+Failed case (word count 3 < 0.01 %): s, a, n, t, i, m, w, t, r
+Failed case (word count 3 < 0.01 %): t, a, i, l, b, u, r, i, l, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): t, a, n, g, s, a, l, a, h, u
+Failed case (word count 3 < 0.01 %): h, a, y, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): j, u, h, s, u, n, mvs, a
+Failed case (word count 3 < 0.01 %): a, s, i, h, l, a, j, u
+Failed case (word count 3 < 0.01 %): u, n, a, g, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): h, a, n, d, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): t, a, n, g, s, a, l, a, n, mvs, a
+Failed case (word count 3 < 0.01 %): u, d, a, g, mvs, a, y, a, m, a, r, b, a
+Failed case (word count 3 < 0.01 %): u, d, a, g, mvs, a, a, d, a, l, i, h, a, n
+Failed case (word count 3 < 0.01 %): h, a, s, u, n, mvs, a, u, l, a, g, a, n
+Failed case (word count 3 < 0.01 %): s, a, l, g, a, n, mvs, a, t, u, s
+Failed case (word count 3 < 0.01 %): j, u, r, i, h, t, e, i
+Failed case (word count 3 < 0.01 %): d, u, r, a, s, g, a, h, u
+Failed case (word count 3 < 0.01 %): b, a, t, u, d, g, a, h, u
+Failed case (word count 3 < 0.01 %): j, u, r, i, h, j, i, g, u, l, b, a
+Failed case (word count 3 < 0.01 %): w, n
+Failed case (word count 3 < 0.01 %): j, i, h, s, a, g, a, n
+Failed case (word count 3 < 0.01 %): b, i, ch, i, g, s, a, n
+Failed case (word count 3 < 0.01 %): a, i, l, a, d, g, a, y, mvs, a
+Failed case (word count 3 < 0.01 %): m, eh, t, r
+Failed case (word count 3 < 0.01 %): ch, i, e, g, g, a, d, g, a, j, u
+Failed case (word count 3 < 0.01 %): i, h, ch, u
+Failed case (word count 3 < 0.01 %): u, r, a, l, i, h, ch, i
+Failed case (word count 3 < 0.01 %): d, a, i, l, b, u, r, i, l, a, h, ch, i
+Failed case (word count 3 < 0.01 %): nirugu, f, l, u, r, w, n, c, w
+Failed case (word count 3 < 0.01 %): nirugu, b, y, a, t, r, i, ch
+Failed case (word count 3 < 0.01 %): t, u, r, a, s, g, a, h, u
+Failed case (word count 3 < 0.01 %): t, u, r, a, d, g, a, l
+Failed case (word count 3 < 0.01 %): a, d, g, a, g
+Failed case (word count 3 < 0.01 %): h, u, r, a, l, d, u, g, u, l, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, u, s, g, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, u, h, d, a, g, a, h, u
+Failed case (word count 3 < 0.01 %): s, u, d, u, l, u, h, ch, i
+Failed case (word count 3 < 0.01 %): b, a, i, h, s, a, g, a, r
+Failed case (word count 3 < 0.01 %): j, i, sh, i, y, a, l, a, b, e, l
+Failed case (word count 3 < 0.01 %): j, u, l, g, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, u, h, d, u, l, u, n
+Failed case (word count 3 < 0.01 %): g, a, h, ch, a, g, a, r
+Failed case (word count 3 < 0.01 %): d, u, h, d, a, g, a, j, ue
+Failed case (word count 3 < 0.01 %): b, u, d, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, u, h, d, u, l, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): h, a, r, i, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, a, n, i, l, ch, a, g, u, l, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): d, a, r, h, a, g, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): a, j, i, l, l, a, h, s, a, d
+Failed case (word count 3 < 0.01 %): a, s, a, g, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): j, i, l, u, g, u, d, u, h, ch, i
+Failed case (word count 3 < 0.01 %): m, a, h, d, a, g, a, l
+Failed case (word count 3 < 0.01 %): u, r, ch, i, g, u, l, u, h, ch, i
+Failed case (word count 3 < 0.01 %): s, u, ng, g, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): a, j, i, h, l, a, j, ue
+Failed case (word count 3 < 0.01 %): k2, u, m, p, i, o, i, t, w, r
+Failed case (word count 3 < 0.01 %): h, a, r, a, h, d, a, j, ue
+Failed case (word count 3 < 0.01 %): d, u, m, i, y, a, ch, i, l, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): u, h, a, h, d, a, h, u, n, ch, i, l, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): s, a, n, a, h, d, a, j, ue
+Failed case (word count 3 < 0.01 %): u, ch, a, r, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): j, i, sh, i, y, a, l, e, b, e, l
+Failed case (word count 3 < 0.01 %): b, u, l, u, h, s, a, d
+Failed case (word count 3 < 0.01 %): h, a, d, a, g, a, l, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): ch, u, l, g, u, r, a, h, s, a, n
+Failed case (word count 3 < 0.01 %): ch, u, h, l, a, g, u, l, j, ue
+Failed case (word count 3 < 0.01 %): u, l, g, u, h, s, a, n
+Failed case (word count 3 < 0.01 %): h, a, r, a, h, d, a, h, u
+Failed case (word count 3 < 0.01 %): sh, i, w, w, i
+Failed case (word count 2 < 0.01 %): d, fvs1, ue, ng, s, i, g, u, r
+Failed case (word count 2 < 0.01 %): d, fvs1, nirugu
+Failed case (word count 2 < 0.01 %): l, o, b, s, n, ng
+Failed case (word count 2 < 0.01 %): n, i, g, t, a, r, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): nnbsp, i, i
+Failed case (word count 2 < 0.01 %): w
+Failed case (word count 2 < 0.01 %): d, fvs1, ue, fvs1, ng
+Failed case (word count 2 < 0.01 %): h, a, d, g, u, g, d, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, d, g, u, j, u
+Failed case (word count 2 < 0.01 %): a, s, g, a, h, u
+Failed case (word count 2 < 0.01 %): d, fvs1, u, g, a, r
+Failed case (word count 2 < 0.01 %): t, a, s, g, a, l
+Failed case (word count 2 < 0.01 %): a, s, g, a, r, a, n, mvs, a
+Failed case (word count 2 < 0.01 %): h, a, d, g, u, m, a, l, l, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): h, u, d, g, u, l, d, u, g, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, d, g, u, l, a, n
+Failed case (word count 2 < 0.01 %): a, d, g, u, g, u, l, u, g, a, d
+Failed case (word count 2 < 0.01 %): t, a, i, d, g, u, r, a, g, u, l, u, n
+Failed case (word count 2 < 0.01 %): d, u, s, g, a, j, u
+Failed case (word count 2 < 0.01 %): g, fvs1, h, i, b
+Failed case (word count 2 < 0.01 %): j, i, sh, fvs1, i, y, e, ch, i
+Failed case (word count 2 < 0.01 %): j, i, sh, fvs1, i, y, a, l, a, b, a, l
+Failed case (word count 2 < 0.01 %): n, i, g, t, a, r, a, n
+Failed case (word count 2 < 0.01 %): u, r, u, s, g, a, l, t, u
+Failed case (word count 2 < 0.01 %): ch, i, d, g, u, j, u
+Failed case (word count 2 < 0.01 %): d
+Failed case (word count 2 < 0.01 %): y, fvs1, i
+Failed case (word count 2 < 0.01 %): a, sh, i, g, ue, i
+Failed case (word count 2 < 0.01 %): d, fvs1, hh, r, mvs, a
+Failed case (word count 2 < 0.01 %): ch, i, d, g, u, g, s, a, n
+Failed case (word count 2 < 0.01 %): d, fvs1, eh, b, a, j, a, n
+Failed case (word count 2 < 0.01 %): a, d, g, u, g, u, l, j, u
+Failed case (word count 2 < 0.01 %): d, u, r, a, s, g, a, l, t, u
+Failed case (word count 2 < 0.01 %): t, o, d, g, a, r
+Failed case (word count 2 < 0.01 %): t, o, g, u, s, g, a, n
+Failed case (word count 2 < 0.01 %): t, a, i, d, g, u, r, a, g, u, l, h, u
+Failed case (word count 2 < 0.01 %): d, fvs1, ue, i
+Failed case (word count 2 < 0.01 %): h, u, d, g, u, n
+Failed case (word count 2 < 0.01 %): h
+Failed case (word count 2 < 0.01 %): j
+Failed case (word count 2 < 0.01 %): nirugu, g, s, a, n
+Failed case (word count 2 < 0.01 %): b, a, g, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): t, u, s, g, a, i, l, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): j, n, g, ue, n
+Failed case (word count 2 < 0.01 %): n, a, i, fvs3, m, a, n
+Failed case (word count 2 < 0.01 %): u, u, d, u, n, n, w, l
+Failed case (word count 2 < 0.01 %): hh, w, n, r, i
+Failed case (word count 2 < 0.01 %): t, u, g, d, a, g, a, h, ch, i
+Failed case (word count 2 < 0.01 %): k2, a, t, c
+Failed case (word count 2 < 0.01 %): ch, i, d, g, u, h, u
+Failed case (word count 2 < 0.01 %): s, i, s, t, w, m, d, oe
+Failed case (word count 2 < 0.01 %): u, d, u, r, i, d, g, a, l
+Failed case (word count 2 < 0.01 %): d, w, m, i, ng
+Failed case (word count 2 < 0.01 %): s, w, n, t
+Failed case (word count 2 < 0.01 %): eh, d, w, e, r, d
+Failed case (word count 2 < 0.01 %): b, a, g, a, s, g, a, d, a, g
+Failed case (word count 2 < 0.01 %): o, d, o, r, i, d, g, o
+Failed case (word count 2 < 0.01 %): j, u, n, a, s, w, n
+Failed case (word count 2 < 0.01 %): j, i, g, a, h, s, a, n, ch, i, l, a, n
+Failed case (word count 2 < 0.01 %): s, t, w, b, u, f
+Failed case (word count 2 < 0.01 %): n, u, h, d, a, h, u
+Failed case (word count 2 < 0.01 %): t, u, h, d, a, b, u, r, i, d, ue
+Failed case (word count 2 < 0.01 %): e, l, w, m, w, n, t, o, l, o, s
+Failed case (word count 2 < 0.01 %): j, i, sh, i, y, e, l, e, g, oe
+Failed case (word count 2 < 0.01 %): b, u, g, u, n, i, s, g, a, j, u
+Failed case (word count 2 < 0.01 %): p, r, oe, g, r, e, m
+Failed case (word count 2 < 0.01 %): b, u, g, u, n, i, s, g, a, j, a, i
+Failed case (word count 2 < 0.01 %): b, a, g, a, s, g, a, j, a, i
+Failed case (word count 2 < 0.01 %): l, i, n, d, b, l, u, m
+Failed case (word count 2 < 0.01 %): a, d, a, l, i, d, g, a, n, mvs, a
+Failed case (word count 2 < 0.01 %): m, w, n, t, k2, a, l, u
+Failed case (word count 2 < 0.01 %): n, w, w, oe, m, e, n
+Failed case (word count 2 < 0.01 %): h, u, b, i, s, u, h, ch, i
+Failed case (word count 2 < 0.01 %): t, u, h, d, a, g, a, l, d, a
+Failed case (word count 2 < 0.01 %): j, i, g, s, a, g, a, b, a
+Failed case (word count 2 < 0.01 %): ch, i, n, g, g, a, d, g, a, j, u
+Failed case (word count 2 < 0.01 %): b, u, d, u, h, l, a, h, u
+Failed case (word count 2 < 0.01 %): ue, n, d, ue, r, t, o, o, r, mvs, a, t, o, o, r, mvs, a, t, o, o, r, mvs, a, o, r, g, a, n, i, g
+Failed case (word count 2 < 0.01 %): t, u, s, g, a, i, j, i, l, a, h, u
+Failed case (word count 2 < 0.01 %): b, a, g, a, s, g, u
+Failed case (word count 2 < 0.01 %): h, a, m, i, y, a, r, u, h, ch, i, d
+Failed case (word count 2 < 0.01 %): b, a, g, d, a, g, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): s, u, r, g, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, a, d, u, d, g, a, n
+Failed case (word count 2 < 0.01 %): s, i, s, t, w, m, d, u
+Failed case (word count 2 < 0.01 %): t, a, b, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, w, t, oe, r, n, w
+Failed case (word count 2 < 0.01 %): s, a, g, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, a, i, l, d, u, h, ch, i
+Failed case (word count 2 < 0.01 %): n, i, g, d, a, r, a, n
+Failed case (word count 2 < 0.01 %): b, a, g, a, s, g, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): g, w, n
+Failed case (word count 2 < 0.01 %): t, u, s, g, a, j, a, i
+Failed case (word count 2 < 0.01 %): a, d, a, l, i, d, g, a, g, a, d
+Failed case (word count 2 < 0.01 %): u, s, a, d, g, u
+Failed case (word count 2 < 0.01 %): j, i, sh, i, j, oe
+Failed case (word count 2 < 0.01 %): f, u, r, d
+Failed case (word count 2 < 0.01 %): ch, i, ng, g, a, d, g, a, j, oe
+Failed case (word count 2 < 0.01 %): n, i, h, d, a, r, a, l
+Failed case (word count 2 < 0.01 %): a, j, i, h, l, a, j, oe
+Failed case (word count 2 < 0.01 %): j, u, r, i, h, j, i, g, u, l, j, oe
+Failed case (word count 2 < 0.01 %): j, i, r, u, h, l, a, n
+Failed case (word count 2 < 0.01 %): h, u, b, i, s, g, a, l, d, a
+Failed case (word count 2 < 0.01 %): u, n, ch, a, l, i, h, d, oe
+Failed case (word count 2 < 0.01 %): a, s, i, h, l, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): s, u, n, g, g, u, h, o
+Failed case (word count 2 < 0.01 %): d, a, b, s, i, n, g, g, u, i
+Failed case (word count 2 < 0.01 %): y, a, n, g, j, ue
+Failed case (word count 2 < 0.01 %): d, a, n, g, ch, u
+Failed case (word count 2 < 0.01 %): b, a, g, a, s, g, a, j, ue
+Failed case (word count 2 < 0.01 %): h, u, r, i, y, a, n, g, g, u, i, l, a, l
+Failed case (word count 2 < 0.01 %): d, u, s, g, a, d, a, g
+Failed case (word count 2 < 0.01 %): h, a, n, g, g, a, l, g, a, h, u
+Failed case (word count 2 < 0.01 %): h, a, n, g, g, a, g, d, a, g, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, n, g, g, a, n
+Failed case (word count 2 < 0.01 %): h, a, m, d, u, d, g, a, n
+Failed case (word count 2 < 0.01 %): d, u, s, g, a, i, j, i, j, ue
+Failed case (word count 2 < 0.01 %): j, a, n, g, g, i, l, a, g, mvs, a
+Failed case (word count 2 < 0.01 %): a, n, g, h, a, n
+Failed case (word count 2 < 0.01 %): h, u, n, g, h, u
+Failed case (word count 2 < 0.01 %): ch, a, g, a, j, a, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): t, u, s, a, l, a, h, ch, i
+Failed case (word count 2 < 0.01 %): y, a, b, u, h, d, a, n, mvs, a
+Failed case (word count 2 < 0.01 %): b, a, y, a, s, g, a, j, u
+Failed case (word count 2 < 0.01 %): m, i, l, i, m, w, t, r
+Failed case (word count 2 < 0.01 %): h, u, l, b, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): t, u, g, u, h, s, i
+Failed case (word count 2 < 0.01 %): d, i, y, a, m, w, t, r
+Failed case (word count 2 < 0.01 %): b, u, d, u, h, d, u
+Failed case (word count 2 < 0.01 %): y, a, n, g, j, u
+Failed case (word count 2 < 0.01 %): t, a, h, l, a, h, u
+Failed case (word count 2 < 0.01 %): t, a, h, l, a, j, u
+Failed case (word count 2 < 0.01 %): t, a, n, g, s, a, l, a, g, u, l, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): y, a, b, u, h, d, a, g, u, l, u, n, mvs, a
+Failed case (word count 2 < 0.01 %): n, a, g, a, l, i, n, g, h, a, i
+Failed case (word count 2 < 0.01 %): h, a, g, a, h, ch, i
+Failed case (word count 2 < 0.01 %): u, r, u, l, a, h, ch, i
+Failed case (word count 2 < 0.01 %): b, a, r, i, h, s, a, n
+Failed case (word count 2 < 0.01 %): t, a, n, g, s, a, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): a, l, d, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, u, h, s, u, g, a, j, u
+Failed case (word count 2 < 0.01 %): b, a, i, g, u, l, u, h, ch, i
+Failed case (word count 2 < 0.01 %): t, u, r, g, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, i, r, a, d, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): m, a, g, a, u, n, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): s, i, r, mvs, a, t, u, s
+Failed case (word count 2 < 0.01 %): g, e, s, i, g, ue, n, s, a, g, a, d, a, g, u, l, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, r, u, h, s, i, d, a, i
+Failed case (word count 2 < 0.01 %): ch, i, ng, g, a, d, g, a, j, ue
+Failed case (word count 2 < 0.01 %): d, u, r, a, d, g, a, l
+Failed case (word count 2 < 0.01 %): b, u, s, g, a, n, mvs, a
+Failed case (word count 2 < 0.01 %): n, i, g, t, a, r, a, j, ue
+Failed case (word count 2 < 0.01 %): d, a, g, u, s, g, a, j, ue
+Failed case (word count 2 < 0.01 %): b, a, i, g, u, l, u, g, d, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, g, s, a, n
+Failed case (word count 2 < 0.01 %): u, l, n
+Failed case (word count 2 < 0.01 %): s, a, r, n
+Failed case (word count 2 < 0.01 %): h, u, u, j, i, y, n
+Failed case (word count 2 < 0.01 %): p, a, i, s, n
+Failed case (word count 2 < 0.01 %): n, i, ng, s, i, y, n
+Failed case (word count 2 < 0.01 %): h, u, r, ch, n
+Failed case (word count 2 < 0.01 %): c, a, n, g, y, a, n, g, j, a, m, s, u
+Failed case (word count 2 < 0.01 %): j, i, sh, i, y, a, ch, i
+Failed case (word count 2 < 0.01 %): hh, i, t, l, w, r
+Failed case (word count 2 < 0.01 %): h, u, g, u, l, n
+Failed case (word count 2 < 0.01 %): b, a, y, a, s, g, u, l, a, e, g
+Failed case (word count 2 < 0.01 %): m, a, s, l, u, w, n
+Failed case (word count 2 < 0.01 %): a, d, g, u, g, a, l
+Failed case (word count 2 < 0.01 %): j, w, n, w, w, n
+Failed case (word count 2 < 0.01 %): a, n, g, g, l, i
+Failed case (word count 2 < 0.01 %): b, a, y, a, s, g, a, m, mvs, a
+Failed case (word count 2 < 0.01 %): b, a, y, a, s, g, a, n
+Failed case (word count 2 < 0.01 %): s, u, n, g, g, u, m, a, l
+Failed case (word count 2 < 0.01 %): t, u, s, g, a, i, l, e, n
+Failed case (word count 2 < 0.01 %): t, u, d, g, a, r
+Failed case (word count 2 < 0.01 %): s, o, n, o, s, g, u
+Failed case (word count 2 < 0.01 %): j, u, r, i, h, j, i, g, u, l, j, ue
+Failed case (word count 2 < 0.01 %): t, u, l, n
+Failed case (word count 2 < 0.01 %): t, a, r, n
+Failed case (word count 2 < 0.01 %): i, g, ch, u
+Failed case (word count 2 < 0.01 %): b, a, y, a, s, g, o, l, a, ng
+Failed case (word count 2 < 0.01 %): s, i, y, a, n, g, sh, a, n
+Failed case (word count 2 < 0.01 %): b, a, d, a, r, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): d, a, b, s, i, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, u, h, s, u, g, mvs, a
+Failed case (word count 2 < 0.01 %): m, a, n, j, i, l, n
+Failed case (word count 2 < 0.01 %): ch, u, h, i, h, d, a, g, a, d
+Failed case (word count 2 < 0.01 %): y, a, g, a, h, i, h, s, a, n
+Failed case (word count 2 < 0.01 %): s, u, ng, g, u, h, d, a, j, ue
+Failed case (word count 2 < 0.01 %): n, i, h, d, a, l, a, j, ue
+Failed case (word count 2 < 0.01 %): u, y, a, ng, g, a, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, i, r, a, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): g, u, y, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): d, a, l, a, r, a, h, j, ue
+Failed case (word count 2 < 0.01 %): d, a, l, b, i, h, ch, i
+Failed case (word count 2 < 0.01 %): u, h, d, u, j, ue
+Failed case (word count 2 < 0.01 %): a, j, i, l, l, a, h, ch, i
+Failed case (word count 2 < 0.01 %): u, m, u, h, s, i, l
+Failed case (word count 2 < 0.01 %): d, u, s, g, a, j, ue
+Failed case (word count 2 < 0.01 %): j, i, g, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): d, a, n, i, l, ch, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, h, d, u, h, d, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, l, a, m, j, i, l, a, h, d, a, n
+Failed case (word count 2 < 0.01 %): j, i, sh, i, j, ue
+Failed case (word count 2 < 0.01 %): s, u, n, u, s, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, u, ch, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, i, r, u, h, l, a, j, ue
+Failed case (word count 2 < 0.01 %): j, u, h, i, ch, a, l, d, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): d, u, h, l, a, ch, i, h, a, j, ue
+Failed case (word count 2 < 0.01 %): j, a, h, b, u, r
+Failed case (word count 2 < 0.01 %): s, a, n, a, h, d, a, d, a, g
+Failed case (word count 2 < 0.01 %): b, a, h, s, i, l, a, j, ue
+Failed case (word count 2 < 0.01 %): j, u, h, s, u, j, ue
+Failed case (word count 2 < 0.01 %): u, d, u, h, i, ch, i, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, u, d, u, l, h, i, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, r, u, h, s, i, l, a, j, ue
+Failed case (word count 2 < 0.01 %): u, y, a, l, d, u, g, u, l, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, u, d, u, h, s, a, g, a, r
+Failed case (word count 2 < 0.01 %): g, i, l, a, l, j, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): m, a, h, d, a, j, ue
+Failed case (word count 2 < 0.01 %): d, a, i, l, b, u, r, i, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): u, r, u, h, s, i, d, e, i
+Failed case (word count 2 < 0.01 %): d, a, b, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): d, u, h, d, a, g, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, a, b, s, i, h, ch, i
+Failed case (word count 2 < 0.01 %): d, u, s, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): a, ng, h, a, r, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): b, a, h, a, r, a, h, d, a, g
+Failed case (word count 2 < 0.01 %): d, u, r, a, s, g, a, l, d, u
+Failed case (word count 2 < 0.01 %): b, a, h, ch, a, l, a, g, a, d
+Failed case (word count 2 < 0.01 %): h, a, d, g, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, ng, h, u, l, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): h, a, r, a, h, d, a, d, a, g
+Failed case (word count 2 < 0.01 %): i, l, g, a, r, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): ch, u, h, i, l, a, h, s, a, g, a, r
+Failed case (word count 2 < 0.01 %): u, m, u, h, s, i, n, mvs, a
+Failed case (word count 2 < 0.01 %): u, r, ch, i, g, u, l, u, h, s, a, n
+Failed case (word count 2 < 0.01 %): m, a, h, d, a, g, u, s, i, d, a, i
+Failed case (word count 2 < 0.01 %): a, l, a, h, d, a, g, mvs, a
+Failed case (word count 2 < 0.01 %): s, a, h, s, u
+Failed case (word count 2 < 0.01 %): j, a, s, a, h, d, a, n
+Failed case (word count 2 < 0.01 %): h, a, r, a, h, d, a, n
+Failed case (word count 2 < 0.01 %): h, a, m, d, u, r, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): y, a, b, u, h, d, a, j, ue
+Failed case (word count 2 < 0.01 %): d, u, g, u, r, i, h, s, a, n
+Failed case (word count 2 < 0.01 %): j, u, h, s, u, l, mvs, a
+Failed case (word count 2 < 0.01 %): s, u, n, d, a, l, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): h, u, ch, i, h, d, a, h, s, a, n
+Failed case (word count 2 < 0.01 %): e, zr, w, i
+Failed case (word count 2 < 0.01 %): h, a, r, a, h, d, a, l, mvs, a
+Failed case (word count 2 < 0.01 %): s, a, ch, u, h, d, u
+Failed case (word count 2 < 0.01 %): b, u, s, g, a, ch, i, h, a, l, mvs, a
+Failed case (word count 2 < 0.01 %): f, w, n, g, sh, ue, i
+Failed case (word count 1 < 0.01 %): nnbsp, d, a, g, e, n
+Failed case (word count 1 < 0.01 %): g, a, i, a, h, b, a
+Failed case (word count 1 < 0.01 %): h, o, n, g, g, a, r, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, j, o
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, l, a, j, o
+Failed case (word count 1 < 0.01 %): a, d, a, l, i, d, g, a, s, i
+Failed case (word count 1 < 0.01 %): e, g, ue, l, n
+Failed case (word count 1 < 0.01 %): nnbsp, e, ch, n
+Failed case (word count 1 < 0.01 %): h, a, m, t, u, d, g, a, g, ch, i
+Failed case (word count 1 < 0.01 %): g, fvs1, eh, r, m, a, n
+Failed case (word count 1 < 0.01 %): u, d, g, a, t, a, i, h, a, n
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, u, l, b, a
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, l, a, h, u
+Failed case (word count 1 < 0.01 %): k2, u, l, w, n, k2, u, r
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): s, i, g, l, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, ue, t, o, g, l, a, h, u
+Failed case (word count 1 < 0.01 %): p
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, g, u, l, d, a, g
+Failed case (word count 1 < 0.01 %): d, fvs1, o, n, i
+Failed case (word count 1 < 0.01 %): w, a, r, w, n, k2, a, t, e, g, ue, n
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, b, a
+Failed case (word count 1 < 0.01 %): d, fvs1, a, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): a, s, g, a, r, a, j, u
+Failed case (word count 1 < 0.01 %): d, a
+Failed case (word count 1 < 0.01 %): d, fvs1, ue, ng, y, e, ng
+Failed case (word count 1 < 0.01 %): d, fvs1, w, u, f, ue, fvs1
+Failed case (word count 1 < 0.01 %): d, fvs1, u, g, e, r
+Failed case (word count 1 < 0.01 %): d, fvs1, u, g, a, r, l, a, h, u
+Failed case (word count 1 < 0.01 %): d, fvs1, ue, ng, n, e, l, t, e
+Failed case (word count 1 < 0.01 %): b, a, d, g, u, n, mvs, a
+Failed case (word count 1 < 0.01 %): d, fvs1, a, r, w, i, n
+Failed case (word count 1 < 0.01 %): d, u, r, a, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): g, r, ue, z, i, y, a, ch, ue, d
+Failed case (word count 1 < 0.01 %): d, fvs1, a, g, i, n
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, b, a
+Failed case (word count 1 < 0.01 %): t, a, i, d, g, u, r, a, g, u, l, d, a, g
+Failed case (word count 1 < 0.01 %): sh, fvs1, i
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, l, l, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, d, g, u, g, a, d
+Failed case (word count 1 < 0.01 %): f, a, sh, fvs1, i, s
+Failed case (word count 1 < 0.01 %): g, fvs1, w, a, r, d, eh
+Failed case (word count 1 < 0.01 %): d, fvs1, n, eh, p, r
+Failed case (word count 1 < 0.01 %): s, o, n, u, s, g, a, g, a, r, a, i
+Failed case (word count 1 < 0.01 %): d, fvs1, e, g, fvs2
+Failed case (word count 1 < 0.01 %): a, s, g, a, b, a
+Failed case (word count 1 < 0.01 %): d, u, r, a, s, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): s, u, l, a, d, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): ch, a, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): ch, a, d, g, a, d, a, g
+Failed case (word count 1 < 0.01 %): a, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): j, i, sh, fvs1, i, y, e, ch, i, d
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, l, a, d, a, d
+Failed case (word count 1 < 0.01 %): ch, a, d, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, g, d, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, j, a, i
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): a, s, g, a, g, u, l, d, a, g
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, d, a, g
+Failed case (word count 1 < 0.01 %): d, u, r, a, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, b, a, ch, u
+Failed case (word count 1 < 0.01 %): u, s, a, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, d, g, u, h, u
+Failed case (word count 1 < 0.01 %): d, fvs1, u, w, a, n
+Failed case (word count 1 < 0.01 %): u, u
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, u, l, b, a, l
+Failed case (word count 1 < 0.01 %): t, u, s, h, g, h, u
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, l, a, m, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, y, a, s, g, a, h, u
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, d, a, g
+Failed case (word count 1 < 0.01 %): a, s, g, mvs, a
+Failed case (word count 1 < 0.01 %): h, u, b, i, s, g, a, ch, i, h, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, fvs1, w
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, n
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, l, a, j, u
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, t, a, i
+Failed case (word count 1 < 0.01 %): i, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): d, fvs1, e, ng
+Failed case (word count 1 < 0.01 %): d, fvs1, u, ng
+Failed case (word count 1 < 0.01 %): h, a, m, t, u, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, u, l, u, n, mvs, a
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, d, g, u, g, d, a, b, a
+Failed case (word count 1 < 0.01 %): i, fvs1, i
+Failed case (word count 1 < 0.01 %): d, u, r, a, s, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, j, u
+Failed case (word count 1 < 0.01 %): j, i, sh, fvs1, i, b, e, l
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): d, a, w, a, o, fvs1, s, u, r
+Failed case (word count 1 < 0.01 %): s, u, ng, g, g, j, u
+Failed case (word count 1 < 0.01 %): ch, i, g, t, a, l, a, j, u
+Failed case (word count 1 < 0.01 %): s, u, l, a, d, g, a, n
+Failed case (word count 1 < 0.01 %): ch, a, g, a, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, r, i, s, g, a, g, d, a, j, u
+Failed case (word count 1 < 0.01 %): d, a, s, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, a, t, a, i
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, g, d, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, y, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, d, g, u, j, u
+Failed case (word count 1 < 0.01 %): u, i, d, g, a, r, t, u
+Failed case (word count 1 < 0.01 %): a, s, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, fvs1, ue, ng, n, e, b, e
+Failed case (word count 1 < 0.01 %): o, d, g, u, n
+Failed case (word count 1 < 0.01 %): t, o, d, u, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): t, o, d, u, d, g, a, b, a
+Failed case (word count 1 < 0.01 %): d, fvs1, a, i
+Failed case (word count 1 < 0.01 %): h, a, d, g, u, b, a
+Failed case (word count 1 < 0.01 %): d, a, s, g, a, l
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, h, u
+Failed case (word count 1 < 0.01 %): s, o, n, u, s, g, a, l
+Failed case (word count 1 < 0.01 %): h, o, b, i, s, g, a, l, ch, i, d
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, l, l, a, g, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): b, o, s, g, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): d, e
+Failed case (word count 1 < 0.01 %): i, sh, i
+Failed case (word count 1 < 0.01 %): a, d, g, u, y, mvs, a
+Failed case (word count 1 < 0.01 %): a, d, g, u, b, a
+Failed case (word count 1 < 0.01 %): o, r, g, g, i, l, u, n
+Failed case (word count 1 < 0.01 %): u, s, a, d, g, a, g, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, g, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): u, r, d, u, d, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): nnbsp, d, o, n, i
+Failed case (word count 1 < 0.01 %): h, u, w, a, n, g, fvs2
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, g, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): nnbsp, d, fvs1, g, a, n
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, g, a, d
+Failed case (word count 1 < 0.01 %): d, u, r, a, s, g, a, b, a
+Failed case (word count 1 < 0.01 %): sh, l, ue, k2
+Failed case (word count 1 < 0.01 %): fvs1, mvs
+Failed case (word count 1 < 0.01 %): g, fvs1, r, eh, g
+Failed case (word count 1 < 0.01 %): nnbsp, ue, g, e
+Failed case (word count 1 < 0.01 %): ng
+Failed case (word count 1 < 0.01 %): nirugu, g, ch, i
+Failed case (word count 1 < 0.01 %): nirugu, g, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): y
+Failed case (word count 1 < 0.01 %): u, r, t, u, d, g, a, l
+Failed case (word count 1 < 0.01 %): o, l, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, g, a, r, a, i
+Failed case (word count 1 < 0.01 %): nnbsp, e
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, l, t, u
+Failed case (word count 1 < 0.01 %): d, a, g, u, r, i, s, g, a, l
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, l, a, ng, t, u
+Failed case (word count 1 < 0.01 %): a, m, t, a, r, a, h, n
+Failed case (word count 1 < 0.01 %): a, m, i, n, ue, fvs2, n, d, ue, r
+Failed case (word count 1 < 0.01 %): d, e, l, g, e, r, n, ng, g, ue, i
+Failed case (word count 1 < 0.01 %): t, u, u, sh, fvs1, l, a, g, u, l, h, u
+Failed case (word count 1 < 0.01 %): a, ng, g, fvs2, l, i
+Failed case (word count 1 < 0.01 %): nnbsp, a, ng, g, fvs2, l, i
+Failed case (word count 1 < 0.01 %): d, fvs1, o, k2, ue, fvs1, m, eh, n, t
+Failed case (word count 1 < 0.01 %): nnbsp, y, i, n, n
+Failed case (word count 1 < 0.01 %): nnbsp, d, e, g, a, n
+Failed case (word count 1 < 0.01 %): t, ue, g, e, m, n, l, j, i, g, ue, l, j, ue
+Failed case (word count 1 < 0.01 %): nnbsp, a, r, b, a, n
+Failed case (word count 1 < 0.01 %): mvs
+Failed case (word count 1 < 0.01 %): nnbsp, ue, y, mvs, e
+Failed case (word count 1 < 0.01 %): nnbsp, a, j, i, l
+Failed case (word count 1 < 0.01 %): b, u, r, u, g, u, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): nnbsp, ue, j, e, l, t, e
+Failed case (word count 1 < 0.01 %): nnbsp, b, ue, g, ue, d, e, g, e, r
+Failed case (word count 1 < 0.01 %): nnbsp, u, g, s, a, r, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, j, e, r, g, e, mvs
+Failed case (word count 1 < 0.01 %): h, a, m, t, u, d, g, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, i, j, i, l
+Failed case (word count 1 < 0.01 %): n, a, i, fvs3, m, a
+Failed case (word count 1 < 0.01 %): nnbsp, d, a, i
+Failed case (word count 1 < 0.01 %): nnbsp, fvs1, t, u
+Failed case (word count 1 < 0.01 %): nnbsp, d, ue, r, s, ue
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, h, u
+Failed case (word count 1 < 0.01 %): a, t, w, n, w, r
+Failed case (word count 1 < 0.01 %): a, j, i, l, l, a, g, mvs, e
+Failed case (word count 1 < 0.01 %): m, i, n, t, z, a, b, w, r, i, a
+Failed case (word count 1 < 0.01 %): j, u, g, i, y, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, t, t, hh, w, w
+Failed case (word count 1 < 0.01 %): f, r, w, d, w, r, i, s, k2
+Failed case (word count 1 < 0.01 %): s, i, s, t, w, m, j, i, n
+Failed case (word count 1 < 0.01 %): f, i, l, a, d, w, n, b, i, y, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, r, i, m, j, i, y, a, j, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, w, s, t, w, r
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, g, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): a, oe, s, t, r, l, i, y, mvs, a
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, b, a
+Failed case (word count 1 < 0.01 %): m, k2, l, w, l, l, a, n, d
+Failed case (word count 1 < 0.01 %): k2, a, n, d
+Failed case (word count 1 < 0.01 %): j, oe, r, n
+Failed case (word count 1 < 0.01 %): m, i, n, t, z, b, w, r, i, g
+Failed case (word count 1 < 0.01 %): s, a, h, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, r, sh, w, n
+Failed case (word count 1 < 0.01 %): h, oe, p, i, s, t, w, r
+Failed case (word count 1 < 0.01 %): m, a, t, w, w, i, sh
+Failed case (word count 1 < 0.01 %): hh, w, ue, l, w, t, t
+Failed case (word count 1 < 0.01 %): p, a, s, k2, a, r, d
+Failed case (word count 1 < 0.01 %): m, k2, d, u, n, a, l, d, s
+Failed case (word count 1 < 0.01 %): m, w, d, oe, oe
+Failed case (word count 1 < 0.01 %): t, a, l, h, i, h, d, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, r, i, g, o, ch, a, l, g, mvs, a, a, j, o
+Failed case (word count 1 < 0.01 %): f, r, w, d, m, a, n
+Failed case (word count 1 < 0.01 %): b, r, w, d, w, m, a, n
+Failed case (word count 1 < 0.01 %): s, a, g, u, d, g, a, n
+Failed case (word count 1 < 0.01 %): e, j, a, n, g, n, a, l, d, a
+Failed case (word count 1 < 0.01 %): b, w, n, z, eh, n, d, u
+Failed case (word count 1 < 0.01 %): s, w, w, d, w, n
+Failed case (word count 1 < 0.01 %): g, l, a, s, g, u
+Failed case (word count 1 < 0.01 %): nnbsp, a, ch, e
+Failed case (word count 1 < 0.01 %): b, a, i, g, mvs, a, t, ue, s, d, a, i, a, d, a, l, i, t, ue, s, d, a, i, n, i, g, e
+Failed case (word count 1 < 0.01 %): b, a, i, g, mvs, a, i, l, g, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): u, r, d, u, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): f, oe, r, d
+Failed case (word count 1 < 0.01 %): a, r, g, mvs, a, h, o, b, i, ch, a, g, a, n
+Failed case (word count 1 < 0.01 %): t, a, l, mvs, a, ue, m, ch, i, l, e, l
+Failed case (word count 1 < 0.01 %): t, a, l, mvs, a, b, a, i, n, mvs, a, b, a, i, n, mvs, a, b, a, i, n, mvs, a, t, o, d, o, g, a, d, u, ch, i, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, ue, g, e, i, b, a, i, n, mvs, a, b, a, i, n, mvs, a
+Failed case (word count 1 < 0.01 %): nnbsp, ue, g, e, i, b, a, i, n, mvs, a
+Failed case (word count 1 < 0.01 %): u, n, u, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, f, s, t, a, t, w
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, g, d, a, h, u
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): l, i, t, w, f, a, k2
+Failed case (word count 1 < 0.01 %): h, u, r, i, h, l, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): u, h, d, u, n, mvs, e
+Failed case (word count 1 < 0.01 %): u, h, d, u, h, u
+Failed case (word count 1 < 0.01 %): b, o, d, o, l, g, mvs, a, a, j, o
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, g, ue, r, ue, ng, g, e
+Failed case (word count 1 < 0.01 %): h, a, ng, g, a, l, g, mvs, a, t, o, s, a, l, a, h, o
+Failed case (word count 1 < 0.01 %): a, ng, g, l, i, ch, u, d
+Failed case (word count 1 < 0.01 %): t, a, y, a, g, a, r, ch, i, l, a, a, a, s, n, n
+Failed case (word count 1 < 0.01 %): j, a, n, g, h, i
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, l, a, h, u
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, m, u, r, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): e, l, w, k2, t, r, u, n, ch, i, l, a, j, u
+Failed case (word count 1 < 0.01 %): b, u, g, u, n, i, s, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): s, w, s, t, w, m
+Failed case (word count 1 < 0.01 %): t, a, i, l, b, u, r, i, l, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): f, a, n, d, t
+Failed case (word count 1 < 0.01 %): j, i, g, s, i, j, u
+Failed case (word count 1 < 0.01 %): ch, i, d, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): d, w, r, f, w, i
+Failed case (word count 1 < 0.01 %): h, u, r, ch, a, l, n
+Failed case (word count 1 < 0.01 %): nnbsp, d, a, h, e, n
+Failed case (word count 1 < 0.01 %): l, a, n, d
+Failed case (word count 1 < 0.01 %): h, u, l, a, n, d
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): n, o, r, m, mvs, a, a, l, d, a, b, ue, r, i
+Failed case (word count 1 < 0.01 %): n, o, r, m, mvs, a, e, g, i, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, m, j, i, y, mvs, a, ch, a, g
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, t, o, d, o, r, h, a, i
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, j, i, r, u, m, j, i, ch, e
+Failed case (word count 1 < 0.01 %): a, n, g, g, i, l, a, j, u
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, g, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): g, u, h, ch, u, g, a, n
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, g, u, l, u, n
+Failed case (word count 1 < 0.01 %): p, oe, w, r, t, r
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, g, a, h, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): ch, u, h, ch, a, d, u
+Failed case (word count 1 < 0.01 %): b, a, h, d, a, g, a, m, j, i
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, ch, a
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, o, l
+Failed case (word count 1 < 0.01 %): u, n, ch, a, l, i, h, d, u
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, h, d, a, j, u
+Failed case (word count 1 < 0.01 %): t, a, g, a, r, a, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, u, h, ch, a, l, a, h, u
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, a, h, ch, i
+Failed case (word count 1 < 0.01 %): ch, i, n, g, g, a, d, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, n, g, g, u, i
+Failed case (word count 1 < 0.01 %): ch, i, n, g, g, a, d, g, a, h, o
+Failed case (word count 1 < 0.01 %): t, a, n, g, s, a
+Failed case (word count 1 < 0.01 %): d, r, u, k2, w, r
+Failed case (word count 1 < 0.01 %): n, a, r, i, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): g, u, h, ch, o, g, a, n
+Failed case (word count 1 < 0.01 %): u, r, d, u, s, g, u
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, j, u
+Failed case (word count 1 < 0.01 %): j, i, r, u, m, j, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, a, r, u, ch, a, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): t, u, r, a, d, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, oe, m, n
+Failed case (word count 1 < 0.01 %): l, w, n, d, i, s
+Failed case (word count 1 < 0.01 %): d, w, ng, j, w, ue
+Failed case (word count 1 < 0.01 %): g, w, u, m, w, t, r, i
+Failed case (word count 1 < 0.01 %): b, oe, r, n, s
+Failed case (word count 1 < 0.01 %): s, t, l, k2, w, r
+Failed case (word count 1 < 0.01 %): l, oe, r, w, n, c
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, i, j, i, h, u
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, i, j, i, g, u, l, u, g, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, g, ch, i
+Failed case (word count 1 < 0.01 %): b, a, h, d, a, g, a, d, a, g
+Failed case (word count 1 < 0.01 %): a, d, a, l, i, d, g, a, l, m, e, r, g, e, j, i, l, d, e, n
+Failed case (word count 1 < 0.01 %): a, d, a, l, i, d, g, a, l, t, ue, r, i, m, j, i, g, s, e, n
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, e, r, g, e
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, b, o, d, o, l, i, y, a, n, d, ue
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, y, e, r, ue, ng, g, e, i
+Failed case (word count 1 < 0.01 %): t, o, o, r, mvs, a, ue, n, d, ue, r, ue, n, d, ue, r, ue, n, d, ue, r, m, w, h, a, n, i, g
+Failed case (word count 1 < 0.01 %): a, u, i, t, ch, i, l, a, l, d, a
+Failed case (word count 1 < 0.01 %): p, w, r, r, oe, w
+Failed case (word count 1 < 0.01 %): nnbsp, i, i, e
+Failed case (word count 1 < 0.01 %): a, r, b, i, d, g, u
+Failed case (word count 1 < 0.01 %): i, d, g, a, l
+Failed case (word count 1 < 0.01 %): d, w, r, l, e, l
+Failed case (word count 1 < 0.01 %): n, a, r, i, s, g, u
+Failed case (word count 1 < 0.01 %): h, a, s, u, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): t, u, r, u, h, s, i
+Failed case (word count 1 < 0.01 %): t, a, d, g, u
+Failed case (word count 1 < 0.01 %): u, h, ch, a, r, a, g, u, l, u, n
+Failed case (word count 1 < 0.01 %): g, u, u, l, d, a, l, g, mvs, e
+Failed case (word count 1 < 0.01 %): g, a, ch, i, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): j, a, b, d, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, m, i, y, a, r, u, h, ch, i
+Failed case (word count 1 < 0.01 %): s, i, r, h, a, d, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): o, b, o, h, d, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, o, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, ch, i, h, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): s, i, l, u, g, u, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): h, u, r, ch, a, d, g, u
+Failed case (word count 1 < 0.01 %): a, l, g, a, s, g, u
+Failed case (word count 1 < 0.01 %): s, u, l, a, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, h, u
+Failed case (word count 1 < 0.01 %): b, u, d, a, s, j, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, r, a, g, u, l, j, u
+Failed case (word count 1 < 0.01 %): j, ue, b, l, n, n
+Failed case (word count 1 < 0.01 %): g, u, w, a, n, g, d, ue, ng
+Failed case (word count 1 < 0.01 %): f, r, w, n, ch
+Failed case (word count 1 < 0.01 %): r, a, w, w, n
+Failed case (word count 1 < 0.01 %): g, a, t, w, s
+Failed case (word count 1 < 0.01 %): i, e, l, d, h, e, n, mvs, a
+Failed case (word count 1 < 0.01 %): ch, i, ng, g, a, d, g, a, l
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, g, u, l, g, mvs, a
+Failed case (word count 1 < 0.01 %): f, r, w, d, r, i, k2
+Failed case (word count 1 < 0.01 %): ch, i, ng, g, a, d, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): d, u, w, g, l, a, s
+Failed case (word count 1 < 0.01 %): s, k2, i, n, n, w, r
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, g, u, s, i, d, a, i
+Failed case (word count 1 < 0.01 %): t, u, d, u, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): d, r, oe, k2, w, r
+Failed case (word count 1 < 0.01 %): o, r, d, o, d, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): d, o, h, d, a, g, a, l
+Failed case (word count 1 < 0.01 %): j, a, r, l, i, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): b, u, r, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, a, h, s, a, d
+Failed case (word count 1 < 0.01 %): d, a, s, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, g, u, r, l, a, j, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, l, b, u, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): h, e, l, b, e, r, i, j, i, sh, i, y, mvs, a, t, a, b, a, g, o, l, i, g
+Failed case (word count 1 < 0.01 %): t, a, l, mvs, a, t, o, d, a, g, d, a, l
+Failed case (word count 1 < 0.01 %): y, a, r, i, y, mvs, a, y, a, r, i, l, ch, a, h, o
+Failed case (word count 1 < 0.01 %): b, o, l, o, n, mvs, a, b, ue, d, ue, m, j, i
+Failed case (word count 1 < 0.01 %): k2, o, m, p, i, ue, i, t, w, r
+Failed case (word count 1 < 0.01 %): h, e, m, j, i, y, mvs, a, g, ue, l, i, y, e, n
+Failed case (word count 1 < 0.01 %): j, a, r, o, ch, a, g, o, l, o, n, mvs, a, h, o, o, s
+Failed case (word count 1 < 0.01 %): i, d, e, g, e, n, mvs, a, g, ue, l, i, y, e, n
+Failed case (word count 1 < 0.01 %): t, a, m, j, i, g, u, l, u, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): p, r, a, a, h, l, a, d
+Failed case (word count 1 < 0.01 %): k2, a, r, t, w, l
+Failed case (word count 1 < 0.01 %): i, n, t, w, r
+Failed case (word count 1 < 0.01 %): u, s, a, d, g, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, n, mvs, a, n, a, m
+Failed case (word count 1 < 0.01 %): s, o, ng, g, o, n, mvs, a, t, o, g, i, r, a, m, j, i, d, a, i
+Failed case (word count 1 < 0.01 %): g, e, r, e, g, l, e, n, mvs, a, h, e, l, e, n
+Failed case (word count 1 < 0.01 %): a, ng, h, a, r, o, n, mvs, a, t, o, d, o
+Failed case (word count 1 < 0.01 %): t, a, b, d, a, n, mvs, a, o, r, g, i, g, d, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, ue, g, e, i, m, a, r, g, o, h, o, t, a, s, o, l, d, o, g, o, l, h, o, y, a, r, i, l, ch, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, g, a, s, g, a, j, o
+Failed case (word count 1 < 0.01 %): ch, i, ng, g, a, d, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, n, d, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, n, t, w, u
+Failed case (word count 1 < 0.01 %): j, u, g, s, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, d, g, u
+Failed case (word count 1 < 0.01 %): s, t, w, f, w, n
+Failed case (word count 1 < 0.01 %): a, d, a, l, i, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): s, w, k2, oe, i, n, d
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, g, a, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): t, u, h, i, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, s, g, a, a, a, s, a, n
+Failed case (word count 1 < 0.01 %): f, w, n
+Failed case (word count 1 < 0.01 %): e, w, n, t, r, u, p, i
+Failed case (word count 1 < 0.01 %): a, j, i, h, l, a, h, u
+Failed case (word count 1 < 0.01 %): j, i, sh, i, y, e, l, e, n
+Failed case (word count 1 < 0.01 %): m, w, h, a, n, i, h, j, i, l, d, a
+Failed case (word count 1 < 0.01 %): u, r, d, u, d, g, a, n
+Failed case (word count 1 < 0.01 %): a, j, i, h, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): p, w, t, w, r, s
+Failed case (word count 1 < 0.01 %): a, oe, s, t, w, n
+Failed case (word count 1 < 0.01 %): i, l, a, g, d, a, h, ch, i, h, a, j, oe
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, m, mvs, a
+Failed case (word count 1 < 0.01 %): h, u, b, i, s, g, a, g, ch, i
+Failed case (word count 1 < 0.01 %): b, u, g, u, n, i, s, g, a, g, a, r, a, i
+Failed case (word count 1 < 0.01 %): ch, i, r, m, a, i, h, ch, i, d
+Failed case (word count 1 < 0.01 %): n, i, h, d, a, ch, a
+Failed case (word count 1 < 0.01 %): j, i, r, u, h, d, oe
+Failed case (word count 1 < 0.01 %): a, d, a, l, i, d, g, a, h, o
+Failed case (word count 1 < 0.01 %): h, u, r, s, i, h, ch, i
+Failed case (word count 1 < 0.01 %): j, u, a, a, s, u, n, g, g, i, r, a, l
+Failed case (word count 1 < 0.01 %): h, u, d, g, u, j, oe
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, a, a, s, a, n
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, j, u
+Failed case (word count 1 < 0.01 %): a, j, i, h, l, a, g, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): t, a, n, i, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): j, i, sh, i, g, e, d
+Failed case (word count 1 < 0.01 %): r, u, l, sh, i
+Failed case (word count 1 < 0.01 %): a, g, n, w, l, l, i
+Failed case (word count 1 < 0.01 %): a, u, i, s, t, r, i, y, mvs, a
+Failed case (word count 1 < 0.01 %): h, u, j, i, h, d, a, b, a, l
+Failed case (word count 1 < 0.01 %): j, a, n, g, h, i, l, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): k2, u, m, p, i, u, t, w, r
+Failed case (word count 1 < 0.01 %): h, u, ch, u, r, u, n, g, g, u, i
+Failed case (word count 1 < 0.01 %): nnbsp, u, e
+Failed case (word count 1 < 0.01 %): s, k2, oe, l, l, y, i
+Failed case (word count 1 < 0.01 %): h, u, r, s, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, n, g, g, u, b, a, l
+Failed case (word count 1 < 0.01 %): u, r, d, u, d, g, a, d, a, g
+Failed case (word count 1 < 0.01 %): h, a, n, g, s, i, n
+Failed case (word count 1 < 0.01 %): ch, i, n, g, g, a, d, g, a, j, ue
+Failed case (word count 1 < 0.01 %): a, n, g, g, i, j, i, r, a, h, u
+Failed case (word count 1 < 0.01 %): a, n, g, g, i, l, a, l
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, a, l, g, a, j, ue
+Failed case (word count 1 < 0.01 %): a, n, g, g, i, l, a, h, u
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, g, d, a, h, u
+Failed case (word count 1 < 0.01 %): s, u, n, g, g, u, n
+Failed case (word count 1 < 0.01 %): h, u, r, i, y, a, n, g, g, u, i, l, a, b, a, l
+Failed case (word count 1 < 0.01 %): n, a, r, i, s, g, a, n
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, i, j, i, g, u, l, j, ue
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, i, j, i, g, u, l, u, g, a, d
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, i, j, i, l, d, a
+Failed case (word count 1 < 0.01 %): ch, i, n, g, g, a, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, g, ue, n
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, r, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): d, u, n, g, g, a, g, a, j, ue
+Failed case (word count 1 < 0.01 %): ue, i, e, l, d, b, u, r, i
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, a, g, d, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): y, a, n, g, j, u, ch, i, l, a, h, u
+Failed case (word count 1 < 0.01 %): y, a, n, g, j, u, ch, i, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, r, i, y, a, n, g, g, u, i, l, a, n
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): k2, a, n, g, b, ue, d, ue
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, i, n, a, g, u, l, u, g, s, a, n
+Failed case (word count 1 < 0.01 %): sh, a, n, g, n, a, l, d, ue
+Failed case (word count 1 < 0.01 %): d, a, g, a, d, g, a, l
+Failed case (word count 1 < 0.01 %): sh, a, n, g, h, a, i
+Failed case (word count 1 < 0.01 %): ch, a, n, g, ch, ue, n
+Failed case (word count 1 < 0.01 %): g, u, w, a, n, g, j, w, ue
+Failed case (word count 1 < 0.01 %): b, e, s, n
+Failed case (word count 1 < 0.01 %): j, a, n, g, g, i, j, i, l, d, a
+Failed case (word count 1 < 0.01 %): ch, i, n, g, g, a, d, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, b, s, u, r, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, ue, l, ue, g, h, i, n, a, h, ch, i
+Failed case (word count 1 < 0.01 %): g, e, s, e, g, h, i, n, a, h, ch, i
+Failed case (word count 1 < 0.01 %): s, a, l, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): y, a, b, u, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): h, u, u, s, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, r, g, a, h, ch, i, u, n
+Failed case (word count 1 < 0.01 %): ch, u, h, ch, a, l, a, n
+Failed case (word count 1 < 0.01 %): t, a, h, d, u
+Failed case (word count 1 < 0.01 %): u, r, d, u, u, n, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, l, a, u, n, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, b, i, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, l, u, h, s, a, u, n
+Failed case (word count 1 < 0.01 %): y, a, b, u, h, d, a, g, u, l, j, u
+Failed case (word count 1 < 0.01 %): s, e, n, t, m, w, t, r
+Failed case (word count 1 < 0.01 %): u, y, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, h, l, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): t, a, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, n, g, l, a, i
+Failed case (word count 1 < 0.01 %): t, u, d, u, r, h, a, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): n, i, g, u, h, d, a, m, a, l
+Failed case (word count 1 < 0.01 %): h, a, n, g, h, u
+Failed case (word count 1 < 0.01 %): b, a, h, d, a, g, a, h, u
+Failed case (word count 1 < 0.01 %): t, u, r, g, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): t, a, g, u, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): y, a, b, u, h, d, a, g, u, l, h, u
+Failed case (word count 1 < 0.01 %): t, u, s, i, y, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, a, s, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, l, d, a, h, s, e, a
+Failed case (word count 1 < 0.01 %): h, u, r, a, l, d, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, i, s, i, l, a, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, n, g, g, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, s, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, j, i, h, l, a, j, u
+Failed case (word count 1 < 0.01 %): n, i, h, d, a, r, a, n
+Failed case (word count 1 < 0.01 %): t, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, n, g, g, a, j, u
+Failed case (word count 1 < 0.01 %): h, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, g, u, l, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): y, a, b, u, h, d, a, b, a, l
+Failed case (word count 1 < 0.01 %): y, a, b, u, h, d, a, g, u, l, b, a, l
+Failed case (word count 1 < 0.01 %): t, u, n, g, g, u, u, n, h, a, l
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, u, h, ch, i, u, n
+Failed case (word count 1 < 0.01 %): h, i, j, a, g, a, r, l, a, h, d, a, j, u
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, g, u, l, h, u
+Failed case (word count 1 < 0.01 %): h, a, r, s, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, a, l, a, r, a, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, i, j, a, g, a, r, l, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): t, u, h, d, a, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): h, u, l, b, u, h, d, a, a, h, u
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, g, u, l, u, n, mvs, a
+Failed case (word count 1 < 0.01 %): j, u, h, s, u, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): t, a, s, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, i, n, a, h, s, i, d, a
+Failed case (word count 1 < 0.01 %): u, h, d, u
+Failed case (word count 1 < 0.01 %): t, a, n, g, s, a, l, a, j, u
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, n, mvs, a
+Failed case (word count 1 < 0.01 %): t, u, g, mvs, a, j, ue, r, i, ch, e, g, ch, i, u, n, t, u, r, g, a, h, u, p, a, i, s, a, ue, r, mvs, a
+Failed case (word count 1 < 0.01 %): g, e, s, i, g, ue, n, t, u, r, g, a, n, mvs, a, u, l, a, g, a, n, n, i, g, e
+Failed case (word count 1 < 0.01 %): a, j, i, l, l, a, g, mvs, a, n, i, g, e, d, ue, g, e, r
+Failed case (word count 1 < 0.01 %): u, d, a, g, mvs, a, a, d, a, l, i
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, g, u, l, u, n, mvs, a, g, a, r
+Failed case (word count 1 < 0.01 %): t, u, r, g, a, n, mvs, a, g, a, r
+Failed case (word count 1 < 0.01 %): g, u, u, l, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, u, g, u, h, s, i
+Failed case (word count 1 < 0.01 %): h, a, n, g, g, a, j, u
+Failed case (word count 1 < 0.01 %): b, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): u, ch, i, h, s, e, n
+Failed case (word count 1 < 0.01 %): h, u, n, g, h, i, l
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, j, e, i
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, j, u
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, h, u
+Failed case (word count 1 < 0.01 %): u, y, a, n, g, g, a, l, a, j, u
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, g, a, n
+Failed case (word count 1 < 0.01 %): b, u, d, a, l, n
+Failed case (word count 1 < 0.01 %): n, i, e, g, s, i, y, n
+Failed case (word count 1 < 0.01 %): nirugu, d, u, w, n, n
+Failed case (word count 1 < 0.01 %): m, a, j, i, y, n
+Failed case (word count 1 < 0.01 %): b, u, s, g, a, b, a, i
+Failed case (word count 1 < 0.01 %): s, a, i, e, h, n
+Failed case (word count 1 < 0.01 %): ch, i, e, g, g, a, d, g, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): d, u, d, u, d, g, a, n
+Failed case (word count 1 < 0.01 %): n, a, i, j, n
+Failed case (word count 1 < 0.01 %): u, d, ue, r, i, d, g, u
+Failed case (word count 1 < 0.01 %): d, a, r, n
+Failed case (word count 1 < 0.01 %): b, a, s, n
+Failed case (word count 1 < 0.01 %): oe, r, u, ch, n
+Failed case (word count 1 < 0.01 %): n, n
+Failed case (word count 1 < 0.01 %): ch, u, g, l, a, g, u, l, u, g, s, n, n
+Failed case (word count 1 < 0.01 %): u, ng, s, i, h, ch, i, u, n
+Failed case (word count 1 < 0.01 %): m, ue, ch, n
+Failed case (word count 1 < 0.01 %): u, r, u, m, a, g, ch, n
+Failed case (word count 1 < 0.01 %): a, a, g, g, l, i
+Failed case (word count 1 < 0.01 %): ch, i, g, l, a, l, d, a
+Failed case (word count 1 < 0.01 %): ch, u, g, ch, n
+Failed case (word count 1 < 0.01 %): sh, n
+Failed case (word count 1 < 0.01 %): a, s, a, h, n
+Failed case (word count 1 < 0.01 %): d, ng, r, i
+Failed case (word count 1 < 0.01 %): nirugu, d, w
+Failed case (word count 1 < 0.01 %): m, w, n, b, a
+Failed case (word count 1 < 0.01 %): nirugu, d, w, ng
+Failed case (word count 1 < 0.01 %): h, a, m, t, u, d, g, a, j, ue
+Failed case (word count 1 < 0.01 %): m, u, n, g, g, u, r
+Failed case (word count 1 < 0.01 %): d, a, n, g, h, i, m
+Failed case (word count 1 < 0.01 %): d, eh
+Failed case (word count 1 < 0.01 %): u, r, i, l, i, h, ch, i, d
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): g, u, w, n, n, g, m, i, ng
+Failed case (word count 1 < 0.01 %): g, u, w, a, n, g, m, i, ng
+Failed case (word count 1 < 0.01 %): g, u, w, a, n, g, s, i
+Failed case (word count 1 < 0.01 %): g, u, w, a, n, g, d, ue, i, ng
+Failed case (word count 1 < 0.01 %): s, u, l, u, n, g, g, u, s
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, i, m, a, i, t, i, n, g, m, i, ng, a, u, sh, u, r
+Failed case (word count 1 < 0.01 %): a, i, l, a, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): s, t, a, l, i, n, g, g, r, a, d
+Failed case (word count 1 < 0.01 %): u, s, t, r, u, w, s, k2, i
+Failed case (word count 1 < 0.01 %): h, a, l, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, ch, i, d
+Failed case (word count 1 < 0.01 %): d, a, l, n
+Failed case (word count 1 < 0.01 %): d, ue, l, n
+Failed case (word count 1 < 0.01 %): n, a, i, m, n
+Failed case (word count 1 < 0.01 %): u, n, g, g, u, n, b, u, l
+Failed case (word count 1 < 0.01 %): g, u, r, b, a, g, u, l, n
+Failed case (word count 1 < 0.01 %): b, u, n, g, h, u, n
+Failed case (word count 1 < 0.01 %): nnbsp, d, u, d, u, r, a, s, g, a, h, u
+Failed case (word count 1 < 0.01 %): nirugu, b, r, w, j, n, w
+Failed case (word count 1 < 0.01 %): h, u, d, a, l, n
+Failed case (word count 1 < 0.01 %): s, u, n, d, u, u, l, n
+Failed case (word count 1 < 0.01 %): j, a, h, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, l, i, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): f, a, sh, i, s, ch, u, d
+Failed case (word count 1 < 0.01 %): u, s, a, d, g, a, d, u, g, a, i
+Failed case (word count 1 < 0.01 %): f, i, a, l, a, n, d
+Failed case (word count 1 < 0.01 %): p, w, t, w, r, b, ue, i, r, e, g
+Failed case (word count 1 < 0.01 %): a, s, t, w, r
+Failed case (word count 1 < 0.01 %): j, u, j, a, g, a, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): a, m, n
+Failed case (word count 1 < 0.01 %): a, n, d, r, w, i, i, ch
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, g, u, l, a, e, g
+Failed case (word count 1 < 0.01 %): g, r, a, n, d, w, t
+Failed case (word count 1 < 0.01 %): d, w, l, o, s, m, w
+Failed case (word count 1 < 0.01 %): d, y, w, g, a, ue, l, l, w
+Failed case (word count 1 < 0.01 %): s, i, t, w
+Failed case (word count 1 < 0.01 %): t, u, r, a, s, g, a, n
+Failed case (word count 1 < 0.01 %): m, u, n, g, b, a, r, n, a, s, s
+Failed case (word count 1 < 0.01 %): m, e, t, r, o, nirugu
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): ch, o, h, i, h, ch, i
+Failed case (word count 1 < 0.01 %): s, o, n, u, s, g, u, l, a, ng, t, a, i
+Failed case (word count 1 < 0.01 %): i, n, t, w, r, n, a, c, i, u, n, a, l
+Failed case (word count 1 < 0.01 %): s, t, w, n, d, a, l
+Failed case (word count 1 < 0.01 %): nirugu, d, i, k2, w, n, s
+Failed case (word count 1 < 0.01 %): l, oe, c, i, r, n
+Failed case (word count 1 < 0.01 %): w, w, n, w, z, i, y, a, t
+Failed case (word count 1 < 0.01 %): d, a, n, g, h, i, s
+Failed case (word count 1 < 0.01 %): a, t, l, a, a, t
+Failed case (word count 1 < 0.01 %): f, l, u, r, w, n, c, w
+Failed case (word count 1 < 0.01 %): nirugu, p, w, t, r, a, k2, a
+Failed case (word count 1 < 0.01 %): d, a, n, t, w
+Failed case (word count 1 < 0.01 %): u, n, g, g, u, n, n, a, s, u, t, a, i, ch, u, d
+Failed case (word count 1 < 0.01 %): d, e, g, e, r, mvs, a, j, o, g, s, u, n
+Failed case (word count 1 < 0.01 %): b, a, t, u, d, g, a, j, u
+Failed case (word count 1 < 0.01 %): m, a, t, t, i, r, h, o, m
+Failed case (word count 1 < 0.01 %): y, a, b, u, g, d, a, g, u, l, d
+Failed case (word count 1 < 0.01 %): nirugu, b, w, r, n, w
+Failed case (word count 1 < 0.01 %): ch, o, k2, o, l, a, t, w
+Failed case (word count 1 < 0.01 %): b, o, l, g, a, g, a, g, d
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, l, a, h, u
+Failed case (word count 1 < 0.01 %): t, r, ue, i
+Failed case (word count 1 < 0.01 %): d, u, m, d, n
+Failed case (word count 1 < 0.01 %): a, s, g, u, h, u
+Failed case (word count 1 < 0.01 %): t, u, r, a, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, g, u, l, a, ng, d, e, i
+Failed case (word count 1 < 0.01 %): m, a, d, n
+Failed case (word count 1 < 0.01 %): s, u, l, n
+Failed case (word count 1 < 0.01 %): u, s, e, d, g, a, h, u
+Failed case (word count 1 < 0.01 %): b, a, d, u, l, n, j, u
+Failed case (word count 1 < 0.01 %): m, a, t, w, r, i, y, e, l
+Failed case (word count 1 < 0.01 %): b, u, i, j, i, h, s, e, n
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, l, d, e
+Failed case (word count 1 < 0.01 %): j, i, g, s, a, g, a, g, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): sh, w, n, j, w, u
+Failed case (word count 1 < 0.01 %): s, o, l, i, l, ch, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, a, d, g, a, l, j, i, g, s, a, n
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, j, u
+Failed case (word count 1 < 0.01 %): j, a, r, l, i, h, d, e, b, e
+Failed case (word count 1 < 0.01 %): t, a, g, u, s, g, a, g, a, d
+Failed case (word count 1 < 0.01 %): h, u, r, u, s, g, u
+Failed case (word count 1 < 0.01 %): a, m, j, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, u, r, a, s, g, u
+Failed case (word count 1 < 0.01 %): h, a, b, ch, i, h, d, e, j, u
+Failed case (word count 1 < 0.01 %): s, i, l, j, i, g, s, a, n
+Failed case (word count 1 < 0.01 %): o, d, o, r, i, d, g, u
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, n
+Failed case (word count 1 < 0.01 %): t, e, r, n
+Failed case (word count 1 < 0.01 %): n, e, r, n
+Failed case (word count 1 < 0.01 %): k2, i, l, oe, m, w, t, r
+Failed case (word count 1 < 0.01 %): i, g, d, u, l, u, n
+Failed case (word count 1 < 0.01 %): p, i, l, n
+Failed case (word count 1 < 0.01 %): t, a, g, a, d, g, a, d, a, g
+Failed case (word count 1 < 0.01 %): t, a, r, n, ch, i, l, a, n
+Failed case (word count 1 < 0.01 %): ch, i, g, l, a, b, a
+Failed case (word count 1 < 0.01 %): i, j, i, l, s, i, g, s, a, n
+Failed case (word count 1 < 0.01 %): a, n, g, h, a, r, u, g, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, a, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): ch, a, d, g, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, l, a, j, u
+Failed case (word count 1 < 0.01 %): i, g, ch, u, r, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): j, i, sh, i, y, a, l, e, b, a, l
+Failed case (word count 1 < 0.01 %): b, i, ch, i, g, d, u
+Failed case (word count 1 < 0.01 %): t, a, g, a, d, g, a, b, a
+Failed case (word count 1 < 0.01 %): t, o, s, g, a, i, l, a, n
+Failed case (word count 1 < 0.01 %): o, o, m, w, n
+Failed case (word count 1 < 0.01 %): t, o, r, a, s, g, a, l
+Failed case (word count 1 < 0.01 %): u, r, u, l, ch, a, h, s, e, n
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, b, a, l
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, g, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): o, i, l, a, g, a, g, s, n
+Failed case (word count 1 < 0.01 %): ue, j, w, n
+Failed case (word count 1 < 0.01 %): t, u, g, u, s, g, mvs, a
+Failed case (word count 1 < 0.01 %): n, i, g, d, a, r, a, j, u
+Failed case (word count 1 < 0.01 %): h, a, n, g, j, w, u
+Failed case (word count 1 < 0.01 %): d, e, g, e, r, mvs, a, h, a, r, i, g, u, l, u, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, r, i, g, u, l, u, h, s, n, n
+Failed case (word count 1 < 0.01 %): h, a, y, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, r, i, l, a, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, d, u, d, ue, r, ue
+Failed case (word count 1 < 0.01 %): s, a, g, u, h, s, a, d
+Failed case (word count 1 < 0.01 %): d, u, r, a, d, o, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, h, d, u, n
+Failed case (word count 1 < 0.01 %): d, o, r, a, d, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): g, a, r, u, h, s, n, n
+Failed case (word count 1 < 0.01 %): u, r, u, h, s, n, n
+Failed case (word count 1 < 0.01 %): h, a, r, a, h, d, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): d, a, n, g, s, a
+Failed case (word count 1 < 0.01 %): i, d, g, a, b, a
+Failed case (word count 1 < 0.01 %): n, a, i, d, e, b, u, r, i, j, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, b, ch, i, r, a, h, s, n, n
+Failed case (word count 1 < 0.01 %): n, a, n, d, i, n, g, n, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, u, n, a, m
+Failed case (word count 1 < 0.01 %): d, a, g, a, s, i, y, a, h, d, a, b, a
+Failed case (word count 1 < 0.01 %): a, ng, h, a, r, u, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, g, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): a, i, m, a, h, ch, i, l, a, j, ue
+Failed case (word count 1 < 0.01 %): sh, i, y, a, n, g, sh, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, n, i, u, ng, s, i, h, ch, i, d
+Failed case (word count 1 < 0.01 %): d, a, g, a, s, i, y, a, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): u, r, g, i, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, m, d, u, d, g, a, j, ue
+Failed case (word count 1 < 0.01 %): j, u, r, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, r, b, a, g, a, d, g, a, n
+Failed case (word count 1 < 0.01 %): a, m, s, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): sh, a, d, u, ch, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, l, u, h, s, a
+Failed case (word count 1 < 0.01 %): u, m, u, h, s, i, j, ue
+Failed case (word count 1 < 0.01 %): d, a, b, s, i, h, s, e, n
+Failed case (word count 1 < 0.01 %): d, u, n, g, g, u, r, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, g, u, l, u, l, d, a
+Failed case (word count 1 < 0.01 %): ch, i, e, g, g, a, d, g, a, n
+Failed case (word count 1 < 0.01 %): a, s, g, a, r, a, m, u, i
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, s, e, n
+Failed case (word count 1 < 0.01 %): h, a, m, d, u, d, g, a, b, a, i
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, g, u, y, mvs, a
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, h, u
+Failed case (word count 1 < 0.01 %): s, i, s, t, w, m, ch, i, l, e, g, s, e, n
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, g, a, d
+Failed case (word count 1 < 0.01 %): y, o, h, d, a, l, i, g
+Failed case (word count 1 < 0.01 %): b, u, r, u, g, u, s, i, y, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): ch, u, h, i, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, n, i, g, u, l, u, h, s, a, a
+Failed case (word count 1 < 0.01 %): h, a, r, a, g, a, l, j, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, s, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, u, g, u, l, u, n
+Failed case (word count 1 < 0.01 %): u, h, d, u, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): d, o, s, g, a, i, l, a, n
+Failed case (word count 1 < 0.01 %): d, u, g, d, u, l, u, n, g, g, u, i
+Failed case (word count 1 < 0.01 %): u, m, u, h, s, i, g, u, s, i, d, e, i
+Failed case (word count 1 < 0.01 %): d, u, h, ch, i, n
+Failed case (word count 1 < 0.01 %): b, u, s, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): g, a, h, ch, a, g, a, r, h, a, n
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, u, m, a, h, ch, a
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, l, a, j, ue
+Failed case (word count 1 < 0.01 %): g, u, n, i, h, l, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, l, a, h, u
+Failed case (word count 1 < 0.01 %): a, b, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, l, a, n
+Failed case (word count 1 < 0.01 %): ch, a, h, d, a, g, mvs, a
+Failed case (word count 1 < 0.01 %): a, r, a, d, ch, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, l, d, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, b, i, y, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): g, a, n, g, d, i, s
+Failed case (word count 1 < 0.01 %): d, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, h, d, u, h, d, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, b, a
+Failed case (word count 1 < 0.01 %): a, m, i, d, u, r, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): j, u, h, i, ch, a, g, o, l, o, h, s, a, a
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, u, g, u, l, u, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): u, r, g, i, l, u, h, s, n, n
+Failed case (word count 1 < 0.01 %): ch, u, h, ch, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, i, r, u, h, d, u
+Failed case (word count 1 < 0.01 %): d, a, g, a, r, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, r, i, s, g, a, j, ue
+Failed case (word count 1 < 0.01 %): d, a, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): nnbsp, n, i, d, u, h, a, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, a, d, a, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, l, a, l, d, a
+Failed case (word count 1 < 0.01 %): h, a, l, a, h, d, a, g, a, d
+Failed case (word count 1 < 0.01 %): d, o, s, g, u, n
+Failed case (word count 1 < 0.01 %): d, a, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, h, s, i, r, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, g, u, l, a, h, d, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): a, d, g, u, l, ch, a, j, ue
+Failed case (word count 1 < 0.01 %): b, a, g, u, ch, i, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): y, a, r, i, l, ch, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, l, b, u, g, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): g, a, r, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, r, i, h, ch, i
+Failed case (word count 1 < 0.01 %): h, a, r, a, h, ch, i, n
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, l, a, g, u, l, j, ue
+Failed case (word count 1 < 0.01 %): d, a, l, a, l, u, h, ch, i
+Failed case (word count 1 < 0.01 %): u, h, d, u, h, ch, i
+Failed case (word count 1 < 0.01 %): g, u, m, u, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, sh, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): i, n, a, h, l, a, b, a
+Failed case (word count 1 < 0.01 %): d, u, l, g, a, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, o, n, i, r, a, h, l, d, u
+Failed case (word count 1 < 0.01 %): d, w, ue
+Failed case (word count 1 < 0.01 %): n, i, h, d, a, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): ch, a, l, n, g, e, r
+Failed case (word count 1 < 0.01 %): s, o, r, u, h, ch, i
+Failed case (word count 1 < 0.01 %): h, u, b, i, y, a, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): u, r, u, l, ch, a, h, s, a, d
+Failed case (word count 1 < 0.01 %): h, u, b, ch, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, h, d, a, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): ch, a, h, i, l, g, a, n, ch, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, d, u, h, ch, i
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, r, b, a, l
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, u, g, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, i, d, ch, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, u, h, s, i, l, a, n
+Failed case (word count 1 < 0.01 %): u, r, i, h, d, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, n, g, d, a
+Failed case (word count 1 < 0.01 %): a, y, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, h, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): a, l, h, u, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): t, o, s, g, a, l
+Failed case (word count 1 < 0.01 %): a, m, i, s, g, o, l, l, a, g, s, a, n
+Failed case (word count 1 < 0.01 %): o, s, g, a, l
+Failed case (word count 1 < 0.01 %): s, i, y, a, m, w, n
+Failed case (word count 1 < 0.01 %): j, u, r, a, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, s, u, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): p, u, u, d, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): a, l, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, i, r, u, h, l, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, g, u
+Failed case (word count 1 < 0.01 %): u, r, u, h, s, i, l, a, l, d, a
+Failed case (word count 1 < 0.01 %): i, n, a, h, l, a, j, ue
+Failed case (word count 1 < 0.01 %): ch, u, h, i, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): h, a, i, r, a, l, a, h, s, g, a, r
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, g, a, d
+Failed case (word count 1 < 0.01 %): a, l, a, h, d, a, b, a
+Failed case (word count 1 < 0.01 %): n, u, d, u, g, s, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, i, n, a, h, ch, i, d
+Failed case (word count 1 < 0.01 %): d, u, s, a, l, a, h, ch, i
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, sh, u, ng, n, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, i, y, a, l, d, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, i, s, i, y, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): l, u, g, i, h, ch, i
+Failed case (word count 1 < 0.01 %): h, a, m, a, g, a, l, a, h, ch, i
+Failed case (word count 1 < 0.01 %): n, a, i, m, n, n
+Failed case (word count 1 < 0.01 %): b, a, h, a, r, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, r, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, s, g, i, r, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, l, i, y, a, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): u, b, u, h, d, u
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): s, u, r, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, r, a, s, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, h, a, r, a, h, n
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, i, l, e, n
+Failed case (word count 1 < 0.01 %): b, a, y, a, l, i, h, j, i, l, mvs, a
+Failed case (word count 1 < 0.01 %): d, u, g, a, ch, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, r, d, a, h, d, a, s, i
+Failed case (word count 1 < 0.01 %): a, g, u, l, j, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, u, h, d, a, j, u
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, u, h, s, n, n
+Failed case (word count 1 < 0.01 %): s, a, g, u, l, ch, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, r, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): y, a, d, a, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, u, h, s, u, g, a, d
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, g, a, b, a
+Failed case (word count 1 < 0.01 %): b, a, y, a, r, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, l, a, m, j, i, l, a, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): n, i, l, a, h, s, a, g
+Failed case (word count 1 < 0.01 %): ch, o, h, ch, a, l, a, j, ue
+Failed case (word count 1 < 0.01 %): ch, i, n, a, h, s, i, l, a, b, e, l
+Failed case (word count 1 < 0.01 %): m, a, h, d, a, g, u, ch, i
+Failed case (word count 1 < 0.01 %): d, a, r, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, a, d, a, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, ng, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, g, u, l, g, mvs, a
+Failed case (word count 1 < 0.01 %): a, g, u, l, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, y, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): i, l, a, g, a, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, i, d, g, u, n
+Failed case (word count 1 < 0.01 %): a, s, a, h, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): u, h, s, a, g, a, n
+Failed case (word count 1 < 0.01 %): g, a, i, h, a, m, s, i, h, d, a, i
+Failed case (word count 1 < 0.01 %): s, u, n, o, s, g, u
+Failed case (word count 1 < 0.01 %): d, a, n, i, h, d, a, g, a, d
+Failed case (word count 1 < 0.01 %): b, u, s, g, u
+Failed case (word count 1 < 0.01 %): ch, u, h, ch, a, l, a, j, ue
+Failed case (word count 1 < 0.01 %): u, h, s, a, r, a, g, u, l, u, l
+Failed case (word count 1 < 0.01 %): s, a, ch, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): i, m, a, h, d, a
+Failed case (word count 1 < 0.01 %): d, u, s, g, a, h, u
+Failed case (word count 1 < 0.01 %): m, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): g, a, l, s, a, n, g, d, u, r, j, i
+Failed case (word count 1 < 0.01 %): h, a, m, d, u, ch, i, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, y, a, n, g, g, a, d, u
+Failed case (word count 1 < 0.01 %): b, a, g, a, n, a, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, n, g, h, i, l, u, m, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, ng, h, u, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, w, ng, ch, ue, ng, s, i, m, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, u, h, ch, i, d
+Failed case (word count 1 < 0.01 %): l, u, h, i, h, ch, i
+Failed case (word count 1 < 0.01 %): g, i, l, e, l, j, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, n, a, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, m, u, h, s, i, l, d, u
+Failed case (word count 1 < 0.01 %): j, u, r, i, h, j, i, g, u, l, d, a, g
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, u, g, u, l, j, ue
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): h, a, y, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, i, r, g, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, r, g, u, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, u, h, d, u, g, o, r, a, n
+Failed case (word count 1 < 0.01 %): d, u, g, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, d, u, h, d, u
+Failed case (word count 1 < 0.01 %): l, u, b, s, a, n, g, d, a, n, j, i, n
+Failed case (word count 1 < 0.01 %): g, u, n, ch, u, h, s, ue, i, r, u, ng
+Failed case (word count 1 < 0.01 %): s, u, r, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): d, a, g, a, r, i, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): n, u, m, u, h, a, d, g, a, ch, i, h, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, h, d, a, d, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, r, a, h, d, a, b, a, ch, u
+Failed case (word count 1 < 0.01 %): h, a, r, b, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, g, u, l, u, l, mvs, a
+Failed case (word count 1 < 0.01 %): u, n, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, j, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, r, a, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, b, h, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, u, n, g, h, u, n
+Failed case (word count 1 < 0.01 %): a, i, t, m, u, t, u, f
+Failed case (word count 1 < 0.01 %): u, r, ch, i, g, u, l, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, ch, i, g, u, l, u, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): d, a, n, i, l, ch, a, g, u, l, u, h, d, a, n
+Failed case (word count 1 < 0.01 %): a, m, i, d, u, r, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): sh, a, ng, n, a, h, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): u, r, u, h, s, i, l, a, j, a, i
+Failed case (word count 1 < 0.01 %): b, a, i, j, a, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, r, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, r, u, s, g, a, j, ue
+Failed case (word count 1 < 0.01 %): u, m, u, h, s, i, g, u, s, i, d, a, i
+Failed case (word count 1 < 0.01 %): u, l, u, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, n
+Failed case (word count 1 < 0.01 %): a, ng, h, a, r, u, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): d, a, r, h, a, g, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, o, h, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): b, a, i, g, u, l, u, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): u, h, d, u, l, g, mvs, a
+Failed case (word count 1 < 0.01 %): b, a, r, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, m, mvs, a
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, b, a, ch, u
+Failed case (word count 1 < 0.01 %): n, u, u, r, a, h, l, a, h, u
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, h, d, a, m, a, r
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, h, u
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, g, a, n
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, g, u, l, b, a
+Failed case (word count 1 < 0.01 %): d, o, s, g, a, j, ue
+Failed case (word count 1 < 0.01 %): a, u, i, s, t, r, a, l, i, y, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, r, i, y, a, l, a, h, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): h, a, r, a, h, d, a, g, a, d
+Failed case (word count 1 < 0.01 %): j, a, s, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): h, a, n, g, h, i, n, a, g, u, l, u, g, a, d
+Failed case (word count 1 < 0.01 %): d, a, n, g, h, i, l
+Failed case (word count 1 < 0.01 %): u, n, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, a, r, h, i, n, a, h, l, a, n
+Failed case (word count 1 < 0.01 %): d, a, b, a, l, g, a, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, l, a, l, mvs, a
+Failed case (word count 1 < 0.01 %): b, u, r, g, i, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, o, g, u, n, a, h, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): u, h, i, y, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, h, d, a
+Failed case (word count 1 < 0.01 %): u, h, d, u, g, a, d
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, u, m, mvs, a
+Failed case (word count 1 < 0.01 %): d, u, l, a, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, u, g, a, ch, a, h, s, a, d
+Failed case (word count 1 < 0.01 %): i, g, ch, u, r, a, n
+Failed case (word count 1 < 0.01 %): u, i, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, w, l, w, i, s
+Failed case (word count 1 < 0.01 %): n, u, d, u, h, s, i, j, ue
+Failed case (word count 1 < 0.01 %): u, y, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, i, sh, i, g
+Failed case (word count 1 < 0.01 %): z, w, l, a, n, d
+Failed case (word count 1 < 0.01 %): j, i, g, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): h, a, r, i, y, a, l, a, h, d, a, d, a, g
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, m, a, l
+Failed case (word count 1 < 0.01 %): a, s, i, h, l, a, l, d, a
+Failed case (word count 1 < 0.01 %): sh, a, g, a, r, d, a, h, d, a, j, ue
+Failed case (word count 1 < 0.01 %): b, a, l, g, u, m, a, h, ch, a
+Failed case (word count 1 < 0.01 %): s, o, n, o, s, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, a, n, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): u, u, g, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, u, s, ch, i, h, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, l, h, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, u, l, u, h, ch, i
+Failed case (word count 1 < 0.01 %): d, u, h, d, u, l, h, u
+Failed case (word count 1 < 0.01 %): u, r, u, h, s, a, a
+Failed case (word count 1 < 0.01 %): y, a, b, u, l, ch, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): d, o, h, d, a, b, a
+Failed case (word count 1 < 0.01 %): m, u, ng, g, u, l, ch, i, l, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, g, a, j, a, i
+Failed case (word count 1 < 0.01 %): d, u, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): a, h, i, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, j, i, h, s, a, n
+Failed case (word count 1 < 0.01 %): a, ng, h, a, r, u, h, d, a, n
+Failed case (word count 1 < 0.01 %): d, u, g, a, ch, a, h, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): d, u, g, u, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): j, a, l, a, h, d, a, j, a, i
+Failed case (word count 1 < 0.01 %): u, m, a, r, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): b, a, r, i, m, d, a, l, a, h, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): s, a, i, s, i, y, a, h, d, a, n
+Failed case (word count 1 < 0.01 %): y, a, b, u, g, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): s, i, l, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, g, u, l, u, g, a, d
+Failed case (word count 1 < 0.01 %): h, a, y, a, h, d, a, m, a, l
+Failed case (word count 1 < 0.01 %): nnbsp, h, a, r, a, h, d, a, n, mvs, a
+Failed case (word count 1 < 0.01 %): ch, u, h, l, a, g, u, l, u, n
+Failed case (word count 1 < 0.01 %): d, u, r, u, h, s, i
+Failed case (word count 1 < 0.01 %): u, h, s, a, g, a, d, a, n
+Failed case (word count 1 < 0.01 %): sh, a, g, a, r, d, a, h, d, a, h, u
+Failed case (word count 1 < 0.01 %): b, a, y, a, s, g, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): d, a, g, a, s, i, y, a, h, d, a, h, s, a, n
+Failed case (word count 1 < 0.01 %): m, a, i, m, a, i, t, i, n, g, m, i, ng, a, u, i, sh, u, r
+Failed case (word count 1 < 0.01 %): a, ng, h, d, a, h, ch, i
+Failed case (word count 1 < 0.01 %): d, u, l, u, h, s, a, n
+Failed case (word count 1 < 0.01 %): t, n
+Failed case (word count 1 < 0.01 %): a, d, g, u, g, s, a, g, a, r
+Failed case (word count 1 < 0.01 %): w, w, n, ch, ue, w, a, n
+Failed case (word count 1 < 0.01 %): h, a, r, a, ch, n
+Failed case (word count 1 < 0.01 %): d, a, l, i, i, h, ch, i
+Failed case (word count 1 < 0.01 %): s, u, n, u, s, u, m, a, g, ch, n
+Failed case (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
+Passed cases: 517752/531905 = 97.33918650886906 %

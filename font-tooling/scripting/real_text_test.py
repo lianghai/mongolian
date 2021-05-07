@@ -1,5 +1,5 @@
 import difflib
-import logging
+import re
 from collections import Counter
 from pathlib import Path
 from textwrap import indent
@@ -22,56 +22,48 @@ def main():
 
     text = "\n".join((corpus_dir / f"almas_{i:03}.txt").read_text() for i in range(1, 65))
 
-    def normalize_text(text: str) -> str:
-        for k, v in {
-            "\uFEFF": "",
-            "᠊": "",
-            "\u202F": " \u202F",
-            "᠂": " ",
-            "᠃": " ",
-            "᠄": " ",
-            "᠁": " ",
-            "«": " ",
-            "»": " ",
-            "︖": " ",
-            "︕": " ",
-            ">": " ",
-            "<": " ",
-            "Q": " ",
-            "D": " ",
-            "⟫": " ",
-            "⟪": " ",
-        }.items():
-            text = text.replace(k, v)
-        return text
+    cases = Counter[str](
+        i.group(0) for i in
+        re.finditer(r"\u202F?[\u200C\u200D\u180A-\u180E\u1807\u1820-\u1842]+", text)
+    )
+    total = sum(cases.values())
 
-    cases = Counter[str]()
-    for line in normalize_text(text).splitlines():
-        cases.update(line.split(" "))
+    with (scripting_dir / "report.txt").open("w") as f:
 
-    passed = 0
-    for case, count in cases.most_common():
+        message = f"Total word count: {total}"
+        print(message)
+        print(message, file=f)
 
-        eac_shaper = Shaper(font_dir / "MongolQaganTig.ttf")
-        eac_names = eac_shaper.shape_text_to_glyph_names(case)
-        eac_result = normalize_eac(eac_names)
+        passed = 0
+        for case, count in cases.most_common():
 
-        utn_shaper = Shaper(project_dir / "products" / "DummyStateless-Regular.otf")
-        utn_names = utn_shaper.shape_text_to_glyph_names(case)
-        utn_result = normalize_utn(utn_names)
+            eac_shaper = Shaper(font_dir / "MongolQaganTig.ttf")
+            eac_names = eac_shaper.shape_text_to_glyph_names(case)
+            eac_result = normalize_eac(eac_names)
 
-        if eac_result == utn_result:
-            passed += count
-        elif count > 100:
-            string_notation = ", ".join(
-                cp_to_name.get(i) or unicodedata.name(i, f"U+{ord(i):04X}") for i in case
-            )
-            logging.info(f" Failed case (count {count}): {string_notation}")
-            for line in [*difflib.unified_diff(eac_result, utn_result, lineterm="")][3:]:
-                print(indent(line, " " * 4))
+            utn_shaper = Shaper(project_dir / "products" / "DummyStateless-Regular.otf")
+            utn_names = utn_shaper.shape_text_to_glyph_names(case)
+            utn_result = normalize_utn(utn_names)
 
-    count_sum = sum(cases.values())
-    logging.info(f" Passed cases: {passed}/{count_sum} = {passed / count_sum * 100} %")
+            if eac_result == utn_result:
+                passed += count
+            else:
+                string_notation = ", ".join(
+                    cp_to_name.get(i) or unicodedata.name(i, f"U+{ord(i):04X}") for i in case
+                )
+                percentage = round(count / total * 100, 4)
+                if percentage >= 0.01:
+                    message = f"Failed case (word count {count} ≈ {percentage} %): {string_notation}"
+                    print(message)
+                    print(message, file=f)
+                    for line in [*difflib.unified_diff(eac_result, utn_result, lineterm="")][3:]:
+                        print(indent(line, " " * 4), file=f)
+                else:
+                    print(f"Failed case (word count {count} < 0.01 %): {string_notation}", file=f)
+
+        message = f"Passed cases: {passed}/{total} = {passed / total * 100} %"
+        print(message)
+        print(message, file=f)
 
 
 cp_to_name = {chr(character.cp): character_id for character_id, character in mongolian.characters.items()}
