@@ -16,11 +16,26 @@ project_dir = scripting_dir / ".."
 repo_dir = scripting_dir / ".." / ".."
 private_repo_dir = repo_dir / ".." / "mongolian-private"
 font_dir = private_repo_dir / "misc/liangjinbao/20210303"
-corpus_dir = private_repo_dir / "misc/jirimutu/mongol_corpus"
+
+corpus_loader_by_tag = {
+    "jirimutu": (
+        lambda: "\n".join(
+            (private_repo_dir / f"misc/jirimutu/mongol_corpus/almas_{i:03}.txt").read_text()
+            for i in range(1, 65)
+        )
+    ),
+    "badamsuren": (
+        lambda: (private_repo_dir / "misc/badamsuren/Badamsuren.txt").read_text()
+    ),
+    "combined": (
+        lambda: "\n".join(v() for k, v in corpus_loader_by_tag.items() if k != "combined")
+    ),
+}
 
 def main():
 
-    text = "\n".join((corpus_dir / f"almas_{i:03}.txt").read_text() for i in range(1, 65))
+    tag = "combined"
+    text = corpus_loader_by_tag[tag]()
 
     cases = Counter[str](
         i.group(0) for i in
@@ -28,7 +43,7 @@ def main():
     )
     total = sum(cases.values())
 
-    with (scripting_dir / "report.txt").open("w") as f:
+    with (scripting_dir / f"report-{tag}.txt").open("w") as f:
 
         message = f"Total word count: {total}"
         print(message)
