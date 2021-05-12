@@ -18,6 +18,9 @@ private_repo_dir = repo_dir / ".." / "mongolian-private"
 font_dir = private_repo_dir / "misc/liangjinbao/20210303"
 
 corpus_loader_by_tag = {
+    "combined": (
+        lambda: "\n".join(v() for k, v in corpus_loader_by_tag.items() if k != "combined")
+    ),
     "jirimutu": (
         lambda: "\n".join(
             (private_repo_dir / f"misc/jirimutu/mongol_corpus/almas_{i:03}.txt").read_text()
@@ -26,9 +29,6 @@ corpus_loader_by_tag = {
     ),
     "badamsuren": (
         lambda: (private_repo_dir / "misc/badamsuren/Badamsuren.txt").read_text()
-    ),
-    "combined": (
-        lambda: "\n".join(v() for k, v in corpus_loader_by_tag.items() if k != "combined")
     ),
 }
 
@@ -43,7 +43,7 @@ def main():
     )
     total = sum(cases.values())
 
-    with (scripting_dir / f"report-{tag}.txt").open("w") as f:
+    with (scripting_dir / ".." / "reports" / f"{tag}.txt").open("w") as f:
 
         message = f"Total word count: {total}"
         print(message)
