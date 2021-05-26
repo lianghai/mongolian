@@ -50,7 +50,7 @@ def main():
         print(message, file=f)
 
         passed = 0
-        for case, count in cases.most_common():
+        for index, (case, count) in enumerate(cases.most_common()):
 
             eac_shaper = Shaper(font_dir / "MongolQaganTig.ttf")
             eac_names = eac_shaper.shape_text_to_glyph_names(case)
@@ -68,17 +68,21 @@ def main():
                 )
                 percentage = round(count / total * 100, 4)
                 if percentage >= 0.01:
-                    message = f"Failed case (word count {count} ≈ {percentage} %): {string_notation}"
+                    message = f"Failed: case {index} (word count {count} ≈ {percentage} %): {string_notation}"
                     print(message)
                     print(message, file=f)
                     for line in [*difflib.unified_diff(eac_result, utn_result, lineterm="")][3:]:
                         print(indent(line, " " * 4), file=f)
                 else:
-                    print(f"Failed case (word count {count} < 0.01 %): {string_notation}", file=f)
+                    print(f"Failed: case {index} (word count {count} < 0.01 %): {string_notation}", file=f)
 
-        message = f"Passed cases: {passed}/{total} = {passed / total * 100} %"
-        print(message)
-        print(message, file=f)
+        failed = total - passed
+        for message in [
+            f"Failed word count: {failed}/{total} = {failed / total * 100} %",
+            f"Passed word count: {passed}/{total} = {passed / total * 100} %",
+        ]:
+            print(message)
+            print(message, file=f)
 
 
 cp_to_name = {chr(character.cp): character_id for character_id, character in mongolian.characters.items()}
