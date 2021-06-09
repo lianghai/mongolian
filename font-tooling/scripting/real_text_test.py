@@ -1,15 +1,16 @@
+from __future__ import annotations
+
 import difflib
 import re
 from collections import Counter
 from collections.abc import Callable
 from dataclasses import dataclass
-from functools import cache
 from pathlib import Path
 from textwrap import indent
-from unicodedata import normalize
 
+import uharfbuzz as hb
+import yaml
 from fontTools import unicodedata
-from tptq.utils.shaping import Shaper
 
 from data import mongolian
 from naming import eac_name_to_standard
@@ -21,15 +22,49 @@ repo_dir = scripting_dir / ".." / ".."
 private_repo_dir = repo_dir / ".." / "mongolian-private"
 
 
+class Shaper:
+
+    def __init__(self, path: Path):
+        self.path = path
+        face = hb.Face(path.read_bytes())  # type: ignore
+        self.font = hb.Font(face)  # type: ignore
+        hb.ot_font_set_funcs(self.font)  # type: ignore
+
+    def shape_text_to_glyph_names(
+        self,
+        text: str,
+        features: dict = None,
+        gid_to_name: dict[int, str] = None,
+    ) -> list[str]:
+
+        buffer = hb.Buffer()  # type: ignore
+        buffer.add_str(text)
+        buffer.guess_segment_properties()
+
+        hb.shape(self.font, buffer, features)  # type: ignore
+
+        names = []
+        for info in buffer.glyph_infos:
+            gid = info.codepoint
+            if gid_to_name is None:
+                name = self.font.get_glyph_name(gid)
+            else:
+                name = gid_to_name.get(gid, f"gid{gid}")
+            names.append(name)
+
+        return names
+
+
 @dataclass
 class Testee:
 
     name: str
     shaper: Shaper
-    normalizer: Callable[[list[str]], list[str]]
+    normalizer: Callable[[list[str]], list[str]] = lambda x: x
+    gid_to_name: dict[int, str] | None = None
 
     def shape(self, string: str) -> list[str]:
-        glyph_names = self.shaper.shape_text_to_glyph_names(string)
+        glyph_names = self.shaper.shape_text_to_glyph_names(string, gid_to_name=self.gid_to_name)
         return self.normalizer(glyph_names)
 
 
@@ -51,10 +86,14 @@ corpus_loader_by_tag = {
 
 def main():
 
+    with (scripting_dir / "microsoft_tagging.yaml").open() as f:
+        greg_tagging = yaml.safe_load(f)
+
     microsoft = Testee(
         name="microsoft",
         shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
         normalizer=microsoft_normalizer,
+        gid_to_name=greg_tagging | {1769: "nnbsp", 241: "nirugu", 3: "space"},
     )
     eac = Testee(
         name="eac",
@@ -67,9 +106,9 @@ def main():
         normalizer=utn_normalizer,
     )
 
-    baseline_testee = eac
-    alt_testee = utn
-    corpus_tag = "badamsuren"
+    baseline_testee = microsoft
+    alt_testee = eac
+    corpus_tag = "jirimutu"
 
     filename = f"{baseline_testee.name}-vs-{alt_testee.name}-with-{corpus_tag}-corpus.txt"
     with (scripting_dir / ".." / "reports" / filename).open("w") as f:
@@ -130,7 +169,12 @@ def split_ligature(name: str) -> list[str]:
 
 
 def microsoft_normalizer(names: list[str]) -> list[str]:
-    return names
+    return [
+        j for i in names for j in split_ligature(i)
+        if j not in {
+            "space",  # HarfBuzz pseudo space for invisible glyphs
+        }
+    ]
 
 
 def eac_normalizer(names: list[str]) -> list[str]:
@@ -152,11 +196,12 @@ def eac_normalizer(names: list[str]) -> list[str]:
 def utn_normalizer(names: list[str]) -> list[str]:
     normalized = []
     for standard_name in names:
-        if standard_name in ["_nil"]:
+        if standard_name in {
+            "_nil",
+            "_fvs1", "_fvs2", "_fvs3", "_fvs4",
+        }:
             continue
-        if standard_name in ["_fvs1", "_fvs2", "_fvs3", "_fvs4"]:
-            continue
-        if standard_name == "_nnbsp":
+        elif standard_name == "_nnbsp":
             normalized.append("nnbsp")
         else:
             normalized.extend(split_ligature(standard_name))
