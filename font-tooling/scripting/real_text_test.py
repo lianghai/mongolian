@@ -93,7 +93,11 @@ def main():
         name="microsoft",
         shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
         normalizer=microsoft_normalizer,
-        gid_to_name=greg_tagging | {1769: "nnbsp", 241: "nirugu", 3: "space"},
+        gid_to_name=greg_tagging | {
+            1769: "nnbsp",
+            241: "nirugu",
+            3: "space",  # HarfBuzz pseudo space for invisible glyphs
+        },
     )
     eac = Testee(
         name="eac",
