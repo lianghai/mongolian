@@ -13,7 +13,7 @@ import yaml
 from fontTools import unicodedata
 
 from data import mongolian
-from utils import slice_joining_form
+from utils import joining_form_to_joinedness, slice_joining_form
 
 scripting_dir = Path(__file__).parent
 tagging_dir = scripting_dir / "tagging"
@@ -44,12 +44,14 @@ class Shaper:
         hb.shape(self.font, buffer, features)  # type: ignore
 
         names = []
-        for info in buffer.glyph_infos:
+        for info, position in zip(buffer.glyph_infos, buffer.glyph_positions):
             gid = info.codepoint
             if gid_to_name is None:
                 name = self.font.get_glyph_name(gid)
             else:
                 name = gid_to_name.get(gid, f"gid{gid}")
+            if name == "space" and position.x_advance == 0:  # HarfBuzz pseudo space for invisible glyphs
+                name = "_invisible"
             names.append(name)
 
         return names
@@ -112,13 +114,18 @@ def main():
         normalizer=utn_normalizer,
     )
 
-    baseline = microsoft
-    corpus_tag = "jirimutu"
-    for alt in [eac, utn]:
-        test(baseline, alt, corpus_tag)
+    for corpus_tag in ["jirimutu", "badamsuren"]:
+        test(eac, utn, corpus_tag)
+        for alt in [eac, utn]:
+            test(microsoft, alt, corpus_tag)
 
 
 def test(baseline: Testee, alt: Testee, corpus_tag: str):
+
+    print("===")
+    print(f"Shaping models: {baseline.name} vs. {alt.name}")
+    print(f"Corpus: {corpus_tag}")
+    print("---")
 
     filename = f"{baseline.name}-vs-{alt.name}-with-{corpus_tag}-corpus.txt"
     with (scripting_dir / ".." / "reports" / filename).open("w") as f:
@@ -156,6 +163,7 @@ def test(baseline: Testee, alt: Testee, corpus_tag: str):
                 else:
                     print(f"Failed: case {index} (word count {count} < 0.01 %): {string_notation}", file=f)
 
+        print("---")
         failed = total - passed
         for message in [
             f"Failed word count: {failed}/{total} = {failed / total * 100} %",
@@ -163,6 +171,7 @@ def test(baseline: Testee, alt: Testee, corpus_tag: str):
         ]:
             print(message)
             print(message, file=f)
+        print("===")
 
 
 cp_to_name = {chr(character.cp): character_id for character_id, character in mongolian.characters.items()}
@@ -180,18 +189,26 @@ def split_ligature(name: str) -> list[str]:
 
 def general_normalizer(names: list[str]) -> list[str]:
     names_to_drop = {
-        "space",  # HarfBuzz pseudo space for invisible glyphs
+        "_invisible",
+    }
+    name_to_standard = {
+        f"K2.{i}": f"K.{i}"
+        for i in joining_form_to_joinedness.keys()
     }
     confusables_to_neutralized = {
-        ("O.init", "O.medi"): "O.init/medi",
-        ("I.isol", "I.fina"): "I.isol/fina",
-        ("I.init", "I.medi"): "I.init/medi",
-        ("U.isol", "U.fina"): "U.isol/fina",
+        (f"{i}.isol", f"{i}.fina"): f"{i}.isol/fina"
+        for i in ["Aa", "I", "U"]
+    } | {
+        (f"{i}.init", f"{i}.medi"): f"{i}.init/medi"
+        for i in [
+            "I", "O", "B", "P", "G", "Gx", "T", "D", "Ch", "Y", "R", "W", "F", "K", "C", "Z", "Rh",
+        ]
     }
     normalized = []
     for name in names:
         if name in names_to_drop:
             continue
+        name = name_to_standard.get(name) or name
         for confusables, neutralized in confusables_to_neutralized.items():
             if name in confusables:
                 normalized.append(neutralized)
@@ -203,10 +220,8 @@ def general_normalizer(names: list[str]) -> list[str]:
 
 def microsoft_normalizer(names: list[str]) -> list[str]:
     part_to_standard = {
-        "Hx.init": "Gh.init",
-        "Hx.medi": "Gh.medi",
-        "Hx.fina": "Gh.fina",
-        "Hx.isol": "Gh.isol",
+        f"Hx.{i}": f"Gh.{i}"
+        for i in joining_form_to_joinedness.keys()
     }
     normalized = []
     for name in names:
@@ -220,17 +235,10 @@ def eac_normalizer(names: list[str]) -> list[str]:
         "a.Aa.fina": "a.Aa.isol",
         "e.Aa.fina": "e.Aa.isol",
     }
-    part_to_standard = {
-        "K2.init": "K.init",
-        "K2.medi": "K.medi",
-        "K2.fina": "K.fina",
-        "K2.isol": "K.isol",
-    }
     normalized = []
     for name in names:
         name = name_to_standard.get(name) or name
-        for part in split_ligature(name):
-            normalized.append(part_to_standard.get(part) or part)
+        normalized.extend(split_ligature(name))
     return normalized
 
 
