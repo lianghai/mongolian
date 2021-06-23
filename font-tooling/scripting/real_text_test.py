@@ -13,10 +13,10 @@ import yaml
 from fontTools import unicodedata
 
 from data import mongolian
-from naming import eac_name_to_standard
 from utils import slice_joining_form
 
 scripting_dir = Path(__file__).parent
+tagging_dir = scripting_dir / "tagging"
 project_dir = scripting_dir / ".."
 repo_dir = scripting_dir / ".." / ".."
 private_repo_dir = repo_dir / ".." / "mongolian-private"
@@ -60,12 +60,17 @@ class Testee:
 
     name: str
     shaper: Shaper
-    normalizer: Callable[[list[str]], list[str]] = lambda x: x
     gid_to_name: dict[int, str] | None = None
+    name_to_standard: dict[str, str] | None = None
+    normalizer: Callable[[list[str]], list[str]] = lambda x: x
 
     def shape(self, string: str) -> list[str]:
         glyph_names = self.shaper.shape_text_to_glyph_names(string, gid_to_name=self.gid_to_name)
-        return self.normalizer(glyph_names)
+        if self.name_to_standard is not None:
+            glyph_names = [self.name_to_standard.get(i) or i for i in glyph_names]
+        glyph_names = self.normalizer(glyph_names)
+        glyph_names = general_normalizer(glyph_names)
+        return glyph_names
 
 
 corpus_loader_by_tag = {
@@ -86,22 +91,19 @@ corpus_loader_by_tag = {
 
 def main():
 
-    with (scripting_dir / "microsoft_tagging.yaml").open() as f:
-        greg_tagging = yaml.safe_load(f)
-
     microsoft = Testee(
         name="microsoft",
         shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
-        normalizer=microsoft_normalizer,
-        gid_to_name=greg_tagging | {
-            1769: "nnbsp",
-            241: "nirugu",
-            3: "space",  # HarfBuzz pseudo space for invisible glyphs
+        gid_to_name=yaml.safe_load((tagging_dir / "microsoft.yaml").read_text()) | {
+            262: "a.A.init",
+            704: "y.I.fina",
         },
+        normalizer=microsoft_normalizer,
     )
     eac = Testee(
         name="eac",
         shaper=Shaper(private_repo_dir / "misc/liangjinbao/20210303/MongolQaganTig.ttf"),
+        name_to_standard=yaml.safe_load((tagging_dir / "eac.yaml").read_text()),
         normalizer=eac_normalizer,
     )
     utn = Testee(
@@ -110,11 +112,15 @@ def main():
         normalizer=utn_normalizer,
     )
 
-    baseline_testee = microsoft
-    alt_testee = eac
+    baseline = microsoft
     corpus_tag = "jirimutu"
+    for alt in [eac, utn]:
+        test(baseline, alt, corpus_tag)
 
-    filename = f"{baseline_testee.name}-vs-{alt_testee.name}-with-{corpus_tag}-corpus.txt"
+
+def test(baseline: Testee, alt: Testee, corpus_tag: str):
+
+    filename = f"{baseline.name}-vs-{alt.name}-with-{corpus_tag}-corpus.txt"
     with (scripting_dir / ".." / "reports" / filename).open("w") as f:
 
         text = corpus_loader_by_tag[corpus_tag]()
@@ -131,10 +137,10 @@ def main():
         passed = 0
         for index, (case, count) in enumerate(cases.most_common()):
 
-            baseline = baseline_testee.shape(case)
-            alt = alt_testee.shape(case)
+            baseline_shaping = baseline.shape(case)
+            alt_shaping = alt.shape(case)
 
-            if baseline == alt:
+            if baseline_shaping == alt_shaping:
                 passed += count
             else:
                 string_notation = ", ".join(
@@ -145,7 +151,7 @@ def main():
                     message = f"Failed: case {index} (word count {count} ≈ {percentage} %): {string_notation}"
                     print(message)
                     print(message, file=f)
-                    for line in [*difflib.unified_diff(baseline, alt, lineterm="")][3:]:
+                    for line in [*difflib.unified_diff(baseline_shaping, alt_shaping, lineterm="")][3:]:
                         print(indent(line, " " * 4), file=f)
                 else:
                     print(f"Failed: case {index} (word count {count} < 0.01 %): {string_notation}", file=f)
@@ -172,43 +178,76 @@ def split_ligature(name: str) -> list[str]:
     return [".".join(i) for i in zip(graphic_parts, joining_forms)]
 
 
+def general_normalizer(names: list[str]) -> list[str]:
+    names_to_drop = {
+        "space",  # HarfBuzz pseudo space for invisible glyphs
+    }
+    confusables_to_neutralized = {
+        ("O.init", "O.medi"): "O.init/medi",
+        ("I.isol", "I.fina"): "I.isol/fina",
+        ("I.init", "I.medi"): "I.init/medi",
+        ("U.isol", "U.fina"): "U.isol/fina",
+    }
+    normalized = []
+    for name in names:
+        if name in names_to_drop:
+            continue
+        for confusables, neutralized in confusables_to_neutralized.items():
+            if name in confusables:
+                normalized.append(neutralized)
+                break
+        else:
+            normalized.append(name)
+    return normalized
+
+
 def microsoft_normalizer(names: list[str]) -> list[str]:
-    return [
-        j for i in names for j in split_ligature(i)
-        if j not in {
-            "space",  # HarfBuzz pseudo space for invisible glyphs
-        }
-    ]
+    part_to_standard = {
+        "Hx.init": "Gh.init",
+        "Hx.medi": "Gh.medi",
+        "Hx.fina": "Gh.fina",
+        "Hx.isol": "Gh.isol",
+    }
+    normalized = []
+    for name in names:
+        for part in split_ligature(name):
+            normalized.append(part_to_standard.get(part) or part)
+    return normalized
 
 
 def eac_normalizer(names: list[str]) -> list[str]:
+    name_to_standard = {
+        "a.Aa.fina": "a.Aa.isol",
+        "e.Aa.fina": "e.Aa.isol",
+    }
+    part_to_standard = {
+        "K2.init": "K.init",
+        "K2.medi": "K.medi",
+        "K2.fina": "K.fina",
+        "K2.isol": "K.isol",
+    }
     normalized = []
-    for eac_name in names:
-        standard_name = eac_name_to_standard.get(eac_name) or eac_name
-        if standard_name in [
-            "space",  # HarfBuzz swap zero-width nonspacing glyphs to /space
-        ]:
-            continue
-        standard_name = {
-            "a.Aa.fina": "a.Aa.isol",
-            "e.Aa.fina": "e.Aa.isol"
-        }.get(standard_name) or standard_name
-        normalized.extend(split_ligature(standard_name))
-    return [{"K2.init": "K.init", "K2.medi": "K.medi", "K2.fina": "K.fina"}.get(i) or i for i in normalized]
+    for name in names:
+        name = name_to_standard.get(name) or name
+        for part in split_ligature(name):
+            normalized.append(part_to_standard.get(part) or part)
+    return normalized
 
 
 def utn_normalizer(names: list[str]) -> list[str]:
+    names_to_drop = {
+        "_nil",
+        "_fvs1", "_fvs2", "_fvs3", "_fvs4",
+    }
+    name_to_standard = {
+        "_nnbsp": "nnbsp",
+    }
     normalized = []
-    for standard_name in names:
-        if standard_name in {
-            "_nil",
-            "_fvs1", "_fvs2", "_fvs3", "_fvs4",
-        }:
+    for name in names:
+        if name in names_to_drop:
             continue
-        elif standard_name == "_nnbsp":
-            normalized.append("nnbsp")
-        else:
-            normalized.extend(split_ligature(standard_name))
+        name = name_to_standard.get(name) or name
+        normalized.extend(split_ligature(name))
     return normalized
 
 

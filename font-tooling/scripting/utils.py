@@ -1,25 +1,3 @@
-from tptq.utils.otl import File
-
-from data import Category
-
-
-def make_glyph_classes(file: File, category_chain: list[str], category: Category):
-
-    class_name = "@" + ".".join(category_chain)
-    members = []
-
-    for key, value in category.immediate_members.items():
-        if value:
-            sub_category_chain = category_chain[:] + [key]
-            nested_class_name = "@" + ".".join(sub_category_chain)
-            make_glyph_classes(file, sub_category_chain, value)
-            members.append(nested_class_name)
-        else:
-            members.append("@" + key)
-
-    if members:
-        file.glyph_class(class_name, members)
-
 
 def slice_joining_form(joining_form: str, slice_into: int) -> list[str]:
     name_to_joinedness = {

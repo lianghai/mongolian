@@ -2,9 +2,10 @@ from pathlib import Path
 
 import tptq.utils.otl as otl
 from tptq.utils.glyph import DevelopmentNaming, Identity
+from tptq.utils.otl import File
 
-from data import mongolian
-from utils import make_glyph_classes, slice_joining_form
+from data import Category, mongolian
+from utils import slice_joining_form
 
 project_dir = Path(__file__).parent / ".."
 directory = project_dir / "otl"
@@ -21,6 +22,24 @@ def mong(phonetic_letter: str, written_units: list[str] = None, joining_form: st
 
 def make_class_name(phonetic_letter: str, joining_form: str = None) -> str:
     return "@" + mong(phonetic_letter, joining_form=joining_form).imply_script(mongolian.code).name()
+
+
+def make_glyph_classes(file: File, category_chain: list[str], category: Category):
+
+    class_name = "@" + ".".join(category_chain)
+    members = []
+
+    for key, value in category.immediate_members.items():
+        if value:
+            sub_category_chain = category_chain[:] + [key]
+            nested_class_name = "@" + ".".join(sub_category_chain)
+            make_glyph_classes(file, sub_category_chain, value)
+            members.append(nested_class_name)
+        else:
+            members.append("@" + key)
+
+    if members:
+        file.glyph_class(class_name, members)
 
 
 def writer(builder: otl.CodeBuilder):

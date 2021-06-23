@@ -1,3 +1,13 @@
+3: space
+241: nirugu
+1769: nnbsp
+220: zwnj
+221: zwj
+243: fvs1
+244: fvs2
+245: fvs3
+246: mvs
+237: ssm
 257: a
 258: a.A.isol
 267: a.Aa.isol
@@ -5,6 +15,7 @@
 266: a.A.init
 260: a.A.medi
 261: a.A_A.medi
+262: a.A.medi
 263: a.A.fina
 264: a.Aa.fina
 274: e
@@ -63,6 +74,7 @@
 334: n.N.medi
 337: n.A.fina
 339: n.N.fina
+340: n.N.fina
 341: n.A.fina
 342: ng
 343: ng.A_G.init
@@ -244,6 +256,7 @@
 580: g.H.init
 575: g.H.medi
 582: g.Hx.medi
+588: g.G.medi
 573: g.H.fina
 586: g.G.fina
 579: g.Hx.fina
@@ -356,6 +369,7 @@
 702: y.I.fina
 703: y.I.medi
 698: y.I.fina
+704: y.Y.fina
 705: r
 706: r.R.init
 707: r.R.medi
