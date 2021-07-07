@@ -251,7 +251,7 @@ def utn_normalizer(names: list[str]) -> list[str]:
     names_to_drop = {
         "_nil",
         "_fvs1", "_fvs2", "_fvs3", "_fvs4",
-        # "_masculine",
+        "_masculine",
     }
     name_to_standard = {
         "_nnbsp": "nnbsp",
