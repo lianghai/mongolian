@@ -968,6 +968,7 @@ lookup III.fallback {
 
 lookup III.y.dictionary_particle {
     lookupflag IgnoreMarks;
+    sub [mvs.effective nnbsp.effective] ue.O.init' g.G.medi e.A.medi i.I.fina by ue.A_O_I.init;
     sub [mvs.effective nnbsp.effective] i.I.init y.Y.medi' lookup condition.dictionary_particle [a.A.medi e.A.medi] [n.A.fina r.R.fina];
     sub [mvs nnbsp]' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.fina;
     sub [mvs nnbsp]' lookup _.effective y.Y.init' lookup condition.dictionary_particle i.I.medi n.A.fina;

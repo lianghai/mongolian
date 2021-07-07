@@ -1,12 +1,4 @@
 Total word count: 531905
-Failed: case 10 (word count 3404 ≈ 0.64 %): nnbsp, ue, g, e, i
-     nnbsp
-    -A.init
-     O.init/medi
-    -I.init/medi
-     G.init/medi
-     A.medi
-     I.isol/fina
 Failed: case 39 (word count 1356 ≈ 0.2549 %): nirugu, y, i, n
      nirugu
     -I.init/medi
@@ -2789,5 +2781,5 @@ Failed: case 34280 (word count 1 < 0.01 %): b, ue, m, b, ue, r, i, n, mvs, e
 Failed: case 34300 (word count 1 < 0.01 %): ue, h, e, i, ch, e, l
 Failed: case 34302 (word count 1 < 0.01 %): ue, l, j, e, i, b, ue, r, i, n
 Failed: case 34304 (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
-Failed word count: 19498/531905 = 3.665692181874583 %
-Passed word count: 512407/531905 = 96.33430781812542 %
+Failed word count: 16094/531905 = 3.025728278545981 %
+Passed word count: 515811/531905 = 96.97427172145402 %

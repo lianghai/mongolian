@@ -1,12 +1,4 @@
 Total word count: 531905
-Failed: case 10 (word count 3404 ≈ 0.64 %): nnbsp, ue, g, e, i
-     nnbsp
-    -A.init
-     O.init/medi
-    -I.init/medi
-     G.init/medi
-     A.medi
-     I.isol/fina
 Failed: case 101 (word count 618 ≈ 0.1162 %): d, oe
     -D.init/medi
     +T.init/medi
@@ -1870,5 +1862,5 @@ Failed: case 34223 (word count 1 < 0.01 %): h, a, r, a, ch, n
 Failed: case 34232 (word count 1 < 0.01 %): d, a, l, i, i, h, ch, i
 Failed: case 34235 (word count 1 < 0.01 %): s, u, n, u, s, u, m, a, g, ch, n
 Failed: case 34304 (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
-Failed word count: 13562/531905 = 2.5497034244836954 %
-Passed word count: 518343/531905 = 97.4502965755163 %
+Failed word count: 10158/531905 = 1.9097395211550936 %
+Passed word count: 521747/531905 = 98.0902604788449 %

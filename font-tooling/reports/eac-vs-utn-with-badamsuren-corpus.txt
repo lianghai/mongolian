@@ -1,12 +1,4 @@
 Total word count: 385093
-Failed: case 8 (word count 4544 ≈ 1.18 %): nnbsp, ue, g, e, i
-     nnbsp
-    -A.init
-     O.init/medi
-    -I.init/medi
-     G.init/medi
-     A.medi
-     I.isol/fina
 Failed: case 61 (word count 1044 ≈ 0.2711 %): nnbsp, i, i, n
      nnbsp
     -A.init
@@ -368,5 +360,5 @@ Failed: case 15061 (word count 1 < 0.01 %): b, a, k, r, eh, i, i, sh, i, g
 Failed: case 15091 (word count 1 < 0.01 %): h, u, y
 Failed: case 15217 (word count 1 < 0.01 %): ch, i, h, t, a
 Failed: case 15255 (word count 1 < 0.01 %): n, a, m, j, i, h, s, a, n
-Failed word count: 9731/385093 = 2.526922068175739 %
-Passed word count: 375362/385093 = 97.47307793182426 %
+Failed word count: 5187/385093 = 1.346947360767399 %
+Passed word count: 379906/385093 = 98.6530526392326 %
