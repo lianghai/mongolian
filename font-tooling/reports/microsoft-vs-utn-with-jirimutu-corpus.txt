@@ -173,10 +173,6 @@ Failed: case 865 (word count 85 ≈ 0.016 %): d, fvs1, a, g, a, n
      A.medi
      Gh.medi
      A.medi
-Failed: case 923 (word count 79 ≈ 0.0149 %): a
-    -a
-    +A.init
-    +A.fina
 Failed: case 966 (word count 76 ≈ 0.0143 %): d, o
      T.init/medi
     -U.isol/fina
@@ -2801,5 +2797,5 @@ Failed: case 34280 (word count 1 < 0.01 %): b, ue, m, b, ue, r, i, n, mvs, e
 Failed: case 34300 (word count 1 < 0.01 %): ue, h, e, i, ch, e, l
 Failed: case 34302 (word count 1 < 0.01 %): ue, l, j, e, i, b, ue, r, i, n
 Failed: case 34304 (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
-Failed word count: 19604/531905 = 3.685620552542277 %
-Passed word count: 512301/531905 = 96.31437944745772 %
+Failed word count: 19525/531905 = 3.6707682762899387 %
+Passed word count: 512380/531905 = 96.32923172371007 %

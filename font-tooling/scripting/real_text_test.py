@@ -118,9 +118,9 @@ def main():
 
     for corpus_tag in [
         "jirimutu",
-        # "badamsuren",
+        "badamsuren",
     ]:
-        # test(eac, utn, corpus_tag)
+        test(eac, utn, corpus_tag)
         for alt in [eac, utn]:
             test(microsoft, alt, corpus_tag)
 
@@ -251,6 +251,7 @@ def utn_normalizer(names: list[str]) -> list[str]:
     names_to_drop = {
         "_nil",
         "_fvs1", "_fvs2", "_fvs3", "_fvs4",
+        # "_masculine",
     }
     name_to_standard = {
         "_nnbsp": "nnbsp",

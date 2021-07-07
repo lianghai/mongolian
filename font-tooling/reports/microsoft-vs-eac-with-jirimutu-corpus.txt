@@ -82,10 +82,6 @@ Failed: case 856 (word count 86 ≈ 0.0162 %): ue, i, l, e, d, b, ue, r, i, l, e
 Failed: case 861 (word count 85 ≈ 0.016 %): b
     -b
     +B.isol
-Failed: case 923 (word count 79 ≈ 0.0149 %): a
-    -a
-    +A.init
-    +A.fina
 Failed: case 966 (word count 76 ≈ 0.0143 %): d, o
     -T.init/medi
     -U.isol/fina
@@ -1242,5 +1238,5 @@ Failed: case 34219 (word count 1 < 0.01 %): w, w, n, ch, ue, w, a, n
 Failed: case 34280 (word count 1 < 0.01 %): b, ue, m, b, ue, r, i, n, mvs, e
 Failed: case 34300 (word count 1 < 0.01 %): ue, h, e, i, ch, e, l
 Failed: case 34302 (word count 1 < 0.01 %): ue, l, j, e, i, b, ue, r, i, n
-Failed word count: 9130/531905 = 1.7164719263778307 %
-Passed word count: 522775/531905 = 98.28352807362218 %
+Failed word count: 9051/531905 = 1.7016196501254923 %
+Passed word count: 522854/531905 = 98.2983803498745 %

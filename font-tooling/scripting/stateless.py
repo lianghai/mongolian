@@ -244,6 +244,7 @@ def writer(builder: otl.CodeBuilder):
 
         with f.Lookup("III.y.dictionary_particle").flag("IgnoreMarks") as lookup:
             c = "dictionary_particle"
+            # lookup.prefix(["mvs.effective", "nnbsp.effective"]).sub("ue.O.init").by("ue.A_O_I.init").suffix("g.G.medi", "e.A.medi", "i.I.fina")  # Hack for tasting.
             lookup.prefix(["mvs.effective", "nnbsp.effective"], "i.I.init").sub("y.Y.medi").chain(conditions(c)).suffix(["a.A.medi", "e.A.medi"], ["n.A.fina", "r.R.fina"])
             lookup.sub(["mvs", "nnbsp"], "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.fina")
             lookup.sub(["mvs", "nnbsp"], "y.Y.init").chain(_effective, conditions(c)).suffix("i.I.medi", "n.A.fina")
