@@ -97,7 +97,9 @@ def main():
         name="microsoft",
         shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
         gid_to_name=yaml.safe_load((tagging_dir / "microsoft.yaml").read_text()) | {
+            257: "a.A_A.isol",
             262: "a.A.init",
+            274: "e.A.isol",
             704: "y.I.fina",
         },
         normalizer=microsoft_normalizer,
@@ -114,8 +116,11 @@ def main():
         normalizer=utn_normalizer,
     )
 
-    for corpus_tag in ["jirimutu", "badamsuren"]:
-        test(eac, utn, corpus_tag)
+    for corpus_tag in [
+        "jirimutu",
+        # "badamsuren",
+    ]:
+        # test(eac, utn, corpus_tag)
         for alt in [eac, utn]:
             test(microsoft, alt, corpus_tag)
 

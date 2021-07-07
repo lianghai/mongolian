@@ -37,9 +37,6 @@ Failed: case 243 (word count 313 ≈ 0.0588 %): nirugu, d
      nirugu
     -Dd.fina
     +D.fina
-Failed: case 256 (word count 297 ≈ 0.0558 %): e
-    -e
-    +A.isol
 Failed: case 270 (word count 285 ≈ 0.0536 %): j, i, n, n
      I.init/medi
      I.init/medi
@@ -2804,5 +2801,5 @@ Failed: case 34280 (word count 1 < 0.01 %): b, ue, m, b, ue, r, i, n, mvs, e
 Failed: case 34300 (word count 1 < 0.01 %): ue, h, e, i, ch, e, l
 Failed: case 34302 (word count 1 < 0.01 %): ue, l, j, e, i, b, ue, r, i, n
 Failed: case 34304 (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
-Failed word count: 19901/531905 = 3.7414575911111947 %
-Passed word count: 512004/531905 = 96.2585424088888 %
+Failed word count: 19604/531905 = 3.685620552542277 %
+Passed word count: 512301/531905 = 96.31437944745772 %

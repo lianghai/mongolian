@@ -27,9 +27,6 @@ Failed: case 252 (word count 301 ≈ 0.0566 %): j, i, sh, i, y, e, l, e, b, e, l
      I.init/medi
      Y.init/medi
      A.medi
-Failed: case 256 (word count 297 ≈ 0.0558 %): e
-    -e
-    +A.isol
 Failed: case 352 (word count 222 ≈ 0.0417 %): ue, b, ue, r
      I.init/medi
      B.init/medi
@@ -1245,5 +1242,5 @@ Failed: case 34219 (word count 1 < 0.01 %): w, w, n, ch, ue, w, a, n
 Failed: case 34280 (word count 1 < 0.01 %): b, ue, m, b, ue, r, i, n, mvs, e
 Failed: case 34300 (word count 1 < 0.01 %): ue, h, e, i, ch, e, l
 Failed: case 34302 (word count 1 < 0.01 %): ue, l, j, e, i, b, ue, r, i, n
-Failed word count: 9427/531905 = 1.772308964946748 %
-Passed word count: 522478/531905 = 98.22769103505325 %
+Failed word count: 9130/531905 = 1.7164719263778307 %
+Passed word count: 522775/531905 = 98.28352807362218 %
