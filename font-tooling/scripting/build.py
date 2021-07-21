@@ -21,6 +21,8 @@ source_ufo_path = glyphs_dir / "variants.ufo"
 otl_dir = project_dir / "otl"
 otl_path = otl_dir / "stateless" / "main.fea"
 
+temp_otl_dir = otl_dir / "temp"
+
 product_dir = project_dir / "products"
 
 product_format = "otf"
@@ -66,7 +68,8 @@ def main():
     builder.build_with_writer(stateless.writer)
 
     # feaLib’s include() following somehow fails.
-    inlined_otl_path = otl_dir / "stateless.fea"
+    temp_otl_dir.mkdir(exist_ok=True)
+    inlined_otl_path = (temp_otl_dir / otl_path.parent.stem).with_suffix(".fea")
     include_statement_pattern = re.compile(r"include\((.+)\);\n")
     with inlined_otl_path.open("w") as inlined_otl:
         with otl_path.open() as main_otl:
