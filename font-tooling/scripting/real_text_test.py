@@ -22,6 +22,43 @@ repo_dir = scripting_dir / ".." / ".."
 private_repo_dir = repo_dir / ".." / "mongolian-private"
 
 
+def main():
+
+    microsoft = Testee(
+        name="microsoft",
+        shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
+        gid_to_name=yaml.safe_load((tagging_dir / "microsoft.yaml").read_text()) | {
+            257: "a.A_A.isol",
+            262: "a.A.init",
+            274: "e.A.isol",
+            704: "y.I.fina",
+        },
+        normalizer=microsoft_normalizer,
+    )
+    eac = Testee(
+        name="eac",
+        shaper=Shaper(private_repo_dir / "misc/liangjinbao/20210303/MongolQaganTig.ttf"),
+        name_to_standard=yaml.safe_load((tagging_dir / "eac.yaml").read_text()),
+        normalizer=eac_normalizer,
+    )
+    utn = Testee(
+        name="utn",
+        shaper=Shaper(project_dir / "products" / "DummyStateless-Regular.otf"),
+        normalizer=utn_normalizer,
+    )
+
+    for baseline, alts in [
+        (eac, [utn]),
+        (microsoft, [eac, utn]),
+    ]:
+        for alt in alts:
+            for corpus_tag in [
+                "jirimutu",
+                "badamsuren",
+            ]:
+                test(baseline, alt, corpus_tag)
+
+
 class Shaper:
 
     def __init__(self, path: Path):
@@ -89,40 +126,6 @@ corpus_loader_by_tag = {
         lambda: (private_repo_dir / "misc/badamsuren/Badamsuren.txt").read_text()
     ),
 }
-
-
-def main():
-
-    microsoft = Testee(
-        name="microsoft",
-        shaper=Shaper(private_repo_dir / "misc/gregeck/20210527/monbaiti.ttf"),
-        gid_to_name=yaml.safe_load((tagging_dir / "microsoft.yaml").read_text()) | {
-            257: "a.A_A.isol",
-            262: "a.A.init",
-            274: "e.A.isol",
-            704: "y.I.fina",
-        },
-        normalizer=microsoft_normalizer,
-    )
-    eac = Testee(
-        name="eac",
-        shaper=Shaper(private_repo_dir / "misc/liangjinbao/20210303/MongolQaganTig.ttf"),
-        name_to_standard=yaml.safe_load((tagging_dir / "eac.yaml").read_text()),
-        normalizer=eac_normalizer,
-    )
-    utn = Testee(
-        name="utn",
-        shaper=Shaper(project_dir / "products" / "DummyStateless-Regular.otf"),
-        normalizer=utn_normalizer,
-    )
-
-    for corpus_tag in [
-        "jirimutu",
-        "badamsuren",
-    ]:
-        test(eac, utn, corpus_tag)
-        for alt in [eac, utn]:
-            test(microsoft, alt, corpus_tag)
 
 
 def test(baseline: Testee, alt: Testee, corpus_tag: str):
