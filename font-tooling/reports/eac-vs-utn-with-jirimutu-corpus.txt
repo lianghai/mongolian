@@ -28,10 +28,6 @@ Failed: case 270 (word count 285 ≈ 0.0536 %): j, i, n, n
      A.medi
     -A.fina
     +N.fina
-Failed: case 294 (word count 263 ≈ 0.0494 %): d, fvs1, a
-    -D.init/medi
-    +T.init/medi
-     A.fina
 Failed: case 420 (word count 184 ≈ 0.0346 %): nnbsp, d, e, h, e, n
      nnbsp
     -T.init/medi
@@ -113,12 +109,6 @@ Failed: case 847 (word count 88 ≈ 0.0165 %): j, i, l, u, g, u, d, g, u
 Failed: case 861 (word count 85 ≈ 0.016 %): b
     -B.isol
     +b.isol
-Failed: case 865 (word count 85 ≈ 0.016 %): d, fvs1, a, g, a, n
-    -D.init/medi
-    +T.init/medi
-     A.medi
-     Gh.medi
-     A.medi
 Failed: case 966 (word count 76 ≈ 0.0143 %): d, o
     -D.init/medi
     +T.init/medi
@@ -239,7 +229,6 @@ Failed: case 2338 (word count 27 < 0.01 %): ue, fvs1
 Failed: case 2360 (word count 27 < 0.01 %): nirugu, p, w, t, w, r, b, ue, i, r, e, g
 Failed: case 2370 (word count 26 < 0.01 %): u, r, u, s, g, a, l
 Failed: case 2406 (word count 26 < 0.01 %): t
-Failed: case 2444 (word count 25 < 0.01 %): d, fvs1, ue, ng
 Failed: case 2479 (word count 25 < 0.01 %): h, u, b, i, s, g, a, l, t, u
 Failed: case 2509 (word count 25 < 0.01 %): s, e, n, t, i, m, w, t, r
 Failed: case 2582 (word count 24 < 0.01 %): j, u, h, s, u, h, u
@@ -266,11 +255,9 @@ Failed: case 3126 (word count 19 < 0.01 %): j, i, h, s, a, g, a, l
 Failed: case 3131 (word count 19 < 0.01 %): g, a, r, g, a, h, s, a, n
 Failed: case 3135 (word count 19 < 0.01 %): ch, i, h, u, l, n
 Failed: case 3138 (word count 19 < 0.01 %): g, e, l, n
-Failed: case 3196 (word count 18 < 0.01 %): d, fvs1, e
 Failed: case 3204 (word count 18 < 0.01 %): h, u, b, i, s, g, a, h, u
 Failed: case 3248 (word count 18 < 0.01 %): d, u, s, g, a, l
 Failed: case 3268 (word count 18 < 0.01 %): h, u, l, b, u, h, d, a, l
-Failed: case 3283 (word count 17 < 0.01 %): d, fvs1, eh, ng
 Failed: case 3330 (word count 17 < 0.01 %): p, l, y, ue, sh, k2, i, n
 Failed: case 3353 (word count 17 < 0.01 %): e, l, w, k2, t, r, u, n
 Failed: case 3363 (word count 17 < 0.01 %): j, a, h, mvs, e
@@ -295,7 +282,6 @@ Failed: case 3930 (word count 14 < 0.01 %): j, w, n, w, w, a
 Failed: case 3931 (word count 14 < 0.01 %): nirugu, p, w, t, w, r, s
 Failed: case 4021 (word count 13 < 0.01 %): h, u, b, i, s, g, a, l, ch, i
 Failed: case 4050 (word count 13 < 0.01 %): k2, r, ue, sh, eh, w
-Failed: case 4061 (word count 13 < 0.01 %): d, fvs1, u
 Failed: case 4064 (word count 13 < 0.01 %): a, s, i, h, d, a, i
 Failed: case 4080 (word count 13 < 0.01 %): t, u, h, d, a, g, a, h, u
 Failed: case 4104 (word count 13 < 0.01 %): ch, i, ng, g, a, d, g, a, j, u
@@ -306,7 +292,6 @@ Failed: case 4144 (word count 13 < 0.01 %): nirugu, p, w, t, w, r
 Failed: case 4156 (word count 13 < 0.01 %): n, a, r, n
 Failed: case 4176 (word count 13 < 0.01 %): u, d, a, h, s, a, n
 Failed: case 4177 (word count 13 < 0.01 %): a, ng, h, a, d, a, h, ch, i
-Failed: case 4188 (word count 12 < 0.01 %): d, fvs1, e, h, i
 Failed: case 4207 (word count 12 < 0.01 %): b, a, y, a, s, g, u, l, a, ng
 Failed: case 4222 (word count 12 < 0.01 %): a, d, g, u, j, u
 Failed: case 4226 (word count 12 < 0.01 %): j, i, sh, i, y, a, l, a, b, a, l
@@ -357,7 +342,6 @@ Failed: case 5434 (word count 9 < 0.01 %): h, i, n, a, h, ch, i, u, n
 Failed: case 5435 (word count 9 < 0.01 %): h, a, r, a, h, ch, i
 Failed: case 5438 (word count 9 < 0.01 %): g, a, h, ch, a
 Failed: case 5473 (word count 9 < 0.01 %): d, u, l, n
-Failed: case 5546 (word count 8 < 0.01 %): d, fvs1, u, n, i
 Failed: case 5690 (word count 8 < 0.01 %): n, i, g, t, a, l, a, n
 Failed: case 5694 (word count 8 < 0.01 %): a, d, a, l, i, d, g, a, j, u
 Failed: case 5718 (word count 8 < 0.01 %): y, fvs1, i, n
@@ -380,7 +364,6 @@ Failed: case 6000 (word count 8 < 0.01 %): u, ch, i, h, s, a, n
 Failed: case 6001 (word count 8 < 0.01 %): s, u, r, u, h, ch, i, d
 Failed: case 6003 (word count 8 < 0.01 %): j, u, h, i, y, a, h, s, a, n
 Failed: case 6004 (word count 8 < 0.01 %): ch, i, d, a, h, s, a, n
-Failed: case 6014 (word count 7 < 0.01 %): d, fvs1, eh, ng, l, ue
 Failed: case 6088 (word count 7 < 0.01 %): u, i, d, g, a, r
 Failed: case 6089 (word count 7 < 0.01 %): k2, u, w, n, l, w, n, k2, u
 Failed: case 6135 (word count 7 < 0.01 %): j, i, g, s, a, g, a, l, t, a
@@ -401,10 +384,7 @@ Failed: case 6623 (word count 7 < 0.01 %): h, a, r, a, g, u, l, u, h, s, a, n
 Failed: case 6694 (word count 6 < 0.01 %): g, fvs1, eh, n, eh, r, e, l
 Failed: case 6720 (word count 6 < 0.01 %): b, o, s, g, a, j, u
 Failed: case 6729 (word count 6 < 0.01 %): w, a, r, w, n, k2, a
-Failed: case 6777 (word count 6 < 0.01 %): d, fvs1, i
-Failed: case 6802 (word count 6 < 0.01 %): d, fvs1, i, y, a, ng, h, u, w, a
 Failed: case 6858 (word count 6 < 0.01 %): m
-Failed: case 6870 (word count 6 < 0.01 %): d, fvs1, m, i, t, fvs1, r, i
 Failed: case 6968 (word count 6 < 0.01 %): a, d, g, u, g, s, a, n
 Failed: case 7012 (word count 6 < 0.01 %): j, i, sh, i, y, e, l, e, b, a, l
 Failed: case 7051 (word count 6 < 0.01 %): g, a, n, t, t
@@ -442,13 +422,11 @@ Failed: case 7427 (word count 6 < 0.01 %): b, i, l, h, a, h, s, a, n
 Failed: case 7429 (word count 6 < 0.01 %): s, u, r, b, u, l, j, i, l, a, h, s, a, n
 Failed: case 7434 (word count 6 < 0.01 %): g, a, i, h, a, m, s, i, h, d, u
 Failed: case 7567 (word count 5 < 0.01 %): b, o, s, g, a, g, s, a, n
-Failed: case 7695 (word count 5 < 0.01 %): d, fvs1, i, w, i, z, i
 Failed: case 7726 (word count 5 < 0.01 %): h, a, d, g, u, n
 Failed: case 7767 (word count 5 < 0.01 %): g, fvs1, h, i, r
 Failed: case 7786 (word count 5 < 0.01 %): h, a, m, t, u, d, g, a, g, s, a, n
 Failed: case 7854 (word count 5 < 0.01 %): t, o, g, u, s, g, mvs, a
 Failed: case 7907 (word count 5 < 0.01 %): j, i, sh, fvs1, i, y, e, l, e, b, e, l
-Failed: case 7963 (word count 5 < 0.01 %): d, fvs1, ue
 Failed: case 7970 (word count 5 < 0.01 %): n, a, s, u, n, u, fvs1, r, t, u
 Failed: case 7997 (word count 5 < 0.01 %): nnbsp, d, ue, i, ng
 Failed: case 8078 (word count 5 < 0.01 %): g, a, d, a, h, s, i
@@ -485,15 +463,12 @@ Failed: case 8662 (word count 4 < 0.01 %): d, a, g, u, s, g, a, g, s, a, n
 Failed: case 8676 (word count 4 < 0.01 %): b, a, y, a, s, g, u, l, a, ng, t, u
 Failed: case 8764 (word count 4 < 0.01 %): sh, i, z, ue
 Failed: case 8849 (word count 4 < 0.01 %): a, d, g, u, g, a, d
-Failed: case 8875 (word count 4 < 0.01 %): d, fvs1, a, ch, a, ng
 Failed: case 8904 (word count 4 < 0.01 %): b, o, s, g, a, n
 Failed: case 8909 (word count 4 < 0.01 %): u, s, a, d, g, a, h, u
 Failed: case 9028 (word count 4 < 0.01 %): h, a, d, g, u, g, s, a, n
 Failed: case 9029 (word count 4 < 0.01 %): ch, i, d, g, u, l, a, n
 Failed: case 9053 (word count 4 < 0.01 %): h, u, b, i, s, g, a, j, u
-Failed: case 9093 (word count 4 < 0.01 %): d, fvs1, a, g
 Failed: case 9132 (word count 4 < 0.01 %): a, d, g, u, n
-Failed: case 9175 (word count 4 < 0.01 %): d, fvs1, i, ng
 Failed: case 9233 (word count 4 < 0.01 %): nirugu, g
 Failed: case 9237 (word count 4 < 0.01 %): l
 Failed: case 9238 (word count 4 < 0.01 %): u, fvs1, u
@@ -568,7 +543,6 @@ Failed: case 10383 (word count 3 < 0.01 %): t, u, r, u, s, g, mvs, a
 Failed: case 10440 (word count 3 < 0.01 %): ch, o, m, h, a, d, g, a, l
 Failed: case 10488 (word count 3 < 0.01 %): k2, a, t, r, ch, u, d
 Failed: case 10520 (word count 3 < 0.01 %): d, u, s, g, a, n
-Failed: case 10529 (word count 3 < 0.01 %): d, fvs1, w, ng
 Failed: case 10600 (word count 3 < 0.01 %): j, i, sh, fvs1, i, y, mvs, e
 Failed: case 10610 (word count 3 < 0.01 %): h, a, d, g, u, m, a, l
 Failed: case 10611 (word count 3 < 0.01 %): a, d, g, u, l, ch, a, n
@@ -578,9 +552,7 @@ Failed: case 10758 (word count 3 < 0.01 %): i, fvs1
 Failed: case 10766 (word count 3 < 0.01 %): u, r, u, s, g, a, g, s, a, n
 Failed: case 10784 (word count 3 < 0.01 %): ch, a, d, g, u, l, a, ng
 Failed: case 10806 (word count 3 < 0.01 %): i, d, g, a, n
-Failed: case 10811 (word count 3 < 0.01 %): d, fvs1, a, ng
 Failed: case 10884 (word count 3 < 0.01 %): t, u, s, g, a, n
-Failed: case 10937 (word count 3 < 0.01 %): d, fvs1, g, a, n
 Failed: case 11005 (word count 3 < 0.01 %): a, s, g, a, r, a, g, u, l, u, n
 Failed: case 11094 (word count 3 < 0.01 %): i, d, g, a, g, s, a, n
 Failed: case 11110 (word count 3 < 0.01 %): d, u, r, a, s, g, a, n
@@ -592,7 +564,6 @@ Failed: case 11201 (word count 3 < 0.01 %): g
 Failed: case 11203 (word count 3 < 0.01 %): ch
 Failed: case 11204 (word count 3 < 0.01 %): r
 Failed: case 11214 (word count 3 < 0.01 %): s
-Failed: case 11235 (word count 3 < 0.01 %): d, fvs1, e, g, e, n
 Failed: case 11271 (word count 3 < 0.01 %): j, i, g, s, a, g, a, h, u
 Failed: case 11289 (word count 3 < 0.01 %): t, oe, n, n, w, i
 Failed: case 11307 (word count 3 < 0.01 %): u, d, u, r, i, d, u, h, ch, i
@@ -691,17 +662,13 @@ Failed: case 12504 (word count 3 < 0.01 %): ch, u, h, l, a, g, u, l, j, ue
 Failed: case 12509 (word count 3 < 0.01 %): u, l, g, u, h, s, a, n
 Failed: case 12520 (word count 3 < 0.01 %): h, a, r, a, h, d, a, h, u
 Failed: case 12526 (word count 3 < 0.01 %): sh, i, w, w, i
-Failed: case 12544 (word count 2 < 0.01 %): d, fvs1, ue, ng, s, i, g, u, r
-Failed: case 12632 (word count 2 < 0.01 %): d, fvs1, nirugu
 Failed: case 12646 (word count 2 < 0.01 %): l, o, b, s, n, ng
 Failed: case 12745 (word count 2 < 0.01 %): n, i, g, t, a, r, a, g, s, a, n
 Failed: case 12763 (word count 2 < 0.01 %): nnbsp, i, i
 Failed: case 12788 (word count 2 < 0.01 %): w
-Failed: case 12809 (word count 2 < 0.01 %): d, fvs1, ue, fvs1, ng
 Failed: case 12814 (word count 2 < 0.01 %): h, a, d, g, u, g, d, a, g, s, a, n
 Failed: case 12910 (word count 2 < 0.01 %): h, a, d, g, u, j, u
 Failed: case 13051 (word count 2 < 0.01 %): a, s, g, a, h, u
-Failed: case 13102 (word count 2 < 0.01 %): d, fvs1, u, g, a, r
 Failed: case 13116 (word count 2 < 0.01 %): t, a, s, g, a, l
 Failed: case 13141 (word count 2 < 0.01 %): a, s, g, a, r, a, n, mvs, a
 Failed: case 13223 (word count 2 < 0.01 %): h, a, d, g, u, m, a, l, l, a, g, s, a, n
@@ -719,15 +686,12 @@ Failed: case 13828 (word count 2 < 0.01 %): ch, i, d, g, u, j, u
 Failed: case 13837 (word count 2 < 0.01 %): d
 Failed: case 13853 (word count 2 < 0.01 %): y, fvs1, i
 Failed: case 13872 (word count 2 < 0.01 %): a, sh, i, g, ue, i
-Failed: case 13879 (word count 2 < 0.01 %): d, fvs1, hh, r, mvs, a
 Failed: case 13881 (word count 2 < 0.01 %): ch, i, d, g, u, g, s, a, n
-Failed: case 13929 (word count 2 < 0.01 %): d, fvs1, eh, b, a, j, a, n
 Failed: case 14189 (word count 2 < 0.01 %): a, d, g, u, g, u, l, j, u
 Failed: case 14271 (word count 2 < 0.01 %): d, u, r, a, s, g, a, l, t, u
 Failed: case 14314 (word count 2 < 0.01 %): t, o, d, g, a, r
 Failed: case 14326 (word count 2 < 0.01 %): t, o, g, u, s, g, a, n
 Failed: case 14353 (word count 2 < 0.01 %): t, a, i, d, g, u, r, a, g, u, l, h, u
-Failed: case 14399 (word count 2 < 0.01 %): d, fvs1, ue, i
 Failed: case 14559 (word count 2 < 0.01 %): h, u, d, g, u, n
 Failed: case 14560 (word count 2 < 0.01 %): h
 Failed: case 14563 (word count 2 < 0.01 %): j
@@ -945,22 +909,13 @@ Failed: case 17923 (word count 1 < 0.01 %): s, i, g, l, a, n
 Failed: case 17965 (word count 1 < 0.01 %): nnbsp, ue, t, o, g, l, a, h, u
 Failed: case 18060 (word count 1 < 0.01 %): p
 Failed: case 18068 (word count 1 < 0.01 %): b, o, s, g, a, g, u, l, d, a, g
-Failed: case 18099 (word count 1 < 0.01 %): d, fvs1, o, n, i
 Failed: case 18128 (word count 1 < 0.01 %): w, a, r, w, n, k2, a, t, e, g, ue, n
 Failed: case 18159 (word count 1 < 0.01 %): j, i, g, s, a, b, a
-Failed: case 18228 (word count 1 < 0.01 %): d, fvs1, a, g, a, n, mvs, a
 Failed: case 18230 (word count 1 < 0.01 %): a, s, g, a, r, a, j, u
 Failed: case 18255 (word count 1 < 0.01 %): d, a
-Failed: case 18316 (word count 1 < 0.01 %): d, fvs1, ue, ng, y, e, ng
-Failed: case 18347 (word count 1 < 0.01 %): d, fvs1, w, u, f, ue, fvs1
-Failed: case 18440 (word count 1 < 0.01 %): d, fvs1, u, g, e, r
-Failed: case 18458 (word count 1 < 0.01 %): d, fvs1, u, g, a, r, l, a, h, u
-Failed: case 18476 (word count 1 < 0.01 %): d, fvs1, ue, ng, n, e, l, t, e
 Failed: case 18761 (word count 1 < 0.01 %): b, a, d, g, u, n, mvs, a
-Failed: case 18806 (word count 1 < 0.01 %): d, fvs1, a, r, w, i, n
 Failed: case 18834 (word count 1 < 0.01 %): d, u, r, a, d, g, a, h, u
 Failed: case 18874 (word count 1 < 0.01 %): g, r, ue, z, i, y, a, ch, ue, d
-Failed: case 18897 (word count 1 < 0.01 %): d, fvs1, a, g, i, n
 Failed: case 18915 (word count 1 < 0.01 %): d, u, s, g, a, b, a
 Failed: case 18952 (word count 1 < 0.01 %): t, a, i, d, g, u, r, a, g, u, l, d, a, g
 Failed: case 19000 (word count 1 < 0.01 %): sh, fvs1, i
@@ -968,9 +923,7 @@ Failed: case 19063 (word count 1 < 0.01 %): a, m, i, s, g, u, l, l, a, n, mvs, a
 Failed: case 19070 (word count 1 < 0.01 %): h, a, d, g, u, g, a, d
 Failed: case 19157 (word count 1 < 0.01 %): f, a, sh, fvs1, i, s
 Failed: case 19168 (word count 1 < 0.01 %): g, fvs1, w, a, r, d, eh
-Failed: case 19202 (word count 1 < 0.01 %): d, fvs1, n, eh, p, r
 Failed: case 19294 (word count 1 < 0.01 %): s, o, n, u, s, g, a, g, a, r, a, i
-Failed: case 19358 (word count 1 < 0.01 %): d, fvs1, e, g, fvs2
 Failed: case 19423 (word count 1 < 0.01 %): a, s, g, a, b, a
 Failed: case 19497 (word count 1 < 0.01 %): d, u, r, a, s, g, a, g, a, d
 Failed: case 19508 (word count 1 < 0.01 %): d, a, g, u, s, g, a, j, u
@@ -991,7 +944,6 @@ Failed: case 19853 (word count 1 < 0.01 %): d, u, r, a, s, g, a, j, u
 Failed: case 19873 (word count 1 < 0.01 %): u, r, u, s, g, a, b, a, ch, u
 Failed: case 19875 (word count 1 < 0.01 %): u, s, a, d, g, a, g, s, a, n
 Failed: case 19883 (word count 1 < 0.01 %): h, a, d, g, u, h, u
-Failed: case 19950 (word count 1 < 0.01 %): d, fvs1, u, w, a, n
 Failed: case 20061 (word count 1 < 0.01 %): u, u
 Failed: case 20125 (word count 1 < 0.01 %): a, d, g, u, g, u, l, b, a, l
 Failed: case 20251 (word count 1 < 0.01 %): ch, i, d, g, u, l, a, m, mvs, a
@@ -999,13 +951,10 @@ Failed: case 20354 (word count 1 < 0.01 %): b, a, y, a, s, g, a, h, u
 Failed: case 20368 (word count 1 < 0.01 %): ch, i, d, g, u, d, a, g
 Failed: case 20371 (word count 1 < 0.01 %): a, s, g, mvs, a
 Failed: case 20488 (word count 1 < 0.01 %): h, u, b, i, s, g, a, ch, i, h, a, g, s, a, n
-Failed: case 20501 (word count 1 < 0.01 %): d, fvs1, w
 Failed: case 20507 (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, n
 Failed: case 20533 (word count 1 < 0.01 %): u, i, d, g, a, r, l, a, j, u
 Failed: case 20534 (word count 1 < 0.01 %): u, i, d, g, a, r, t, a, i
 Failed: case 20602 (word count 1 < 0.01 %): i, d, g, a, j, u
-Failed: case 20657 (word count 1 < 0.01 %): d, fvs1, e, ng
-Failed: case 20658 (word count 1 < 0.01 %): d, fvs1, u, ng
 Failed: case 20695 (word count 1 < 0.01 %): h, a, m, t, u, d, g, a, h, u
 Failed: case 20702 (word count 1 < 0.01 %): a, d, g, u, g, u, l, u, n, mvs, a
 Failed: case 20814 (word count 1 < 0.01 %): a, d, g, u, g, mvs, a
@@ -1028,11 +977,9 @@ Failed: case 21554 (word count 1 < 0.01 %): d, a, g, u, s, g, a, y, mvs, a
 Failed: case 21563 (word count 1 < 0.01 %): b, a, d, g, u, j, u
 Failed: case 21591 (word count 1 < 0.01 %): u, i, d, g, a, r, t, u
 Failed: case 21626 (word count 1 < 0.01 %): a, s, g, a, g, s, a, n
-Failed: case 21660 (word count 1 < 0.01 %): d, fvs1, ue, ng, n, e, b, e
 Failed: case 21780 (word count 1 < 0.01 %): o, d, g, u, n
 Failed: case 21812 (word count 1 < 0.01 %): t, o, d, u, d, g, a, j, u
 Failed: case 21817 (word count 1 < 0.01 %): t, o, d, u, d, g, a, b, a
-Failed: case 21896 (word count 1 < 0.01 %): d, fvs1, a, i
 Failed: case 22006 (word count 1 < 0.01 %): h, a, d, g, u, b, a
 Failed: case 22048 (word count 1 < 0.01 %): d, a, s, g, a, l
 Failed: case 22108 (word count 1 < 0.01 %): b, o, s, g, a, h, u
@@ -1050,7 +997,6 @@ Failed: case 23007 (word count 1 < 0.01 %): h, u, d, g, u, l, d, u, g, s, a, g, 
 Failed: case 23155 (word count 1 < 0.01 %): u, r, d, u, d, g, a, n, mvs, a
 Failed: case 23198 (word count 1 < 0.01 %): nnbsp, d, o, n, i
 Failed: case 23280 (word count 1 < 0.01 %): u, r, u, s, g, a, g, s, a, g, a, r
-Failed: case 23351 (word count 1 < 0.01 %): nnbsp, d, fvs1, g, a, n
 Failed: case 23375 (word count 1 < 0.01 %): a, m, i, s, g, u, g, a, d
 Failed: case 23459 (word count 1 < 0.01 %): d, u, r, a, s, g, a, b, a
 Failed: case 23490 (word count 1 < 0.01 %): sh, l, ue, k2
@@ -1073,7 +1019,6 @@ Failed: case 23846 (word count 1 < 0.01 %): a, m, i, n, ue, fvs2, n, d, ue, r
 Failed: case 23978 (word count 1 < 0.01 %): d, e, l, g, e, r, n, ng, g, ue, i
 Failed: case 24000 (word count 1 < 0.01 %): t, u, u, sh, fvs1, l, a, g, u, l, h, u
 Failed: case 24008 (word count 1 < 0.01 %): nnbsp, a, ng, g, fvs2, l, i
-Failed: case 24009 (word count 1 < 0.01 %): d, fvs1, o, k2, ue, fvs1, m, eh, n, t
 Failed: case 24012 (word count 1 < 0.01 %): nnbsp, y, i, n, n
 Failed: case 24033 (word count 1 < 0.01 %): nnbsp, d, e, g, a, n
 Failed: case 24035 (word count 1 < 0.01 %): t, ue, g, e, m, n, l, j, i, g, ue, l, j, ue
@@ -1862,5 +1807,5 @@ Failed: case 34223 (word count 1 < 0.01 %): h, a, r, a, ch, n
 Failed: case 34232 (word count 1 < 0.01 %): d, a, l, i, i, h, ch, i
 Failed: case 34235 (word count 1 < 0.01 %): s, u, n, u, s, u, m, a, g, ch, n
 Failed: case 34304 (word count 1 < 0.01 %): t, u, r, u, n, a, t, ng, r, i
-Failed word count: 10158/531905 = 1.9097395211550936 %
-Passed word count: 521747/531905 = 98.0902604788449 %
+Failed word count: 9625/531905 = 1.8095336573260261 %
+Passed word count: 522280/531905 = 98.19046634267397 %

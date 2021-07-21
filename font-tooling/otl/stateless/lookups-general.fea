@@ -537,8 +537,8 @@ lookup III.o_u_oe_ue.post_bowed {
 @g.fina.for_fvs3 = [g.fina g.Gh.fina g.G.fina];
 @t.medi.for_fvs1 = [t.medi t.D.medi];
 @t.medi.for_fvs2 = [t.medi t.T.medi];
-@d.init.for_fvs1 = [d.init d.D.init];
-@d.init.for_fvs2 = [d.init d.T.init];
+@d.init.for_fvs2 = [d.init d.D.init];
+@d.init.for_fvs1 = [d.init d.T.init];
 @d.medi.for_fvs1 = [d.medi d.Dd.medi];
 @d.medi.for_fvs2 = [d.medi d.D.medi];
 @d.fina.for_fvs1 = [d.fina d.Dd.fina];
@@ -613,8 +613,8 @@ lookup _.manual {
     sub @g.fina.for_fvs3' fvs3 by g.H.fina;
     sub @t.medi.for_fvs1' fvs1 by t.T.medi;
     sub @t.medi.for_fvs2' fvs2 by t.D.medi;
-    sub @d.init.for_fvs1' fvs1 by d.T.init;
-    sub @d.init.for_fvs2' fvs2 by d.D.init;
+    sub @d.init.for_fvs2' fvs2 by d.T.init;
+    sub @d.init.for_fvs1' fvs1 by d.D.init;
     sub @d.medi.for_fvs1' fvs1 by d.D.medi;
     sub @d.medi.for_fvs2' fvs2 by d.Dd.medi;
     sub @d.fina.for_fvs1' fvs1 by d.D.fina;
@@ -691,8 +691,8 @@ lookup III.fvs {
     sub @g.fina.for_fvs3' lookup _.manual fvs3' lookup _.effective;
     sub @t.medi.for_fvs1' lookup _.manual fvs1' lookup _.effective;
     sub @t.medi.for_fvs2' lookup _.manual fvs2' lookup _.effective;
-    sub @d.init.for_fvs1' lookup _.manual fvs1' lookup _.effective;
     sub @d.init.for_fvs2' lookup _.manual fvs2' lookup _.effective;
+    sub @d.init.for_fvs1' lookup _.manual fvs1' lookup _.effective;
     sub @d.medi.for_fvs1' lookup _.manual fvs1' lookup _.effective;
     sub @d.medi.for_fvs2' lookup _.manual fvs2' lookup _.effective;
     sub @d.fina.for_fvs1' lookup _.manual fvs1' lookup _.effective;

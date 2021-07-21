@@ -608,11 +608,11 @@
     init:
       - written_units: [.T]
         conditions: [.onset]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE30F]
       - written_units: [.D]
         conditions: [.fallback, .particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE310]
     medi:
       - written_units: [.D]
