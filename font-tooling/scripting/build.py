@@ -1,13 +1,16 @@
 from __future__ import annotations
 
 import re
-from functools import partial
 from pathlib import Path
 
 import defcon
 from tptq.utils.glyph_set import SourceGlyphSet
 from tptq.utils.otl import GlyphNotInSourceFontError
 from tptq.utils.script import Common
+from tptqscripttools.data import REGISTER as LegacyScriptRegister
+from tptqscripttools.objects import \
+    DevelopmentNaming as LegacyDevelopmentNaming
+from tptqscripttools.objects import GlyphIdentity
 
 import stateless
 from data import mongolian
@@ -77,15 +80,6 @@ def main():
                 else:
                     inlined_otl.write(line)
 
-    from tptqscripttools.data import REGISTER as LegacyScriptRegister
-    from tptqscripttools.objects import DevelopmentNaming as LegacyDevelopmentNaming
-
-    class LegacySimpleNaming(LegacyDevelopmentNaming):
-        make_name = partial(
-            LegacyDevelopmentNaming.make_name,
-            implied_script_codes = [Common.code, mongolian.code],
-        )
-
     legacy_script = LegacyScriptRegister.script_by_code[mongolian.code]
     nnbsp = next(i for i in legacy_script.glyphs if i.formal_notation() == "Mong:nnbsp")
     nnbsp.info.code_point = 0x202F
@@ -95,6 +89,13 @@ def main():
         naming=LegacySimpleNaming,
         feature_file_path=inlined_otl_path,
     )
+
+
+class LegacySimpleNaming(LegacyDevelopmentNaming):
+
+    @classmethod
+    def make_name(cls, identity: GlyphIdentity) -> str:
+        return super().make_name(identity, implied_script_codes=[Common.code, mongolian.code])
 
 
 if __name__ == "__main__":
