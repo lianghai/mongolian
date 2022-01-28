@@ -45,10 +45,10 @@
     isol:
       - written_units: [.A, .A]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE264]
       - written_units: [.A]
-        fvs: 3
+        fvs: 1
         known_fvs_usage: ["exclamatory particle: a A"]
         menksoft_puas: [0xE265]
       - written_units: [.Aa]
@@ -58,11 +58,11 @@
     init:
       - written_units: [.A, .A]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE266]
       - written_units: [.A]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE267]
     medi:
       - written_units: [.A]
@@ -87,11 +87,11 @@
     isol:
       - written_units: [.A]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE270]
       - written_units: [.Aa]
         conditions: [.chachlag, .particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE274]
     init:
       - written_units: [.A]
@@ -113,28 +113,28 @@
     isol:
       - written_units: [.A, .I]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE279]
       - written_units: [.I]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE282]
       - written_units: [.Ix]
-        fvs: 3
+        fvs: 2
         note: "Early modern orthographies"
         menksoft_puas: [0xE350]
     init:
       - written_units: [.A, .I]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE27A]
       - written_units: [.I]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
     medi:
       - written_units: [.I]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE27E, 0xE27F, 0xE280]
       - written_units: [.I, .I]
         conditions: [.devsger]
@@ -180,22 +180,22 @@
     isol:
       - written_units: [.A, .O]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE28B]
       - written_units: [.U]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
       - written_units: [.Ux]
-        fvs: 3
+        fvs: 2
         menksoft_puas: [0xE351]
     init:
       - written_units: [.A, .O]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE28C]
       - written_units: [.O]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
     medi:
       - written_units: [.O]
         menksoft_puas: [0xE291, 0xE292]
@@ -230,7 +230,7 @@
         menksoft_puas: [0xE29C, 0xE29D]
       - written_units: [.O]
         conditions: [.fallback]
-        fvs: 2
+        fvs: 3
         menksoft_puas: [0xE29E, 0xE29F]
     fina:
       - written_units: [.Ue]
@@ -260,25 +260,25 @@
     isol:
       - written_units: [.A, .Ue]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 4  # [!] missed by Greg
         menksoft_puas: [0xE2A0]
       - written_units: [.A, .U]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE2A1]
       - written_units: [.U]
         conditions: [.particle]
-        fvs: 3
+        fvs: 2
       - written_units: [.Ux]
-        fvs: 4
+        fvs: 3
         menksoft_puas: [0xE351]
     init:
       - written_units: [.A, .O, .I]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE2A2]
       - written_units: [.O]
         conditions: [.particle]
-        fvs: 2
+        fvs: 1
     medi:
       - written_units: [.O, .I]
         conditions: [.marked]
@@ -286,7 +286,7 @@
         menksoft_puas: [0xE2A9, 0xE2AA]
       - written_units: [.O]
         conditions: [.fallback, .particle]
-        fvs: 2
+        fvs: 3
         menksoft_puas: [0xE2AB, 0xE2AC]
     fina:
       - written_units: [.Ue]
@@ -410,26 +410,26 @@
     init:
       - written_units: [.H]
         conditions: [.masculine_onset]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE2D2]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
         menksoft_puas: [0xE2D4]
       - written_units: [.Gx]
-        fvs: 3
+        fvs: 4
         menksoft_puas: [0xE2D5]
     medi:
       - written_units: [.H]
         conditions: [.masculine_onset]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE2D8, 0xE2DC]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
         fvs: 2
         menksoft_puas: [0xE2DA, 0xE2DD, 0xE2DF]
       - written_units: [.Gx]
-        fvs: 3
+        fvs: 4
         menksoft_puas: [0xE2DB, 0xE2DE, 0xE2E0]
     fina:
       - written_units: [.H]
@@ -463,7 +463,7 @@
     init:
       - written_units: [.Gh]
         conditions: [.masculine_onset]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE2E4]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
@@ -485,7 +485,7 @@
     fina:
       - written_units: [.Gh]
         conditions: [.chachlag_onset]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE2E9]
       - written_units: [.G]
         conditions: [.fallback, .feminine]
@@ -493,7 +493,7 @@
         menksoft_puas: [0xE2E8]
       - written_units: [.H]
         conditions: [.masculine_devsger]
-        fvs: 3
+        fvs: 1
         menksoft_puas: [0xE2E7]
   extra_variants_by_joining_form:
     isol:
@@ -608,11 +608,11 @@
     init:
       - written_units: [.T]
         conditions: [.onset]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE30F]
       - written_units: [.D]
         conditions: [.fallback, .particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE310]
     medi:
       - written_units: [.D]
@@ -680,20 +680,20 @@
     init:
       - written_units: [.Y]
         conditions: [.fallback, .onset]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE31E]
       - written_units: [.I]
         conditions: [.dictionary_particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE321]
     medi:
       - written_units: [.Y]
         conditions: [.fallback, .onset]
-        fvs: 1
+        fvs: 3
         menksoft_puas: [0xE320]
       - written_units: [.I]
         conditions: [.dictionary_particle]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE321]
     fina:
       - written_units: [.I]
@@ -727,11 +727,11 @@
     fina:
       - written_units: [.W]
         conditions: [.fallback]
-        fvs: 1
+        fvs: 2
         menksoft_puas: [0xE32A]
       - written_units: [.U]
         conditions: [.chachlag_onset]
-        fvs: 2
+        fvs: 1
         menksoft_puas: [0xE32B]
 
 - cp: 0x1839 # ᠹ MONGOLIAN LETTER FA
