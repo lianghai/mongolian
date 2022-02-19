@@ -6,20 +6,20 @@ This is [Liang Hai](https://lianghai.github.io)’s growing list of public resou
 
 ## Documents
 
-- [**Draft UTN**](./draft-utn/)
+- [**Draft UTN**](./utn/)
 
-- [**The Mongolian script: What’s going on?! ↓**](./whats-going-on-r1.pdf)
+- [**The Mongolian script: What’s going on?! ↓**](./misc/whats-going-on-r1.pdf)
 
     Originally prepared as a talk at the [IUC #42](http://unicodeconference.org/presentations-42/), then revised for Bolorsoft’s [Mongolian Script Encoding—2018](https://bolorsoft.com/index.php?pageId=2&op=read&item=42) meeting.
 
 ## Utilities
 
-- [**Sandbox font**](./sandbox-font/)
+- [**Sandbox font and tooling**](./font-tooling/)
 
-- [**Keyboard layouts**](./keyboard-layouts/)
+- [**Keyboard layouts**](./misc/keyboard-layouts/)
 
 ## References
 
-- [**A summary of China’s national standards related to the Mongolian script**](./national-standards/)
+- [**A summary of China’s national standards related to the Mongolian script**](./misc/national-standards/)
 
-- [**Archived EAC publications**](./archived-eac-publications/)
+- [**Archived EAC publications**](./misc/archived-eac-publications/)

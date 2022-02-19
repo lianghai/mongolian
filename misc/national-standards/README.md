@@ -1,4 +1,4 @@
-[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/national-standards)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/main/misc/national-standards)
 
 # A summary of China’s national standards related to the Mongolian script
 

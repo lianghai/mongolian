@@ -1,8 +1,8 @@
-[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/utn)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/main/utn)
 
 # Draft UTN
 
-The editor’s draft of the UTN and related documents are hosted in [this directory](https://github.com/lianghai/mongolian/tree/master/utn) in the PDF format.
+The editor’s draft of the UTN and related documents are hosted in [this directory](https://github.com/lianghai/mongolian/tree/main/utn) in the PDF format.
 
 See also the latest published draft:
 

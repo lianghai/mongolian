@@ -1,4 +1,4 @@
-[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/archived-eac-publications)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/main/misc/archived-eac-publications)
 
 # Archived EAC publications
 

@@ -1,4 +1,4 @@
-[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/master/keyboard-layouts)
+[**→ Go to repo**](https://github.com/lianghai/mongolian/tree/main/misc/keyboard-layouts)
 
 # Keyboard layouts
 
