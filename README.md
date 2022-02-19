@@ -14,7 +14,7 @@ This is [Liang Hai](https://lianghai.github.io)’s growing list of public resou
 
 ## Utilities
 
-- [**Sandbox font and tooling**](./font-tooling/)
+- [**Reference font based on the draft UTN**](./utn-font/)
 
 - [**Keyboard layouts**](./misc/keyboard-layouts/)
 
