@@ -1,8 +1,8 @@
 [**→ Go to repo**](https://github.com/lianghai/mongolian/tree/main/utn-font)
 
-# OFL FONTLOG: Sandbox font for the Mongolian script
+# Reference font based on the draft UTN
 
-components/shapes.glyphs → components/written-units.ufo → variants/variants.ufo
+sources/shapes.glyphs → sources/written-units.ufo → sources/variants.ufo
 
 ## Glyphs
 
