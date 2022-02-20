@@ -21,6 +21,31 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "cloudpickle"]
 
 [[package]]
+name = "babelfont"
+version = "2.0.2"
+description = "Abstract interface to font source files based on fontParts"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+defcon = "*"
+fontParts = "*"
+fontTools = {version = "*", extras = ["ufo"]}
+glyphsLib = "*"
+
+[[package]]
+name = "beziers"
+version = "0.4.0"
+description = "Bezier curve manipulation library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pyclipper = "*"
+
+[[package]]
 name = "black"
 version = "22.1.0"
 description = "The uncompromising code formatter."
@@ -112,6 +137,59 @@ fonttools = {version = ">=3.32.0", extras = ["ufo"]}
 cli = ["defcon (>=0.6.0)"]
 
 [[package]]
+name = "defcon"
+version = "0.10.0"
+description = "A set of flexible objects for representing UFO data."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+fontPens = {version = ">=0.1.0", optional = true, markers = "extra == \"pens\""}
+fonttools = {version = ">=4.10.0", extras = ["ufo", "unicode"]}
+
+[package.extras]
+lxml = ["fonttools[lxml] (>=4.10.0)"]
+pens = ["fontPens (>=0.1.0)"]
+
+[[package]]
+name = "feacomposer"
+version = "0.1.0"
+description = ""
+category = "main"
+optional = false
+python-versions = "^3.10"
+develop = true
+
+[package.dependencies]
+fontFeatures = "^1.4.0"
+fonttools = "^4.28.5"
+ufo2ft = "^2.25.1"
+ufoLib2 = "^0.13.0"
+
+[package.source]
+type = "directory"
+url = "../../feacomposer"
+
+[[package]]
+name = "fontfeatures"
+version = "1.5.0"
+description = "Python library for manipulating OpenType font features"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+beziers = ">=0.1.0"
+fontTools = ">=4.28.0"
+fs = "*"
+glyphtools = ">=0.7.0"
+lxml = "*"
+
+[package.extras]
+shaper = ["youseedee (>=0.3.0)", "babelfont (>=3.0.0a1)", "dataclasses"]
+
+[[package]]
 name = "fontmake"
 version = "3.2.0"
 description = "Compile fonts from sources (UFO, Glyphs) to binary (OpenType, TrueType)."
@@ -143,6 +221,31 @@ python-versions = "*"
 
 [package.dependencies]
 fonttools = ">=3.32.0"
+
+[[package]]
+name = "fontparts"
+version = "0.10.2"
+description = "An API for interacting with the parts of fonts during the font development process."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+booleanOperations = ">=0.9.0"
+defcon = {version = ">=0.6.0", extras = ["pens"]}
+fontMath = ">=0.4.8"
+FontTools = {version = ">=3.32.0", extras = ["lxml", "ufo", "unicode"]}
+
+[[package]]
+name = "fontpens"
+version = "0.2.4"
+description = "A collection of classes implementing the pen protocol for manipulating glyphs."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+FontTools = ">=3.32.0"
 
 [[package]]
 name = "fonttools"
@@ -205,6 +308,20 @@ defcon = ["defcon (>=0.6.0)"]
 ufo_normalization = ["ufonormalizer"]
 
 [[package]]
+name = "glyphtools"
+version = "0.8.0"
+description = "Routines for extracting information from fontTools glyphs"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+babelfont = ">0.2.0"
+beziers = "*"
+glyphsLib = "*"
+numpy = "*"
+
+[[package]]
 name = "lxml"
 version = "4.8.0"
 description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
@@ -225,6 +342,14 @@ description = "Experimental type system extensions for programs checked with the
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "numpy"
+version = "1.22.2"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
 
 [[package]]
 name = "openstep-plist"
@@ -359,7 +484,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "62391cd17789be1cfc34d136fb4d38df617943919ecb246d0a1cf3a3b0f37d07"
+content-hash = "0cf3b6d60d6acef853a9a489fd04021eb75d23235f62ae138a8e8959508bb6b6"
 
 [metadata.files]
 appdirs = [
@@ -369,6 +494,14 @@ appdirs = [
 attrs = [
     {file = "attrs-21.4.0-py2.py3-none-any.whl", hash = "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"},
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
+]
+babelfont = [
+    {file = "babelfont-2.0.2-py3-none-any.whl", hash = "sha256:28ca9a26f1f3208d94bcbbcf82f235755be2468a0b344784b658d5658ff1fdc9"},
+    {file = "babelfont-2.0.2.tar.gz", hash = "sha256:4fe45910e0260f17045c6860a0e04c387af95fb795ad180131c7b33f6a3db40a"},
+]
+beziers = [
+    {file = "beziers-0.4.0-py2.py3-none-any.whl", hash = "sha256:04dfb44f4ba9614b23a71fcd0a414042c006f601910de4ca3f053ea8f6abc8b4"},
+    {file = "beziers-0.4.0.tar.gz", hash = "sha256:3a01994887928971fd88b34777dea42ff49813264d8ffddee909310d03959ef5"},
 ]
 black = [
     {file = "black-22.1.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1297c63b9e1b96a3d0da2d85d11cd9bf8664251fd69ddac068b98dc4f34f73b6"},
@@ -463,6 +596,15 @@ cu2qu = [
     {file = "cu2qu-1.6.7.post1-py2.py3-none-any.whl", hash = "sha256:c93619ba635427f42373077f52711bf3a253ec9080da2a9b80652037d6c0f987"},
     {file = "cu2qu-1.6.7.post1.zip", hash = "sha256:8c982f11de0151f41da83df4a4f75207380301c0356fb7a3322f0db74e16e6f4"},
 ]
+defcon = [
+    {file = "defcon-0.10.0-py3-none-any.whl", hash = "sha256:4f5e5ee4dde51a43f3bddd5ef7909a9e75faf0ef572f4292c7df6fdc7afe3584"},
+    {file = "defcon-0.10.0.zip", hash = "sha256:a009862a0bc3f41f2b1a1b1f80d6aeedb3a17ed77d598da09f5a1bd93e970b3c"},
+]
+feacomposer = []
+fontfeatures = [
+    {file = "fontFeatures-1.5.0-py3-none-any.whl", hash = "sha256:058885d3d4c759560e0fdffb6e95d23d2f3caa0a8a7c8ab5c234224971f2f5fb"},
+    {file = "fontFeatures-1.5.0.tar.gz", hash = "sha256:eb40928a0896a59219d56a89f49d18a8a756eecd26d00ad6135ee545e4f22df9"},
+]
 fontmake = [
     {file = "fontmake-3.2.0-py3-none-any.whl", hash = "sha256:988f09805816bfb1dd14293d19c9d1a257f7406e1e83d59ab375aa19391c4486"},
     {file = "fontmake-3.2.0.zip", hash = "sha256:130a2d621144e13c013aceb99b3db779a7e27c234efc254612a76512df5199a0"},
@@ -470,6 +612,14 @@ fontmake = [
 fontmath = [
     {file = "fontMath-0.9.1-py2.py3-none-any.whl", hash = "sha256:df05fe830661a8e4e66a5b773f748a734b9bcde17e7dd620f98faacd7d014bf3"},
     {file = "fontMath-0.9.1.zip", hash = "sha256:1c5e76e135409f49b15809d0ce94dfd00850f893f86d4d6a336808dbbf292700"},
+]
+fontparts = [
+    {file = "fontParts-0.10.2-py3-none-any.whl", hash = "sha256:c7126f2491f4f803f3e4c0cdd53de6fa9f067b99701b35c37342db7efcb8cc6b"},
+    {file = "fontParts-0.10.2.zip", hash = "sha256:a3a3926e977f82ae19e6823760b59f2338085973da1eaad5badaf969f261a737"},
+]
+fontpens = [
+    {file = "fontPens-0.2.4-py2.py3-none-any.whl", hash = "sha256:cdef727e49b54ac6228f8fa087ee539258f7b0a6f0accb63cbf31d4bfc437ce7"},
+    {file = "fontPens-0.2.4.zip", hash = "sha256:a6d9a14573b3450f3313d69523f9006028c21fc7aef5d35333b87aab7f2b41fd"},
 ]
 fonttools = [
     {file = "fonttools-4.29.1-py3-none-any.whl", hash = "sha256:1933415e0fbdf068815cb1baaa1f159e17830215f7e8624e5731122761627557"},
@@ -482,6 +632,10 @@ fs = [
 glyphslib = [
     {file = "glyphsLib-6.0.4-py3-none-any.whl", hash = "sha256:ce888d2084b17492234109dc46c7b5b49dc683ef53824bbc2be194cd0f30f224"},
     {file = "glyphsLib-6.0.4.tar.gz", hash = "sha256:3d3eba9f55843b914d730a2ff066974f560dac08b6d97e0737b895364b9e84a2"},
+]
+glyphtools = [
+    {file = "glyphtools-0.8.0-py2.py3-none-any.whl", hash = "sha256:c5de7881eb29f1d37f8879c7838ae4aa42cc07b185dcffbc7eac6dfb84a95f96"},
+    {file = "glyphtools-0.8.0.tar.gz", hash = "sha256:3d7c171d63096ec8ba66d37e75a697027970de05790c5021c91c5d05aed43fe3"},
 ]
 lxml = [
     {file = "lxml-4.8.0-cp27-cp27m-macosx_10_14_x86_64.whl", hash = "sha256:e1ab2fac607842ac36864e358c42feb0960ae62c34aa4caaf12ada0a1fb5d99b"},
@@ -549,6 +703,27 @@ lxml = [
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
+]
+numpy = [
+    {file = "numpy-1.22.2-cp310-cp310-macosx_10_14_x86_64.whl", hash = "sha256:515a8b6edbb904594685da6e176ac9fbea8f73a5ebae947281de6613e27f1956"},
+    {file = "numpy-1.22.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:76a4f9bce0278becc2da7da3b8ef854bed41a991f4226911a24a9711baad672c"},
+    {file = "numpy-1.22.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:168259b1b184aa83a514f307352c25c56af111c269ffc109d9704e81f72e764b"},
+    {file = "numpy-1.22.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3556c5550de40027d3121ebbb170f61bbe19eb639c7ad0c7b482cd9b560cd23b"},
+    {file = "numpy-1.22.2-cp310-cp310-win_amd64.whl", hash = "sha256:aafa46b5a39a27aca566198d3312fb3bde95ce9677085efd02c86f7ef6be4ec7"},
+    {file = "numpy-1.22.2-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:55535c7c2f61e2b2fc817c5cbe1af7cb907c7f011e46ae0a52caa4be1f19afe2"},
+    {file = "numpy-1.22.2-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:60cb8e5933193a3cc2912ee29ca331e9c15b2da034f76159b7abc520b3d1233a"},
+    {file = "numpy-1.22.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0b536b6840e84c1c6a410f3a5aa727821e6108f3454d81a5cd5900999ef04f89"},
+    {file = "numpy-1.22.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2638389562bda1635b564490d76713695ff497242a83d9b684d27bb4a6cc9d7a"},
+    {file = "numpy-1.22.2-cp38-cp38-win32.whl", hash = "sha256:6767ad399e9327bfdbaa40871be4254d1995f4a3ca3806127f10cec778bd9896"},
+    {file = "numpy-1.22.2-cp38-cp38-win_amd64.whl", hash = "sha256:03ae5850619abb34a879d5f2d4bb4dcd025d6d8fb72f5e461dae84edccfe129f"},
+    {file = "numpy-1.22.2-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:d76a26c5118c4d96e264acc9e3242d72e1a2b92e739807b3b69d8d47684b6677"},
+    {file = "numpy-1.22.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:15efb7b93806d438e3bc590ca8ef2f953b0ce4f86f337ef4559d31ec6cf9d7dd"},
+    {file = "numpy-1.22.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:badca914580eb46385e7f7e4e426fea6de0a37b9e06bec252e481ae7ec287082"},
+    {file = "numpy-1.22.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:94dd11d9f13ea1be17bac39c1942f527cbf7065f94953cf62dfe805653da2f8f"},
+    {file = "numpy-1.22.2-cp39-cp39-win32.whl", hash = "sha256:8cf33634b60c9cef346663a222d9841d3bbbc0a2f00221d6bcfd0d993d5543f6"},
+    {file = "numpy-1.22.2-cp39-cp39-win_amd64.whl", hash = "sha256:59153979d60f5bfe9e4c00e401e24dfe0469ef8da6d68247439d3278f30a180f"},
+    {file = "numpy-1.22.2-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4a176959b6e7e00b5a0d6f549a479f869829bfd8150282c590deee6d099bbb6e"},
+    {file = "numpy-1.22.2.zip", hash = "sha256:076aee5a3763d41da6bef9565fdf3cb987606f567cd8b104aded2b38b7b47abf"},
 ]
 openstep-plist = [
     {file = "openstep_plist-0.3.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:afc0875597b346c9a7ef6f191611e104991067a26c525328aec826a312103e82"},

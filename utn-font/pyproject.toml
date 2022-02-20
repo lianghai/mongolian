@@ -10,6 +10,7 @@ fontmake = "^3.2.0"
 PyYAML = "^6.0"
 uharfbuzz = "^0.21.0"
 yattag = "^1.14.0"
+feacomposer = { path = "../../feacomposer", develop = true }
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"
