@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from data import mongolian
+from data import script
 
 scripting_dir = Path(__file__).parent
 
@@ -22,4 +22,4 @@ for line in (scripting_dir / "glyph-names.txt").read_text().splitlines():
 
     eac_name, *parts = line.split("\t")
 
-    print(f'''"{eac_name}": "{".".join(parts)}",''')
+    print(f""""{eac_name}": "{".".join(parts)}",""")

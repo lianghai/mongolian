@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "_"
+name = "source"
 version = "0.0.0"
 description = ""
 authors = ["Liang Hai <lianghai@gmail.com>"]
@@ -7,6 +7,9 @@ authors = ["Liang Hai <lianghai@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 fontmake = "^3.2.0"
+PyYAML = "^6.0"
+uharfbuzz = "^0.21.0"
+yattag = "^1.14.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"
