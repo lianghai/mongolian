@@ -1,16 +1,13 @@
+from collections.abc import Iterator
 from pathlib import Path
 
-from data import Category, script
-from utils import slice_joining_form
+from . import slice_joining_form
+from .data import Category
+from .data import mongolian as script
 
 # import tptq.utils.otl as otl
 # from tptq.utils.glyph import DevelopmentNaming, Identity
 # from tptq.utils.otl import File
-
-
-project_dir = Path(__file__).parent / ".."
-directory = project_dir / "otl"
-path = directory / "stateless" / "main.fea"
 
 
 def mong(
@@ -24,34 +21,9 @@ def mong(
     return Identity(phonetic_letter, suffix=suffixes, script_code=script.code)
 
 
-def make_class_name(phonetic_letter: str, joining_form: str = None) -> str:
-    return (
-        "@"
-        + mong(phonetic_letter, joining_form=joining_form)
-        .imply_script(script.code)
-        .name()
-    )
+def make(path: Path):
 
-
-def make_glyph_classes(file: File, category_chain: list[str], category: Category):
-
-    class_name = "@" + ".".join(category_chain)
-    members = []
-
-    for key, value in category.immediate_members.items():
-        if value:
-            sub_category_chain = category_chain[:] + [key]
-            nested_class_name = "@" + ".".join(sub_category_chain)
-            make_glyph_classes(file, sub_category_chain, value)
-            members.append(nested_class_name)
-        else:
-            members.append("@" + key)
-
-    if members:
-        file.glyph_class(class_name, members)
-
-
-def writer(builder: otl.CodeBuilder):
+    builder = otl.CodeBuilder()
 
     format_control = script.categorization.format_control
     directory = path.parent
@@ -70,7 +42,7 @@ def writer(builder: otl.CodeBuilder):
                 continue
             subclasses = []
             for joining_form in otl.JOINING_FORM_TAGS:
-                class_name = make_class_name(name, joining_form)
+                class_name = _make_class_name(name, joining_form)
                 subclasses.append(class_name)
                 abstract_variant = mong(name, None, joining_form)
                 variants = [
@@ -79,7 +51,7 @@ def writer(builder: otl.CodeBuilder):
                     if v.is_contextual
                 ]
                 f.glyph_class(class_name, [abstract_variant, *variants])
-            f.glyph_class(make_class_name(name), subclasses)
+            f.glyph_class(_make_class_name(name), subclasses)
 
     with builder.File(directory / "classes-categories.fea") as f:
         for (
@@ -87,7 +59,8 @@ def writer(builder: otl.CodeBuilder):
             value,
         ) in script.categorization.letter.immediate_members.items():
             if value:
-                make_glyph_classes(f, [category], value)
+                for name, members in _make_glyph_classes([category], value):
+                    f.glyph_class(name, members)
 
     with builder.File(directory / "lookups-joining.fea") as f:
         for joining_form in otl.JOINING_FORM_TAGS:
@@ -116,7 +89,7 @@ def writer(builder: otl.CodeBuilder):
                     builder.shaped_glyph_names.update(
                         [builder.source_glyph_set[variant_glyph]]
                     )
-                    joining_form_class_name = make_class_name(name, joining_form)
+                    joining_form_class_name = _make_class_name(name, joining_form)
                     affected_variants: tuple[Identity, ...] = tuple(
                         [abstract_variant]
                         + [
@@ -203,7 +176,7 @@ def writer(builder: otl.CodeBuilder):
         f.glyph_class(
             "@consonant.init",
             [
-                make_class_name(name, "init")
+                _make_class_name(name, "init")
                 for name in script.categorization.letter.consonant
             ],
         )
@@ -491,3 +464,32 @@ def writer(builder: otl.CodeBuilder):
             if stage == "test":
                 with f.Feature(feature_tag) as feature:
                     feature.lookup(name)
+
+
+def _make_class_name(phonetic_letter: str, joining_form: str = None) -> str:
+    return (
+        "@"
+        + mong(phonetic_letter, joining_form=joining_form)
+        .imply_script(script.code)
+        .name()
+    )
+
+
+def _make_glyph_classes(
+    category_chain: list[str], category: Category
+) -> Iterator[tuple[str, list[str]]]:
+
+    name = "@" + ".".join(category_chain)
+    members = list[str]()
+
+    for key, value in category.immediate_members.items():
+        if value:
+            sub_category_chain = category_chain[:] + [key]
+            nested_name = "@" + ".".join(sub_category_chain)
+            yield from _make_glyph_classes(sub_category_chain, value)
+            members.append(nested_name)
+        else:
+            members.append("@" + key)
+
+    if members:
+        yield name, members
