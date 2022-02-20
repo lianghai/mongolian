@@ -4,8 +4,8 @@ from pathlib import Path
 
 import yattag
 from fontTools import unicodedata
+from source import slice_joining_form
 from source.data import mongolian as script
-from source.utils import slice_joining_form
 
 from utils import Shaper
 

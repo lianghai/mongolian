@@ -8,16 +8,16 @@ from textwrap import indent
 
 import yaml
 from fontTools import unicodedata
+from source import JOINING_FORM_TO_JOINEDNESS, slice_joining_form
 from source.data import mongolian
-from source.utils import JOINING_FORM_TO_JOINEDNESS, slice_joining_form
 
 from utils import Shaper
 
-scripting_dir = Path(__file__).parent
-tagging_dir = scripting_dir / "tagging"
-project_dir = scripting_dir / ".."
-repo_dir = scripting_dir / ".." / ".."
-private_repo_dir = repo_dir / ".." / "mongolian-private"
+directory = Path(__file__).parent
+project_dir = directory.parent
+
+tagging_dir = project_dir / "source" / "tagging"
+private_repo_dir = project_dir.parent.parent / "mongolian-private"
 
 
 @dataclass
@@ -84,7 +84,7 @@ def main():
     )
     utn = Testee(
         name="utn",
-        shaper=Shaper(project_dir / "products" / "DummyStateless-Regular.otf"),
+        shaper=Shaper(project_dir / "DummyStateless-Regular.otf"),
         normalizer=utn_normalizer,
     )
 
@@ -105,7 +105,7 @@ def test(baseline: Testee, alt: Testee, corpus_tag: str):
     print("---")
 
     filename = f"{baseline.name}-vs-{alt.name}-with-{corpus_tag}-corpus.txt"
-    with (scripting_dir / ".." / "reports" / filename).open("w") as f:
+    with (directory / "reports" / filename).open("w") as f:
 
         text = corpus_loader_by_tag[corpus_tag]()
         cases = Counter[str](
