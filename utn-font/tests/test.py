@@ -16,7 +16,7 @@ from utils import Shaper
 directory = Path(__file__).parent
 project_dir = directory.parent
 
-tagging_dir = project_dir / "source" / "tagging"
+tagging_dir = directory / "tagging"
 private_repo_dir = project_dir.parent.parent / "mongolian-private"
 
 
