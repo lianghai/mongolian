@@ -220,13 +220,6 @@ def writer(builder: otl.CodeBuilder):
             lookup.prefix("@i").sub("@g").chain(conditions("masculine_devsger")).suffix("masculine")
             lookup.prefix("@i").sub("@g").chain(conditions("feminine"))
 
-        with f.Lookup("III.ig.postprocessing") as lookup:
-            name = "g"
-            for joining_form, variants in mongolian.characters[name].variants_by_joining_form.items():
-                for variant in variants:
-                    variant = mong(name, variant.written_units, joining_form)
-                    lookup.sub(variant, "masculine").by(variant)
-
         with f.Lookup("III.a_i_u_ue_d.particle.A").flag("IgnoreMarks") as lookup:
             c = "particle"
             lookup.sub(["mvs", "nnbsp"], for_condition(c, ["@a.init", "@i", "@u", "@ue", "@d"])).chain(_effective, conditions(c))  # type: ignore
@@ -244,6 +237,13 @@ def writer(builder: otl.CodeBuilder):
         with f.Lookup("III.fallback") as lookup:
             for abstract, fallback in abstract_variant_to_fallback.items():
                 lookup.sub(abstract).by(fallback)
+
+        with f.Lookup("III.ig.postprocessing") as lookup:
+            name = "g"
+            for joining_form, variants in mongolian.characters[name].variants_by_joining_form.items():
+                for variant in variants:
+                    variant = mong(name, variant.written_units, joining_form)
+                    lookup.sub(variant, "masculine").by(variant)
 
         with f.Lookup("III.y.dictionary_particle").flag("IgnoreMarks") as lookup:
             c = "dictionary_particle"
