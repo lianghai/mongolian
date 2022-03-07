@@ -1,3 +1,5 @@
+# fmt: off
+
 from pathlib import Path
 
 import tptq.utils.otl as otl
@@ -196,16 +198,17 @@ def writer(builder: otl.CodeBuilder):
         with f.Lookup("III.o_u_oe_ue.marked").flag("IgnoreMarks") as lookup:
             lookup.prefix("@consonant.init").sub(["@o", "@u", "@oe", "@ue"]).chain(conditions("marked"))
 
-        with f.Lookup("III.n_j_y_w_h_g.chachlag_onset").flag("IgnoreMarks") as lookup:
-            c = "chachlag_onset"
-            lookup.sub(for_condition(c, ["@n", "@j", "@y", "@w"])).suffix("mvs.effective", ["a.Aa.isol", "e.Aa.isol"]).chain(conditions(c))  # type: ignore
-            lookup.sub(for_condition(c, ["@h", "@g"])).suffix("mvs.effective", "a.Aa.isol").chain(conditions(c))  # type: ignore
+        # with f.Lookup("III.n_j_y_w_h_g.chachlag_onset").flag("IgnoreMarks") as lookup:
+
+        # TODO: try adding mvs.effective to GDEF class marks.
 
         with f.Lookup("III.n_t_d.onset_and_devsger").flag("IgnoreMarks") as lookup:
+            lookup.sub(for_condition("chachlag_onset", ["@n", "@j", "@y", "@w"])).suffix("mvs.effective", ["a.Aa.isol", "e.Aa.isol"]).chain(conditions("chachlag_onset"))  # type: ignore
             lookup.sub(["@n", "@t", "@d"]).chain(conditions("onset")).suffix("@vowel")
             lookup.prefix("@vowel").sub(["@n", "@d"]).chain(conditions("devsger"))
 
         with f.Lookup("III.h_g.onset_and_devsger_and_gender.A").flag("IgnoreMarks") as lookup:
+            lookup.sub(for_condition("chachlag_onset", ["@h", "@g"])).suffix("mvs.effective", "a.Aa.isol").chain(conditions("chachlag_onset"))  # type: ignore
             lookup.sub(["@h", "@g"]).chain(conditions("masculine_onset")).suffix("@vowel.masculine")
             lookup.sub(["@h", "@g"]).chain(conditions("feminine")).suffix(["@vowel.feminine", "@vowel.neuter"])
             lookup.prefix("@vowel.masculine").sub("@g").chain(conditions("masculine_devsger"))

@@ -285,15 +285,9 @@ lookup III.o_u_oe_ue.marked {
     lookupflag 0;
 } III.o_u_oe_ue.marked;
 
-lookup III.n_j_y_w_h_g.chachlag_onset {
-    lookupflag IgnoreMarks;
-    sub [@n.fina.for_chachlag_onset @j.isol.for_chachlag_onset @y.fina.for_chachlag_onset @w.fina.for_chachlag_onset]' lookup condition.chachlag_onset mvs.effective [a.Aa.isol e.Aa.isol];
-    sub [@h.fina.for_chachlag_onset @g.fina.for_chachlag_onset]' lookup condition.chachlag_onset mvs.effective a.Aa.isol;
-    lookupflag 0;
-} III.n_j_y_w_h_g.chachlag_onset;
-
 lookup III.n_t_d.onset_and_devsger {
     lookupflag IgnoreMarks;
+    sub [@n.fina.for_chachlag_onset @j.isol.for_chachlag_onset @y.fina.for_chachlag_onset @w.fina.for_chachlag_onset]' lookup condition.chachlag_onset mvs.effective [a.Aa.isol e.Aa.isol];
     sub [@n @t @d]' lookup condition.onset @vowel;
     sub @vowel [@n @d]' lookup condition.devsger;
     lookupflag 0;
@@ -301,6 +295,7 @@ lookup III.n_t_d.onset_and_devsger {
 
 lookup III.h_g.onset_and_devsger_and_gender.A {
     lookupflag IgnoreMarks;
+    sub [@h.fina.for_chachlag_onset @g.fina.for_chachlag_onset]' lookup condition.chachlag_onset mvs.effective a.Aa.isol;
     sub [@h @g]' lookup condition.masculine_onset @vowel.masculine;
     sub [@h @g]' lookup condition.feminine [@vowel.feminine @vowel.neuter];
     sub @vowel.masculine @g' lookup condition.masculine_devsger;
