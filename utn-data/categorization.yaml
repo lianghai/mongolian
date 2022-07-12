@@ -1,5 +1,3 @@
----
-
 format_control:
 
   joining_control: [.zwnj, .zwj, .nirugu]
@@ -20,5 +18,3 @@ letter:
     .n, .ng, .b, .p, .h, .g, .m, .l, .s, .sh, .t, .d, .ch, .j, .y, .r, .w,
     .f, .k2, .k, .c, .z, .hh, .rh, .lh, .zr, .cr,
   ]
-
-...

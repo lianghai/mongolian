@@ -1,12 +1,10 @@
----
-
 - id: "A"
   variant_by_joining_form:
     isol:
       represented_letters: [.a, .e]
       menksoft_pua: 0xE265
     init:
-      represented_letters: [.aleph, .a, .e, {type: .early_modern, letter: .n}]
+      represented_letters: [.aleph, .a, .e, { type: .early_modern, letter: .n }]
       menksoft_pua: 0xE267
     medi:
       represented_letters: [.aleph, .a, .e, .n]
@@ -48,7 +46,7 @@
   transcription: "Ị"
   variant_by_joining_form:
     isol:
-      represented_letters: [{type: .early_modern, letter: .i}]
+      represented_letters: [{ type: .early_modern, letter: .i }]
       typographical_decomposition: "I.isol dotbelow"
       menksoft_pua: 0xE350
 
@@ -89,7 +87,11 @@
   transcription: "Ụ"
   variant_by_joining_form:
     isol:
-      represented_letters: [{type: .early_modern, letter: .u}, {type: .early_modern, letter: .ue}]
+      represented_letters:
+        [
+          { type: .early_modern, letter: .u },
+          { type: .early_modern, letter: .ue },
+        ]
       typographical_decomposition: "U.isol dotbelow"
       menksoft_pua: 0xE351
 
@@ -184,139 +186,139 @@
   transcription: "G̈"
   variant_by_joining_form:
     init:
-      represented_letters: [{type: .early_modern, letter: .h}]
+      represented_letters: [{ type: .early_modern, letter: .h }]
       orthogonally_joining_types: [.leading]
       menksoft_pua: 0xE2E0
     medi:
-      represented_letters: [{type: .early_modern, letter: .h}]
+      represented_letters: [{ type: .early_modern, letter: .h }]
       orthogonally_joining_types: [.leading, .trailing_minor]
       menksoft_pua: 0xE2E0
 
 - id: "M"
   variant_by_joining_form:
-      init:
-        represented_letters: [.m]
-        menksoft_pua: 0xE2F2
-      medi:
-        represented_letters: [.m]
-        menksoft_pua: 0xE2F4
-      fina:
-        represented_letters: [.m]
-        menksoft_pua: 0xE2F3
+    init:
+      represented_letters: [.m]
+      menksoft_pua: 0xE2F2
+    medi:
+      represented_letters: [.m]
+      menksoft_pua: 0xE2F4
+    fina:
+      represented_letters: [.m]
+      menksoft_pua: 0xE2F3
 
 - id: "L"
   variant_by_joining_form:
-      init:
-        represented_letters: [.l]
-        menksoft_pua: 0xE2F8
-      medi:
-        represented_letters: [.l]
-        menksoft_pua: 0xE2FA
-      fina:
-        represented_letters: [.l]
-        menksoft_pua: 0xE2F9
+    init:
+      represented_letters: [.l]
+      menksoft_pua: 0xE2F8
+    medi:
+      represented_letters: [.l]
+      menksoft_pua: 0xE2FA
+    fina:
+      represented_letters: [.l]
+      menksoft_pua: 0xE2F9
 
 - id: "S"
   variant_by_joining_form:
-      init:
-        represented_letters: [.s]
-        menksoft_pua: 0xE2FE
-      medi:
-        represented_letters: [.s]
-        menksoft_pua: 0xE301
-      fina:
-        represented_letters: [.s]
-        menksoft_pua: 0xE2FF
+    init:
+      represented_letters: [.s]
+      menksoft_pua: 0xE2FE
+    medi:
+      represented_letters: [.s]
+      menksoft_pua: 0xE301
+    fina:
+      represented_letters: [.s]
+      menksoft_pua: 0xE2FF
 
 - id: "Sh"
   transcription: "Ś"
   variant_by_joining_form:
-      init:
-        represented_letters: [.sh]
-        menksoft_pua: 0xE304
-      medi:
-        represented_letters: [.sh]
-        menksoft_pua: 0xE306
-      fina:
-        represented_letters: [.sh]
-        menksoft_pua: 0xE305
+    init:
+      represented_letters: [.sh]
+      menksoft_pua: 0xE304
+    medi:
+      represented_letters: [.sh]
+      menksoft_pua: 0xE306
+    fina:
+      represented_letters: [.sh]
+      menksoft_pua: 0xE305
 
 - id: "T"
   variant_by_joining_form:
-      init:
-        represented_letters: [.t, .d]
-        menksoft_pua: 0xE309
-      medi:
-        represented_letters: [.t]
-        menksoft_pua: 0xE30C
-      fina:
-        represented_letters: [.t]
-        menksoft_pua: 0xE30A
+    init:
+      represented_letters: [.t, .d]
+      menksoft_pua: 0xE309
+    medi:
+      represented_letters: [.t]
+      menksoft_pua: 0xE30C
+    fina:
+      represented_letters: [.t]
+      menksoft_pua: 0xE30A
 
 - id: "D"
   variant_by_joining_form:
-      init:
-        represented_letters: [.d]
-        menksoft_pua: 0xE310
-      medi:
-        represented_letters: [.t, .d]
-        menksoft_pua: 0xE30B
-      fina:
-        represented_letters: [.d]
-        menksoft_pua: 0xE312
+    init:
+      represented_letters: [.d]
+      menksoft_pua: 0xE310
+    medi:
+      represented_letters: [.t, .d]
+      menksoft_pua: 0xE30B
+    fina:
+      represented_letters: [.d]
+      menksoft_pua: 0xE312
 
 - id: "Dd"
   transcription: "Đ"
   variant_by_joining_form:
-      medi:
-        represented_letters: [.d]
-        menksoft_pua: 0xE314
-      fina:
-        represented_letters: [.d]
-        menksoft_pua: 0xE311
+    medi:
+      represented_letters: [.d]
+      menksoft_pua: 0xE314
+    fina:
+      represented_letters: [.d]
+      menksoft_pua: 0xE311
 
 - id: "Ch"
   transcription: "Ć"
   variant_by_joining_form:
-      init:
-        represented_letters: [.ch]
-        menksoft_pua: 0xE315
-      medi:
-        represented_letters: [.ch]
-        menksoft_pua: 0xE317
-      fina:
-        represented_letters: [.ch]
-        menksoft_pua: 0xE316
+    init:
+      represented_letters: [.ch]
+      menksoft_pua: 0xE315
+    medi:
+      represented_letters: [.ch]
+      menksoft_pua: 0xE317
+    fina:
+      represented_letters: [.ch]
+      menksoft_pua: 0xE316
 
 - id: "J"
   variant_by_joining_form:
-      medi:
-        represented_letters: [.j]
-        menksoft_pua: 0xE31D
-      fina:
-        represented_letters: [.j]
-        menksoft_pua: 0xE31B
+    medi:
+      represented_letters: [.j]
+      menksoft_pua: 0xE31D
+    fina:
+      represented_letters: [.j]
+      menksoft_pua: 0xE31B
 
 - id: "Y"
   variant_by_joining_form:
-      init:
-        represented_letters: [.y]
-        menksoft_pua: 0xE31E
-      medi:
-        represented_letters: [.y]
-        menksoft_pua: 0xE320
+    init:
+      represented_letters: [.y]
+      menksoft_pua: 0xE31E
+    medi:
+      represented_letters: [.y]
+      menksoft_pua: 0xE320
 
 - id: "R"
   variant_by_joining_form:
-      init:
-        represented_letters: [.r]
-        menksoft_pua: 0xE322
-      medi:
-        represented_letters: [.r]
-        menksoft_pua: 0xE326
-      fina:
-        represented_letters: [.r]
-        menksoft_pua: 0xE325
+    init:
+      represented_letters: [.r]
+      menksoft_pua: 0xE322
+    medi:
+      represented_letters: [.r]
+      menksoft_pua: 0xE326
+    fina:
+      represented_letters: [.r]
+      menksoft_pua: 0xE325
 
 - id: "W"
   variant_by_joining_form:
@@ -346,7 +348,7 @@
       represented_letters: [.f]
       menksoft_pua: 0xE32F
 
-- id: "K2"  # EAC compatibility
+- id: "K2" # EAC compatibility
   variant_by_joining_form:
     init:
       represented_letters: [.k2]
@@ -376,64 +378,64 @@
 
 - id: "C"
   variant_by_joining_form:
-      init:
-        represented_letters: [.c]
-        menksoft_pua: 0xE33F
-      medi:
-        represented_letters: [.c]
-        menksoft_pua: 0xE341
-      fina:
-        represented_letters: [.c]
-        menksoft_pua: 0xE340
+    init:
+      represented_letters: [.c]
+      menksoft_pua: 0xE33F
+    medi:
+      represented_letters: [.c]
+      menksoft_pua: 0xE341
+    fina:
+      represented_letters: [.c]
+      menksoft_pua: 0xE340
 
 - id: "Z"
   variant_by_joining_form:
-      init:
-        represented_letters: [.z]
-        menksoft_pua: 0xE342
-      medi:
-        represented_letters: [.z]
-        menksoft_pua: 0xE344
-      fina:
-        represented_letters: [.z]
-        menksoft_pua: 0xE343
+    init:
+      represented_letters: [.z]
+      menksoft_pua: 0xE342
+    medi:
+      represented_letters: [.z]
+      menksoft_pua: 0xE344
+    fina:
+      represented_letters: [.z]
+      menksoft_pua: 0xE343
 
 - id: "Hh"
   transcription: "Ħ"
   variant_by_joining_form:
-      init:
-        represented_letters: [.hh]
-        menksoft_pua: 0xE345
-      medi:
-        represented_letters: [.hh]
-        menksoft_pua: 0xE347
-      fina:
-        represented_letters: [.hh]
-        menksoft_pua: 0xE346
+    init:
+      represented_letters: [.hh]
+      menksoft_pua: 0xE345
+    medi:
+      represented_letters: [.hh]
+      menksoft_pua: 0xE347
+    fina:
+      represented_letters: [.hh]
+      menksoft_pua: 0xE346
 
 - id: "Rh"
   transcription: "Ř"
   variant_by_joining_form:
-      init:
-        represented_letters: [.rh]
-        menksoft_pua: 0xE349
-      medi:
-        represented_letters: [.rh]
-        menksoft_pua: 0xE349
-      fina:
-        represented_letters: [.rh]
-        menksoft_pua: 0xE34A
+    init:
+      represented_letters: [.rh]
+      menksoft_pua: 0xE349
+    medi:
+      represented_letters: [.rh]
+      menksoft_pua: 0xE349
+    fina:
+      represented_letters: [.rh]
+      menksoft_pua: 0xE34A
 
 - id: "Zr"
   transcription: "Ž"
   variant_by_joining_form:
-      init:
-        represented_letters: [.zr]
-        menksoft_pua: 0xE34E
+    init:
+      represented_letters: [.zr]
+      menksoft_pua: 0xE34E
 
 - id: "Cr"
   transcription: "Č"
   variant_by_joining_form:
-      init:
-        represented_letters: [.cr]
-        menksoft_pua: 0xE34F
+    init:
+      represented_letters: [.cr]
+      menksoft_pua: 0xE34F

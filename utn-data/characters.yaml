@@ -1,5 +1,3 @@
----
-
 - cp: 0x200C # ZERO WIDTH NON-JOINER
   id: "zwnj"
 
@@ -853,5 +851,3 @@
     init:
       - written_units: [.Cr]
         menksoft_puas: [0xE34F]
-
-...
