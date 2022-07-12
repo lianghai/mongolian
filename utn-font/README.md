@@ -6,7 +6,7 @@ sources/shapes.glyphs → sources/written-units.ufo → sources/variants.ufo
 
 ## Glyphs
 
-The glyph **outlines** are derived from **Noto Sans Mongolian**’s source files ([googlefonts/noto-source/src/NotoSansMongolian/ at the commit 933987e](https://github.com/googlefonts/noto-source/tree/933987e2509b9ae5192420a8296f330c25df7652/src/NotoSansMongolian)), which are [archived here](https://github.com/lianghai/mongolian/tree/main/utn-font/sources/NotoSansMongolian) for quick reference.
+The glyph **outlines** are derived from **Noto Sans Mongolian**’s source files ([googlefonts/noto-source/src/NotoSansMongolian/ at the commit 933987e](https://github.com/googlefonts/noto-source/tree/933987e2509b9ae5192420a8296f330c25df7652/src/NotoSansMongolian)), which are [archived here](https://github.com/lianghai/mongolian/tree/main/utn-font/source/glyphs/NotoSansMongolian) for quick reference.
 
 Only the **subset** needed by the **Hudum** writing system is kept for now.
 
