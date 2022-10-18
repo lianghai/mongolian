@@ -1,38 +1,15 @@
-# create-svelte
+# Web-based draft UTN
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the source repo of [mongolian.lianghai.io](https://mongolian.lianghai.io).
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Developed with [SvelteKit](https://kit.svelte.dev). Deployed to [Vercel](https://vercel.com/changelog/sveltekit-projects-can-now-be-deployed-with-zero-configuration) from the [main](https://github.com/lianghai/mongolian/tree/main) branch.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you’ve installed dependencies with `npm install`, start a development server locally and open the site in your browser:
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+```console
 npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The site auto-reloads when you save changes.
