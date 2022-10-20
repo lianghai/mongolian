@@ -1,7 +1,16 @@
+<script>
+  import WrittenUnits from "$lib/WrittenUnits.svelte";
+</script>
+
 <hgroup>
   <p>Draft technical note:</p>
   <h1>Text representation and shaping specification of the Mongolian script</h1>
 </hgroup>
+
+<p>
+  <WrittenUnits transcription="M A O A G Gh O L" />
+  <WrittenUnits transcription="B I Ch I G" />
+</p>
 
 <p>
   This <em>draft</em> specification demonstrates and proposes how to specify both

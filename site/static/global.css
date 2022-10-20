@@ -17,3 +17,8 @@ body {
   max-width: 95%;
   font-family: "IBM Plex Serif", serif;
 }
+
+@font-face {
+  font-family: "Menk Vran Tig";
+  src: url("Menk Vran Tig.ttf");
+}

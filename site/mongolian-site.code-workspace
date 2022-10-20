@@ -1,10 +1,16 @@
 {
   "folders": [
     {
+      "name": "site",
       "path": "."
     },
     {
+      "name": "routes",
       "path": "src/routes"
+    },
+    {
+      "name": "lib",
+      "path": "src/lib"
     }
   ],
   "settings": {

@@ -2,7 +2,7 @@
 
 This is the source repo of [mongolian.lianghai.io](https://mongolian.lianghai.io).
 
-Developed with [SvelteKit](https://kit.svelte.dev). Deployed to [Vercel](https://vercel.com/changelog/sveltekit-projects-can-now-be-deployed-with-zero-configuration) from the [main](https://github.com/lianghai/mongolian/tree/main) branch.
+Developed with [SvelteKit](https://kit.svelte.dev). Automatically deployed to [Vercel](https://vercel.com/changelog/sveltekit-projects-can-now-be-deployed-with-zero-configuration) from the [main](https://github.com/lianghai/mongolian/tree/main) branch.
 
 ## Developing
 
