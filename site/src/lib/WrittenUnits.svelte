@@ -1,5 +1,30 @@
 <script lang="ts">
-  export let transcription: string; // "GhA"
+  import { onMount } from "svelte";
+
+  let container: HTMLElement; // with content like: Gh A
+  let writtenUnits: WrittenUnit[] = [];
+
+  onMount(() => {
+    const content = container.textContent ?? "";
+
+    writtenUnits = [...content.matchAll(/[A-Z][a-z]*/g)]
+      .map((i) => i[0])
+      .filter((i) => i in data);
+
+    container.textContent = writtenUnits
+      .map((writtenUnit, index) => {
+        let joiningForm: JoiningForm = "medi";
+        if (writtenUnits.length == 1) {
+          joiningForm = "isol";
+        } else if (index == 0) {
+          joiningForm = "init";
+        } else if (index == writtenUnits.length - 1) {
+          joiningForm = "fina";
+        }
+        return data[writtenUnit][joiningForm];
+      })
+      .join("");
+  });
 
   type WrittenUnit = string;
   type JoiningForm = "isol" | "init" | "medi" | "fina";
@@ -43,29 +68,9 @@
     Zr: { init: "\ue34e" },
     Cr: { init: "\ue34f" },
   };
-
-  const writtenUnits: WrittenUnit[] = [
-    ...transcription.matchAll(/[A-Z][a-z]*/g),
-  ]
-    .map((i) => i[0])
-    .filter((i) => i in data);
-
-  const text = writtenUnits
-    .map((writtenUnit, index) => {
-      let joiningForm: JoiningForm = "medi";
-      if (writtenUnits.length == 1) {
-        joiningForm = "isol";
-      } else if (index == 0) {
-        joiningForm = "init";
-      } else if (index == writtenUnits.length - 1) {
-        joiningForm = "fina";
-      }
-      return data[writtenUnit][joiningForm];
-    })
-    .join("");
 </script>
 
-<span title={writtenUnits.join(" ")}>{text}</span>
+<span bind:this={container} title={writtenUnits.join(" ")}><slot /></span>
 
 <style>
   span {

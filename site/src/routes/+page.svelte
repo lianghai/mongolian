@@ -8,8 +8,8 @@
 </hgroup>
 
 <p>
-  <WrittenUnits transcription="M A O A G Gh O L" />
-  <WrittenUnits transcription="B I Ch I G" />
+  <WrittenUnits>M A O A G Gh O L</WrittenUnits>
+  <WrittenUnits>B I Ch I G</WrittenUnits>
 </p>
 
 <p>
