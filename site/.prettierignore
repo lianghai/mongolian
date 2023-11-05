@@ -1,6 +1,0 @@
-package-lock.json
-
-# .gitignore:
-.DS_Store
-node_modules
-/.svelte-kit
